@@ -1,0 +1,16 @@
+# Robots.txt for Space Lean
+# https://spacelean.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://spacelean.com/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
