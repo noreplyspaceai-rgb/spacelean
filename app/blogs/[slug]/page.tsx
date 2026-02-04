@@ -220,7 +220,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 Request a Demo
               </Link>
               <Link
-                href="#"
+                href="/request-a-demo"
                 className="px-6 py-3 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-medium rounded-full hover:from-gray-800 hover:to-gray-700 shadow-lg transition-all"
               >
                 Try for free

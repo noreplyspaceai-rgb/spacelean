@@ -11,8 +11,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "SPACE LEAN | AI Task Management & Kanban Board for Teams",
-  description: "Transform your workflow with SPACE LEAN - the AI-powered task management system featuring Kanban boards, smart task prioritization, calendar views, and automatic task generation. Boost team productivity by 40%.",
-  keywords: ["AI Task Management", "Kanban Board", "Task Management Software", "Project Management", "Team Collaboration", "AI Task Generator", "Productivity Tools"],
+  description:
+    "Transform your workflow with SPACE LEAN - the AI-powered task management system featuring Kanban boards, smart task prioritization, calendar views, and automatic task generation. Boost team productivity by 40%.",
+  keywords: [
+    "AI Task Management",
+    "Kanban Board",
+    "Task Management Software",
+    "Project Management",
+    "Team Collaboration",
+    "AI Task Generator",
+    "Productivity Tools",
+  ],
   authors: [{ name: "Space Lean Inc." }],
   creator: "Space Lean Inc.",
   publisher: "Space Lean Inc.",
@@ -30,10 +39,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://spacelean.com",
+    url: "https://spacelean.ai",
     siteName: "SPACE LEAN",
     title: "SPACE LEAN | AI Task Management & Kanban Board for Teams",
-    description: "Transform your workflow with SPACE LEAN - the AI-powered task management system featuring Kanban boards, smart task prioritization, and automatic task generation.",
+    description:
+      "Transform your workflow with SPACE LEAN - the AI-powered task management system featuring Kanban boards, smart task prioritization, and automatic task generation.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1200&auto=format&fit=crop",
@@ -46,14 +56,17 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SPACE LEAN | AI Task Management & Kanban Board",
-    description: "Transform your workflow with AI-powered task management. Kanban boards, smart prioritization, and automatic task generation.",
-    images: ["https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1200&auto=format&fit=crop"],
+    description:
+      "Transform your workflow with AI-powered task management. Kanban boards, smart prioritization, and automatic task generation.",
+    images: [
+      "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1200&auto=format&fit=crop",
+    ],
     creator: "@spacelean",
   },
   alternates: {
-    canonical: "https://spacelean.com",
+    canonical: "https://spacelean.ai",
   },
-  metadataBase: new URL("https://spacelean.com"),
+  metadataBase: new URL("https://spacelean.ai"),
 };
 
 export default function RootLayout({
@@ -63,10 +76,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}>
-        <Header />
-        {children}
-        <Footer />
+      <body
+        className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}
+      >
+        <div className="relative z-10">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

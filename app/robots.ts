@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://spacelean.com";
+  const baseUrl = "https://spacelean.ai";
 
   return {
     rules: [

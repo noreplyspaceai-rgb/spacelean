@@ -1,11 +1,11 @@
 # Robots.txt for Space Lean
-# https://spacelean.com
+# https://spacelean.ai
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://spacelean.com/sitemap.xml
+Sitemap: https://spacelean.ai/sitemap.xml
 
 # Crawl-delay (optional, for politeness)
 Crawl-delay: 1

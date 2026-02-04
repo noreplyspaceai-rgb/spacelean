@@ -87,7 +87,7 @@ export default function Header() {
               Request a Demo
             </Link>
             <Link
-              href="#"
+              href="/request-a-demo"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white text-sm font-medium rounded-full hover:from-gray-800 hover:via-gray-700 hover:to-gray-800 shadow-lg shadow-gray-900/25 hover:shadow-xl hover:shadow-gray-900/30 hover:scale-[1.02] transition-all duration-200"
             >
               Try for free
@@ -187,7 +187,7 @@ export default function Header() {
                   Request a Demo
                 </Link>
                 <Link
-                  href="#"
+                  href="/request-a-demo"
                   onClick={() => setMobileMenuOpen(false)}
                   className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 text-white text-base font-medium rounded-xl shadow-lg shadow-purple-600/30 hover:shadow-xl hover:shadow-purple-600/40 transition-all duration-200"
                 >

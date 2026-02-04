@@ -3,7 +3,7 @@ import { getAllBlogSlugs } from "@/lib/blog-data";
 import { getAllSolutionSlugs } from "@/lib/solutions-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://spacelean.com";
+  const baseUrl = "https://spacelean.ai";
 
   // Static pages
   const staticPages = [
