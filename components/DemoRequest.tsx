@@ -3,31 +3,19 @@ import { useState, useEffect, Suspense } from 'react';
 import { gql } from '@apollo/client';
 import { client } from '@/lib/apollo-client';
 import { useSearchParams } from 'next/navigation';
-
-// Inline SVG Icons
-const FileSignatureIcon = () => (
-  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-  </svg>
-);
-
-const ShieldIcon = ({ className }: { className?: string }) => (
-  <svg className={className || "h-6 w-6"} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-  </svg>
-);
-
-const ZapIcon = ({ className }: { className?: string }) => (
-  <svg className={className || "h-6 w-6"} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-  </svg>
-);
-
-const CheckCircleIcon = ({ className }: { className?: string }) => (
-  <svg className={className || "h-6 w-6"} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
+import { motion } from 'framer-motion';
+import {
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  FileSignature,
+  Star,
+  Users,
+  Briefcase,
+  Check
+} from 'lucide-react';
+import Link from 'next/link';
 
 // GraphQL Mutation
 const CREATE_DEMO_REQUEST = gql`
@@ -48,7 +36,7 @@ const CREATE_DEMO_REQUEST = gql`
 
 function DemoRequestContent() {
   const searchParams = useSearchParams();
-  
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -76,7 +64,7 @@ function DemoRequestContent() {
       if (searchParams.get('lastName')) updates.lastName = searchParams.get('lastName') || '';
       if (searchParams.get('email')) updates.email = searchParams.get('email') || '';
       if (searchParams.get('projectDetails')) updates.projectDetails = searchParams.get('projectDetails') || '';
-      
+
       if (Object.keys(updates).length > 0) {
         setFormData(prev => ({ ...prev, ...updates }));
       }
@@ -156,237 +144,270 @@ function DemoRequestContent() {
 
   const features = [
     {
-      icon: ShieldIcon,
+      icon: Shield,
       title: 'AI-Powered Intelligence',
       desc: 'Let our AI break down complex projects into actionable tasks automatically.',
     },
     {
-      icon: ZapIcon,
+      icon: Zap,
       title: 'Real-Time Collaboration',
       desc: 'Stay in sync with your team through live updates, comments, and activity feeds.',
     },
     {
-      icon: CheckCircleIcon,
+      icon: CheckCircle,
       title: 'Complete Task Visibility',
       desc: 'Kanban boards, calendar views, and priority tracking all in one unified platform.',
     },
   ];
 
   return (
-    <section className="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-orange-50/30 pointer-events-none" />
-      <div className="absolute inset-0 pattern-dots pointer-events-none opacity-40" />
-      <div className="absolute top-20 right-20 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 left-20 w-64 h-64 bg-gray-200/30 rounded-full blur-3xl pointer-events-none" />
+    <section className="min-h-screen bg-[#fafafa] pt-32 pb-20 overflow-hidden relative">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-[50vw] h-[50vw] border border-black/5 rounded-full translate-x-1/4 -translate-y-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] border border-black/5 rounded-full -translate-x-1/4 translate-y-1/4 pointer-events-none" />
 
-      <div className="relative container mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
+      <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid gap-20 lg:grid-cols-2 lg:items-start">
           {/* Left Content */}
-          <div>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2">
-              <FileSignatureIcon />
-              <span className="text-sm font-semibold text-orange-600 uppercase tracking-wider">Request a Demo</span>
+          <motion.div
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 bg-white shadow-sm">
+              <FileSignature className="w-4 h-4 text-black" />
+              <span className="text-xs font-bold tracking-wide uppercase">Experience the Future</span>
             </div>
 
-            <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
-              Transform Your Workflow with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-orange-500">
-                SPACE LEAN
-              </span>
+            <h1 className="text-5xl sm:text-7xl font-bold text-gray-900 mb-8 tracking-tighter leading-tight">
+              Transform your <br />
+              <span className="text-gray-300">workflow.</span>
             </h1>
 
-            <p className="mb-8 text-lg leading-relaxed text-gray-600">
-              Join thousands of teams who have revolutionized their task management. Experience 
-              AI-powered automation, intelligent scheduling, and comprehensive project oversight.
+            <p className="text-xl sm:text-2xl text-gray-500 mb-12 font-light leading-relaxed max-w-xl">
+              Join thousands of teams who have revolutionized their productivity. Experience
+              AI-powered automation with <span className="text-black font-normal">SpaceLean</span>.
             </p>
 
-            <div className="space-y-6">
-              {features.map((item) => (
-                <div key={item.title} className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-orange-100 to-amber-100">
-                    <item.icon className="h-6 w-6 text-orange-600" />
+            <div className="space-y-10">
+              {features.map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 + (idx * 0.1) }}
+                  className="flex items-start gap-6 group"
+                >
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white border border-black/5 shadow-sm group-hover:bg-black group-hover:text-white transition-all duration-500">
+                    <item.icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                    <p className="text-gray-600">{item.desc}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">{item.title}</h3>
+                    <p className="text-gray-500 text-lg font-light leading-relaxed">{item.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+
+            {/* Trust Badges */}
+            <div className="mt-16 pt-12 border-t border-black/5 flex flex-wrap gap-8 items-center">
+              <div className="flex gap-1 text-black">
+                {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-black" />)}
+              </div>
+              <p className="text-sm text-gray-400 font-bold tracking-widest uppercase">
+                4.9/5 Average Rating
+              </p>
+            </div>
+          </motion.div>
 
           {/* Right Form */}
-          <div className="rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-8 shadow-xl lg:p-10">
-            {isSuccess ? (
-              <div className="py-12 text-center">
-                <div className="mx-auto mb-6 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                  <CheckCircleIcon className="h-12 w-12 text-green-500" />
-                </div>
-                <h2 className="mb-2 text-3xl font-bold text-gray-900">Request Received!</h2>
-                <p className="text-lg text-gray-600">
-                  Our team will contact you within 24 hours to schedule your personalized demo.
-                </p>
-              </div>
-            ) : (
-              <>
-                <h2 className="mb-2 text-2xl font-bold text-gray-900">
-                  Schedule Your Personalized Demo
-                </h2>
-                <p className="mb-8 text-gray-600">
-                  See SPACE LEAN in action. Let&apos;s discuss your unique task management needs.
-                </p>
+          <motion.div
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="rounded-[2.5rem] border border-black/5 bg-white p-8 sm:p-12 shadow-2xl shadow-black/5">
+              {isSuccess ? (
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  className="py-20 text-center"
+                >
+                  <div className="mx-auto mb-10 w-24 h-24 bg-black text-white rounded-3xl flex items-center justify-center shadow-xl shadow-black/20">
+                    <Check className="h-12 w-12" />
+                  </div>
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tighter">Request Received!</h2>
+                  <p className="text-xl text-gray-500 font-light leading-relaxed max-w-xs mx-auto">
+                    A specialist will reach out within 24 hours to schedule your session.
+                  </p>
+                  <button
+                    onClick={() => setData(null)}
+                    className="mt-10 text-black font-bold border-b-2 border-black pb-1 hover:text-gray-500 transition-colors"
+                  >
+                    Send another request
+                  </button>
+                </motion.div>
+              ) : (
+                <>
+                  <div className="mb-10">
+                    <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">
+                      Start your journey.
+                    </h2>
+                    <p className="text-lg text-gray-500 font-light">
+                      Fill out the form below and we&apos;ll be in touch.
+                    </p>
+                  </div>
 
-                <form onSubmit={handleSubmit} noValidate>
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                        First Name *
+                  <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      <div className="space-y-1.5">
+                        <label htmlFor="firstName" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                          First Name
+                        </label>
+                        <input
+                          type="text"
+                          name="firstName"
+                          id="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
+                          className={`block w-full rounded-2xl border ${errors.firstName ? 'border-red-500' : 'border-black/5'
+                            } bg-gray-50 px-5 py-4 text-gray-900 transition-all focus:bg-white focus:border-black focus:outline-none`}
+                          placeholder="Your first name"
+                        />
+                        {errors.firstName && <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider ml-1">{errors.firstName}</p>}
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <label htmlFor="lastName" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                          Last Name
+                        </label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          id="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
+                          className={`block w-full rounded-2xl border ${errors.lastName ? 'border-red-500' : 'border-black/5'
+                            } bg-gray-50 px-5 py-4 text-gray-900 transition-all focus:bg-white focus:border-black focus:outline-none`}
+                          placeholder="Your last name"
+                        />
+                        {errors.lastName && <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider ml-1">{errors.lastName}</p>}
+                      </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                        Corporate Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`block w-full rounded-2xl border ${errors.email ? 'border-red-500' : 'border-black/5'
+                          } bg-gray-50 px-5 py-4 text-gray-900 transition-all focus:bg-white focus:border-black focus:outline-none`}
+                        placeholder="name@company.com"
+                      />
+                      {errors.email && <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider ml-1">{errors.email}</p>}
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="phoneNumber" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phoneNumber"
+                        id="phoneNumber"
+                        value={formData.phoneNumber}
+                        onChange={handleChange}
+                        placeholder="+1 (555) 000-0000"
+                        className={`block w-full rounded-2xl border ${errors.phoneNumber ? 'border-red-500' : 'border-black/5'
+                          } bg-gray-50 px-5 py-4 text-gray-900 transition-all focus:bg-white focus:border-black focus:outline-none`}
+                      />
+                      {errors.phoneNumber && <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider ml-1">{errors.phoneNumber}</p>}
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="company" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                        Company Name
                       </label>
                       <input
                         type="text"
-                        name="firstName"
-                        id="firstName"
-                        value={formData.firstName}
+                        name="company"
+                        id="company"
+                        value={formData.company}
                         onChange={handleChange}
-                        className={`block w-full rounded-lg border-2 ${
-                          errors.firstName ? 'border-red-500' : 'border-gray-200'
-                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200`}
-                        placeholder="John"
+                        className={`block w-full rounded-2xl border ${errors.company ? 'border-red-500' : 'border-black/5'
+                          } bg-gray-50 px-5 py-4 text-gray-900 transition-all focus:bg-white focus:border-black focus:outline-none`}
+                        placeholder="ACME Corp"
                       />
-                      {errors.firstName && <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>}
+                      {errors.company && <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider ml-1">{errors.company}</p>}
                     </div>
 
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                        Last Name *
+                    <div className="space-y-1.5">
+                      <label htmlFor="companySize" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                        Company Size
                       </label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        id="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        className={`block w-full rounded-lg border-2 ${
-                          errors.lastName ? 'border-red-500' : 'border-gray-200'
-                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200`}
-                        placeholder="Doe"
-                      />
-                      {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>}
+                      <div className="relative">
+                        <select
+                          name="companySize"
+                          id="companySize"
+                          value={formData.companySize}
+                          onChange={handleChange}
+                          className="block w-full rounded-2xl border border-black/5 bg-gray-50 px-5 py-4 text-gray-900 transition-all appearance-none focus:bg-white focus:border-black focus:outline-none"
+                        >
+                          <option value="">Select size...</option>
+                          <option value="1-10">1-10 employees</option>
+                          <option value="11-50">11-50 employees</option>
+                          <option value="51-200">51-200 employees</option>
+                          <option value="201-1000">201-1000 employees</option>
+                          <option value="1000+">1000+ employees</option>
+                        </select>
+                        <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none">
+                          <ArrowRight className="w-4 h-4 rotate-90 text-gray-400" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mt-6">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`block w-full rounded-lg border-2 ${
-                        errors.email ? 'border-red-500' : 'border-gray-200'
-                      } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200`}
-                      placeholder="john.doe@company.com"
-                    />
-                    {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
-                  </div>
+                    <div className="space-y-1.5">
+                      <label htmlFor="projectDetails" className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">
+                        Additional Context
+                      </label>
+                      <textarea
+                        name="projectDetails"
+                        id="projectDetails"
+                        rows={3}
+                        value={formData.projectDetails}
+                        onChange={handleChange}
+                        className="block w-full rounded-2xl border border-black/5 bg-gray-50 px-5 py-4 text-gray-900 transition-all focus:bg-white focus:border-black focus:outline-none resize-none"
+                        placeholder="Tell us about your challenges..."
+                      />
+                    </div>
 
-                  <div className="mt-6">
-                    <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phoneNumber"
-                      id="phoneNumber"
-                      value={formData.phoneNumber}
-                      onChange={handleChange}
-                      placeholder="+1 234 567 8900"
-                      className={`block w-full rounded-lg border-2 ${
-                        errors.phoneNumber ? 'border-red-500' : 'border-gray-200'
-                      } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200`}
-                    />
-                    {errors.phoneNumber && <p className="mt-1 text-sm text-red-600">{errors.phoneNumber}</p>}
-                  </div>
+                    <div className="pt-4">
+                      <button
+                        type="submit"
+                        disabled={loading}
+                        className="w-full inline-flex items-center justify-center gap-4 rounded-2xl bg-black px-8 py-5 text-white font-bold shadow-2xl shadow-black/30 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
+                      >
+                        <span className="text-lg">{loading ? 'Submitting...' : 'Request Demo'}</span>
+                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </button>
+                    </div>
+                  </form>
 
-                  <div className="mt-6">
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                      Company Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      id="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className={`block w-full rounded-lg border-2 ${
-                        errors.company ? 'border-red-500' : 'border-gray-200'
-                      } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200`}
-                      placeholder="Your Company"
-                    />
-                    {errors.company && <p className="mt-1 text-sm text-red-600">{errors.company}</p>}
-                  </div>
-
-                  <div className="mt-6">
-                    <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 mb-1">
-                      Company Size
-                    </label>
-                    <select
-                      name="companySize"
-                      id="companySize"
-                      value={formData.companySize}
-                      onChange={handleChange}
-                      className="block w-full rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200"
-                    >
-                      <option value="">Select company size</option>
-                      <option value="1-10">1-10 employees</option>
-                      <option value="11-50">11-50 employees</option>
-                      <option value="51-200">51-200 employees</option>
-                      <option value="201-1000">201-1000 employees</option>
-                      <option value="1000+">1000+ employees</option>
-                    </select>
-                  </div>
-
-                  <div className="mt-6">
-                    <label htmlFor="projectDetails" className="block text-sm font-medium text-gray-700 mb-1">
-                      Project Details
-                    </label>
-                    <textarea
-                      name="projectDetails"
-                      id="projectDetails"
-                      rows={4}
-                      value={formData.projectDetails}
-                      onChange={handleChange}
-                      className="block w-full rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200"
-                      placeholder="Tell us about your task management needs..."
-                    />
-                  </div>
-
-                  <div className="mt-8">
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="w-full inline-flex items-center justify-center gap-3 rounded-full bg-gray-900 px-8 py-4 text-white text-lg font-semibold shadow-xl hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-105"
-                    >
-                      {loading ? 'Submitting...' : 'Request Demo'}
-                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </form>
-
-                <p className="mt-6 text-center text-xs text-gray-500">
-                  By submitting this form, you agree to our Terms of Service and Privacy Policy.
-                </p>
-              </>
-            )}
-          </div>
+                  <p className="mt-8 text-center text-xs text-gray-400 font-medium">
+                    Secure & Private. <br className="sm:hidden" /> By submitting, you agree to our Terms.
+                  </p>
+                </>
+              )}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

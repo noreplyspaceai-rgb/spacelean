@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+});
+
 export const metadata: Metadata = {
-  title: "SPACE LEAN | AI Task Management & Kanban Board for Teams",
+  title: "SPACE LEAN | AI Task Breakdown Tool & Automatic Project Scheduler",
   description:
-    "Transform your workflow with SPACE LEAN - the AI-powered task management system featuring Kanban boards, smart task prioritization, calendar views, and automatic task generation. Boost team productivity by 40%.",
+    "Transform notes into tasks AI-powered efficiency. SPACE LEAN is an automatic project scheduler and AI task breakdown tool featuring Kanban boards and smart prioritization. Boost team productivity by 40%.",
   keywords: [
+    "AI task breakdown tool",
+    "turn notes into tasks AI",
+    "automatic project scheduler",
     "AI Task Management",
     "Kanban Board",
     "Task Management Software",
@@ -75,10 +85,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
-        className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#fafafa] text-[#0a0a0a]`}
       >
+        <SmoothScroll />
+        <CustomCursor />
         <div className="relative z-10">
           <Header />
           {children}

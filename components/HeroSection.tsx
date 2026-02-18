@@ -2,348 +2,116 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-const features = [
-  {
-    id: "kanban",
-    title: "Smart Kanban Board",
-    description:
-      "AI-powered visual workflows that learn your patterns. Watch tasks flow intelligently from backlog to completion with automated suggestions.",
-  },
-  {
-    id: "calendar",
-    title: "Intelligent Scheduling",
-    description:
-      "Let AI optimize your calendar. Smart deadline detection and auto-scheduling ensure you never miss what matters most.",
-  },
-  {
-    id: "ai",
-    title: "AI Task Generation",
-    description:
-      "Simply describe your vision. Our AI instantly breaks complex projects into structured, prioritized action items.",
-  },
-];
+import { ArrowRight, Play } from "lucide-react";
+import { motion } from "framer-motion";
+import VideoModal from "./VideoModal";
 
 export default function HeroSection() {
-  const [activeFeature, setActiveFeature] = useState("kanban");
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <>
-      {/* HERO - Full Screen */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-orange-50/50 pointer-events-none" />
-        <div className="absolute inset-0 pattern-dots pointer-events-none opacity-50" />
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-gradient-to-br from-orange-200/30 to-amber-100/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gradient-to-br from-blue-100/30 to-purple-100/30 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fafafa] pt-32 pb-20">
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with actual product demo video
+      />
 
-        <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center pt-16">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-            The future of work is{" "}
-            <em className="not-italic font-serif italic">intelligent</em>.
-            <br />
-            Let AI{" "}
-            <em className="not-italic font-serif italic text-orange-500">
-              orchestrate
-            </em>{" "}
-            your success.
-          </h1>
+      {/* Abstract Minimalist Background Shapes (Subtle) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute top-0 right-0 w-[60vw] h-[60vw] border border-black/5 rounded-full translate-x-1/3 -translate-y-1/3"
+      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="absolute bottom-0 left-0 w-[50vw] h-[50vw] border border-black/5 rounded-full -translate-x-1/3 translate-y-1/3"
+      />
 
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Harness the power of next-generation AI to transform chaos into
-            clarity. Your autonomous task companion that thinks ahead, adapts in
-            real-time, and keeps you light-years ahead of your deadlines.
-          </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
-          {/* CTA Button */}
+        {/* Badge */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-black/10 bg-white mb-10 shadow-sm hover:shadow-md transition-shadow cursor-default"
+        >
+          <span className="w-2 h-2 rounded-full bg-black animate-pulse" />
+          <span className="text-sm font-semibold tracking-wide text-gray-800 uppercase">AI Task Management V2.0</span>
+        </motion.div>
+
+        {/* Heading */}
+        <motion.h1
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-6xl sm:text-7xl lg:text-9xl font-bold tracking-tighter text-black mb-10 leading-[1.05]"
+        >
+          Orchestrate <br />
+          <span className="text-gray-300">Your Chaos.</span>
+        </motion.h1>
+
+        {/* Subheading */}
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-3xl mx-auto text-xl sm:text-2xl text-gray-500 mb-16 leading-relaxed font-light"
+        >
+          SpaceLean is the <strong>AI task breakdown tool</strong> and <strong>automatic project scheduler</strong> designed for high-velocity teams.
+          Effortlessly <strong>turn notes into tasks with AI</strong>, automate workflows, and ship faster.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-24"
+        >
           <Link
             href="https://cad.spaceaiapp.com/lean"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white text-lg font-semibold rounded-full hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform"
+            className="group relative inline-flex items-center gap-4 px-10 py-5 bg-black text-white text-lg font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-xl hover:shadow-2xl shadow-black/20"
           >
-            Start for free
-            <span className="flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full">
-              <svg
-                className="w-4 h-4 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </span>
+            <span className="relative z-10">Start Free Trial</span>
+            <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
           </Link>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg
-              className="w-6 h-6 text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCTIVITY POWERHOUSE SECTION */}
-      <section className="pt-10 pb-20 lg:pt-12 lg:pb-28 relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/80 to-blue-50/30 pointer-events-none" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Your AI-Powered Command Center
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience intelligent task management with AI that learns,
-              adapts, and automates. Every workflow becomes smarter, every
-              deadline stays on track.
-            </p>
-          </div>
-
-          {/* Feature Showcase */}
-          <div className="grid lg:grid-cols-12 gap-8 items-start">
-            {/* Left: Feature Cards */}
-            <div className="lg:col-span-4 space-y-4">
-              {features.map((feature) => (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveFeature(feature.id)}
-                  className={`w-full text-left p-6 rounded-xl transition-all ${
-                    activeFeature === feature.id
-                      ? "bg-white shadow-lg border-l-4 border-l-gray-900"
-                      : "bg-gray-50 border-l-4 border-l-transparent hover:bg-gray-100"
-                  }`}
-                >
-                  <h3
-                    className={`font-semibold text-lg mb-2 ${
-                      activeFeature === feature.id
-                        ? "text-gray-900"
-                        : "text-gray-700"
-                    }`}
-                  >
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </button>
-              ))}
-
-              {/* Slide Indicators */}
-              <div className="flex items-center gap-2 pt-4">
-                <div className="w-8 h-1 bg-gray-900 rounded-full"></div>
-                <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-              </div>
+          <button
+            onClick={() => setIsVideoModalOpen(true)}
+            className="group inline-flex items-center gap-4 px-8 py-5 text-black text-lg font-semibold hover:text-gray-600 transition-colors"
+          >
+            <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center bg-white shadow-sm group-hover:scale-110 transition-transform">
+              <Play className="w-5 h-5 ml-1 fill-black" />
             </div>
+            See How It Works
+          </button>
+        </motion.div>
 
-            {/* Right: UI Mockup */}
-            <div className="lg:col-span-8">
-              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-2xl overflow-hidden">
-                {/* Decorative elements */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gray-700/30 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-gray-600/20 rounded-full blur-2xl" />
-
-                {/* Mock UI Windows */}
-                <div className="relative flex gap-4">
-                  {/* Inbox Panel */}
-                  <div className="flex-1 bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div className="bg-gray-800 text-white px-4 py-3 flex items-center gap-2">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <span className="font-medium text-sm">Inbox</span>
-                    </div>
-                    <div className="p-3 space-y-2">
-                      <div className="flex items-center gap-2 text-xs text-gray-400 pb-2 border-b">
-                        <span>Add a task, or use</span>
-                        <span className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-600">
-                          /
-                        </span>
-                        <span>for actions</span>
-                      </div>
-
-                      {/* Task Items */}
-                      <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
-                        <p className="text-sm font-medium text-gray-800">
-                          Marketing presentation
-                        </p>
-                        <p className="text-xs text-gray-500">Due Friday</p>
-                        <div className="flex items-center gap-1 mt-2">
-                          <span className="w-5 h-5 bg-orange-500 rounded flex items-center justify-center">
-                            <span className="text-xs text-white">📅</span>
-                          </span>
-                          <span className="w-5 h-5 bg-orange-400 rounded flex items-center justify-center">
-                            <span className="text-xs text-white">⚡</span>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                        <p className="text-sm font-medium text-gray-800">
-                          Your stay in Austin
-                        </p>
-                        <div className="flex items-center gap-1 mt-2">
-                          <span className="w-5 h-5 bg-red-500 rounded flex items-center justify-center">
-                            <span className="text-xs text-white font-bold">
-                              M
-                            </span>
-                          </span>
-                          <span className="w-5 h-5 bg-orange-400 rounded flex items-center justify-center">
-                            <span className="text-xs text-white">⚡</span>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
-                        <div className="flex items-center gap-2">
-                          <span className="w-5 h-5 bg-purple-500 rounded flex items-center justify-center">
-                            <span className="text-xs text-white">📄</span>
-                          </span>
-                          <p className="text-sm font-medium text-gray-800">
-                            Project poster
-                          </p>
-                        </div>
-                        <p className="text-xs text-gray-500 mt-1 ml-7">
-                          Keynote presentation draft
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Kanban Board Panel */}
-                  <div className="flex-1 bg-gray-100 rounded-xl shadow-lg overflow-hidden hidden md:block">
-                    <div className="bg-gray-700 text-white px-4 py-3 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium text-sm">
-                          Personal Task Board
-                        </span>
-                      </div>
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 6h16M4 12h16M4 18h7"
-                        />
-                      </svg>
-                    </div>
-                    <div className="p-3 bg-gray-50">
-                      <div className="flex gap-3">
-                        {/* To Do Column */}
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-xs font-semibold text-gray-700">
-                              To Do - Today
-                            </span>
-                            <span className="text-gray-400 text-xs">•••</span>
-                          </div>
-                          <div className="space-y-2">
-                            <div className="bg-white border border-gray-200 rounded-lg p-2 shadow-sm">
-                              <p className="text-xs text-gray-800">
-                                Prepare analysis of recent campaigns
-                              </p>
-                              <div className="flex justify-end mt-1">
-                                <svg
-                                  className="w-4 h-4 text-gray-400"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-lg p-2 shadow-sm">
-                              <p className="text-xs text-gray-800">
-                                Write test instructions for Project Ranier
-                              </p>
-                            </div>
-                          </div>
-                          <button className="flex items-center gap-1 text-xs text-gray-400 mt-2 hover:text-gray-600">
-                            <span>+</span>
-                            <span>Add a card</span>
-                          </button>
-                        </div>
-
-                        {/* This Week Column */}
-                        <div className="flex-1 hidden lg:block">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-xs font-semibold text-gray-700">
-                              This Week
-                            </span>
-                          </div>
-                          <div className="space-y-2">
-                            <div className="bg-white border border-gray-200 rounded-lg p-2 shadow-sm">
-                              <p className="text-xs text-gray-800">
-                                Review Q4 reports
-                              </p>
-                              <div className="flex items-center gap-1 mt-1">
-                                <span className="text-xs text-gray-400">
-                                  📎 1
-                                </span>
-                              </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-lg p-2 shadow-sm">
-                              <p className="text-xs text-gray-800">
-                                Update team docs
-                              </p>
-                              <div className="flex items-center gap-1 mt-1">
-                                <span className="text-xs text-orange-500">
-                                  ⏰ Jun 2
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <button className="flex items-center gap-1 text-xs text-gray-400 mt-2 hover:text-gray-600">
-                            <span>+</span>
-                            <span>Add</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* UI Preview (Abstract/Minimal) */}
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="relative w-full max-w-6xl rounded-t-3xl border-t border-x border-black/10 bg-white shadow-2xl shadow-black/5 p-2 pb-0 overflow-hidden"
+        >
+          <div className="relative rounded-t-2xl overflow-hidden aspect-[16/9] bg-gray-50">
+            <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent z-10" />
+            {/* Actual Dashboard Image (Minimalist) */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2000&auto=format&fit=crop"
+              alt="SpaceLean Dashboard Interface"
+              className="w-full h-full object-cover object-top"
+            />
           </div>
-        </div>
-      </section>
-    </>
+        </motion.div>
+
+      </div>
+    </section>
   );
 }

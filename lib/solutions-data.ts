@@ -38,8 +38,11 @@ export const solutions: Solution[] = [
     description:
       "Transform your marketing operations with intelligent automation, real-time analytics, and seamless campaign orchestration. Space Lean empowers marketing teams to move faster, optimize smarter, and deliver measurable results at scale.",
     metaDescription:
-      "Space Lean for Marketing Teams: AI-powered marketing automation, campaign analytics, and team collaboration. Boost marketing ROI with intelligent workflows and real-time insights.",
+      "Transform marketing with an automatic project scheduler and AI task breakdown tool. Space Lean for Marketing Teams: AI-powered marketing automation and team collaboration.",
     keywords: [
+      "AI task breakdown tool",
+      "turn notes into tasks AI",
+      "automatic project scheduler",
       "marketing automation platform",
       "AI marketing tools",
       "campaign management software",
@@ -151,8 +154,11 @@ export const solutions: Solution[] = [
     description:
       "Empower your product team with AI-driven insights, roadmap visualization, and seamless stakeholder collaboration. Space Lean helps product managers prioritize features, track metrics, and deliver value with confidence.",
     metaDescription:
-      "Space Lean for Product Management: AI-powered roadmapping, feature prioritization, and user feedback analysis. Make data-driven product decisions faster.",
+      "Optimize product roadmaps with an automatic project scheduler. Space Lean for Product Management: AI-powered feature prioritization and AI task breakdown tool.",
     keywords: [
+      "AI task breakdown tool",
+      "turn notes into tasks AI",
+      "automatic project scheduler",
       "product management software",
       "product roadmap tool",
       "feature prioritization platform",
@@ -264,8 +270,11 @@ export const solutions: Solution[] = [
     description:
       "Supercharge your engineering workflow with intelligent task management, automated code insights, and seamless CI/CD integration. Space Lean helps engineering teams reduce technical debt, improve velocity, and maintain code quality at scale.",
     metaDescription:
-      "Space Lean for Engineering Teams: AI-powered project management, code analytics, and developer productivity tools. Accelerate software delivery with intelligent automation.",
+      "Ship code faster with an automatic project scheduler and AI task breakdown tool. Space Lean for Engineering Teams: AI-powered project management and developer productivity.",
     keywords: [
+      "AI task breakdown tool",
+      "turn notes into tasks AI",
+      "automatic project scheduler",
       "engineering project management",
       "developer productivity platform",
       "software development tools",
@@ -490,8 +499,11 @@ export const solutions: Solution[] = [
     description:
       "Built for speed and scale, Space Lean gives startups the operational foundation they need to grow. From seed to Series C and beyond, our AI-powered platform adapts to your evolving needs while keeping your team aligned and moving fast.",
     metaDescription:
-      "Space Lean for Startups: Scalable project management, team collaboration, and growth analytics for fast-moving startup teams. Enterprise features at startup-friendly pricing.",
+      "Scale your startup with an automatic project scheduler. Space Lean for Startups: Scalable project management and AI task breakdown tool for fast-moving teams.",
     keywords: [
+      "AI task breakdown tool",
+      "turn notes into tasks AI",
+      "automatic project scheduler",
       "startup project management",
       "startup collaboration tools",
       "startup growth platform",
@@ -603,8 +615,11 @@ export const solutions: Solution[] = [
     description:
       "Purpose-built for distributed teams, Space Lean bridges time zones and eliminates communication gaps. Our AI-powered platform ensures remote teams stay connected, productive, and aligned regardless of where they work.",
     metaDescription:
-      "Space Lean for Remote Teams: AI-powered remote collaboration, async communication, and distributed team management. Keep your remote workforce connected and productive.",
+      "Remote collaboration with an automatic project scheduler and AI task breakdown tool. Space Lean for Remote Teams: AI-powered remote work and async communication.",
     keywords: [
+      "AI task breakdown tool",
+      "turn notes into tasks AI",
+      "automatic project scheduler",
       "remote team management",
       "distributed team collaboration",
       "remote work platform",

@@ -19,11 +19,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
       <nav
-        className={`mx-auto max-w-6xl transition-all duration-500 rounded-full ${
-          scrolled
-            ? "bg-white/80 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] border border-gray-200/60"
-            : "bg-white/60 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-300/40"
-        }`}
+        className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${scrolled
+          ? "bg-white/90 backdrop-blur-md shadow-sm border border-black/5"
+          : "bg-transparent border border-transparent"
+          }`}
       >
         <div className="flex h-14 items-center justify-between px-6">
           {/* Logo */}
@@ -53,7 +52,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1 bg-gray-100/50 rounded-full p-1">
             <Link
-              href="#features"
+              href="/#features"
               className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Features
@@ -65,13 +64,25 @@ export default function Header() {
               Solutions
             </Link>
             <Link
+              href="/pricing"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+            >
+              Pricing
+            </Link>
+            <Link
               href="/blogs"
               className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Blog
             </Link>
             <Link
-              href="#about"
+              href="/compare"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+            >
+              Compare
+            </Link>
+            <Link
+              href="/about"
               className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               About
@@ -87,7 +98,9 @@ export default function Header() {
               Request a Demo
             </Link>
             <Link
-              href="/request-a-demo"
+              href="https://cad.spaceaiapp.com/lean"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white text-sm font-medium rounded-full hover:from-gray-800 hover:via-gray-700 hover:to-gray-800 shadow-lg shadow-gray-900/25 hover:shadow-xl hover:shadow-gray-900/30 hover:scale-[1.02] transition-all duration-200"
             >
               Try for free
@@ -151,7 +164,7 @@ export default function Header() {
           <div className="md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-gradient-to-br from-white via-purple-50 to-blue-50 border border-gray-200 shadow-2xl shadow-purple-900/20 rounded-2xl overflow-hidden">
             <div className="flex flex-col p-4 bg-white/90">
               <Link
-                href="#features"
+                href="/#features"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
               >
@@ -165,6 +178,13 @@ export default function Header() {
                 Solutions
               </Link>
               <Link
+                href="/pricing"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
+              >
+                Pricing
+              </Link>
+              <Link
                 href="/blogs"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
@@ -172,7 +192,14 @@ export default function Header() {
                 Blog
               </Link>
               <Link
-                href="#about"
+                href="/compare"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
+              >
+                Compare
+              </Link>
+              <Link
+                href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
               >
@@ -187,8 +214,10 @@ export default function Header() {
                   Request a Demo
                 </Link>
                 <Link
-                  href="/request-a-demo"
+                  href="https://cad.spaceaiapp.com/lean"
                   onClick={() => setMobileMenuOpen(false)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 text-white text-base font-medium rounded-xl shadow-lg shadow-purple-600/30 hover:shadow-xl hover:shadow-purple-600/40 transition-all duration-200"
                 >
                   Try for free
