@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "SPACE LEAN | AI Task Breakdown Tool & Automatic Project Scheduler",
+  title: "SPACE LEAN | AI Task Breakdown Tool & Automatic Project Scheduler ",
   description:
     "Transform notes into tasks AI-powered efficiency. SPACE LEAN is an automatic project scheduler and AI task breakdown tool featuring Kanban boards and smart prioritization. Boost team productivity by 40%.",
   keywords: [
