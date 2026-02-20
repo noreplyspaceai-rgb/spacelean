@@ -43,7 +43,7 @@ export default function Header() {
               <span className="text-[22px] font-black tracking-tight bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent leading-[36px]">
                 SPACE
               </span>
-              <span className="text-[22px] font-light tracking-tight text-gray-900 ml-1 leading-[36px]">
+              <span className="text-[22px] font-light tracking-tight text-secondary-text ml-1 leading-[36px]">
                 LEAN
               </span>
             </div>
@@ -52,38 +52,38 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1 bg-gray-100/50 rounded-full p-1">
             <Link
-              href="/#features"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+              href="/features"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Features
             </Link>
             <Link
               href="/solutions"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Solutions
             </Link>
             <Link
               href="/pricing"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Pricing
             </Link>
             <Link
               href="/blogs"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Blog
             </Link>
             <Link
               href="/compare"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Compare
             </Link>
             <Link
               href="/about"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               About
             </Link>

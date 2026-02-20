@@ -57,7 +57,7 @@ export default async function SolutionPage({ params }: Props) {
   const otherSolutions = solutions.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (
-    <main className="min-h-screen bg-[#fafafa] text-black pt-32 pb-20 overflow-hidden relative">
+    <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
       <SolutionDetailClient solution={solution} otherSolutions={otherSolutions} />
     </main>
   );

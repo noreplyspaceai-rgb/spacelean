@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ComparePage() {
     return (
-        <main className="min-h-screen bg-[#fafafa] text-black pt-32 pb-20 relative overflow-hidden">
+        <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-[60vw] h-[60vw] border border-black/5 rounded-full -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 

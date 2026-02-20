@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <main className="min-h-screen bg-[#fafafa] text-black pt-32 pb-20 overflow-hidden relative">
+    <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
       <SolutionsIndexClient solutions={solutions} />
     </main>
   );
