@@ -30,7 +30,7 @@ export default function TermsPage() {
     ];
 
     return (
-        <main className="min-h-screen bg-[#fafafa] text-black pt-40 pb-32">
+        <main className="min-h-screen bg-[#fafafa] text-primary-text pt-40 pb-32">
             <div className="max-w-4xl mx-auto px-6">
                 <header className="mb-20">
                     <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter mb-8 leading-[1.1]">

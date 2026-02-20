@@ -5,7 +5,7 @@ const workSmarterFeatures = [
       "Connect the apps you already use into your Space Lean workflow. Seamlessly sync with Slack, Google Calendar, GitHub, and 50+ more tools.",
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -18,7 +18,6 @@ const workSmarterFeatures = [
         />
       </svg>
     ),
-    gradient: "from-violet-500 to-purple-500",
   },
   {
     title: "Automation",
@@ -26,7 +25,7 @@ const workSmarterFeatures = [
       "No-code automation built into every board. Set triggers and actions to automate repetitive tasks. Focus on what matters, let the AI handle the rest.",
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -39,7 +38,6 @@ const workSmarterFeatures = [
         />
       </svg>
     ),
-    gradient: "from-orange-500 to-amber-400",
   },
   {
     title: "Task Mirroring",
@@ -47,7 +45,7 @@ const workSmarterFeatures = [
       "View all your tasks from multiple boards in one unified dashboard. Mirror cards to track work across projects and teams effortlessly.",
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -60,31 +58,28 @@ const workSmarterFeatures = [
         />
       </svg>
     ),
-    gradient: "from-cyan-500 to-blue-500",
   },
 ];
 
 export default function WorkSmarter() {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-purple-50/30 to-blue-50/40 pointer-events-none" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+    <section className="py-24 lg:py-32 relative bg-[#FAFAFA] overflow-hidden">
+      {/* Subtle Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-px bg-black/5" />
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-black/[0.02] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-black/[0.02] rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-purple-100/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 left-10 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 text-sm font-semibold rounded-full mb-4 uppercase tracking-wider">
-            Work Smarter
+        <div className="max-w-3xl mb-20">
+          <span className="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-black/40 mb-4">
+            Productivity Reimagined
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-6">
-            Do more with Space Lean
+          <h2 className="text-4xl sm:text-5xl font-black text-primary-text tracking-tighter mb-6 leading-[1.1]">
+            Work smarter, <br />
+            <span className="text-black/20">not harder.</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-500 font-light leading-relaxed max-w-2xl">
             Customize the way you organize with powerful integrations,
             intelligent automation, and seamless task mirroring across all your
             projects.
@@ -92,26 +87,31 @@ export default function WorkSmarter() {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-1px bg-black/5 border border-black/5 rounded-[2rem] overflow-hidden shadow-2xl shadow-black/[0.02]">
           {workSmarterFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300"
+              className="bg-white p-10 lg:p-12 hover:bg-gray-50/50 transition-colors duration-500 group"
             >
-              {/* Icon with gradient */}
-              <div
-                className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br ${feature.gradient} text-white rounded-xl mb-6 shadow-lg group-hover:scale-110 transition-transform`}
-              >
+              {/* Icon Container */}
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-xl mb-10 shadow-xl shadow-black/10 group-hover:scale-110 transition-transform duration-500">
                 {feature.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-2xl font-black text-primary-text tracking-tight mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-500 font-light leading-relaxed">
                 {feature.description}
               </p>
+
+              <div className="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-black/20 group-hover:text-black transition-colors duration-500">
+                <span>Learn more</span>
+                <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
             </div>
           ))}
         </div>
@@ -119,3 +119,4 @@ export default function WorkSmarter() {
     </section>
   );
 }
+

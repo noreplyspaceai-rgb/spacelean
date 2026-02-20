@@ -77,6 +77,9 @@ export const metadata: Metadata = {
     canonical: "https://spacelean.ai",
   },
   metadataBase: new URL("https://spacelean.ai"),
+  verification: {
+    google: "fZiGZZYWb8sosgKhEut7JJEHdH1KGKEAiEmgUYtGMqY",
+  },
 };
 
 export default function RootLayout({
@@ -87,7 +90,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#fafafa] text-[#0a0a0a]`}
+        suppressHydrationWarning
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#fafafa] text-primary-text`}
       >
         <SmoothScroll />
         <CustomCursor />

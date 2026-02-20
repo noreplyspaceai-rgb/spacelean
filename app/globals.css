@@ -3,8 +3,8 @@
 :root {
   --background: #fafafa;
   /* Off-white */
-  --foreground: #0a0a0a;
-  /* Soft Black */
+  --foreground: #401D67;
+  /* Primary Text Color */
 }
 
 @theme inline {
@@ -12,6 +12,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);
+  --color-primary-text: #401D67;
+  --color-secondary-text: #CD3D2A;
 }
 
 body {

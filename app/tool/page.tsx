@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import ToolClient from "./ToolClient";
 import { Sparkles } from "lucide-react";
 
@@ -28,12 +28,12 @@ export default function ToolPage() {
             "price": "0",
             "priceCurrency": "USD",
         },
-        "description": "A free AI-powered tool that automatically breaks down complex project descriptions into actionable tasks and structured project plans.",
+        "description": "Unlock efficiency with the SpaceLean AI Task Generator. Automatically break down complex project requirements into high-priority actionable tasks.",
         "featureList": [
-            "Natural Language Project Decomposition",
-            "Instant Task Generation",
-            "Structured Execution Planning",
-            "AI-Powered Work Breakdown Structure"
+            "AI-Powered Task Decomposition",
+            "Agile Workflow Generation",
+            "Smart Task Prioritization",
+            "Automated Project Scheduling"
         ],
         "author": {
             "@type": "Organization",
@@ -41,63 +41,19 @@ export default function ToolPage() {
         }
     };
 
-    const howToLd = {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to Generate a Project Plan with SpaceLean AI",
-        "description": "Create a complete project breakdown in under 60 seconds using artificial intelligence.",
-        "step": [
-            {
-                "@type": "HowToStep",
-                "name": "Describe your project",
-                "text": "Enter a high-level description of your project or goal in plain English."
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Click Generate",
-                "text": "Press the generate button to activate the SpaceLean AI decomposition engine."
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Review your plan",
-                "text": "Watch as the AI instantly generates a step-by-step list of actionable tasks."
-            }
-        ]
-    };
-
     return (
-        <main className="min-h-screen bg-[#fafafa] text-black pt-32 pb-20 overflow-hidden relative">
+        <main className="min-h-screen bg-[#FAFAFA] text-primary-text pt-32 pb-32 overflow-hidden relative">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }}
-            />
 
-            {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-[50vw] h-[50vw] border border-black/5 rounded-full translate-x-1/4 -translate-y-1/4 pointer-events-none opacity-40" />
-            <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] border border-black/5 rounded-full -translate-x-1/4 translate-y-1/4 pointer-events-none opacity-40" />
+            {/* Background Minimalist Accents (Static) */}
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-black/[0.02] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-black/[0.02] rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-[0.5px] border-black/[0.03] rounded-full pointer-events-none scale-150" />
 
-            {/* Header Section */}
-            <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 bg-white mb-8 shadow-sm">
-                    <Sparkles className="w-3 h-3 text-black" />
-                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Free AI Tool</span>
-                </div>
-
-                <h1 className="text-6xl sm:text-8xl font-black mb-8 tracking-tighter text-black leading-tight">
-                    AI Task <br />
-                    <span className="text-gray-300">Generator.</span>
-                </h1>
-                <p className="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-light">
-                    Turn a simple idea into a structured project plan in seconds. <br className="hidden md:block" />
-                    No sign-up required. Powered by SpaceLean v4.2.
-                </p>
-            </div>
-
-            {/* Interactive Client Component */}
+            {/* Interactive Client Component (Handles Hero Animation & Logic) */}
             <ToolClient />
         </main>
     );
