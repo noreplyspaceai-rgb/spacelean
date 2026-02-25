@@ -148,7 +148,7 @@ export default function AIFeature() {
             {/* Decorative Image */}
             <div className="absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden shadow-2xl hidden lg:block">
               <Image
-                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1170&auto=format&fit=crop"
+                src="/remote.jpg"
                 alt="Project planning collaboration"
                 width={192}
                 height={192}

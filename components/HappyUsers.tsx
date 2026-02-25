@@ -4,11 +4,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const userAvatars = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=100&auto=format&fit=crop' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop' },
-    { id: 5, src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop' },
+    { id: 1, src: '/design.jpg' },
+    { id: 2, src: '/engineering.jpg' },
+    { id: 3, src: '/marketing.jpg' },
+    { id: 4, src: '/productmanagement.jpg' },
+    { id: 5, src: '/startups.jpg' },
 ];
 
 export default function HappyUsers() {

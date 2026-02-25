@@ -354,6 +354,18 @@ export function SolutionDetailClient({ solution, otherSolutions }: { solution: S
                 </div>
             </section>
 
+            {solution.seoContent && (
+                <section className="relative z-10 py-24 px-4 bg-white border-y border-black/5">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto">
+                            {solution.seoContent.split('\n\n').map((p, i) => (
+                                <p key={i} className="mb-6">{p}</p>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             <section className="relative z-10 py-32 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-24 max-w-3xl mx-auto">

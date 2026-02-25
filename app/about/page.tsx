@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/about",
   },
-  openGraph: {
+    openGraph: {
     title: "About SpaceLean | Shaping the Future of Work",
     description: "Discover the philosophy and team behind the world's most intelligent task management platform.",
-    images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"],
+    images: ["/marketing.jpg"],
   },
 };
 

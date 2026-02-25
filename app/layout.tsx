@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  openGraph: {
+    openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://spacelean.ai",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Transform your workflow with SPACE LEAN - the AI-powered task management system featuring Kanban boards, smart task prioritization, and automatic task generation.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1200&auto=format&fit=crop",
+        url: "/marketing.jpg",
         width: 1200,
         height: 630,
         alt: "SPACE LEAN - AI Task Management Platform",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description:
       "Transform your workflow with AI-powered task management. Kanban boards, smart prioritization, and automatic task generation.",
     images: [
-      "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1200&auto=format&fit=crop",
+      "/marketing.jpg",
     ],
     creator: "@spacelean",
   },

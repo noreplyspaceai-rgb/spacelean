@@ -104,7 +104,7 @@ export default function HeroSection() {
             {/* Actual Dashboard Image (Minimalist) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2000&auto=format&fit=crop"
+              src="/productmanagement.jpg"
               alt="SpaceLean Dashboard Interface"
               className="w-full h-full object-cover object-top"
             />

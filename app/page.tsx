@@ -11,8 +11,67 @@ import FAQ from "@/components/FAQ";
 import TrySection from "@/components/TrySection";
 
 export default function Home() {
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Space Lean",
+    "url": "https://spacelean.ai",
+    "description": "Space Lean is an AI-powered project management tool that turns notes into actionable tasks, automates scheduling, and helps teams ship faster.",
+    "applicationCategory": "ProjectManagement",
+    "operatingSystem": "Web",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "url": "https://spacelean.ai/#signup",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "billingIncrement": 1,
+          "price": "15.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        "url": "https://spacelean.ai/pricing#pro",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Teams",
+        "price": "50.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "billingIncrement": 1,
+          "price": "50.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        "url": "https://spacelean.ai/pricing#teams",
+        "availability": "https://schema.org/InStock"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Space Lean Inc.",
+      "url": "https://spacelean.ai"
+    }
+  } as const;
+
   return (
     <main className="overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
       {/* 1. Hero Section - Hook */}
       <HeroSection />
 

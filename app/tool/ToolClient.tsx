@@ -70,7 +70,7 @@ export default function ToolClient() {
                         <span className="text-[11px] font-bold tracking-[0.3em] uppercase opacity-40">Intelligence v4.2</span>
                     </div>
 
-                    <h1 className="text-6xl sm:text-8xl lg:text-9xl font-black mb-10 tracking-tighter text-primary-text leading-[0.9]">
+                    <h1 className="text-xl sm:text-8xl lg:text-xl font-black mb-10 tracking-tighter text-primary-text leading-[0.9]">
                         Generate <br />
                         <span className="text-black/10 italic">Execution Maps.</span>
                     </h1>

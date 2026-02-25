@@ -251,5 +251,197 @@ export const comparisons: ComparisonData[] = [
             }
         ],
         verdict: 'Taskade is fun for brainstorming. SpaceLean is for professional delivery.'
+    },
+    {
+        slug: 'spacelean-vs-jira',
+        competitorName: 'Jira',
+        title: 'SpaceLean vs Jira: The Fast-Moving Team Alternative for 2026',
+        description: 'Compare SpaceLean vs Jira. See why fast-moving teams are switching from Jira\'s configuration bloat to SpaceLean\'s instant AI-powered setup.',
+        logo: 'jira',
+        color: '#0052CC',
+        summary: 'Jira is the industry standard for enterprise software teams, but its power comes at a steep cost: weeks of admin setup, constant maintenance, and a UI that slows everyone down. SpaceLean gives you the same project control with zero configuration overhead.',
+        pros: [
+            'Battle-tested by large engineering orgs',
+            'Deep integrations with the Atlassian suite',
+            'Highly configurable workflows and permissions'
+        ],
+        cons: [
+            'Notoriously complex to set up and maintain',
+            'Requires a dedicated Jira admin in most teams',
+            'Slow, cluttered UI that frustrates developers',
+            'Pricing scales aggressively with team size'
+        ],
+        features: [
+            {
+                category: 'Setup & Onboarding',
+                items: [
+                    { name: 'Time to First Sprint', spacelean: '< 15 minutes', competitor: 'Days to weeks' },
+                    { name: 'Admin Configuration Required', spacelean: 'None', competitor: 'Extensive' },
+                    { name: 'Workflow Templates', spacelean: 'AI-Generated', competitor: 'Manual / Pre-built' },
+                ]
+            },
+            {
+                category: 'AI & Automation',
+                items: [
+                    { name: 'AI Task Generation', spacelean: true, competitor: false },
+                    { name: 'Predictive Sprint Planning', spacelean: true, competitor: false },
+                    { name: 'Auto-Prioritization', spacelean: true, competitor: 'Rule-based only' },
+                    { name: 'Bottleneck Detection', spacelean: 'Proactive (AI)', competitor: 'Reactive (manual reports)' },
+                ]
+            },
+            {
+                category: 'Developer Experience',
+                items: [
+                    { name: 'UI Complexity', spacelean: 'Clean & minimal', competitor: 'Dense & steep' },
+                    { name: 'Mobile App', spacelean: 'Offline-first, fast', competitor: 'Limited functionality' },
+                    { name: 'GitHub / GitLab Sync', spacelean: true, competitor: true },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: "Is SpaceLean a real Jira replacement for engineering teams?",
+                answer: "Yes. SpaceLean natively supports sprints, backlogs, epics, story points, and CI/CD integrations—all the core workflows your dev team relies on—without requiring a Jira admin to maintain it. The AI handles sprint planning and task breakdown automatically."
+            },
+            {
+                question: "Can I migrate our existing Jira projects to SpaceLean?",
+                answer: "SpaceLean's importer supports Jira exports (CSV and API). It brings over your issues, epics, sprints, and story points, then enriches them with AI-generated time estimates and priority scores."
+            },
+            {
+                question: "We use Confluence alongside Jira. Does SpaceLean replace that too?",
+                answer: "SpaceLean is purpose-built for execution, not documentation. It integrates with Confluence so your specs and meeting notes stay where they are, while tasks and sprints live in SpaceLean."
+            },
+            {
+                question: "How does SpaceLean handle large engineering teams?",
+                answer: "SpaceLean scales with multi-team workspaces, role-based permissions, and cross-team dependency tracking. Unlike Jira, this structure is set up automatically by AI rather than requiring manual admin work."
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: "Zero-Config Sprint Setup",
+                description: "In Jira, launching a new project means creating board schemes, workflow schemes, permission schemes, and issue type hierarchies before writing a single task. SpaceLean eliminates all of this: describe your project in plain English and the AI generates your backlog, assigns story points, and schedules your first sprint in under 15 minutes."
+            },
+            {
+                title: "AI-Powered Backlog Grooming",
+                description: "Backlog grooming in Jira is a manual, time-consuming meeting ritual. SpaceLean continuously analyzes your backlog in the background—surfacing stale tickets, flagging scope creep, and suggesting sprint-ready items based on team velocity and current capacity, so your planning sessions take 20 minutes instead of two hours."
+            },
+            {
+                title: "Proactive Bottleneck Alerts",
+                description: "Jira shows you a burndown chart after things have already gone wrong. SpaceLean's AI monitors your sprint in real time and alerts you proactively when a dependency is at risk, a team member is overloaded, or the current velocity predicts a missed deadline—while there is still time to act."
+            }
+        ],
+        useCases: [
+            {
+                title: "Startups & Scale-ups Escaping Jira",
+                description: "You adopted Jira because it felt \"serious,\" but now half your engineering meetings are about how to use Jira. SpaceLean gives you enterprise-grade project control without the administrative overhead that slows fast-moving teams down."
+            },
+            {
+                title: "Engineering Teams Without a Dedicated PM",
+                description: "In smaller teams, developers are often forced to be their own project managers. SpaceLean's AI acts as that missing PM layer—breaking down epics, scheduling sprints, and flagging risks—so engineers can stay focused on code."
+            },
+            {
+                title: "Agencies Running Multiple Dev Projects",
+                description: "Juggling five Jira boards for five clients is a maintenance nightmare. SpaceLean's cross-project AI view lets you see team capacity and delivery risk across all clients from a single dashboard."
+            }
+        ],
+        verdict: 'Choose Jira if you have a large enterprise with a dedicated Jira admin and deep Atlassian dependencies. Choose SpaceLean if your team wants Jira-level project control in a tool that sets itself up—so you can ship faster, not administrate longer.'
+    },
+
+    // ── 2. ASANA ─────────────────────────────────────────────────────────────────
+    {
+        slug: 'spacelean-vs-asana',
+        competitorName: 'Asana',
+        title: 'SpaceLean vs Asana: AI Automation vs Manual Project Management',
+        description: 'Compare SpaceLean vs Asana. Discover why teams are replacing Asana\'s manual workflows with SpaceLean\'s AI-driven automation for faster, smarter project delivery.',
+        logo: 'asana',
+        color: '#F06A6A',
+        summary: 'Asana is a polished, well-designed PM tool—but it still relies on humans to do the planning. SpaceLean layers AI on top of every step, from breaking down goals to scheduling tasks and predicting delays, so your team spends time executing instead of organizing.',
+        pros: [
+            'Clean, professional interface',
+            'Strong cross-functional workflow features',
+            'Good reporting and portfolio views',
+            'Reliable integrations ecosystem'
+        ],
+        cons: [
+            'No meaningful AI automation—still largely manual',
+            'Task creation, assignment, and scheduling are all manual',
+            'Expensive at scale with limited ROI on higher tiers',
+            'Timeline (Gantt) view locked behind premium plans'
+        ],
+        features: [
+            {
+                category: 'AI & Automation',
+                items: [
+                    { name: 'AI Task Generation from Goal', spacelean: true, competitor: false },
+                    { name: 'AI Sprint & Schedule Optimization', spacelean: true, competitor: false },
+                    { name: 'Intelligent Auto-Prioritization', spacelean: true, competitor: 'Rules-based only' },
+                    { name: 'Proactive Delay Prediction', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Speed & Setup',
+                items: [
+                    { name: 'Project Setup Time', spacelean: '< 15 minutes', competitor: '1–3 hours' },
+                    { name: 'Task Estimation', spacelean: 'AI-generated', competitor: 'Manual' },
+                    { name: 'Onboarding New Members', spacelean: 'AI-assisted context', competitor: 'Manual handoff' },
+                ]
+            },
+            {
+                category: 'Core Features',
+                items: [
+                    { name: 'Timeline / Gantt View', spacelean: true, competitor: 'Premium only' },
+                    { name: 'Native Time Tracking', spacelean: true, competitor: 'Integration required' },
+                    { name: 'Resource & Capacity Planning', spacelean: 'AI-powered', competitor: 'Basic (Workload view)' },
+                    { name: 'Mobile App', spacelean: 'Offline-first', competitor: 'Online-dependent' },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: "How is SpaceLean's AI different from Asana's automation rules?",
+                answer: "Asana's automation is rule-based: 'If X happens, do Y.' SpaceLean's AI understands the context of your entire project. It can generate a full task breakdown from a single project description, predict which sprint items are at risk, and rebalance team workloads automatically—without you writing a single rule."
+            },
+            {
+                question: "Can I import my Asana projects into SpaceLean?",
+                answer: "Yes. SpaceLean's Asana importer pulls in your projects, sections, tasks, and assignees. After import, the AI enriches your tasks with estimated durations and surfaces any missing dependencies or gaps in your workflow."
+            },
+            {
+                question: "Our cross-functional team relies on Asana's Goals feature. Does SpaceLean support OKRs?",
+                answer: "SpaceLean connects high-level goals directly to tasks and sprints. You define the outcome; the AI breaks it down into executable work items and tracks progress automatically, giving you live visibility into goal completion without manual status updates."
+            },
+            {
+                question: "Is SpaceLean more affordable than Asana for growing teams?",
+                answer: "SpaceLean is competitively priced and includes AI features, Timeline view, and Time Tracking in all paid plans—features that Asana locks behind its most expensive tiers. Most growing teams see a lower per-seat cost as well as significant time savings."
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: "Goal-to-Task AI Decomposition",
+                description: "In Asana, someone still has to sit down and manually create every task, subtask, and dependency. SpaceLean changes this entirely: describe your project goal in a sentence and the AI generates a complete, structured task tree with dependencies, effort estimates, and recommended assignees—in seconds. This alone saves most teams 2–4 hours per project kickoff."
+            },
+            {
+                title: "Predictive Capacity & Scheduling",
+                description: "Asana's Workload view shows you a snapshot of who is overloaded—but it's a rearview mirror. SpaceLean's scheduling engine models your team's real availability against incoming work and forecasts overloads before they happen, recommending task reassignments or timeline adjustments proactively rather than reactively."
+            },
+            {
+                title: "Continuous Project Health Monitoring",
+                description: "Instead of waiting for a weekly status meeting, SpaceLean's AI monitors project health 24/7. It flags tasks that are stalling, detects when a dependency chain is at risk, and surfaces the one change most likely to get your project back on track—all without a single manual status update from your team."
+            }
+        ],
+        useCases: [
+            {
+                title: "Product & Engineering Teams Moving Fast",
+                description: "When you're shipping weekly, you can't afford to spend Monday morning manually updating Asana. SpaceLean auto-syncs with your dev workflow, updates task statuses from commits and PRs, and keeps your sprint board accurate without anyone doing it manually."
+            },
+            {
+                title: "Operations Teams Managing Repetitive Processes",
+                description: "Stop rebuilding the same Asana template every quarter. SpaceLean learns from your past projects and generates your next project plan—with realistic timelines—based on what actually happened last time, not an optimistic guess."
+            },
+            {
+                title: "Founders & Small Teams Without a Dedicated PM",
+                description: "Asana is powerful but assumes someone on your team thinks like a project manager. SpaceLean's AI fills that role: it plans, schedules, and monitors so your whole team can focus on the work itself."
+            }
+        ],
+        verdict: 'Choose Asana if your team is comfortable with manual project management and you need deep cross-functional workflow approvals. Choose SpaceLean if you want AI to handle the planning, scheduling, and risk detection automatically—so your team can move twice as fast with the same headcount.'
     }
 ];

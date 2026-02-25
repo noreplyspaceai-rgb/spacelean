@@ -32,19 +32,19 @@ export default function AboutClient({ values, stats }: AboutClientProps) {
             role: "Engineering",
             title: "Core Infrastructure",
             description: "Building the backbone of AI-powered task management with a focus on speed and reliability.",
-            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop"
+            image: "/engineering.jpg"
         },
         {
             role: "Product",
             title: "Design & UX",
             description: "Obsessed with creating an interface that disappears, leaving only your productivity.",
-            image: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1200&auto=format&fit=crop"
+            image: "/productmanagement.jpg"
         },
         {
             role: "Strategy",
             title: "Customer Success",
             description: "Dedicated to helping teams of all sizes achieve high-velocity output with less stress.",
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+            image: "/startups.jpg"
         }
     ];
 

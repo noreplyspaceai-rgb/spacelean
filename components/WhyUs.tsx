@@ -44,7 +44,7 @@ export default function WhyUs() {
                         <div className="absolute inset-0 bg-black/20 z-10" />
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop"
+                            src="/design.jpg"
                             alt="Modern minimalist office"
                             className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                         />

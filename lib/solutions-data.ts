@@ -18,6 +18,7 @@ export interface Solution {
     stat?: string;
   }[];
   useCases: string[];
+  seoContent?: string;
   testimonial?: {
     quote: string;
     author: string;
@@ -39,6 +40,8 @@ export const solutions: Solution[] = [
       "Transform your marketing operations with intelligent automation, real-time analytics, and seamless campaign orchestration. Space Lean empowers marketing teams to move faster, optimize smarter, and deliver measurable results at scale.",
     metaDescription:
       "Transform marketing with an automatic project scheduler and AI task breakdown tool. Space Lean for Marketing Teams: AI-powered marketing automation and team collaboration.",
+      seoContent:
+        "Space Lean for Marketing Teams brings together campaign orchestration, analytics, and AI-driven optimization into a single place so marketing leaders can plan, execute, and measure high-impact programs without switching tools. Our platform ingests campaign goals, audience segments, and past performance to recommend optimal schedules, channel mixes, and budgets—helping teams launch faster and iterate with confidence. Built-in reporting and predictive analytics remove the guesswork from campaign optimization, enabling marketers to focus on creative strategy while Space Lean automates repetitive tasks and surfaces the highest-leverage opportunities.",
     keywords: [
       "AI task breakdown tool",
       "turn notes into tasks AI",
@@ -155,6 +158,8 @@ export const solutions: Solution[] = [
       "Empower your product team with AI-driven insights, roadmap visualization, and seamless stakeholder collaboration. Space Lean helps product managers prioritize features, track metrics, and deliver value with confidence.",
     metaDescription:
       "Optimize product roadmaps with an automatic project scheduler. Space Lean for Product Management: AI-powered feature prioritization and AI task breakdown tool.",
+      seoContent:
+        "Space Lean for Product Management is designed for product leaders who need to convert strategy into predictable delivery. With end-to-end sprint tracking, backlog grooming tools, and AI-assisted prioritization, product teams can keep roadmaps current, prioritize based on impact and effort, and communicate clear tradeoffs to stakeholders. Our backlog workflows automatically group related feedback, estimate effort, and propose a sequence of work that aligns with business objectives—reducing planning overhead and enabling teams to ship features users love more frequently.",
     keywords: [
       "AI task breakdown tool",
       "turn notes into tasks AI",
@@ -271,6 +276,8 @@ export const solutions: Solution[] = [
       "Supercharge your engineering workflow with intelligent task management, automated code insights, and seamless CI/CD integration. Space Lean helps engineering teams reduce technical debt, improve velocity, and maintain code quality at scale.",
     metaDescription:
       "Ship code faster with an automatic project scheduler and AI task breakdown tool. Space Lean for Engineering Teams: AI-powered project management and developer productivity.",
+      seoContent:
+        "Space Lean for Engineering Teams gives technical leaders the visibility and integrations required to ship reliably at scale. By linking issue tracking to commits, pull requests, and CI/CD pipelines, engineering leads can trace work from design through deployment, identify blockers early, and reduce cycle time. Built-in DORA metrics, technical debt prioritization, and automated insights help teams balance feature work with maintenance, improve code quality, and sustain a healthy delivery cadence—so engineering organizations deliver value without burning out.",
     keywords: [
       "AI task breakdown tool",
       "turn notes into tasks AI",
@@ -387,6 +394,8 @@ export const solutions: Solution[] = [
       "Elevate your design workflow with AI-powered asset management, seamless feedback loops, and integrated project tracking. Space Lean helps design teams maintain consistency, streamline reviews, and deliver exceptional user experiences.",
     metaDescription:
       "Space Lean for Design Teams: AI-powered design project management, asset libraries, and collaborative feedback tools. Streamline your creative workflow.",
+      seoContent:
+        "Space Lean for Design Teams helps creative teams move faster while maintaining design quality and consistency. Centralized asset management, version control, and contextual review workflows reduce feedback loops and make approvals painless. Designers can iterate with confidence using AI-powered suggestions for naming, tagging, and reuse, while cross-functional teams stay aligned through linked tasks and visual timelines—so the design process stays focused on outcomes rather than administrative overhead.",
     keywords: [
       "design project management",
       "design team collaboration",
@@ -500,6 +509,8 @@ export const solutions: Solution[] = [
       "Built for speed and scale, Space Lean gives startups the operational foundation they need to grow. From seed to Series C and beyond, our AI-powered platform adapts to your evolving needs while keeping your team aligned and moving fast.",
     metaDescription:
       "Scale your startup with an automatic project scheduler. Space Lean for Startups: Scalable project management and AI task breakdown tool for fast-moving teams.",
+      seoContent:
+        "Space Lean for Startups is built to help high-growth teams move quickly without losing discipline. With templates, scalable workflows, and automated investor-ready reporting, founders and operators can maintain momentum while building repeatable processes. The platform makes it easy to prioritize work against runway, manage cross-functional dependencies, and surface the metrics investors care about—so teams can iterate rapidly, demonstrate traction, and scale with operational rigor.",
     keywords: [
       "AI task breakdown tool",
       "turn notes into tasks AI",
@@ -616,6 +627,8 @@ export const solutions: Solution[] = [
       "Purpose-built for distributed teams, Space Lean bridges time zones and eliminates communication gaps. Our AI-powered platform ensures remote teams stay connected, productive, and aligned regardless of where they work.",
     metaDescription:
       "Remote collaboration with an automatic project scheduler and AI task breakdown tool. Space Lean for Remote Teams: AI-powered remote work and async communication.",
+      seoContent:
+        "Space Lean for Remote Teams is optimized for distributed work: asynchronous collaboration, timezone-aware scheduling, and a centralized knowledge base eliminate context loss and unnecessary meetings. Teams can run async stand-ups, coordinate handoffs, and maintain visibility across projects without pulling people into more meetings. The platform's intelligent scheduling and notification controls respect deep work while providing the right context to stakeholders so distributed teams can stay aligned and productive across time zones.",
     keywords: [
       "AI task breakdown tool",
       "turn notes into tasks AI",
@@ -726,6 +739,221 @@ export const solutions: Solution[] = [
   },
 ];
 
+// Role-based solutions requested by marketing/SEO
+solutions.push(
+  {
+    slug: "product-managers",
+    title: "Space Lean for Product Managers",
+    tagline: "Ship the right features, on time",
+    description:
+      "Focus on outcomes with purpose-built tools for sprint tracking, backlog grooming, and stakeholder alignment. Space Lean for Product Managers helps you prioritize what matters and deliver predictable value.",
+    metaDescription:
+      "Space Lean for Product Managers: sprint tracking, backlog grooming, roadmap visualization, and AI-assisted prioritization.",
+    seoContent:
+      "Space Lean for Product Managers focuses on practical, outcome-driven tools for planning and executing product work. Our sprint tracking surfaces team capacity and burn-down trends while backlog grooming features group, estimate, and surface high-impact requests so product teams can prioritize with confidence. Use AI-assisted prioritization to align stakeholder goals, reduce scope churn, and increase the predictability of releases—making it easier to demonstrate consistent product progress to executives and customers.",
+    keywords: [
+      "sprint tracking",
+      "backlog grooming",
+      "product manager tools",
+      "roadmap visualization",
+      "feature prioritization",
+      "AI task breakdown",
+    ],
+    heroImage: "/productmanagement.jpg",
+    icon: "📌",
+    features: [
+      {
+        title: "Sprint Tracking",
+        description: "Real-time sprint boards with burndown charts and capacity-aware forecasting.",
+        icon: "📅",
+      },
+      {
+        title: "Backlog Grooming",
+        description: "AI-assisted backlog refinement that groups, estimates, and surfaces high-impact work.",
+        icon: "🧰",
+      },
+      {
+        title: "Roadmap Visualization",
+        description: "Dynamic roadmaps that update as priorities change and stakeholders comment.",
+        icon: "🗺️",
+      },
+    ],
+    benefits: [
+      {
+        title: "Faster Planning",
+        description: "Reduce planning overhead and ship with confidence.",
+        stat: "30%",
+      },
+      {
+        title: "Clear Priorities",
+        description: "Keep stakeholders aligned with transparent roadmaps and decision logs.",
+      },
+      {
+        title: "Higher Velocity",
+        description: "Optimize sprint throughput with capacity-aware scheduling.",
+      },
+    ],
+    useCases: [
+      "Sprint planning and tracking",
+      "Backlog refinement and grooming",
+      "Feature prioritization and RICE scoring",
+      "Stakeholder status updates",
+      "Roadmap and release coordination",
+    ],
+    testimonial: {
+      quote:
+        "Space Lean made backlog grooming painless and helped our team focus on outcomes instead of busywork.",
+      author: "Ava Patel",
+      role: "Senior Product Manager",
+      company: "Brightline",
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "See PM Demo",
+    },
+  },
+
+  {
+    slug: "engineering-leads",
+    title: "Space Lean for Engineering Leads",
+    tagline: "Ship reliably with clear engineering workflows",
+    description:
+      "Designed for engineering leadership: streamline issue tracking, integrate with GitHub/GitLab, and reduce technical debt while improving delivery reliability.",
+    metaDescription:
+      "Space Lean for Engineering Leads: issue tracking, GitHub/GitLab integrations, CI/CD insights, and technical debt prioritization.",
+    seoContent:
+      "Space Lean for Engineering Leads is built to provide end-to-end technical visibility and reduce delivery risk. With native GitHub and GitLab integrations, PRs, branches, and CI signals are surfaced directly on issues so engineering leaders can quickly identify bottlenecks and correlate code changes to project milestones. Prioritize technical debt alongside feature work with AI recommendations, and use CI/CD insights to improve release readiness—helping teams ship more reliably while maintaining code quality and developer velocity.",
+    keywords: [
+      "issue tracking",
+      "github integration",
+      "gitlab integration",
+      "engineering leads",
+      "ci/cd insights",
+      "technical debt prioritization",
+    ],
+    heroImage: "/engineering.jpg",
+    icon: "🧑‍💻",
+    features: [
+      {
+        title: "Issue Tracking",
+        description: "Unified issue views with automatic linking to commits, PRs, and deployments.",
+        icon: "🐞",
+      },
+      {
+        title: "GitHub & GitLab Integrations",
+        description: "Sync PRs, branches, and CI status directly into work items for end-to-end traceability.",
+        icon: "🔗",
+      },
+      {
+        title: "CI/CD Insights",
+        description: "Correlate deployment health with project milestones and uncover release blockers.",
+        icon: "🚦",
+      },
+    ],
+    benefits: [
+      {
+        title: "Reduce Cycle Time",
+        description: "Faster delivery by surfacing PR and CI bottlenecks.",
+      },
+      {
+        title: "Improve Visibility",
+        description: "Trace work from issue to deploy with integrated SCM data.",
+      },
+      {
+        title: "Lower Tech Debt",
+        description: "Prioritize maintenance work alongside feature work with AI recommendations.",
+      },
+    ],
+    useCases: [
+      "Issue triage and tracking",
+      "PR and deployment correlation",
+      "Tech-debt tracking and prioritization",
+      "Release readiness checks",
+      "Cross-repo dependency mapping",
+    ],
+    testimonial: {
+      quote:
+        "Integrating our repos into Space Lean gave us the visibility we needed to reduce release pain and improve cadence.",
+      author: "Liam O'Connor",
+      role: "Director of Engineering",
+      company: "Nimbus Labs",
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "See Engineering Demo",
+    },
+  },
+
+  {
+    slug: "freelancers-solo",
+    title: "Space Lean for Freelancers & Solo Makers",
+    tagline: "Focus days, finish projects",
+    description:
+      "Lightweight, powerful workflows for solo professionals: daily task views, timeboxing, and simple invoicing workflows to keep you productive.",
+    metaDescription:
+      "Space Lean for Freelancers & Solo Makers: daily task views, timeboxing, focus mode, and lightweight project tracking.",
+    seoContent:
+      "Space Lean for Freelancers & Solo Makers gives independent professionals a lightweight workspace focused on delivering billable work and protecting creative focus. Daily task views and timeboxing tools help you plan focused work sessions, minimize interruptions, and track progress across client projects. Built-in summaries and exportable reports reduce administrative overhead, making it simple to produce client-ready status updates and invoices so you can spend less time managing and more time creating.",
+    keywords: [
+      "daily task view",
+      "timeboxing",
+      "freelancer productivity",
+      "solo maker tools",
+      "focus mode",
+    ],
+    heroImage: "/startups.jpg",
+    icon: "🧑‍🎨",
+    features: [
+      {
+        title: "Daily Focus View",
+        description: "Plan your day with prioritized tasks and timeblocks that respect your calendar.",
+        icon: "🗓️",
+      },
+      {
+        title: "Timeboxing & Focus",
+        description: "Built-in timers and Pomodoro-style blocks to minimize context switching.",
+        icon: "⏱️",
+      },
+      {
+        title: "Simple Project Tracking",
+        description: "Lightweight milestones, deliverable tracking, and client-ready reports.",
+        icon: "📁",
+      },
+    ],
+    benefits: [
+      {
+        title: "Stay Focused",
+        description: "Reduce context switching and complete more work each day.",
+      },
+      {
+        title: "Deliver On Time",
+        description: "Clear timeboxes and simple scopes keep client work predictable.",
+      },
+      {
+        title: "Less Admin",
+        description: "Automatic summaries and exportable reports for invoicing and client updates.",
+      },
+    ],
+    useCases: [
+      "Daily planning and timeboxing",
+      "Client deliverable tracking",
+      "Quick invoicing summaries",
+      "Personal backlog management",
+      "Focus mode sessions",
+    ],
+    testimonial: {
+      quote:
+        "Space Lean finally gave me a simple, non-bloated way to manage client work and stay focused all day.",
+      author: "Riley Martinez",
+      role: "Freelance Designer",
+      company: "Independent",
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "See Freelancer Demo",
+    },
+  }
+);
 export function getSolutionBySlug(slug: string): Solution | undefined {
   return solutions.find((solution) => solution.slug === slug);
 }
