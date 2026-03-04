@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+       {
+        protocol: 'https',
+        hostname: 'ir.ozone.ru',
+      },
+       {
+        protocol: 'https',
+        hostname: 'julienflorkin.com',
+      },
     ],
   },
 };

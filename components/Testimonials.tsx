@@ -38,7 +38,7 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-24 lg:py-32 bg-[#FAFAFA] relative overflow-hidden">
+        <section className="py-24 lg:py-32 relative overflow-hidden">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-1/4 h-1/4 bg-black/[0.02] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 

@@ -9,6 +9,8 @@ import Testimonials from "@/components/Testimonials";
 import HappyUsers from "@/components/HappyUsers";
 import FAQ from "@/components/FAQ";
 import TrySection from "@/components/TrySection";
+import VideoHero from "@/components/VideoHero";
+import DashboardShowcase from "@/components/Dashboardshowcase";
 
 export default function Home() {
   const softwareSchema = {
@@ -16,94 +18,94 @@ export default function Home() {
     "@type": "SoftwareApplication",
     "name": "Space Lean",
     "url": "https://spacelean.ai",
-    "description": "Space Lean is an AI-powered project management tool that turns notes into actionable tasks, automates scheduling, and helps teams ship faster.",
-    "applicationCategory": "ProjectManagement",
+    "description":
+      "Space Lean is an AI-powered Digital Construction Brain that automatically generates construction schedules from BIM models, predicts risks, optimizes crews, and adapts in real time.",
+    "applicationCategory": "ConstructionManagementSoftware",
     "operatingSystem": "Web",
     "offers": [
       {
         "@type": "Offer",
-        "name": "Free",
+        "name": "Starter",
         "price": "0.00",
         "priceCurrency": "USD",
         "url": "https://spacelean.ai/#signup",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
-        "name": "Pro",
-        "price": "15.00",
+        "name": "Professional",
+        "price": "49.00",
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "billingIncrement": 1,
-          "price": "15.00",
+          "price": "49.00",
           "priceCurrency": "USD",
-          "unitText": "month"
+          "unitText": "month",
         },
         "url": "https://spacelean.ai/pricing#pro",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
-        "name": "Teams",
-        "price": "50.00",
+        "name": "Enterprise",
+        "price": "Custom",
         "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "billingIncrement": 1,
-          "price": "50.00",
-          "priceCurrency": "USD",
-          "unitText": "month"
-        },
-        "url": "https://spacelean.ai/pricing#teams",
-        "availability": "https://schema.org/InStock"
-      }
+        "url": "https://spacelean.ai/pricing#enterprise",
+        "availability": "https://schema.org/InStock",
+      },
     ],
     "publisher": {
       "@type": "Organization",
       "name": "Space Lean Inc.",
-      "url": "https://spacelean.ai"
-    }
+      "url": "https://spacelean.ai",
+    },
   } as const;
 
   return (
     <main className="overflow-x-hidden">
+      {/* SEO Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
-      {/* 1. Hero Section - Hook */}
+
+      {/* 1. HERO — Category Creation */}
       <HeroSection />
 
-      {/* 2. Social Proof - Trust */}
-      <SocialProof />
+      {/* 2. Social Proof — Trust */}
+      {/* <SocialProof /> */}
 
-      {/* 3. Why Us - Problem/Solution Mapping */}
-      <WhyUs />
-
-      {/* 4. AI Deep Dive - Feature Spotlight */}
-      <AIFeature />
-
-      {/* 5. Interactive Tools - Product Demo */}
-      <ToolsSection />
-
-      {/* 6. Features Grid - Capability Overview */}
+      {/* 3. Problem Statement */}
       <FeaturesGrid />
+      <VideoHero />
 
-      {/* 7. Work Smarter - Integrations & Automation */}
-      <WorkSmarter />
+      {/* 4. Product Introduction / Visual */}
+      <WhyUs />
+      <DashboardShowcase />
 
-      {/* 8. Testimonials - User Proof */}
-      <Testimonials />
+      {/* 5. Core Features */}
 
-      {/* 9. Broad Social Proof - Happy Users */}
-      <HappyUsers />
+      {/* 6. How It Works */}
+      {/* <ToolsSection /> */}
 
-      {/* 10. FAQ - Objection Handling */}
+      {/* 7. Use Cases */}
+      {/* <WorkSmarter /> */}
+
+      {/* 8. Technology & Intelligence */}
+      {/* <AIFeature /> */}
+
+      {/* 9. Testimonials */}
+      {/* <Testimonials /> */}
+
+      {/* 10. Broad Social Proof */}
+      {/* <HappyUsers /> */}
+
+      {/* 11. FAQ */}
       <FAQ />
 
-      {/* 11. Final CTA */}
-      <TrySection />
+      {/* 12. Final CTA */}
+      {/* <TrySection /> */}
     </main>
   );
 }

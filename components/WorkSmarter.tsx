@@ -63,7 +63,7 @@ const workSmarterFeatures = [
 
 export default function WorkSmarter() {
   return (
-    <section className="py-24 lg:py-32 relative bg-[#FAFAFA] overflow-hidden">
+    <section className="py-24 lg:py-32 relative  overflow-hidden">
       {/* Subtle Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-black/5" />
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-black/[0.02] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />

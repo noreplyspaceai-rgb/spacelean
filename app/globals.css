@@ -1,28 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  /* Off-white */
-  --foreground: #401D67;
-  /* Primary Text Color */
+  --background: #ffffff;
+  /* Pure white */
+  --foreground: #ff0000;
+  /* Near-black primary text */
+
+  /* Vibrant Text Colors */
+  --color-vivid-red: #FF3B30;
+  --color-burnt-orange: #FF6B00;
+  --color-amber: #FF9500;
+  --color-electric-yellow: #FFCC00;
+  --color-electric-blue: #007AFF;
+  --color-cyan-teal: #00C7BE;
+  --color-vibrant-green: #30D158;
+  --color-indigo-purple: #5E5CE6;
+  --color-hot-pink: #FF2D55;
+  --color-vivid-violet: #BF5AF2;
+  --color-coral-rose: #FF375F;
+  --color-sky-cyan: #64D2FF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
-  --color-primary-text: #401D67;
-  --color-secondary-text: #CD3D2A;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-primary-text: #f97316;
+  --color-secondary-text: #4b5563;
+
+  /* Vibrant palette exposed to Tailwind */
+  --color-vivid-red: var(--color-vivid-red);
+  --color-burnt-orange: var(--color-burnt-orange);
+  --color-amber: var(--color-amber);
+  --color-electric-yellow: var(--color-electric-yellow);
+  --color-electric-blue: var(--color-electric-blue);
+  --color-cyan-teal: var(--color-cyan-teal);
+  --color-vibrant-green: var(--color-vibrant-green);
+  --color-indigo-purple: var(--color-indigo-purple);
+  --color-hot-pink: var(--color-hot-pink);
+  --color-vivid-violet: var(--color-vivid-violet);
+  --color-coral-rose: var(--color-coral-rose);
+  --color-sky-cyan: var(--color-sky-cyan);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family:
-    var(--font-sans),
-    system-ui,
-    sans-serif;
+  font-family: var(--font-sans);
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +56,7 @@ body {
 /* Minimalist selection */
 ::selection {
   background-color: #000;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Smooth scrolling */
@@ -83,4 +108,48 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
+  color: #301659 
+  /* font-weight: 200 !important; thin */
+}
+
+/* ── Vibrant Text Utility Classes ── */
+
+/* Warm / Energetic */
+.text-vivid-red     { color: var(--color-vivid-red); }
+.text-burnt-orange  { color: var(--color-burnt-orange); }
+.text-amber         { color: var(--color-amber); }
+.text-electric-yellow { color: var(--color-electric-yellow); }
+
+/* Cool / Fresh */
+.text-electric-blue  { color: var(--color-electric-blue); }
+.text-cyan-teal      { color: var(--color-cyan-teal); }
+.text-vibrant-green  { color: var(--color-vibrant-green); }
+.text-indigo-purple  { color: var(--color-indigo-purple); }
+
+/* Bold / Trendy */
+.text-hot-pink      { color: var(--color-hot-pink); }
+.text-vivid-violet  { color: var(--color-vivid-violet); }
+.text-coral-rose    { color: var(--color-coral-rose); }
+.text-sky-cyan      { color: var(--color-sky-cyan); }
+
+/* Gradient Text */
+.text-gradient-warm {
+  background: linear-gradient(90deg, #FF6B00, #FF2D55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cool {
+  background: linear-gradient(90deg, #007AFF, #5E5CE6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-vivid {
+  background: linear-gradient(90deg, #FF2D55, #BF5AF2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
