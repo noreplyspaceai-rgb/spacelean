@@ -9,10 +9,12 @@ import { motion } from "framer-motion";
 import VideoModal from "./VideoModal";
 import StartFreeTrialButton from "./StartFreeTrialButton";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const fadeUp = (delay = 0) => ({
   initial: { y: 28, opacity: 0 },
   animate: { y: 0, opacity: 1 },
-  transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.7, delay, ease: EASE },
 });
 
 function circleOrbit(R: number, startDeg: number, steps = 60) {
@@ -141,7 +143,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
           className="flex-1 w-full max-w-xl lg:max-w-none"
         >
           <div className="relative aspect-square">

@@ -122,7 +122,7 @@ function StatItem({ stat, active, index }: { stat: StatConfig; active: boolean; 
         className="absolute -top-6 -right-6 w-20 h-20 rounded-full border border-dashed border-black/[0.07] pointer-events-none"
         animate={{ rotate: 360 }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        style={{ translateZ: "8px" }}
+        style={{ transform: "translateZ(8px)" }}
       />
       <motion.div
         className="absolute -bottom-4 -left-4 w-12 h-12 rounded-full border border-dashed border-orange-300/30 pointer-events-none"
@@ -133,13 +133,13 @@ function StatItem({ stat, active, index }: { stat: StatConfig; active: boolean; 
       {/* Value */}
       <div
         className="text-3xl lg:text-4xl font-bold tabular-nums"
-        style={{ translateZ: "12px", color: "#f97316" /* orange-500 */ }}
+        style={{ transform: "translateZ(12px)", color: "#f97316" /* orange-500 */ }}
       >
         {stat.display ? stat.display(value) : `${value}${stat.suffix}`}
       </div>
 
       {/* Label */}
-      <div className="text-sm text-neutral-500 mt-2 font-medium" style={{ translateZ: "8px" }}>
+      <div className="text-sm text-neutral-500 mt-2 font-medium" style={{ transform: "translateZ(8px)" }}>
         {stat.label}
       </div>
     </motion.div>

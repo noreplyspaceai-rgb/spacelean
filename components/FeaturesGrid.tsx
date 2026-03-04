@@ -48,8 +48,8 @@ const features = [
 ];
 
 export default function FeaturesGrid() {
-  const [activeIdx, setActiveIdx] = useState(null);
-  const [hoveredIdx, setHoveredIdx] = useState(null);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
     <section id="features" className="py-5 relative z-10">
