@@ -85,7 +85,7 @@ export default function BlogPage() {
                       <span className="text-sm font-medium text-neutral-700">{blogPosts[0].author}</span>
                     </div>
                     <span className="group/arrow inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">
-                      Read article
+                      Read article.
                       <ArrowRight className="w-4 h-4 group-hover/arrow:translate-x-0.5 transition-transform" />
                     </span>
                   </div>
