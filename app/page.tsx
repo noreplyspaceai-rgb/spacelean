@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import TrySection from "@/components/TrySection";
 import VideoHero from "@/components/VideoHero";
 import DashboardShowcase from "@/components/Dashboardshowcase";
+import AudienceSection from "@/components/AudienceSection";
 
 export default function Home() {
   const softwareSchema = {
@@ -72,7 +73,9 @@ export default function Home() {
 
       {/* 1. HERO — Category Creation */}
       <HeroSection />
-
+      <WhyUs />
+      <DashboardShowcase />
+<AudienceSection/>
       {/* 2. Social Proof — Trust */}
       {/* <SocialProof /> */}
 
@@ -81,8 +84,6 @@ export default function Home() {
       <VideoHero />
 
       {/* 4. Product Introduction / Visual */}
-      <WhyUs />
-      <DashboardShowcase />
 
       {/* 5. Core Features */}
 

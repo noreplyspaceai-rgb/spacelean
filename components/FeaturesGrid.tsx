@@ -61,7 +61,7 @@ export default function FeaturesGrid() {
             <p className="font-mono text-sm font-bold tracking-[0.25em] uppercase text-black/40 mb-4">
               Capabilities
             </p>
-            <h2 className="font-serif text-[clamp(36px,5vw,58px)] text-[#0a0a0a] leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl  tracking-tight">
               Built for the way<br />
               <span>teams actually work.</span>
             </h2>
@@ -97,17 +97,7 @@ export default function FeaturesGrid() {
                   <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#bbb] font-medium">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
-                  <span
-                    className={`font-mono text-[10px] tracking-[0.18em] uppercase font-medium transition-colors duration-250 ${
-                      isHighlighted ? "text-[#0a0a0a]" : "text-[#ccc]"
-                    }`}
-                  >
-                    {feature.tag}
-                  </span>
-                </div>
-
-                {/* Icon */}
-                <div
+                   <div
                   className="mb-6 w-10 h-10 flex items-center justify-center transition-transform duration-300"
                   style={{
                     transform: isHighlighted
@@ -117,6 +107,17 @@ export default function FeaturesGrid() {
                 >
                   <Icon className="w-6 h-6 text-black" strokeWidth={1.25} />
                 </div>
+                  <span
+                    className={`font-mono text-xl tracking-[0.18em] uppercase font-medium transition-colors duration-250 ${
+                      isHighlighted ? "text-[#0a0a0a]" : "text-[#ccc]"
+                    }`}
+                  >
+                    {feature.tag}
+                  </span>
+                </div>
+
+                {/* Icon */}
+               
 
                 {/* Title */}
                 <h3 className="font-serif text-[26px] text-[#0a0a0a] leading-[1.2] mb-4">
@@ -132,7 +133,7 @@ export default function FeaturesGrid() {
                     marginTop: isHighlighted ? "16px" : "0",
                   }}
                 >
-                  <p className="font-mono text-[13px] leading-[1.9] text-[#555] font-light m-0">
+                  <p className="font-mono text-[16px] leading-[1.9] text-[#555] font-light m-0">
                     {feature.description}
                   </p>
                 </div>

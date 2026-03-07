@@ -102,9 +102,10 @@ export default function HeroSection() {
 
           <motion.h1
             {...fadeUp(0.12)}
-            className="text-4xl sm:text-5xl font-normal lg:text-[3.25rem] tracking-tight leading-tight text-cyan-500 max-w-xl"
+            className="text-3xl sm:text-5xl font-normal lg:text-4xl tracking-tight leading-tight text-cyan-500 max-w-xl"
           >
-            Leading AI Project Management Software for 2026
+            Leading <br />
+             AI Project Management <br /> Software   for 2026
           </motion.h1>
 
           <motion.p
@@ -112,7 +113,7 @@ export default function HeroSection() {
             className="mt-4 text-base font-semibold sm:text-lg text-neutral-500 leading-relaxed max-w-lg relative"
           >
             <span className="absolute -top-4 -left-3 text-7xl leading-none text-cyan-200 font-serif select-none">&ldquo;</span>
-            <span className="relative z-10 pl-6">
+            <span className="relative font-mono z-10 pl-6">
               We don&apos;t animate schedules.
               <span className="text-cyan-500"> We build them</span>
             </span>

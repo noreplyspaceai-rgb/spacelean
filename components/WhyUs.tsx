@@ -96,7 +96,7 @@ export default function WhyUs() {
   const imageInView = useInView(imageRef, { once: true, margin: "-60px" });
 
   return (
-    <section className="py-32 overflow-hidden">
+    <section className="pb-10 pt-5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* ── Header ── */}
@@ -106,12 +106,11 @@ export default function WhyUs() {
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="text-xs font-bold tracking-[0.25em] uppercase text-black/40 mb-4">
+            <p className="text-sm font-bold tracking-[0.25em] uppercase text-black/40 mb-4">
               Why SPACE AI
             </p>
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-normal tracking-tighter leading-[1.02]">
-              Built for planners who are done<br />
-              losing days to manual work.
+            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-normal !text-5xl tracking-tighter leading-[1.02]">
+             Optimize every construction phase with <br /> SPACE LEAN
             </h2>
           </motion.div>
 
@@ -119,9 +118,9 @@ export default function WhyUs() {
             initial={{ opacity: 0, y: 16 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base text-neutral-500 font-light max-w-xs lg:text-right leading-relaxed"
+            className="text-base !text-grey-500 font-bold max-w-xs lg:text-right leading-relaxed"
           >
-            Every delay has a root cause. SPACE AI finds it before it finds you.
+            Every delay has a root cause. <br /> SPACE AI finds it before it finds you.
           </motion.p>
         </div>
 

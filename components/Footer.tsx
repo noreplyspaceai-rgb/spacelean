@@ -70,7 +70,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-white/5">
+    <footer className=" text-stone-900 border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 lg:gap-8 mb-20">
           {/* Brand Section */}
@@ -81,25 +81,24 @@ export default function Footer() {
                 alt="Space Lean"
                 width={32}
                 height={32}
-                className="brightness-0 invert"
               />
-              <span className="text-xl font-black tracking-tighter">
-                SPACE<span className="text-secondary-text font-light">LEAN</span>
+              <span className="text-xl font-black tracking-tighter text-stone-900">
+                SPACE<span className="text-stone-600 font-light">LEAN</span>
               </span>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-8">
+            <p className="text-stone-600 text-sm leading-relaxed max-w-xs mb-8">
               AI-powered task management for high-velocity teams. Orchestrate chaos, automate workflows, and ship faster.
             </p>
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.05] gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Nodes Online</span>
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-stone-100 border border-stone-300 gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[10px] font-bold text-stone-600 tracking-widest uppercase">Nodes Online</span>
             </div>
           </div>
 
           {/* Nav Sections */}
           {Object.values(footerLinks).map((section) => (
             <div key={section.title} className="col-span-1">
-              <h3 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-6">
+              <h3 className="text-[11px] font-bold text-stone-900 uppercase tracking-[0.2em] mb-6">
                 {section.title}
               </h3>
               <ul className="space-y-4">
@@ -107,7 +106,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-500 hover:text-white transition-colors duration-300"
+                      className="text-sm text-stone-600 hover:text-stone-900 transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
@@ -119,14 +118,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-            <p className="text-[12px] text-gray-600 font-medium">
+            <p className="text-[12px] text-stone-600 font-medium">
               © 2026 SpaceLean AI Inc.
             </p>
             <div className="flex gap-6">
-              <Link href="#" className="text-[12px] text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</Link>
-              <Link href="#" className="text-[12px] text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</Link>
+              <Link href="#" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Privacy Policy</Link>
+              <Link href="#" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Terms of Service</Link>
             </div>
           </div>
 
@@ -137,7 +136,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-white transition-colors duration-300"
+                className="text-stone-600 hover:text-stone-900 transition-colors duration-300"
                 aria-label={social.label}
               >
                 {social.icon}

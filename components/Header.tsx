@@ -58,6 +58,12 @@ export default function Header() {
               About
             </Link>
             <Link
+              href="/space-lean-core"
+              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
+            >
+              Space Lean Core
+            </Link>
+            <Link
               href="/blogs"
               className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
@@ -70,22 +76,16 @@ export default function Header() {
               Compare
             </Link>
             <Link
-              href="/features"
+              href="/solutions"
               className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
-              Features
+              Solutions
             </Link>
             <Link
               href="/pricing"
               className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
             >
               Pricing
-            </Link>
-            <Link
-              href="/solutions"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
-            >
-              Solutions
             </Link>
           </div>
 
@@ -116,27 +116,7 @@ export default function Header() {
             >
               Request a Demo
             </Link>
-            <Link
-              href="https://cad.spaceaiapp.com/lean"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white text-sm font-medium rounded-full hover:from-gray-800 hover:via-gray-700 hover:to-gray-800 shadow-lg shadow-gray-900/25 hover:shadow-xl hover:shadow-gray-900/30 hover:scale-[1.02] transition-all duration-200"
-            >
-              Try for free
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
+          
           </div>
 
           {/* Mobile menu button */}
@@ -204,18 +184,18 @@ export default function Header() {
                 Compare
               </Link>
               <Link
-                href="/features"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
-              >
-                Features
-              </Link>
-              <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
               >
                 Pricing
+              </Link>
+              <Link
+                href="/space-lean-core"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
+              >
+                Space Lean Core
               </Link>
               <Link
                 href="/solutions"

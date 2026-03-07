@@ -7,6 +7,7 @@ export interface Solution {
   keywords: string[];
   heroImage: string;
   icon: string;
+  category: "stakeholder" | "project-type" | "solutions";
   features: {
     title: string;
     description: string;
@@ -31,933 +32,1009 @@ export interface Solution {
   };
 }
 
-export const solutions: Solution[] = [
+// ─────────────────────────────────────────────
+// BY STAKEHOLDER
+// ─────────────────────────────────────────────
+
+export const stakeholderSolutions: Solution[] = [
   {
-    slug: "marketing-teams",
-    title: "Space Lean for Marketing Teams",
-    tagline: "AI-Powered Marketing Command Center",
+    slug: "for-gcs",
+    title: "Space AI for General Contractors",
+    tagline: "Build Smarter. Deliver Faster. Win More.",
     description:
-      "Transform your marketing operations with intelligent automation, real-time analytics, and seamless campaign orchestration. Space Lean empowers marketing teams to move faster, optimize smarter, and deliver measurable results at scale.",
+      "Give your project teams a decisive edge with AI-generated construction sequences, real-time schedule intelligence, and automated crew optimization. Space AI transforms how GCs plan, execute, and win projects — from bid through closeout.",
     metaDescription:
-      "Transform marketing with an automatic project scheduler and AI task breakdown tool. Space Lean for Marketing Teams: AI-powered marketing automation and team collaboration.",
-      seoContent:
-        "Space Lean for Marketing Teams brings together campaign orchestration, analytics, and AI-driven optimization into a single place so marketing leaders can plan, execute, and measure high-impact programs without switching tools. Our platform ingests campaign goals, audience segments, and past performance to recommend optimal schedules, channel mixes, and budgets—helping teams launch faster and iterate with confidence. Built-in reporting and predictive analytics remove the guesswork from campaign optimization, enabling marketers to focus on creative strategy while Space Lean automates repetitive tasks and surfaces the highest-leverage opportunities.",
+      "Space AI for General Contractors: AI-powered 4D scheduling, automated sequencing, crew optimization, and real-time critical path prediction. Build smarter and deliver on time.",
+    seoContent:
+      "Space AI for General Contractors replaces manual scheduling with an AI reasoning engine that converts BIM geometry directly into optimized construction sequences. Instead of spending weeks linking tasks in Primavera or Synchro, your project team gets a complete, physics-aware schedule in hours — with zone flow logic, crew/trade assignments, and penetration constraints already resolved. Real-time Monte Carlo simulations identify which tasks are most likely to slip before they actually do, enabling proactive mitigation and protecting your margins. Whether you're managing a 10-story commercial build or a complex industrial fit-out, Space AI gives GCs the predictive intelligence and scheduling confidence that separates winning contractors from the rest.",
     keywords: [
-      "AI task breakdown tool",
-      "turn notes into tasks AI",
-      "automatic project scheduler",
-      "marketing automation platform",
-      "AI marketing tools",
-      "campaign management software",
-      "marketing analytics dashboard",
-      "marketing team collaboration",
-      "content marketing automation",
-      "marketing ROI optimization",
-      "digital marketing platform",
-      "marketing workflow automation",
-      "enterprise marketing software",
-      "marketing operations platform",
-      "marketing performance analytics",
-      "multi-channel marketing",
-      "marketing attribution software",
-      "marketing intelligence platform",
+      "general contractor scheduling software",
+      "AI construction sequencing",
+      "4D BIM scheduling for contractors",
+      "automated construction planning",
+      "construction critical path prediction",
+      "crew optimization software",
+      "construction project management AI",
+      "real-time schedule resequencing",
+      "BIM to schedule automation",
+      "construction risk management platform",
+      "construction delay prediction",
+      "subcontractor coordination software",
+      "construction lookahead planning",
+      "digital construction brain",
+      "construction knowledge graph",
     ],
-    heroImage: "/marketing.jpg",
-    icon: "📊",
+    heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop",
+    icon: "🏗️",
+    category: "stakeholder",
     features: [
       {
-        title: "Campaign Orchestration",
+        title: "AI-Generated Construction Sequences",
         description:
-          "Launch and manage multi-channel campaigns from a single dashboard. AI-powered scheduling ensures optimal timing for maximum engagement.",
-        icon: "🚀",
+          "Upload your BIM model and let Space AI automatically infer task dependencies from geometry — structural support, MEP penetrations, access constraints, and zone logic — without a single manual link.",
+        icon: "🤖",
       },
       {
-        title: "Performance Analytics",
+        title: "Probabilistic Critical Path",
         description:
-          "Real-time dashboards with predictive analytics. Track KPIs, measure attribution, and forecast campaign performance with AI-driven insights.",
-        icon: "📈",
-      },
-      {
-        title: "Content Optimization",
-        description:
-          "AI-assisted content creation and A/B testing. Automatically optimize headlines, copy, and creative assets for higher conversion rates.",
-        icon: "✍️",
-      },
-      {
-        title: "Audience Intelligence",
-        description:
-          "Deep audience segmentation with behavioral analytics. Identify high-value segments and personalize messaging at scale.",
-        icon: "🎯",
-      },
-      {
-        title: "Brand Asset Management",
-        description:
-          "Centralized asset library with version control. Ensure brand consistency across all channels and teams.",
-        icon: "🎨",
-      },
-      {
-        title: "Marketing Automation",
-        description:
-          "Intelligent workflow automation for lead nurturing, email sequences, and customer journey mapping.",
-        icon: "⚡",
-      },
-    ],
-    benefits: [
-      {
-        title: "Accelerate Time-to-Market",
-        description:
-          "Reduce campaign launch time by 60% with streamlined workflows and AI-powered automation.",
-        stat: "60%",
-      },
-      {
-        title: "Boost Marketing ROI",
-        description:
-          "Optimize spend allocation with predictive analytics and real-time performance tracking.",
-        stat: "3.2x",
-      },
-      {
-        title: "Enhance Team Productivity",
-        description:
-          "Eliminate manual tasks and focus on strategic initiatives that drive growth.",
-        stat: "40%",
-      },
-      {
-        title: "Improve Campaign Performance",
-        description:
-          "Data-driven optimization increases engagement and conversion rates across channels.",
-        stat: "85%",
-      },
-    ],
-    useCases: [
-      "Multi-channel campaign management",
-      "Marketing performance reporting",
-      "Content calendar planning",
-      "Lead generation automation",
-      "Customer journey mapping",
-      "Brand consistency management",
-      "Marketing budget optimization",
-      "Competitive intelligence tracking",
-    ],
-    testimonial: {
-      quote:
-        "Space Lean transformed how our marketing team operates. We've cut campaign launch time in half while doubling our conversion rates.",
-      author: "Sarah Chen",
-      role: "VP of Marketing",
-      company: "TechFlow Inc.",
-    },
-    cta: {
-      primary: "Start Free Trial",
-      secondary: "See Marketing Demo",
-    },
-  },
-  {
-    slug: "product-management",
-    title: "Space Lean for Product Management",
-    tagline: "Build Products Users Love, Faster",
-    description:
-      "Empower your product team with AI-driven insights, roadmap visualization, and seamless stakeholder collaboration. Space Lean helps product managers prioritize features, track metrics, and deliver value with confidence.",
-    metaDescription:
-      "Optimize product roadmaps with an automatic project scheduler. Space Lean for Product Management: AI-powered feature prioritization and AI task breakdown tool.",
-      seoContent:
-        "Space Lean for Product Management is designed for product leaders who need to convert strategy into predictable delivery. With end-to-end sprint tracking, backlog grooming tools, and AI-assisted prioritization, product teams can keep roadmaps current, prioritize based on impact and effort, and communicate clear tradeoffs to stakeholders. Our backlog workflows automatically group related feedback, estimate effort, and propose a sequence of work that aligns with business objectives—reducing planning overhead and enabling teams to ship features users love more frequently.",
-    keywords: [
-      "AI task breakdown tool",
-      "turn notes into tasks AI",
-      "automatic project scheduler",
-      "product management software",
-      "product roadmap tool",
-      "feature prioritization platform",
-      "product analytics dashboard",
-      "user feedback management",
-      "product team collaboration",
-      "agile product management",
-      "product strategy software",
-      "product lifecycle management",
-      "product discovery platform",
-      "product metrics tracking",
-      "product backlog management",
-      "OKR tracking software",
-      "product intelligence platform",
-      "product development workflow",
-    ],
-    heroImage: "/productmanagement.jpg",
-    icon: "🎯",
-    features: [
-      {
-        title: "AI-Powered Roadmapping",
-        description:
-          "Create dynamic roadmaps that adapt to changing priorities. AI suggests optimal feature sequencing based on impact and effort.",
-        icon: "🗺️",
-      },
-      {
-        title: "Feature Prioritization",
-        description:
-          "Data-driven prioritization frameworks with RICE scoring, value mapping, and opportunity analysis.",
+          "Monte Carlo simulation runs thousands of schedule scenarios to identify which tasks carry the highest risk of becoming critical. Know your vulnerabilities before they become delays.",
         icon: "📊",
       },
       {
-        title: "User Feedback Intelligence",
+        title: "Real-Time Self-Healing Schedules",
         description:
-          "Aggregate and analyze feedback from multiple sources. AI categorizes insights and identifies emerging patterns.",
-        icon: "💬",
-      },
-      {
-        title: "Stakeholder Alignment",
-        description:
-          "Keep executives, engineering, and sales aligned with shared dashboards and automated status updates.",
-        icon: "🤝",
-      },
-      {
-        title: "Product Analytics",
-        description:
-          "Track adoption metrics, user behavior, and feature performance in real-time.",
-        icon: "📈",
-      },
-      {
-        title: "Release Management",
-        description:
-          "Coordinate releases across teams with automated changelogs, release notes, and deployment tracking.",
-        icon: "🚀",
-      },
-    ],
-    benefits: [
-      {
-        title: "Faster Time-to-Value",
-        description:
-          "Reduce feature discovery to delivery cycle by 45% with streamlined workflows.",
-        stat: "45%",
-      },
-      {
-        title: "Better Prioritization",
-        description:
-          "Make confident decisions with AI-powered impact analysis and opportunity scoring.",
-        stat: "92%",
-      },
-      {
-        title: "Improved Alignment",
-        description:
-          "Keep all stakeholders on the same page with real-time visibility into roadmap progress.",
-        stat: "78%",
-      },
-      {
-        title: "Data-Driven Decisions",
-        description:
-          "Replace gut feelings with actionable insights from comprehensive product analytics.",
-        stat: "4.5x",
-      },
-    ],
-    useCases: [
-      "Product roadmap planning",
-      "Feature request management",
-      "User research synthesis",
-      "Sprint planning integration",
-      "Product metrics dashboards",
-      "Competitive analysis tracking",
-      "Customer journey mapping",
-      "Product launch coordination",
-    ],
-    testimonial: {
-      quote:
-        "Space Lean gave us the clarity we needed to focus on what matters. Our product velocity has increased while customer satisfaction scores are at an all-time high.",
-      author: "Michael Torres",
-      role: "Chief Product Officer",
-      company: "ScaleUp Systems",
-    },
-    cta: {
-      primary: "Start Free Trial",
-      secondary: "See Product Demo",
-    },
-  },
-  {
-    slug: "engineering-teams",
-    title: "Space Lean for Engineering Teams",
-    tagline: "Ship Better Code, Faster",
-    description:
-      "Supercharge your engineering workflow with intelligent task management, automated code insights, and seamless CI/CD integration. Space Lean helps engineering teams reduce technical debt, improve velocity, and maintain code quality at scale.",
-    metaDescription:
-      "Ship code faster with an automatic project scheduler and AI task breakdown tool. Space Lean for Engineering Teams: AI-powered project management and developer productivity.",
-      seoContent:
-        "Space Lean for Engineering Teams gives technical leaders the visibility and integrations required to ship reliably at scale. By linking issue tracking to commits, pull requests, and CI/CD pipelines, engineering leads can trace work from design through deployment, identify blockers early, and reduce cycle time. Built-in DORA metrics, technical debt prioritization, and automated insights help teams balance feature work with maintenance, improve code quality, and sustain a healthy delivery cadence—so engineering organizations deliver value without burning out.",
-    keywords: [
-      "AI task breakdown tool",
-      "turn notes into tasks AI",
-      "automatic project scheduler",
-      "engineering project management",
-      "developer productivity platform",
-      "software development tools",
-      "engineering team collaboration",
-      "code analytics dashboard",
-      "technical debt management",
-      "engineering velocity metrics",
-      "software delivery automation",
-      "agile development platform",
-      "DevOps collaboration tools",
-      "sprint management software",
-      "engineering OKR tracking",
-      "developer workflow automation",
-      "code quality platform",
-      "engineering intelligence software",
-    ],
-    heroImage: "/engineering.jpg",
-    icon: "⚡",
-    features: [
-      {
-        title: "Intelligent Sprint Planning",
-        description:
-          "AI-powered capacity planning and story point estimation. Optimize sprint loads based on historical velocity.",
-        icon: "📋",
-      },
-      {
-        title: "Code Analytics",
-        description:
-          "Track code health, technical debt, and deployment frequency. Identify bottlenecks before they impact delivery.",
-        icon: "💻",
-      },
-      {
-        title: "CI/CD Integration",
-        description:
-          "Seamless integration with GitHub, GitLab, Jenkins, and more. Track deployments and correlate with project milestones.",
+          "When a task slips on site, Space AI automatically propagates the impact through the dependency graph and reoptimizes downstream tasks — no manual rescheduling required.",
         icon: "🔄",
       },
       {
-        title: "Engineering Metrics",
+        title: "Crew & Trade Conflict Resolution",
         description:
-          "DORA metrics, cycle time analysis, and team velocity dashboards for continuous improvement.",
-        icon: "📊",
+          "AI assigns crews across tasks and zones, preventing resource overlap, minimizing idle time, and maximizing daily output. Trade stacking logic is built-in.",
+        icon: "👷",
       },
       {
-        title: "Documentation Hub",
+        title: "Zone-Based Flow & Takt Planning",
         description:
-          "AI-assisted technical documentation with auto-generated API docs and knowledge base management.",
-        icon: "📚",
+          "Automatically sequence work zone by zone for optimal trade flow. Space AI detects congestion before it happens and redistributes tasks to maintain steady progress.",
+        icon: "🗺️",
       },
       {
-        title: "Incident Management",
+        title: "Lookahead & Constraint Management",
         description:
-          "Integrated incident tracking with post-mortem automation and SLA monitoring.",
-        icon: "🚨",
+          "Generate automated 3-week and 6-week lookahead plans with AI-identified constraints, linking material lead times, subcontractor readiness, and access blockers.",
+        icon: "📅",
       },
     ],
     benefits: [
       {
-        title: "Increase Deployment Frequency",
+        title: "Reduce Planning Time",
         description:
-          "Ship code more frequently with streamlined workflows and automated pipelines.",
-        stat: "3x",
+          "Cut schedule preparation from weeks to hours with AI-generated sequences directly from your BIM model.",
+        stat: "80%",
       },
       {
-        title: "Reduce Lead Time",
+        title: "Improve On-Time Delivery",
         description:
-          "Cut time from commit to production with intelligent automation and bottleneck detection.",
-        stat: "55%",
+          "Predictive critical path and real-time resequencing help teams finish projects on or ahead of schedule.",
+        stat: "3.1x",
       },
       {
-        title: "Improve Code Quality",
+        title: "Lower Rework Costs",
         description:
-          "Proactive technical debt management and code health monitoring.",
-        stat: "40%",
+          "Geometry-driven constraint logic eliminates sequencing errors that lead to costly rework and trade conflicts.",
+        stat: "45%",
       },
       {
-        title: "Boost Developer Experience",
+        title: "Increase Bid Confidence",
         description:
-          "Reduce context switching and administrative overhead for your engineering team.",
-        stat: "67%",
+          "Win more bids by backing your schedules with probabilistic data and risk-aware planning that owners trust.",
+        stat: "92%",
       },
     ],
     useCases: [
-      "Agile sprint management",
-      "Engineering metrics tracking",
-      "Technical debt prioritization",
-      "Release coordination",
-      "On-call scheduling",
-      "Code review workflows",
-      "Engineering capacity planning",
-      "Cross-team dependency management",
+      "Preconstruction schedule development from BIM",
+      "Subcontractor coordination and sequencing",
+      "Weekly and 3-week lookahead automation",
+      "Delay impact analysis and resequencing",
+      "Trade stacking and crew optimization",
+      "Zone-by-zone flow and takt scheduling",
+      "Critical path risk reporting for owners",
+      "Change order schedule impact analysis",
     ],
     testimonial: {
       quote:
-        "Since adopting Space Lean, our deployment frequency has tripled while our change failure rate dropped significantly. It's transformed how we deliver software.",
-      author: "David Kim",
-      role: "VP of Engineering",
-      company: "CloudNative Labs",
+        "Space AI cut our preconstruction schedule time in half. The AI sequences out of the BIM model and our project teams just refine — it's transformed how we bid and build.",
+      author: "James Whitfield",
+      role: "VP of Construction Operations",
+      company: "Meridian Construction Group",
     },
     cta: {
       primary: "Start Free Trial",
-      secondary: "See Engineering Demo",
+      secondary: "See GC Demo",
     },
   },
+
   {
-    slug: "design-teams",
-    title: "Space Lean for Design Teams",
-    tagline: "Design Smarter, Collaborate Better",
+    slug: "for-owners",
+    title: "Space AI for Owners",
+    tagline: "Full Visibility. Predictable Delivery. No Surprises.",
     description:
-      "Elevate your design workflow with AI-powered asset management, seamless feedback loops, and integrated project tracking. Space Lean helps design teams maintain consistency, streamline reviews, and deliver exceptional user experiences.",
+      "Owners deserve more than a monthly report and a hope for the best. Space AI gives project owners real-time schedule intelligence, probabilistic delivery forecasting, and transparent risk visibility — so you can hold your GC accountable and protect your investment.",
     metaDescription:
-      "Space Lean for Design Teams: AI-powered design project management, asset libraries, and collaborative feedback tools. Streamline your creative workflow.",
-      seoContent:
-        "Space Lean for Design Teams helps creative teams move faster while maintaining design quality and consistency. Centralized asset management, version control, and contextual review workflows reduce feedback loops and make approvals painless. Designers can iterate with confidence using AI-powered suggestions for naming, tagging, and reuse, while cross-functional teams stay aligned through linked tasks and visual timelines—so the design process stays focused on outcomes rather than administrative overhead.",
+      "Space AI for Owners: real-time construction schedule visibility, predictive delivery forecasting, contractor accountability tools, and AI-powered project risk dashboards.",
+    seoContent:
+      "Space AI for Owners closes the information gap between what contractors report and what is actually happening on site. Our AI platform ingests BIM models, schedules, and live site data to produce an independent, probabilistic view of your project's health. Rather than waiting for end-of-month reports, owners receive live dashboards showing critical path probability, delay risk by zone, and confidence intervals on your project completion date. Space AI also enables smarter GC selection and accountability — with AI-scored schedules during bidding and automated progress validation during construction. Whether you're developing a commercial tower, an industrial facility, or a portfolio of assets, Space AI gives owners the intelligence to protect their investment and make confident decisions.",
     keywords: [
-      "design project management",
-      "design team collaboration",
-      "creative workflow software",
-      "design asset management",
-      "design review platform",
-      "UX design tools",
-      "design system management",
-      "creative project tracking",
-      "design feedback software",
-      "design operations platform",
-      "design handoff tools",
-      "brand management software",
-      "creative team productivity",
-      "design sprint planning",
-      "visual collaboration platform",
+      "construction owner project visibility",
+      "AI construction risk dashboard",
+      "owner's representative software",
+      "predictive project delivery",
+      "construction schedule transparency",
+      "owner construction management platform",
+      "real-time project health monitoring",
+      "construction delay risk forecasting",
+      "capital project management software",
+      "owner project intelligence platform",
+      "contractor accountability tools",
+      "construction schedule validation",
+      "project delivery confidence",
+      "AI project completion forecasting",
     ],
-    heroImage: "/design.jpg",
-    icon: "🎨",
+    heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop",
+    icon: "🏢",
+    category: "stakeholder",
     features: [
       {
-        title: "Design System Hub",
+        title: "Independent Schedule Intelligence",
         description:
-          "Centralized design system management with version control, component libraries, and token management.",
-        icon: "🧩",
+          "Space AI generates its own AI-driven schedule assessment from BIM data, giving owners an independent view of project risk that doesn't rely solely on GC reporting.",
+        icon: "🔍",
       },
       {
-        title: "Collaborative Feedback",
+        title: "Probabilistic Completion Forecasting",
         description:
-          "Contextual comments, annotations, and approval workflows directly on design files.",
-        icon: "💬",
+          "Monte Carlo simulations produce confidence intervals on your completion date — showing you the probability of finishing on time and the range of likely outcomes.",
+        icon: "📈",
       },
       {
-        title: "Asset Library",
+        title: "Real-Time Risk Dashboards",
         description:
-          "AI-tagged asset management with smart search, version history, and usage tracking.",
-        icon: "📁",
+          "Live dashboards highlight the highest-risk zones, tasks, and trades on your project today — not next month when it's too late to act.",
+        icon: "📊",
       },
       {
-        title: "Design-to-Dev Handoff",
+        title: "Contractor Score & Accountability",
         description:
-          "Seamless handoff with auto-generated specs, CSS properties, and responsive breakpoints.",
-        icon: "🔗",
+          "Score GC schedules during bidding using AI-driven quality metrics. Track planned vs actual performance in real time during construction.",
+        icon: "✅",
       },
       {
-        title: "Project Visualization",
+        title: "Portfolio-Level Oversight",
         description:
-          "Visual project timelines, design sprints, and workload balancing for creative teams.",
-        icon: "📅",
+          "Manage multiple projects on a single dashboard. Compare delivery confidence, risk exposure, and schedule performance across your entire capital program.",
+        icon: "🗂️",
       },
       {
-        title: "Brand Consistency",
+        title: "Automated Progress Reporting",
         description:
-          "Automated brand compliance checking and style guide enforcement across projects.",
+          "Replace manual owner reports with AI-generated progress narratives, risk summaries, and completion forecasts delivered on your schedule.",
+        icon: "📋",
+      },
+    ],
+    benefits: [
+      {
+        title: "Reduce Cost Overruns",
+        description:
+          "Proactive risk visibility helps owners intervene early, before schedule slippage compounds into costly overruns.",
+        stat: "38%",
+      },
+      {
+        title: "Improve Delivery Predictability",
+        description:
+          "Probabilistic forecasting gives owners a realistic, data-driven view of when their project will actually finish.",
+        stat: "2.4x",
+      },
+      {
+        title: "Cut Reporting Overhead",
+        description:
+          "Automated AI reporting eliminates the time and cost of manual status reporting and owner meetings.",
+        stat: "60%",
+      },
+      {
+        title: "Better Contractor Selection",
+        description:
+          "AI schedule scoring during bid review helps owners identify the most credible and realistic GC proposals.",
+        stat: "87%",
+      },
+    ],
+    useCases: [
+      "Independent schedule risk assessment",
+      "Probabilistic completion date forecasting",
+      "GC schedule quality scoring during bid",
+      "Real-time site progress monitoring",
+      "Portfolio performance dashboards",
+      "Delay cause analysis and documentation",
+      "Executive and board-level reporting",
+      "Program-level risk management",
+    ],
+    testimonial: {
+      quote:
+        "For the first time, I'm not waiting for a GC's monthly narrative to know if my project is in trouble. Space AI gives me a live, independent view of schedule risk every day.",
+      author: "Priya Nair",
+      role: "Director of Capital Projects",
+      company: "Apex Property Group",
+    },
+    cta: {
+      primary: "Request a Demo",
+      secondary: "See Owner Dashboard",
+    },
+  },
+
+  {
+    slug: "for-consultants",
+    title: "Space AI for Consultants",
+    tagline: "Deliver Smarter Advice. Faster. At Scale.",
+    description:
+      "Whether you're a project controls consultant, a scheduling specialist, or a construction manager, Space AI gives you AI-powered tools to produce better schedules, validate contractor submissions, and deliver predictive insights that make your advisory practice indispensable.",
+    metaDescription:
+      "Space AI for Consultants: AI-powered construction schedule analysis, contractor submission review, Monte Carlo risk simulation, and predictive project intelligence for advisory firms.",
+    seoContent:
+      "Space AI for Consultants transforms the speed and depth of construction advisory services. Project controls professionals and scheduling consultants can now analyze contractor submissions in minutes, generate independent probabilistic schedules from BIM, and deliver risk forecasts that go far beyond traditional CPM analysis. Our AI engine handles the heavy lifting — dependency inference, Monte Carlo simulation, crew conflict detection, zone congestion analysis — while your team focuses on insight, strategy, and client relationships. Space AI also enables consultants to scale their practice by automating routine analysis, freeing senior expertise for the decisions that matter most.",
+    keywords: [
+      "construction scheduling consultant tools",
+      "project controls AI software",
+      "Monte Carlo construction simulation",
+      "schedule delay analysis software",
+      "construction consultant platform",
+      "AI schedule review and validation",
+      "owner's representative software",
+      "schedule risk analysis tool",
+      "construction expert witness tools",
+      "forensic schedule analysis AI",
+      "CPM schedule optimization",
+      "delay impact quantification",
+      "construction advisory intelligence",
+      "project controls analytics platform",
+    ],
+    heroImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
+    icon: "📐",
+    category: "stakeholder",
+    features: [
+      {
+        title: "Contractor Schedule Review & Scoring",
+        description:
+          "Upload a contractor's schedule and let Space AI score it for logic density, critical path integrity, resource plausibility, and risk exposure — in minutes.",
+        icon: "🔎",
+      },
+      {
+        title: "Independent AI Schedule Generation",
+        description:
+          "Generate a fully AI-driven baseline schedule from BIM for comparison against contractor submissions or as a standalone deliverable.",
+        icon: "🤖",
+      },
+      {
+        title: "Monte Carlo Risk Simulation",
+        description:
+          "Run probabilistic schedule risk analysis to quantify completion date confidence, identify float erosion, and model delay scenarios for clients.",
+        icon: "📊",
+      },
+      {
+        title: "Delay Analysis & Impact Quantification",
+        description:
+          "Perform impacted as-planned, time impact, and windows analyses with AI-assisted delay cause attribution and downstream impact mapping.",
+        icon: "📋",
+      },
+      {
+        title: "Multi-Project Portfolio Analytics",
+        description:
+          "Track schedule performance across multiple client projects simultaneously, delivering benchmarked insights and early warning signals at scale.",
+        icon: "🗂️",
+      },
+      {
+        title: "Client-Ready Reporting Engine",
+        description:
+          "Auto-generate professional schedule risk reports, delay narratives, and probabilistic forecasts formatted for owner, legal, or board audiences.",
+        icon: "📄",
+      },
+    ],
+    benefits: [
+      {
+        title: "10x Analysis Speed",
+        description:
+          "AI-powered schedule review and risk simulation cuts analysis time from days to hours, enabling more clients with the same team.",
+        stat: "10x",
+      },
+      {
+        title: "Higher Report Quality",
+        description:
+          "Probabilistic, geometry-aware analysis delivers richer insights than traditional CPM review, strengthening your advisory value.",
+        stat: "94%",
+      },
+      {
+        title: "Scale Your Practice",
+        description:
+          "Automate routine analysis so senior consultants can focus on strategy, claims support, and high-value client work.",
+        stat: "3x",
+      },
+      {
+        title: "Reduce Reporting Time",
+        description:
+          "Automated report generation eliminates manual formatting and data compilation, freeing billable hours.",
+        stat: "55%",
+      },
+    ],
+    useCases: [
+      "Contractor schedule review and validation",
+      "Baseline schedule development from BIM",
+      "Delay analysis and claims support",
+      "Owner representation and oversight",
+      "Bid-phase schedule scoring",
+      "Monthly progress and forecast reporting",
+      "Portfolio performance benchmarking",
+      "Expert witness schedule analysis",
+    ],
+    testimonial: {
+      quote:
+        "Space AI has completely changed our project controls practice. We can now deliver probabilistic risk analysis on day one of an engagement — it's become our strongest differentiator.",
+      author: "Marcus Osei",
+      role: "Principal, Construction Advisory",
+      company: "Vertex Project Controls",
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "See Consultant Demo",
+    },
+  },
+];
+
+// ─────────────────────────────────────────────
+// BY PROJECT TYPE
+// ─────────────────────────────────────────────
+
+export const projectTypeSolutions: Solution[] = [
+  {
+    slug: "industrial",
+    title: "Space AI for Industrial Projects",
+    tagline: "Complex Systems. Precision Sequencing. Zero Surprises.",
+    description:
+      "Industrial construction — refineries, power plants, data centers, manufacturing facilities — demands sequencing logic that no manual planner can fully manage. Space AI's geometry-driven reasoning engine handles the complexity: thousands of pipe spools, equipment lifts, structural steel, and MEP systems, all sequenced with physical precision and optimized for your completion date.",
+    metaDescription:
+      "Space AI for Industrial Construction: AI-powered sequencing for complex industrial facilities, process plants, data centers, and manufacturing. Automate MEP logic, equipment lifts, and steel erection sequences.",
+    seoContent:
+      "Industrial projects are the most scheduling-intensive construction category in existence. The interdependencies between structural steel, large equipment installation, piping systems, electrical infrastructure, and commissioning activities create sequencing complexity that overwhelms traditional CPM tools. Space AI's Construction Knowledge Graph captures every physical relationship — pipe penetrations through vessel nozzles, equipment access envelopes, crane reach constraints, module lift sequences — and converts them into a dependency graph that drives a fully optimized AI schedule. The result is a schedule that is not only logically sound but also constructible, with crew flow, zone sequencing, and equipment utilization all optimized simultaneously.",
+    keywords: [
+      "industrial construction scheduling software",
+      "process plant construction AI",
+      "refinery construction sequencing",
+      "data center construction planning",
+      "manufacturing facility construction schedule",
+      "power plant construction management",
+      "EPC project scheduling AI",
+      "equipment installation sequence planning",
+      "industrial BIM scheduling",
+      "modular construction sequencing",
+      "heavy industrial project controls",
+      "AI construction planning industrial",
+      "pipe spool sequencing software",
+      "structural steel erection sequence",
+    ],
+    heroImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop",
+    icon: "⚙️",
+    category: "project-type",
+    features: [
+      {
+        title: "MEP & Process System Sequencing",
+        description:
+          "Automatically infer installation sequences for piping, vessels, equipment, HVAC, and electrical systems from BIM model geometry — including penetration logic and nozzle alignment constraints.",
+        icon: "🔧",
+      },
+      {
+        title: "Large Equipment & Crane Logic",
+        description:
+          "Model equipment lift sequences, crane positions, exclusion zones, and access envelopes directly in the construction knowledge graph to produce feasible, safe installation schedules.",
+        icon: "🏗️",
+      },
+      {
+        title: "Module & Prefab Coordination",
+        description:
+          "Coordinate modular and prefabricated assembly sequences with on-site structural and MEP activities, optimizing site logistics and minimizing interface clashes.",
+        icon: "📦",
+      },
+      {
+        title: "Commissioning & Handover Planning",
+        description:
+          "AI-generate commissioning sequences from system P&IDs and BIM data, integrating pre-commissioning, testing, and operational handover milestones into the construction schedule.",
+        icon: "✅",
+      },
+      {
+        title: "Multi-Discipline Resource Optimization",
+        description:
+          "Optimize across structural, mechanical, piping, electrical, and instrumentation disciplines simultaneously, eliminating crew conflicts and maximizing field productivity.",
+        icon: "👷",
+      },
+      {
+        title: "Shutdown & Turnaround Planning",
+        description:
+          "AI-accelerated turnaround schedule development with critical path analysis, crew allocation, and real-time progress resequencing for minimal downtime exposure.",
+        icon: "⏱️",
+      },
+    ],
+    benefits: [
+      {
+        title: "Reduce Schedule Development Time",
+        description:
+          "AI generates a multi-discipline industrial schedule from BIM in hours, not weeks of manual P6 data entry.",
+        stat: "75%",
+      },
+      {
+        title: "Eliminate Interface Clashes",
+        description:
+          "Geometry-driven sequencing resolves multi-discipline conflicts before they reach the field, reducing costly rework.",
+        stat: "60%",
+      },
+      {
+        title: "Improve Commissioning Readiness",
+        description:
+          "AI-optimized system turnover sequencing accelerates commissioning and reduces pre-operational delays.",
+        stat: "40%",
+      },
+      {
+        title: "Minimize Shutdown Duration",
+        description:
+          "Real-time resequencing and probabilistic critical path reduce turnaround overruns significantly.",
+        stat: "3.2x",
+      },
+    ],
+    useCases: [
+      "Process plant and refinery construction scheduling",
+      "Data center infrastructure sequencing",
+      "Manufacturing facility fit-out planning",
+      "Power generation construction planning",
+      "Equipment installation and lift sequencing",
+      "Multi-discipline resource optimization",
+      "Commissioning and system turnover planning",
+      "Plant shutdown and turnaround scheduling",
+    ],
+    testimonial: {
+      quote:
+        "We used to spend six weeks developing the schedule for a major plant expansion. Space AI had a fully logic-linked AI schedule ready for review in two days. The quality was better than anything we'd done manually.",
+      author: "Chen Wei",
+      role: "Project Controls Manager",
+      company: "Pacific Industrial Constructors",
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "See Industrial Demo",
+    },
+  },
+
+  {
+    slug: "infrastructure",
+    title: "Space AI for Infrastructure Projects",
+    tagline: "Long Programs. Complex Interfaces. Delivered On Time.",
+    description:
+      "Infrastructure projects — highways, rail, bridges, utilities, water treatment — span years, involve multiple contractors, and carry enormous public accountability. Space AI's AI scheduling platform manages the complexity: linear scheduling, interface coordination, phased delivery, and real-time program risk management, all from a single intelligence platform.",
+    metaDescription:
+      "Space AI for Infrastructure: AI-powered linear scheduling, multi-contractor coordination, phased delivery planning, and real-time program risk management for highways, rail, bridges, and utilities.",
+    seoContent:
+      "Infrastructure programs are fundamentally different from building construction — they are linear, geographically dispersed, multi-contractor, and politically exposed. Traditional CPM tools weren't designed for these characteristics. Space AI for Infrastructure introduces spatial sequencing logic that matches the physical reality of linear projects: chainage-based task positioning, traffic stage sequencing, utility conflict resolution, and environmental constraint management. AI-driven resource flow optimization ensures work fronts are continuously advanced without crew conflicts or zone congestion. Portfolio-level risk dashboards give program managers and funding bodies the visibility they need to manage accountability across complex, multi-year infrastructure delivery programs.",
+    keywords: [
+      "infrastructure construction scheduling AI",
+      "linear scheduling software",
+      "highway construction sequencing",
+      "rail construction planning AI",
+      "bridge construction schedule software",
+      "utility infrastructure scheduling",
+      "water treatment construction planning",
+      "multi-contractor coordination platform",
+      "infrastructure program management",
+      "traffic staging construction planning",
+      "public infrastructure delivery software",
+      "program-level schedule management",
+      "civil construction AI scheduling",
+      "infrastructure risk management platform",
+    ],
+    heroImage: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&auto=format&fit=crop",
+    icon: "🌉",
+    category: "project-type",
+    features: [
+      {
+        title: "Linear & Chainage-Based Scheduling",
+        description:
+          "Schedule linear infrastructure work by geographic chainage, with AI-optimized crew movement, work front sequencing, and production rate optimization along the corridor.",
+        icon: "🛣️",
+      },
+      {
+        title: "Traffic & Utilities Stage Management",
+        description:
+          "Model construction staging with traffic management constraints, utility diversions, and environmental exclusion zones built directly into the sequencing logic.",
+        icon: "🚦",
+      },
+      {
+        title: "Multi-Contractor Interface Coordination",
+        description:
+          "Coordinate interfaces between multiple contractors, disciplines, and work packages with AI-identified dependencies and real-time conflict detection across the program.",
+        icon: "🤝",
+      },
+      {
+        title: "Geospatial Risk Mapping",
+        description:
+          "Overlay schedule risk and delay probability onto GIS maps, giving program managers a spatial view of where the program is most vulnerable.",
+        icon: "🗺️",
+      },
+      {
+        title: "Program-Level Milestone Tracking",
+        description:
+          "Track progress against program milestones across multiple contracts simultaneously, with AI-generated forecast reports for funding bodies and regulatory stakeholders.",
+        icon: "📊",
+      },
+      {
+        title: "Environmental & Seasonal Constraint Modeling",
+        description:
+          "Integrate environmental windows, seasonal weather constraints, and regulatory hold points into the AI scheduling engine for realistic, compliant program plans.",
+        icon: "🌿",
+      },
+    ],
+    benefits: [
+      {
+        title: "Reduce Program Overruns",
+        description:
+          "Predictive risk modeling and proactive interface management reduce infrastructure program overruns significantly.",
+        stat: "35%",
+      },
+      {
+        title: "Improve Milestone Confidence",
+        description:
+          "Monte Carlo simulation provides funders and program boards with honest, probabilistic confidence on key milestone dates.",
+        stat: "2.8x",
+      },
+      {
+        title: "Cut Coordination Overhead",
+        description:
+          "Automated interface detection and multi-contractor coordination reduces the overhead of managing complex program interfaces.",
+        stat: "50%",
+      },
+      {
+        title: "Better Public Accountability",
+        description:
+          "Transparent, AI-generated progress reporting builds public trust and meets funding body reporting requirements efficiently.",
+        stat: "90%",
+      },
+    ],
+    useCases: [
+      "Highway and road construction sequencing",
+      "Rail and transit infrastructure planning",
+      "Bridge and marine structure scheduling",
+      "Water and wastewater treatment facilities",
+      "Multi-contract program interface management",
+      "Traffic staging and utility diversion planning",
+      "Environmental compliance and constraint modeling",
+      "Program-level milestone and funding reporting",
+    ],
+    testimonial: {
+      quote:
+        "Managing interface risk across eight separate contractors on our rail program was a nightmare before Space AI. Now we have a live view of interface conflicts and AI-suggested resolution options. It's transformed our program management.",
+      author: "Sophie Laurent",
+      role: "Program Director",
+      company: "National Rail Infrastructure Authority",
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "See Infrastructure Demo",
+    },
+  },
+
+  {
+    slug: "commercial",
+    title: "Space AI for Commercial Projects",
+    tagline: "On Budget. On Time. Every Time.",
+    description:
+      "Commercial construction — offices, mixed-use, retail, hospitality, and healthcare — demands reliable schedules, smooth trade coordination, and fast response to change. Space AI delivers AI-powered sequencing, automated trade stacking, and real-time schedule intelligence to keep your commercial projects on track from ground-break to handover.",
+    metaDescription:
+      "Space AI for Commercial Construction: AI-powered scheduling, automated trade sequencing, zone-based flow planning, and real-time delay response for office, retail, healthcare, and mixed-use projects.",
+    seoContent:
+      "Commercial construction projects are won and lost on schedule and trade coordination. The difference between a profitable project and a loss often comes down to how well trades are sequenced across zones, how quickly the team responds to delays, and how accurately durations are estimated at the start. Space AI for Commercial Projects introduces AI-native scheduling that eliminates the manual sequencing bottleneck: BIM geometry drives automatic task generation, zone flow planning distributes trades for maximum efficiency, and Monte Carlo simulation tells you which parts of your program are genuinely at risk. The result is a commercial construction team that plans with confidence, coordinates trades without conflict, and responds to site reality in real time.",
+    keywords: [
+      "commercial construction scheduling AI",
+      "office building construction planning",
+      "mixed-use development scheduling",
+      "healthcare construction sequencing",
+      "hospitality construction planning",
+      "retail construction schedule software",
+      "trade coordination software",
+      "commercial BIM scheduling",
+      "zone-based construction planning",
+      "fit-out sequencing software",
+      "commercial project controls AI",
+      "tenant improvement scheduling",
+      "construction schedule optimization",
+      "commercial construction risk management",
+    ],
+    heroImage: "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=800&auto=format&fit=crop",
+    icon: "🏙️",
+    category: "project-type",
+    features: [
+      {
+        title: "Floor-by-Floor Zone Sequencing",
+        description:
+          "AI automatically sequences work zone by zone and floor by floor, optimizing trade flow to eliminate bottlenecks, reduce congestion, and maintain a steady production rate.",
+        icon: "🏢",
+      },
+      {
+        title: "Fit-Out & Tenant Coordination",
+        description:
+          "Integrate base-build and tenant fit-out schedules with AI-managed interface logic, ensuring concurrent workstreams are coordinated without conflict.",
+        icon: "🔑",
+      },
+      {
+        title: "Healthcare & Critical Environment Planning",
+        description:
+          "Model infection control zones, operational area constraints, and phased handover requirements for healthcare and critical environment projects directly in the scheduling engine.",
+        icon: "🏥",
+      },
+      {
+        title: "Automated Trade Stacking Analysis",
+        description:
+          "Detect when too many trades are concentrated in a single area and automatically redistribute work to maintain safe, productive working conditions.",
+        icon: "📐",
+      },
+      {
+        title: "Owner Change Impact Analysis",
+        description:
+          "When design changes arrive, AI instantly models the schedule impact, identifies the critical path effect, and proposes resequencing options to recover time.",
+        icon: "⚡",
+      },
+      {
+        title: "Defects & Commissioning Closeout",
+        description:
+          "AI-generate closeout and commissioning sequences with zone-by-zone defect clearance tracking, linked to practical completion milestones.",
         icon: "✅",
       },
     ],
     benefits: [
       {
-        title: "Faster Design Iterations",
+        title: "Faster Project Delivery",
         description:
-          "Reduce feedback cycles by 50% with streamlined review and approval workflows.",
-        stat: "50%",
+          "AI-optimized zone flow and automated trade sequencing accelerate commercial project delivery significantly.",
+        stat: "22%",
       },
       {
-        title: "Improved Consistency",
+        title: "Reduce Trade Conflicts",
         description:
-          "Maintain brand and design system consistency across all projects and teams.",
-        stat: "95%",
+          "Automatic trade stacking detection and zone redistribution eliminates the most common source of commercial project delay.",
+        stat: "65%",
       },
       {
-        title: "Seamless Handoffs",
+        title: "Improve Budget Certainty",
         description:
-          "Eliminate back-and-forth with developers through comprehensive design specs.",
-        stat: "70%",
+          "Probabilistic scheduling gives commercial owners and developers a realistic view of cost exposure from schedule risk.",
+        stat: "2.5x",
       },
       {
-        title: "Enhanced Creativity",
+        title: "Accelerate Fit-Out Closeout",
         description:
-          "Spend more time designing and less time on administrative tasks.",
-        stat: "35%",
+          "AI-driven closeout sequencing reduces the tail-end snag and commissioning period that erodes commercial project margins.",
+        stat: "30%",
       },
     ],
     useCases: [
-      "Design project management",
-      "Creative asset organization",
-      "Design review and approval",
-      "Design system governance",
-      "Brand asset management",
-      "Design sprint facilitation",
-      "Cross-functional collaboration",
-      "Design resource planning",
+      "High-rise commercial office construction",
+      "Mixed-use development phasing and coordination",
+      "Healthcare and hospital construction planning",
+      "Hospitality and hotel construction scheduling",
+      "Retail and fit-out sequencing",
+      "Tenant improvement coordination",
+      "Base-build and fit-out interface management",
+      "Commissioning and closeout sequencing",
     ],
     testimonial: {
       quote:
-        "Space Lean revolutionized our design operations. We've cut our review cycles in half and our design system adoption has never been higher.",
-      author: "Emma Rodriguez",
-      role: "Head of Design",
-      company: "PixelPerfect Studio",
+        "We handed Space AI our BIM model on Monday and had a fully sequenced, zone-optimized schedule ready for the client by Wednesday. The trade stacking analysis alone saved us weeks of manual effort.",
+      author: "Anita Rosenberg",
+      role: "Project Director",
+      company: "Summit Commercial Builders",
     },
     cta: {
       primary: "Start Free Trial",
-      secondary: "See Design Demo",
+      secondary: "See Commercial Demo",
     },
   },
+
   {
-    slug: "startups",
-    title: "Space Lean for Startups",
-    tagline: "Scale Fast Without the Chaos",
+    slug: "ideal-projects",
+    title: "Ideal Projects for Space AI",
+    tagline: "Where AI Scheduling Delivers the Greatest Impact",
     description:
-      "Built for speed and scale, Space Lean gives startups the operational foundation they need to grow. From seed to Series C and beyond, our AI-powered platform adapts to your evolving needs while keeping your team aligned and moving fast.",
+      "Space AI delivers the most transformative results on projects where complexity, interdependency, and schedule risk are highest. Discover the project profiles where AI-powered sequencing creates the clearest competitive advantage — and why leading contractors and owners choose Space AI for their most demanding work.",
     metaDescription:
-      "Scale your startup with an automatic project scheduler. Space Lean for Startups: Scalable project management and AI task breakdown tool for fast-moving teams.",
-      seoContent:
-        "Space Lean for Startups is built to help high-growth teams move quickly without losing discipline. With templates, scalable workflows, and automated investor-ready reporting, founders and operators can maintain momentum while building repeatable processes. The platform makes it easy to prioritize work against runway, manage cross-functional dependencies, and surface the metrics investors care about—so teams can iterate rapidly, demonstrate traction, and scale with operational rigor.",
+      "Discover the ideal construction project types for Space AI: complex BIM-driven projects, multi-trade coordination, phased delivery, and high-risk programs where AI scheduling delivers maximum ROI.",
+    seoContent:
+      "Not every project needs an AI construction scheduling platform — but the projects that do are exactly where the difference between on-time delivery and costly overrun is decided. Space AI is purpose-built for projects with high element counts, complex trade interdependencies, tight delivery windows, and significant schedule risk. These are the projects where manual CPM scheduling simply cannot keep pace with the geometry, the resource constraints, and the real-time change that characterizes modern construction. If your project fits any of the profiles below, Space AI will deliver measurable value from day one.",
     keywords: [
-      "AI task breakdown tool",
-      "turn notes into tasks AI",
-      "automatic project scheduler",
-      "startup project management",
-      "startup collaboration tools",
-      "startup growth platform",
-      "startup team management",
-      "startup productivity software",
-      "startup operations platform",
-      "startup scaling tools",
-      "startup workflow automation",
-      "startup OKR software",
-      "startup metrics dashboard",
-      "early-stage startup tools",
-      "startup team alignment",
-      "startup agile management",
-      "startup resource planning",
-      "startup intelligence platform",
+      "best projects for AI construction scheduling",
+      "complex construction project management",
+      "high-rise construction AI planning",
+      "BIM-driven construction scheduling",
+      "multi-trade construction coordination",
+      "large-scale construction AI platform",
+      "construction project risk mitigation",
+      "phased construction delivery planning",
+      "construction schedule AI ROI",
+      "when to use AI construction software",
     ],
-    heroImage: "/startups.jpg",
-    icon: "🚀",
+    heroImage: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&auto=format&fit=crop",
+    icon: "🎯",
+    category: "project-type",
     features: [
       {
-        title: "Rapid Deployment",
+        title: "High Element Count Projects",
         description:
-          "Get up and running in minutes, not weeks. Pre-built templates and workflows designed for startup speed.",
+          "Projects with 50,000+ BIM elements — towers, hospitals, data centers, industrial plants — where manual sequencing is impractical and AI-driven automation creates an immediate, quantifiable advantage.",
+        icon: "🏗️",
+      },
+      {
+        title: "Multi-Trade Interdependency",
+        description:
+          "Projects with dense structural, MEP, and fit-out interdependencies that create cascading delay risk — exactly the environment where geometry-driven AI sequencing and Monte Carlo simulation deliver maximum value.",
+        icon: "🔗",
+      },
+      {
+        title: "Phased Handover Programs",
+        description:
+          "Developments with multiple handover stages requiring simultaneous construction, commissioning, and occupation — where AI zone sequencing and real-time resequencing are critical to meeting each milestone.",
+        icon: "📅",
+      },
+      {
+        title: "Fast-Track & Compressed Programs",
+        description:
+          "Projects with aggressive finish dates where every inefficiency in trade sequencing and resource allocation matters — and where AI optimization generates schedule savings impossible to find manually.",
         icon: "⚡",
       },
       {
-        title: "Scalable Architecture",
+        title: "High-Value Delay Risk Projects",
         description:
-          "Start small and scale infinitely. Our platform grows with you from 5 to 500+ team members.",
-        icon: "📈",
-      },
-      {
-        title: "Investor Reporting",
-        description:
-          "Auto-generated investor updates, KPI dashboards, and board meeting preparation tools.",
-        icon: "📊",
-      },
-      {
-        title: "Cross-Functional Alignment",
-        description:
-          "Keep engineering, product, sales, and ops aligned with shared goals and transparent progress.",
-        icon: "🎯",
-      },
-      {
-        title: "Resource Optimization",
-        description:
-          "AI-powered resource allocation to maximize output with limited runway.",
+          "Projects where liquidated damages, revenue loss, or operational impact make schedule overrun extremely costly — and where probabilistic risk intelligence is essential for proactive management.",
         icon: "💰",
       },
       {
-        title: "Growth Analytics",
+        title: "Repeat or Portfolio Programs",
         description:
-          "Track key startup metrics: burn rate, runway, growth rate, and team velocity in one dashboard.",
-        icon: "🔍",
+          "Programs with recurring project types — retail rollouts, residential developments, infrastructure corridors — where Space AI's self-learning engine compounds improvement across every successive project.",
+        icon: "📈",
       },
     ],
     benefits: [
       {
-        title: "Move Faster",
+        title: "Highest ROI on Complex Projects",
         description:
-          "Reduce operational overhead so your team can focus on building and shipping.",
-        stat: "2x",
+          "The more complex the project, the greater the value Space AI delivers — AI scheduling creates exponential returns on complexity.",
+        stat: "8x",
       },
       {
-        title: "Stay Aligned",
+        title: "Quantifiable Risk Reduction",
         description:
-          "Keep everyone rowing in the same direction with transparent goals and progress.",
-        stat: "89%",
+          "Probabilistic scheduling quantifies delay risk in dollar terms, enabling proactive investment in risk mitigation.",
+        stat: "45%",
       },
       {
-        title: "Scale Smoothly",
+        title: "Faster Preconstruction",
         description:
-          "Avoid growing pains with processes that scale from seed to Series C.",
-        stat: "10x",
+          "AI reduces preconstruction schedule preparation time significantly, enabling faster bid submission and better quality proposals.",
+        stat: "70%",
       },
       {
-        title: "Impress Investors",
+        title: "Compounding Portfolio Value",
         description:
-          "Professional reporting and metrics that demonstrate operational excellence.",
-        stat: "95%",
+          "Self-learning AI improves with every project, creating increasing productivity gains across portfolio programs.",
+        stat: "3x",
       },
     ],
     useCases: [
-      "OKR and goal tracking",
-      "Sprint and iteration planning",
-      "Investor update automation",
-      "Hiring and onboarding workflows",
-      "Customer feedback management",
-      "Product-market fit tracking",
-      "Runway and burn rate monitoring",
-      "Cross-team communication",
+      "High-rise residential and commercial towers",
+      "Hospitals and healthcare campuses",
+      "Data centers and mission-critical facilities",
+      "Industrial and process plants",
+      "Fast-track education and civic facilities",
+      "Mixed-use urban development programs",
+      "Retail and hospitality portfolio rollouts",
+      "Major infrastructure corridor programs",
     ],
     testimonial: {
       quote:
-        "Space Lean helped us scale from 10 to 100 people without losing our startup speed. It's the operational backbone every growing startup needs.",
-      author: "Jason Park",
-      role: "CEO & Co-founder",
-      company: "RapidGrowth AI",
+        "Space AI is purpose-built for the kind of projects we do. Complex, multi-trade, fast-track — the kind of work where manual scheduling always falls short. Now we have a platform that matches our project complexity.",
+      author: "Daniel Okonkwo",
+      role: "Chief Estimator",
+      company: "Titan Construction Partners",
     },
     cta: {
-      primary: "Start Free Trial",
-      secondary: "See Startup Demo",
-    },
-  },
-  {
-    slug: "remote-teams",
-    title: "Space Lean for Remote Teams",
-    tagline: "Collaborate Like You're in the Same Room",
-    description:
-      "Purpose-built for distributed teams, Space Lean bridges time zones and eliminates communication gaps. Our AI-powered platform ensures remote teams stay connected, productive, and aligned regardless of where they work.",
-    metaDescription:
-      "Remote collaboration with an automatic project scheduler and AI task breakdown tool. Space Lean for Remote Teams: AI-powered remote work and async communication.",
-      seoContent:
-        "Space Lean for Remote Teams is optimized for distributed work: asynchronous collaboration, timezone-aware scheduling, and a centralized knowledge base eliminate context loss and unnecessary meetings. Teams can run async stand-ups, coordinate handoffs, and maintain visibility across projects without pulling people into more meetings. The platform's intelligent scheduling and notification controls respect deep work while providing the right context to stakeholders so distributed teams can stay aligned and productive across time zones.",
-    keywords: [
-      "AI task breakdown tool",
-      "turn notes into tasks AI",
-      "automatic project scheduler",
-      "remote team management",
-      "distributed team collaboration",
-      "remote work platform",
-      "async communication tools",
-      "remote project management",
-      "virtual team software",
-      "remote team productivity",
-      "distributed workforce management",
-      "remote team coordination",
-      "hybrid work platform",
-      "remote team alignment",
-      "async work tools",
-      "remote team communication",
-      "virtual collaboration platform",
-      "remote operations software",
-    ],
-    heroImage: "/remote.jpg",
-    icon: "🌍",
-    features: [
-      {
-        title: "Async-First Communication",
-        description:
-          "Built for asynchronous work with threaded discussions, video messages, and smart notifications that respect time zones.",
-        icon: "💬",
-      },
-      {
-        title: "Time Zone Intelligence",
-        description:
-          "AI-optimized scheduling that finds the best times for collaboration across global teams.",
-        icon: "🌐",
-      },
-      {
-        title: "Virtual Stand-ups",
-        description:
-          "Automated async stand-ups and check-ins that keep everyone informed without meeting fatigue.",
-        icon: "📹",
-      },
-      {
-        title: "Documentation Hub",
-        description:
-          "Centralized knowledge base with AI-powered search so context is always accessible.",
-        icon: "📚",
-      },
-      {
-        title: "Team Visibility",
-        description:
-          "Real-time presence, availability status, and workload visibility across distributed teams.",
-        icon: "👀",
-      },
-      {
-        title: "Culture & Connection",
-        description:
-          "Virtual water coolers, team celebrations, and engagement tools to maintain company culture.",
-        icon: "🎉",
-      },
-    ],
-    benefits: [
-      {
-        title: "Reduce Meeting Overload",
-        description:
-          "Cut unnecessary meetings by 60% with effective async communication tools.",
-        stat: "60%",
-      },
-      {
-        title: "Bridge Time Zones",
-        description:
-          "Enable seamless collaboration across 24 time zones without anyone working odd hours.",
-        stat: "24",
-      },
-      {
-        title: "Boost Engagement",
-        description:
-          "Keep remote team members connected and engaged with visibility and recognition tools.",
-        stat: "75%",
-      },
-      {
-        title: "Maintain Productivity",
-        description:
-          "Remote teams using Space Lean match or exceed in-office productivity levels.",
-        stat: "110%",
-      },
-    ],
-    useCases: [
-      "Async project management",
-      "Distributed team coordination",
-      "Remote onboarding",
-      "Cross-timezone scheduling",
-      "Virtual team building",
-      "Remote performance tracking",
-      "Knowledge management",
-      "Hybrid work coordination",
-    ],
-    testimonial: {
-      quote:
-        "With team members in 15 countries, Space Lean has been a game-changer. We've never felt more connected or aligned as a distributed team.",
-      author: "Lisa Andersson",
-      role: "Chief People Officer",
-      company: "GlobalTech Solutions",
-    },
-    cta: {
-      primary: "Start Free Trial",
-      secondary: "See Remote Demo",
+      primary: "See If Your Project Qualifies",
+      secondary: "View Project Examples",
     },
   },
 ];
 
-// Role-based solutions requested by marketing/SEO
-solutions.push(
+// ─────────────────────────────────────────────
+// SOLUTIONS — PARTNERS PROGRAM
+// ─────────────────────────────────────────────
+
+export const solutionsSolutions: Solution[] = [
   {
-    slug: "product-managers",
-    title: "Space Lean for Product Managers",
-    tagline: "Ship the right features, on time",
+    slug: "partners-program",
+    title: "Space AI Partners Program",
+    tagline: "Grow Together. Build the Future of Construction Intelligence.",
     description:
-      "Focus on outcomes with purpose-built tools for sprint tracking, backlog grooming, and stakeholder alignment. Space Lean for Product Managers helps you prioritize what matters and deliver predictable value.",
+      "The Space AI Partners Program is built for technology providers, consulting firms, BIM integrators, and construction software companies who want to bring AI-native scheduling intelligence to their clients and platforms. Join a network of partners who are reshaping the future of construction delivery.",
     metaDescription:
-      "Space Lean for Product Managers: sprint tracking, backlog grooming, roadmap visualization, and AI-assisted prioritization.",
+      "Join the Space AI Partners Program: technology integrations, consulting partnerships, reseller opportunities, and co-development programs for construction technology companies and advisors.",
     seoContent:
-      "Space Lean for Product Managers focuses on practical, outcome-driven tools for planning and executing product work. Our sprint tracking surfaces team capacity and burn-down trends while backlog grooming features group, estimate, and surface high-impact requests so product teams can prioritize with confidence. Use AI-assisted prioritization to align stakeholder goals, reduce scope churn, and increase the predictability of releases—making it easier to demonstrate consistent product progress to executives and customers.",
+      "The Space AI Partners Program offers a structured path for organizations that want to embed, resell, or extend AI-native construction scheduling intelligence into their own platforms and client offerings. Whether you are a construction management consultancy, a BIM software provider, a project controls firm, or a technology integrator, Space AI's partnership ecosystem is designed to create mutual value through shared innovation, joint go-to-market, and technical integration. Partners gain early access to Space AI's Construction Knowledge Graph APIs, training and certification programs, co-marketing support, and revenue-sharing models that reward deep integration and client success. Together, we are building the intelligence layer that will define the next generation of construction delivery.",
     keywords: [
-      "sprint tracking",
-      "backlog grooming",
-      "product manager tools",
-      "roadmap visualization",
-      "feature prioritization",
-      "AI task breakdown",
+      "construction technology partner program",
+      "BIM software integration partner",
+      "construction AI reseller program",
+      "project controls consulting partner",
+      "construction software API integration",
+      "construction technology ecosystem",
+      "Space AI integration partner",
+      "construction intelligence platform partner",
+      "AEC technology partnership program",
+      "construction consulting partner network",
+      "BIM consulting partnership",
+      "construction SaaS partner program",
+      "construction technology co-development",
+      "AEC software reseller partnership",
     ],
-    heroImage: "/productmanagement.jpg",
-    icon: "📌",
+    heroImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop",
+    icon: "🤝",
+    category: "solutions",
     features: [
       {
-        title: "Sprint Tracking",
-        description: "Real-time sprint boards with burndown charts and capacity-aware forecasting.",
-        icon: "📅",
+        title: "Technology Integration Partners",
+        description:
+          "Embed Space AI's Construction Knowledge Graph and scheduling engine into your existing platform via our open API. Deliver AI-native scheduling as part of your product without building from scratch.",
+        icon: "🔌",
       },
       {
-        title: "Backlog Grooming",
-        description: "AI-assisted backlog refinement that groups, estimates, and surfaces high-impact work.",
-        icon: "🧰",
+        title: "Consulting & Advisory Partners",
+        description:
+          "Licensed access to Space AI's full platform for consulting firms to deliver AI-powered schedule analysis, risk simulation, and project intelligence to your clients.",
+        icon: "📐",
       },
       {
-        title: "Roadmap Visualization",
-        description: "Dynamic roadmaps that update as priorities change and stakeholders comment.",
-        icon: "🗺️",
+        title: "Reseller Program",
+        description:
+          "Become an authorized Space AI reseller with competitive margin structures, sales enablement support, and co-branded marketing materials for your market region.",
+        icon: "💼",
+      },
+      {
+        title: "BIM & Digital Twin Integrators",
+        description:
+          "Deep integration support for BIM platform providers, digital twin vendors, and construction data companies who want to add AI scheduling intelligence to their offering.",
+        icon: "🧩",
+      },
+      {
+        title: "Co-Development Program",
+        description:
+          "Strategic partners with access to our development roadmap, early API releases, and joint product development opportunities to shape the future of Space AI's platform.",
+        icon: "🛠️",
+      },
+      {
+        title: "Training & Certification",
+        description:
+          "Space AI Partner Certification programs for consultants and integrators, including technical certification, client delivery methodology, and ongoing product education.",
+        icon: "🎓",
       },
     ],
     benefits: [
       {
-        title: "Faster Planning",
-        description: "Reduce planning overhead and ship with confidence.",
-        stat: "30%",
+        title: "New Revenue Streams",
+        description:
+          "Add AI scheduling intelligence to your service or product offering with minimal investment and strong partner economics.",
+        stat: "2.5x",
       },
       {
-        title: "Clear Priorities",
-        description: "Keep stakeholders aligned with transparent roadmaps and decision logs.",
+        title: "Faster Client Outcomes",
+        description:
+          "Deliver AI-powered project intelligence to clients faster by building on Space AI's proven platform rather than building from scratch.",
+        stat: "6x",
       },
       {
-        title: "Higher Velocity",
-        description: "Optimize sprint throughput with capacity-aware scheduling.",
+        title: "Stronger Market Position",
+        description:
+          "Partners consistently report improved win rates and client retention by differentiating with AI construction intelligence.",
+        stat: "78%",
+      },
+      {
+        title: "Shared Innovation",
+        description:
+          "Co-development partners gain early access to new capabilities, positioning their clients ahead of the market with next-generation features.",
+        stat: "12mo",
       },
     ],
     useCases: [
-      "Sprint planning and tracking",
-      "Backlog refinement and grooming",
-      "Feature prioritization and RICE scoring",
-      "Stakeholder status updates",
-      "Roadmap and release coordination",
+      "Embedding AI scheduling into BIM platforms",
+      "Delivering AI risk simulation for owner clients",
+      "Reselling Space AI to GCs in your region",
+      "Building custom integrations for ERP or PMIS systems",
+      "Adding AI scheduling to construction consulting services",
+      "Joint go-to-market with complementary technology providers",
+      "Digital twin integration for infrastructure programs",
+      "Training and certification for project controls teams",
     ],
     testimonial: {
       quote:
-        "Space Lean made backlog grooming painless and helped our team focus on outcomes instead of busywork.",
-      author: "Ava Patel",
-      role: "Senior Product Manager",
-      company: "Brightline",
+        "Partnering with Space AI has opened a completely new service line for our project controls practice. Our clients were asking for probabilistic scheduling — now we can deliver it with confidence on any project.",
+      author: "Nina Bartholomew",
+      role: "Managing Partner",
+      company: "Construct Advisory International",
     },
     cta: {
-      primary: "Start Free Trial",
-      secondary: "See PM Demo",
+      primary: "Apply to Partner Program",
+      secondary: "Download Partner Guide",
     },
   },
+];
 
-  {
-    slug: "engineering-leads",
-    title: "Space Lean for Engineering Leads",
-    tagline: "Ship reliably with clear engineering workflows",
-    description:
-      "Designed for engineering leadership: streamline issue tracking, integrate with GitHub/GitLab, and reduce technical debt while improving delivery reliability.",
-    metaDescription:
-      "Space Lean for Engineering Leads: issue tracking, GitHub/GitLab integrations, CI/CD insights, and technical debt prioritization.",
-    seoContent:
-      "Space Lean for Engineering Leads is built to provide end-to-end technical visibility and reduce delivery risk. With native GitHub and GitLab integrations, PRs, branches, and CI signals are surfaced directly on issues so engineering leaders can quickly identify bottlenecks and correlate code changes to project milestones. Prioritize technical debt alongside feature work with AI recommendations, and use CI/CD insights to improve release readiness—helping teams ship more reliably while maintaining code quality and developer velocity.",
-    keywords: [
-      "issue tracking",
-      "github integration",
-      "gitlab integration",
-      "engineering leads",
-      "ci/cd insights",
-      "technical debt prioritization",
-    ],
-    heroImage: "/engineering.jpg",
-    icon: "🧑‍💻",
-    features: [
-      {
-        title: "Issue Tracking",
-        description: "Unified issue views with automatic linking to commits, PRs, and deployments.",
-        icon: "🐞",
-      },
-      {
-        title: "GitHub & GitLab Integrations",
-        description: "Sync PRs, branches, and CI status directly into work items for end-to-end traceability.",
-        icon: "🔗",
-      },
-      {
-        title: "CI/CD Insights",
-        description: "Correlate deployment health with project milestones and uncover release blockers.",
-        icon: "🚦",
-      },
-    ],
-    benefits: [
-      {
-        title: "Reduce Cycle Time",
-        description: "Faster delivery by surfacing PR and CI bottlenecks.",
-      },
-      {
-        title: "Improve Visibility",
-        description: "Trace work from issue to deploy with integrated SCM data.",
-      },
-      {
-        title: "Lower Tech Debt",
-        description: "Prioritize maintenance work alongside feature work with AI recommendations.",
-      },
-    ],
-    useCases: [
-      "Issue triage and tracking",
-      "PR and deployment correlation",
-      "Tech-debt tracking and prioritization",
-      "Release readiness checks",
-      "Cross-repo dependency mapping",
-    ],
-    testimonial: {
-      quote:
-        "Integrating our repos into Space Lean gave us the visibility we needed to reduce release pain and improve cadence.",
-      author: "Liam O'Connor",
-      role: "Director of Engineering",
-      company: "Nimbus Labs",
-    },
-    cta: {
-      primary: "Start Free Trial",
-      secondary: "See Engineering Demo",
-    },
+// ─────────────────────────────────────────────
+// COMBINED EXPORT
+// ─────────────────────────────────────────────
+
+export const solutions: Solution[] = [
+  ...stakeholderSolutions,
+  ...projectTypeSolutions,
+  ...solutionsSolutions,
+];
+
+// ─────────────────────────────────────────────
+// NAVIGATION STRUCTURE
+// ─────────────────────────────────────────────
+
+export type SolutionsNav = typeof solutionsNav;
+
+export const solutionsNav = {
+  byStakeholder: {
+    label: "By Stakeholder",
+    items: stakeholderSolutions.map((s) => ({
+      slug: s.slug,
+      title: s.title,
+      icon: s.icon,
+      tagline: s.tagline,
+    })),
   },
+  byProjectType: {
+    label: "By Project Type",
+    items: projectTypeSolutions.map((s) => ({
+      slug: s.slug,
+      title: s.title,
+      icon: s.icon,
+      tagline: s.tagline,
+    })),
+  },
+  solutions: {
+    label: "Solutions",
+    items: solutionsSolutions.map((s) => ({
+      slug: s.slug,
+      title: s.title,
+      icon: s.icon,
+      tagline: s.tagline,
+    })),
+  },
+};
 
-  {
-    slug: "freelancers-solo",
-    title: "Space Lean for Freelancers & Solo Makers",
-    tagline: "Focus days, finish projects",
-    description:
-      "Lightweight, powerful workflows for solo professionals: daily task views, timeboxing, and simple invoicing workflows to keep you productive.",
-    metaDescription:
-      "Space Lean for Freelancers & Solo Makers: daily task views, timeboxing, focus mode, and lightweight project tracking.",
-    seoContent:
-      "Space Lean for Freelancers & Solo Makers gives independent professionals a lightweight workspace focused on delivering billable work and protecting creative focus. Daily task views and timeboxing tools help you plan focused work sessions, minimize interruptions, and track progress across client projects. Built-in summaries and exportable reports reduce administrative overhead, making it simple to produce client-ready status updates and invoices so you can spend less time managing and more time creating.",
-    keywords: [
-      "daily task view",
-      "timeboxing",
-      "freelancer productivity",
-      "solo maker tools",
-      "focus mode",
-    ],
-    heroImage: "/startups.jpg",
-    icon: "🧑‍🎨",
-    features: [
-      {
-        title: "Daily Focus View",
-        description: "Plan your day with prioritized tasks and timeblocks that respect your calendar.",
-        icon: "🗓️",
-      },
-      {
-        title: "Timeboxing & Focus",
-        description: "Built-in timers and Pomodoro-style blocks to minimize context switching.",
-        icon: "⏱️",
-      },
-      {
-        title: "Simple Project Tracking",
-        description: "Lightweight milestones, deliverable tracking, and client-ready reports.",
-        icon: "📁",
-      },
-    ],
-    benefits: [
-      {
-        title: "Stay Focused",
-        description: "Reduce context switching and complete more work each day.",
-      },
-      {
-        title: "Deliver On Time",
-        description: "Clear timeboxes and simple scopes keep client work predictable.",
-      },
-      {
-        title: "Less Admin",
-        description: "Automatic summaries and exportable reports for invoicing and client updates.",
-      },
-    ],
-    useCases: [
-      "Daily planning and timeboxing",
-      "Client deliverable tracking",
-      "Quick invoicing summaries",
-      "Personal backlog management",
-      "Focus mode sessions",
-    ],
-    testimonial: {
-      quote:
-        "Space Lean finally gave me a simple, non-bloated way to manage client work and stay focused all day.",
-      author: "Riley Martinez",
-      role: "Freelance Designer",
-      company: "Independent",
-    },
-    cta: {
-      primary: "Start Free Trial",
-      secondary: "See Freelancer Demo",
-    },
-  }
-);
+// ─────────────────────────────────────────────
+// UTILITY FUNCTIONS
+// ─────────────────────────────────────────────
+
 export function getSolutionBySlug(slug: string): Solution | undefined {
-  return solutions.find((solution) => solution.slug === slug);
+  return solutions.find((s) => s.slug === slug);
 }
 
 export function getAllSolutionSlugs(): string[] {
-  return solutions.map((solution) => solution.slug);
+  return solutions.map((s) => s.slug);
+}
+
+export function getSolutionsByCategory(
+  category: Solution["category"]
+): Solution[] {
+  return solutions.filter((s) => s.category === category);
 }
