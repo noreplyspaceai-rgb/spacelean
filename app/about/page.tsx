@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "About SpaceLean | Shaping the Future of Work",
-    description: "Discover the philosophy and team behind the world's most intelligent task management platform.",
-    images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"],
+    description:
+      "Discover the philosophy and team behind the world's most intelligent task management platform.",
+    images: ["/marketing.jpg"],
   },
 };
 
@@ -61,7 +62,8 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: "About SpaceLean",
-    description: "Learn about SpaceLean mission to revolutionize productivity using AI.",
+    description:
+      "Learn about SpaceLean mission to revolutionize productivity using AI.",
     publisher: {
       "@type": "Organization",
       name: "SpaceLean",
@@ -79,11 +81,15 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#fafafa]">
+    <main className="min-h-screen ">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Hero Section */}
+      
+
       <AboutClient values={values} stats={stats} />
     </main>
   );

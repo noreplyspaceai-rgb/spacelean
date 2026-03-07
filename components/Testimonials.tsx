@@ -10,19 +10,19 @@ const testimonials = [
         content: "SpaceLean stripped away the noise. We just drag, drop, and done. It’s the cleanest tool we’ve ever used. The AI suggestions are actually useful, not just a gimmick.",
         author: "Sarah Jenkins",
         role: "Product Manager, TechFlow",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+        image: "/design.jpg"
     },
     {
         content: "The AI doesn't guess; it knows. Our scheduling accuracy improved by 40% in the first week. It feels like having a dedicated project manager for every single team member.",
         author: "Michael Chen",
         role: "CTO, StartupX",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop"
+        image: "/engineering.jpg"
     },
     {
         content: "Finally, a project management tool that respects my time. No clutter, just clarity. I spend less time managing tickets and more time actually building the product.",
         author: "Emily Rodriguez",
         role: "Marketing Lead",
-        image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop"
+        image: "/marketing.jpg"
     }
 ];
 
@@ -38,7 +38,7 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-24 lg:py-32 bg-[#FAFAFA] relative overflow-hidden">
+        <section className="py-24 lg:py-32 relative overflow-hidden">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-1/4 h-1/4 bg-black/[0.02] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 

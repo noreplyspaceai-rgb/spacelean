@@ -1,113 +1,202 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { ArrowRight, Play } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import {
+  Play, Sparkles,
+  Brain, HardHat, Cpu, Layers, Ruler, Zap, BarChart2, Shield,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import VideoModal from "./VideoModal";
+import StartFreeTrialButton from "./StartFreeTrialButton";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const fadeUp = (delay = 0) => ({
+  initial: { y: 28, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.7, delay, ease: EASE },
+});
+
+function circleOrbit(R: number, startDeg: number, steps = 60) {
+  const xs: number[] = [];
+  const ys: number[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const a = ((startDeg + (i / steps) * 360) * Math.PI) / 180;
+    xs.push(parseFloat((R * Math.cos(a)).toFixed(2)));
+    ys.push(parseFloat((R * Math.sin(a)).toFixed(2)));
+  }
+  return { x: xs, y: ys };
+}
+
+const R = 250;
+
+const icons = [
+  { Icon: Brain,     shape: "rounded-2xl",  size: "w-12 h-12" },
+  { Icon: HardHat,   shape: "rounded-full", size: "w-12 h-12" },
+  { Icon: BarChart2, shape: "rounded-2xl",  size: "w-11 h-11" },
+  { Icon: Shield,    shape: "rounded-full", size: "w-11 h-11" },
+  { Icon: Zap,       shape: "rounded-2xl",  size: "w-10 h-10" },
+  { Icon: Cpu,       shape: "rounded-full", size: "w-10 h-10" },
+  { Icon: Layers,    shape: "rounded-2xl",  size: "w-10 h-10" },
+  { Icon: Ruler,     shape: "rounded-full", size: "w-10 h-10" },
+].map((icon, i) => ({ ...icon, keyframes: circleOrbit(R, i * 45) }));
+
+// ── Main hero ────────────────────────────────────────────────────────────────
 export default function HeroSection() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [modelReady, setModelReady] = useState(false);
+  const modelRef = useRef<any>(null);
+
+  useEffect(() => {
+    const existing = document.querySelector('script[src*="model-viewer.min.js"]');
+    if (existing) return;
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js";
+    document.head.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    const modelViewer = modelRef.current;
+    if (!modelViewer) return;
+    const colorize = async () => {
+      await modelViewer.loaded;
+      const model = modelViewer.model;
+      if (!model) return;
+      for (const material of model.materials) {
+        material.pbrMetallicRoughness.setBaseColorFactor([0.1, 0.1, 0.1, 1]);
+        material.pbrMetallicRoughness.setMetallicFactor(0.9);
+        material.pbrMetallicRoughness.setRoughnessFactor(0.4);
+      }
+      setModelReady(true);
+    };
+    modelViewer.addEventListener("load", colorize);
+    const fallback = setTimeout(() => setModelReady(true), 5000);
+    return () => {
+      modelViewer.removeEventListener("load", colorize);
+      clearTimeout(fallback);
+    };
+  }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fafafa] pt-32 pb-20">
+    <section className="relative   overflow-hidden">
+
+      {/* Modals */}
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
-        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with actual product demo video
+        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
       />
 
-      {/* Abstract Minimalist Background Shapes (Subtle) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="absolute top-0 right-0 w-[60vw] h-[60vw] border border-black/5 rounded-full translate-x-1/3 -translate-y-1/3"
-      />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="absolute bottom-0 left-0 w-[50vw] h-[50vw] border border-black/5 rounded-full -translate-x-1/3 translate-y-1/3"
-      />
+      <div className="relative z-10  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-15 pb-5 flex flex-col lg:flex-row items-center gap-12">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        {/* ── Left: content ── */}
+        <div className="flex-1 flex flex-col items-start text-left">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-black/10 bg-white mb-10 shadow-sm hover:shadow-md transition-shadow cursor-default"
-        >
-          <span className="w-2 h-2 rounded-full bg-black animate-pulse" />
-          <span className="text-sm font-semibold tracking-wide text-gray-800 uppercase">AI Task Management V2.0</span>
-        </motion.div>
+          <motion.div {...fadeUp(0.08)}>
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
+              AI-Native Construction Intelligence
+            </span>
+          </motion.div>
 
-        {/* Heading */}
-        <motion.h1
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-6xl sm:text-7xl lg:text-9xl font-bold tracking-tighter text-black mb-10 leading-[1.05]"
-        >
-          Orchestrate <br />
-          <span className="text-gray-300">Your Chaos.</span>
-        </motion.h1>
-
-        {/* Subheading */}
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto text-xl sm:text-2xl text-gray-500 mb-16 leading-relaxed font-light"
-        >
-          SpaceLean is the <strong>AI task breakdown tool</strong> and <strong>automatic project scheduler</strong> designed for high-velocity teams.
-          Effortlessly <strong>turn notes into tasks with AI</strong>, automate workflows, and ship faster.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-24"
-        >
-          <Link
-            href="https://cad.spaceaiapp.com/lean"
-            className="group relative inline-flex items-center gap-4 px-10 py-5 bg-black text-white text-lg font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-xl hover:shadow-2xl shadow-black/20"
+          <motion.h1
+            {...fadeUp(0.12)}
+            className="text-3xl sm:text-5xl font-normal lg:text-4xl tracking-tight leading-tight text-cyan-500 max-w-xl"
           >
-            <span className="relative z-10">Start Free Trial</span>
-            <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
-          </Link>
+            Leading <br />
+             AI Project Management <br /> Software   for 2026
+          </motion.h1>
 
-          <button
-            onClick={() => setIsVideoModalOpen(true)}
-            className="group inline-flex items-center gap-4 px-8 py-5 text-black text-lg font-semibold hover:text-gray-600 transition-colors"
+          <motion.p
+            {...fadeUp(0.18)}
+            className="mt-4 text-base font-semibold sm:text-lg text-neutral-500 leading-relaxed max-w-lg relative"
           >
-            <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center bg-white shadow-sm group-hover:scale-110 transition-transform">
-              <Play className="w-5 h-5 ml-1 fill-black" />
+            <span className="absolute -top-4 -left-3 text-7xl leading-none text-cyan-200 font-serif select-none">&ldquo;</span>
+            <span className="relative font-mono z-10 pl-6">
+              We don&apos;t animate schedules.
+              <span className="text-cyan-500"> We build them</span>
+            </span>
+            <span className="absolute -bottom-8 -right-8 text-7xl leading-none text-cyan-200 font-serif select-none">&rdquo;</span>
+          </motion.p>
+
+          <motion.div
+            {...fadeUp(0.24)}
+            className="mt-12 flex flex-col sm:flex-row items-start gap-3"
+          >
+            {/* ── Trial button → opens email modal ── */}
+            <StartFreeTrialButton />
+
+            {/* ── How it works ── */}
+            <button
+              onClick={() => setIsVideoModalOpen(true)}
+              className="inline-flex items-center gap-2.5 text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors group"
+            >
+              <span className="w-9 h-9 rounded-full bg-black/[0.04] border border-black/10 flex items-center justify-center group-hover:bg-black/[0.08] transition-colors">
+                <Play className="w-3.5 h-3.5 ml-0.5 text-neutral-900" />
+              </span>
+              How it works
+            </button>
+          </motion.div>
+        </div>
+
+        {/* ── Right: 3-D model + circular orbit ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
+          className="flex-1 w-full max-w-xl lg:max-w-none"
+        >
+          <div className="relative aspect-square">
+
+            {/* 3-D model */}
+            <div
+              className="absolute inset-0 transition-opacity duration-500"
+              style={{ opacity: modelReady ? 1 : 0 }}
+            >
+              {/* @ts-ignore */}
+              <model-viewer
+                ref={modelRef}
+                src="/ImageToStl.com_building-1.glb"
+                alt="3D building model"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                disable-zoom
+                loading="eager"
+                style={{ width: "100%", height: "100%", background: "transparent" }}
+              />
             </div>
-            See How It Works
-          </button>
-        </motion.div>
 
-        {/* UI Preview (Abstract/Minimal) */}
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="relative w-full max-w-6xl rounded-t-3xl border-t border-x border-black/10 bg-white shadow-2xl shadow-black/5 p-2 pb-0 overflow-hidden"
-        >
-          <div className="relative rounded-t-2xl overflow-hidden aspect-[16/9] bg-gray-50">
-            <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent z-10" />
-            {/* Actual Dashboard Image (Minimalist) */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2000&auto=format&fit=crop"
-              alt="SpaceLean Dashboard Interface"
-              className="w-full h-full object-cover object-top"
-            />
+            {/* Circular orbit layer */}
+            <div aria-hidden className="hidden sm:block absolute inset-0 pointer-events-none">
+              <svg className="absolute inset-0 w-full h-full" style={{ overflow: "visible" }}>
+                <defs>
+                  <filter id="orbit-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" />
+                  </filter>
+                  <filter id="orbit-dash-blur" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="1.8" />
+                  </filter>
+                </defs>
+                <circle cx="50%" cy="50%" r={R} fill="none" stroke="rgba(0,0,0,0.07)" strokeWidth="8" filter="url(#orbit-glow)" />
+                <circle cx="50%" cy="50%" r={R} fill="none" stroke="rgba(0,0,0,0.2)" strokeWidth="1.5" strokeDasharray="4 24" strokeLinecap="round" filter="url(#orbit-dash-blur)" />
+              </svg>
+
+              {icons.map(({ Icon, shape, size, keyframes }, i) => (
+                <motion.div
+                  key={i}
+                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                              flex items-center justify-center ${size}
+                              ${shape} shadow-md border border-black/5`}
+                  animate={keyframes}
+                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                >
+                  <Icon className="w-[55%] h-[55%] text-cyan-500" />
+                </motion.div>
+              ))}
+            </div>
+
           </div>
         </motion.div>
 

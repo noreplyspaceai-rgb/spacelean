@@ -19,8 +19,62 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
+    const pricingSchema = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Space Lean",
+        "url": "https://spacelean.ai",
+        "description": "Space Lean pricing page describing available subscription tiers for the AI-powered project management platform.",
+        "applicationCategory": "ProjectManagement",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Free",
+                "price": "0.00",
+                "priceCurrency": "USD",
+                "url": "https://spacelean.ai/#signup",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pro",
+                "price": "15.00",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "billingIncrement": 1,
+                    "price": "15.00",
+                    "priceCurrency": "USD",
+                    "unitText": "month"
+                },
+                "url": "https://spacelean.ai/pricing#pro",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Teams",
+                "price": "50.00",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "billingIncrement": 1,
+                    "price": "50.00",
+                    "priceCurrency": "USD",
+                    "unitText": "month"
+                },
+                "url": "https://spacelean.ai/pricing#teams",
+                "availability": "https://schema.org/InStock"
+            }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Space Lean Inc.",
+            "url": "https://spacelean.ai"
+        }
+    } as const;
     return (
         <main className="min-h-screen bg-[#fafafa]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
             <section className="pt-32">
                 <Pricing />
             </section>
