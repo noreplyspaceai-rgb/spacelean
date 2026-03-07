@@ -24,7 +24,7 @@ export default function BlogPage() {
           {/* Heading + GIF side by side */}
           <div className="flex items-center gap-4">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-none text-[#0a0a0a] mb-5">
-              The Journal.
+              The Journal
             </h1>
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex-shrink-0 -mt-4">
               <Image
