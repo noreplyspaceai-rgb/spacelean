@@ -96,7 +96,7 @@ export default function HeroSection() {
           <motion.div {...fadeUp(0.08)}>
             <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
               <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
-              AI-Native Construction Intelligence
+              AI-Native Construction Intelligence.
             </span>
           </motion.div>
 

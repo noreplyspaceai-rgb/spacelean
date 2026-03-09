@@ -67,7 +67,7 @@ export default function Home() {
     <main className="overflow-x-hidden">
       {/* SEO Structured Data */}
       <script
-        type="application/ld+json"
+        type="application/ld+json "
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
