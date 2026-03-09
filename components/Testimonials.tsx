@@ -45,7 +45,7 @@ export default function Testimonials() {
             <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-black/40 mb-6 font-mono">
+                    <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-black/40 mb-6 font-sans">
                         Wall of Love
                     </span>
                     <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-primary-text tracking-tighter mb-8 leading-tight">
@@ -89,7 +89,7 @@ export default function Testimonials() {
                                         <h4 className="text-lg font-black text-primary-text uppercase tracking-wider">
                                             {testimonials[currentIndex].author}
                                         </h4>
-                                        <p className="text-sm text-gray-400 font-mono tracking-tight">
+                                        <p className="text-sm text-gray-400 font-sans tracking-tight">
                                             {testimonials[currentIndex].role}
                                         </p>
                                     </div>
@@ -131,4 +131,5 @@ export default function Testimonials() {
         </section>
     );
 }
+
 

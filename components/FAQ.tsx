@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 
 const faqs = [
   {
@@ -47,25 +48,34 @@ export default function FAQ() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-20">
           <div>
-            <p className="font-mono text-[12px] tracking-[0.25em] uppercase text-[#888] font-medium mb-6">
+            {/* Badge pill — matches HeroSection */}
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
               Support
-            </p>
-            <h2 className="font-serif text-[clamp(42px,6vw,68px)] text-[#0a0a0a] leading-[1.05]">
-              Frequently asked<br />
-              questions.
+            </span>
+
+            <h2 className="text-3xl md:text-5xl font-normal tracking-tight leading-tight">
+              Frequently asked <br />
+              <span className="font-bold text-cyan-500">questions.</span>
             </h2>
           </div>
-          <p className="font-mono text-[16px] text-[#555] leading-[1.9] font-light max-w-[460px]">
-            Everything you need to know about the product and billing. Can't find
-            the answer? Talk to our team.
-          </p>
+
+          {/* Pullquote — matches HeroSection/WhyUs style */}
+          <span className="block border-l-4 border-cyan-400 pl-4 max-w-xs">
+            <span className="block text-sm font-mono text-neutral-500 leading-relaxed">
+              Everything you need to know about the product and billing.
+            </span>
+            <span className="block text-sm font-mono font-semibold text-cyan-500 leading-relaxed mt-1">
+              Can't find the answer? Talk to our team.
+            </span>
+          </span>
         </div>
 
         {/* Column Headers */}
-        <div className="grid md:grid-cols-[72px_1fr_120px] grid-cols-[56px_1fr] border-b border-[#d8d8d8]">
-          <div className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#999] pb-4 font-medium">#</div>
-          <div className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#999] pb-4 font-medium">Question</div>
-          <div className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#999] pb-4 font-medium hidden md:block text-right">Category</div>
+        <div className="grid md:grid-cols-[72px_1fr_120px] grid-cols-[56px_1fr] border-b border-black/8">
+          <div className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-400 pb-4">#</div>
+          <div className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-400 pb-4">Question</div>
+          <div className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-400 pb-4 hidden md:block text-right">Category</div>
         </div>
 
         {/* Rows */}
@@ -79,32 +89,46 @@ export default function FAQ() {
                 key={idx}
                 className={`
                   grid md:grid-cols-[72px_1fr_120px] p-2 grid-cols-[56px_1fr]
-                  items-start border-t border-[#d8d8d8] last:border-b
+                  items-start border-t border-black/8 last:border-b
                   cursor-pointer relative overflow-hidden transition-colors duration-[250ms]
-                  ${isOpen ? "bg-[#f4f4f4]" : hoveredIndex === idx ? "bg-[#f9f9f9]" : "bg-transparent"}
+                  ${isOpen ? "bg-cyan-50/60" : hoveredIndex === idx ? "bg-cyan-50/30" : "bg-transparent"}
                 `}
                 onClick={() => setOpenIndex(isOpen ? null : idx)}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Number */}
-                <div className="font-mono text-[15px] font-normal text-[#999] tracking-[0.15em] py-8 select-none">
+                <div
+                  className={`text-[15px] font-mono tracking-[0.15em] py-8 select-none transition-colors duration-250 ${
+                    isHighlighted ? "text-cyan-400" : "text-neutral-300"
+                  }`}
+                >
                   {String(idx + 1).padStart(2, "0")}
                 </div>
 
                 {/* Question + Answer */}
                 <div className="py-8 pr-8">
                   <div className="flex items-start justify-between gap-6">
-                    <h3 className="font-serif text-[28px] md:text-[30px] text-[#0a0a0a] leading-[1.25]">
+                    <h3 className="text-2xl md:text-3xl font-normal tracking-tight text-neutral-800 leading-snug">
                       {faq.question}
                     </h3>
+
+                    {/* +/× toggle — fills cyan when open */}
                     <div
-                      className="flex-shrink-0 w-6 h-6 mt-[6px] transition-transform duration-300"
-                      style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
+                      className={`flex-shrink-0 w-7 h-7 mt-1 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                        isOpen
+                          ? "bg-cyan-500 border-cyan-500 rotate-45"
+                          : "bg-black/[0.04] border-black/10 rotate-0"
+                      }`}
                     >
-                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <svg
+                        viewBox="0 0 20 20" fill="none"
+                        stroke={isOpen ? "white" : "currentColor"}
+                        strokeWidth="1.75"
+                        className="w-3.5 h-3.5"
+                      >
                         <line x1="10" y1="3" x2="10" y2="17" />
-                        <line x1="3" y1="10" x2="17" y2="10" />
+                        <line x1="3"  y1="10" x2="17" y2="10" />
                       </svg>
                     </div>
                   </div>
@@ -115,12 +139,15 @@ export default function FAQ() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                         className="overflow-hidden"
                       >
-                        <p className="font-mono text-[16px] leading-[1.95] text-[#444] font-light mt-6 max-w-2xl">
-                          {faq.answer}
-                        </p>
+                        {/* Answer uses font-mono + left accent — matches WhyUs pullquote */}
+                        <div className="mt-6 border-l-4 border-cyan-400 pl-4">
+                          <p className="text-sm font-mono text-neutral-500 leading-relaxed max-w-2xl">
+                            {faq.answer}
+                          </p>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -128,16 +155,16 @@ export default function FAQ() {
 
                 {/* Tag */}
                 <div
-                  className={`hidden md:block font-mono text-[13px] tracking-[0.18em] uppercase py-8 text-right font-medium transition-colors duration-[250ms] ${
-                    isHighlighted ? "text-[#0a0a0a]" : "text-[#aaa]"
+                  className={`hidden md:block text-[12px] font-mono tracking-[0.18em] uppercase py-8 text-right transition-colors duration-[250ms] ${
+                    isHighlighted ? "text-cyan-500" : "text-neutral-300"
                   }`}
                 >
                   {faq.tag}
                 </div>
 
-                {/* Underline */}
+                {/* Animated bottom border — cyan sweep */}
                 <div
-                  className="absolute bottom-0 left-0 h-[1.5px] bg-[#0a0a0a] transition-all duration-[450ms]"
+                  className="absolute bottom-0 left-0 h-[1.5px] bg-cyan-500 transition-all duration-[450ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
                   style={{ width: isHighlighted ? "100%" : "0" }}
                 />
               </div>
@@ -147,11 +174,11 @@ export default function FAQ() {
 
         {/* Footer */}
         <div className="mt-14 flex items-center gap-4">
-          <span className="font-mono text-[12px] tracking-[0.25em] uppercase text-[#888] font-medium">
+          <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-neutral-400">
             Click to expand
           </span>
-          <div className="h-px flex-1 bg-[#d8d8d8]" />
-          <span className="font-mono text-[12px] tracking-[0.25em] uppercase text-[#888] font-medium">
+          <div className="h-px flex-1 bg-black/8" />
+          <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-neutral-400">
             {faqs.length} questions
           </span>
         </div>

@@ -64,25 +64,25 @@ function ReasonCard({
         delay: index * 0.07,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative bg-white border border-black/8 rounded-2xl p-6 hover:border-black/20 hover:shadow-md transition-all duration-300"
+      className="group relative bg-white border border-black/8 rounded-2xl p-6 hover:border-cyan-400/60 hover:shadow-[0_4px_24px_rgba(6,182,212,0.08)] transition-all duration-300"
     >
       {/* Number + Icon in same row */}
       <div className="mb-5 flex items-center justify-between">
-        <span className="text-[0.6rem] font-bold tracking-[0.22em] text-black/25 uppercase">
+        <span className="text-[0.6rem] font-bold tracking-[0.22em] text-cyan-400/60 uppercase">
           {reason.number}
         </span>
-        <div className="w-9 h-9 rounded-xl bg-black/5 flex items-center justify-center group-hover:bg-black transition-colors duration-300">
-          <Icon className="w-4 h-4 text-black group-hover:text-white transition-colors duration-300" />
+        <div className="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-colors duration-300">
+          <Icon className="w-4 h-4 text-cyan-500 group-hover:text-white transition-colors duration-300" />
         </div>
       </div>
 
       {/* Title */}
-      <h3 className="text-sm font-bold uppercase tracking-[0.1em] mb-2">
+      <h3 className="text-sm font-bold uppercase tracking-[0.1em] mb-2 text-neutral-800">
         {reason.title}
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-neutral-500 leading-relaxed">
+      <p className="text-sm text-neutral-500 leading-relaxed font-mono">
         {reason.description}
       </p>
     </motion.div>
@@ -96,7 +96,7 @@ export default function WhyUs() {
   const imageInView = useInView(imageRef, { once: true, margin: "-60px" });
 
   return (
-    <section className="pb-10 pt-5 overflow-hidden">
+    <section className="pb-10 pt-4 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* ── Header ── */}
@@ -106,22 +106,34 @@ export default function WhyUs() {
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="text-sm font-bold tracking-[0.25em] uppercase text-black/40 mb-4">
+            {/* Badge — mirrors HeroSection's Sparkles pill */}
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+              <Zap className="w-3.5 h-3.5 text-cyan-500" />
               Why SPACE AI
-            </p>
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-normal !text-5xl tracking-tighter leading-[1.02]">
-             Optimize every construction phase with <br /> SPACE LEAN
+            </span>
+
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.05]">
+              Optimize every construction phase <br />
+              <span className="font-bold text-cyan-500">with SPACE LEAN</span>
             </h2>
           </motion.div>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base !text-grey-500 font-bold max-w-xs lg:text-right leading-relaxed"
+            className="max-w-xs lg:text-right"
           >
-            Every delay has a root cause. <br /> SPACE AI finds it before it finds you.
-          </motion.p>
+            {/* Pullquote — mirrors HeroSection's quote style */}
+            <span className="block border-l-4 lg:border-l-0 lg:border-r-4 border-cyan-400 pl-4 lg:pl-0 lg:pr-4">
+              <span className="block text-sm font-mono text-neutral-500 leading-relaxed">
+                Every delay has a root cause.
+              </span>
+              <span className="block text-sm font-mono font-semibold text-cyan-500 leading-relaxed">
+                SPACE AI finds it before it finds you.
+              </span>
+            </span>
+          </motion.div>
         </div>
 
         {/* ── Body: image + grid ── */}
@@ -135,25 +147,28 @@ export default function WhyUs() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="lg:w-[36%] shrink-0"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4] ">
+            <div className="relative rounded-2xl overflow-hidden aspect-[3/4] border border-black/8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/4dmodel.gif"
                 alt="Construction site planning"
-                className="absolute inset-0 w-full h-full object-cover  transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
               />
 
+              {/* Cyan gradient overlay at bottom */}
+              <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-cyan-950/60 to-transparent z-10" />
+
               {/* Bottom caption */}
-              <div className="absolute bottom-0 left-0 right-0 z-20 p-8">
-                <div className="h-px bg-white/40 mb-5 w-10" />
-                <p className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-xl text-sm text-black leading-snug tracking-tight">
+              <div className="absolute bottom-0 left-0 right-0 z-20 p-6">
+                <div className="h-px bg-cyan-400/60 mb-4 w-10" />
+                <p className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-xl text-sm text-black font-mono leading-snug tracking-tight">
                   From model to build-ready plan — in minutes, not days.
                 </p>
               </div>
 
-              {/* Floating stat badge */}
-              <div className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                <p className="text-2xl font-black text-black leading-none">10×</p>
+              {/* Floating stat badge — same style as HeroSection orbit icons */}
+              <div className="absolute top-5 right-5 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md border border-black/5">
+                <p className="text-2xl font-black text-cyan-500 leading-none">10×</p>
                 <p className="text-[0.65rem] font-semibold text-black/50 uppercase tracking-wide mt-0.5">
                   faster planning
                 </p>

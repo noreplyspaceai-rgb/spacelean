@@ -427,3 +427,11 @@ export const comparisons: ComparisonData[] = [
         verdict: 'Choose Visilean if you want a clean 4D visualization tool with good Last Planner System support and you have the planning bandwidth to manually sequence projects. Choose SpaceLean if you want AI to handle sequencing and real-time adaptation, so your team can focus on execution and constraint resolution instead of constant rescheduling.'
     }
 ];
+
+export function getComparisonBySlug(slug: string) {
+    return comparisons.find((comparison) => comparison.slug === slug);
+}
+
+export function getAllComparisonSlugs() {
+    return comparisons.map((comparison) => comparison.slug);
+}

@@ -1,6 +1,7 @@
 'use client';
 import Link from "next/link";
 import { useState } from "react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 const audiences = [
   {
@@ -33,19 +34,22 @@ export default function AudienceSection() {
   const [active, setActive] = useState("owners");
 
   return (
-    <section className="px-6 md:px-12 py-20 max-w-7xl mx-auto font-sans">
-      
+    <section className="px-4 md:px-6 py-20 max-w-7xl mx-auto font-sans">
+
       {/* Header */}
       <div className="mb-12">
-        <p className="text-sm tracking-[0.14em] font-mono text-gray-800 mb-3">
+        <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+          <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
           AI Construction Project Planning and Scheduling Software
-        </p>
-        <h2 className="text-3xl md:text-4xl  tracking-tight">
-          For Owners, Contractors and Consultants
+        </span>
+
+        <h2 className="text-3xl md:text-4xl font-normal tracking-tight">
+          For Owners, Contractors{" "}
+          <span className="font-bold text-cyan-500">and Consultants</span>
         </h2>
       </div>
 
-      {/* Accordion Cards */}
+      {/* Accordion Cards — unchanged */}
       <div className="flex w-full gap-4 h-[380px] items-stretch mb-8">
         {audiences.map((a) => {
           const isActive = active === a.id;
@@ -57,7 +61,6 @@ export default function AudienceSection() {
               className="relative rounded-2xl overflow-hidden cursor-pointer bg-[#1e2a4a] transition-all duration-500 ease-in-out flex-shrink-0"
               style={{ flex: isActive ? "2.2" : "0.7" }}
             >
-              {/* Background image */}
               <img
                 src={a.image}
                 alt={a.title}
@@ -65,26 +68,19 @@ export default function AudienceSection() {
                 style={{ opacity: isActive ? 0.45 : 0.25 }}
               />
 
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8, 57, 255, 0)] to-[rgba(0, 13, 116, 0.81)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,57,255,0)] to-[rgba(0,13,116,0.81)]" />
 
-              {/* Collapsed label */}
               {!isActive && (
                 <div className="absolute inset-0 flex items-center justify-center z-10">
                   <p
                     className="!text-white font-bold text-sm tracking-widest uppercase whitespace-nowrap"
-                    style={{
-                      writingMode: "vertical-rl",
-                      textOrientation: "mixed",
-                      transform: "rotate(180deg)",
-                    }}
+                    style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)" }}
                   >
                     {a.label} {a.title}
                   </p>
                 </div>
               )}
 
-              {/* Expanded content */}
               <div
                 className="absolute bottom-0 left-0 right-0 z-10 p-8 transition-all duration-500"
                 style={{
@@ -94,20 +90,11 @@ export default function AudienceSection() {
                 }}
               >
                 <p className="text-white/60 text-lg mb-1">{a.label}</p>
-
-                <h3 className="!text-white text-3xl font-bold mb-4">
-                  {a.title}
-                </h3>
-
-                <p className="text-white/70 text-sm leading-relaxed mb-7 max-w-xs">
-                  {a.body}
-                </p>
-
+                <h3 className="!text-white text-3xl font-bold mb-4">{a.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed mb-7 max-w-xs">{a.body}</p>
                 <button className="inline-flex items-center gap-3 border border-white/40 hover:border-white/80 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
                   {a.cta}
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/15 text-xs">
-                    ›
-                  </span>
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/15 text-xs">›</span>
                 </button>
               </div>
             </div>
@@ -115,18 +102,16 @@ export default function AudienceSection() {
         })}
       </div>
 
-      {/* See all solutions button */}
-  <div className="flex justify-start">
-  <Link
-    href="/solutions"
-    className="inline-flex items-center gap-2 bg-gradient-to-r from-gray-600 to-blue-700 hover:from-blue-700 hover:to-gray-800 text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
-  >
-    See all solutions
-    <span className="inline-flex items-center justify-center text-lg">
-      ›
-    </span>
-  </Link>
-</div>
+      {/* See all solutions */}
+      <div className="flex justify-start">
+        <Link
+          href="/solutions"
+          className="inline-flex items-center gap-2 bg-black/[0.04] border border-black/10 text-neutral-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-cyan-500 hover:border-cyan-500 hover:text-white transition-all duration-300"
+        >
+          See all solutions
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </section>
   );
 }

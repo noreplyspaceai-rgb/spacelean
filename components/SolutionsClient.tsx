@@ -405,7 +405,7 @@ export function SolutionDetailClient({
             {solution.benefits.map((benefit, index) => (
               <div key={index} className="group bg-[#fafafa] rounded-3xl p-8 border border-black/5 hover:border-black/20 transition-all duration-500">
                 {benefit.stat && <p className="text-4xl font-bold text-black mb-3 tracking-tighter">{benefit.stat}</p>}
-                <div className="text-lg font-bold text-black mb-4 flex items-baseline gap-2"><span className="text-gray-300 text-sm font-mono">0{index + 1}</span>{benefit.title}</div>
+                <div className="text-lg font-bold text-black mb-4 flex items-baseline gap-2"><span className="text-gray-300 text-sm font-sans">0{index + 1}</span>{benefit.title}</div>
                 <p className="text-gray-500 text-base leading-relaxed font-light">{benefit.description}</p>
               </div>
             ))}

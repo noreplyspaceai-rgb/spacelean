@@ -57,7 +57,7 @@ export default function FeaturesClient() {
                         transition={{ duration: 0.8 }}
                         className="max-w-3xl"
                     >
-                        <span className="inline-block text-[11px] font-bold uppercase tracking-[0.4em] text-black/40 mb-8 font-mono">
+                        <span className="inline-block text-[11px] font-bold uppercase tracking-[0.4em] text-black/40 mb-8 font-sans">
                             The Platform
                         </span>
                         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter mb-10 leading-[0.9] text-primary-text">
@@ -179,3 +179,4 @@ export default function FeaturesClient() {
         </>
     );
 }
+

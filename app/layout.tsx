@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-});
 
 export const metadata: Metadata = {
   title: "SPACE LEAN | Digital Construction Brain — AI Construction Scheduling",
@@ -90,7 +79,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${outfit.variable} leading-[0.9] antialiased min-h-screen bg-white text-neutral-900`}
+        className="leading-[0.9] antialiased min-h-screen bg-white text-neutral-900"
       >
         {/* Global blurred gradient + grain background */}
         <div

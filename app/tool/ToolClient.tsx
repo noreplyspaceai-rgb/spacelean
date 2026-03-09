@@ -105,7 +105,7 @@ export default function ToolClient() {
 
                 <div className="absolute bottom-10 right-10 flex items-center gap-6">
                     {isTyping && (
-                        <span className="text-[10px] font-bold text-black/20 uppercase tracking-[0.2em] animate-pulse font-mono">
+                        <span className="text-[10px] font-bold text-black/20 uppercase tracking-[0.2em] animate-pulse font-sans">
                             AI Context Analysis...
                         </span>
                     )}
@@ -150,7 +150,7 @@ export default function ToolClient() {
                                 />
                             ))}
                         </div>
-                        <span className="text-[11px] font-bold text-black/30 uppercase tracking-[0.4em] font-mono">Orchestrating Logic</span>
+                        <span className="text-[11px] font-bold text-black/30 uppercase tracking-[0.4em] font-sans">Orchestrating Logic</span>
                     </motion.div>
                 )}
 
@@ -164,7 +164,7 @@ export default function ToolClient() {
                     >
                         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-10">
                             <div className="max-w-xl">
-                                <span className="text-[11px] font-bold text-black/30 uppercase tracking-[0.3em] block mb-6 font-mono">Plan Hash: 0x82...f92</span>
+                                <span className="text-[11px] font-bold text-black/30 uppercase tracking-[0.3em] block mb-6 font-sans">Plan Hash: 0x82...f92</span>
                                 <h2 className="text-4xl lg:text-5xl font-black text-primary-text tracking-tighter leading-none italic">
                                     {result.title}
                                 </h2>
@@ -184,7 +184,7 @@ export default function ToolClient() {
                                     transition={{ delay: 0.2 + (i * 0.08), duration: 0.5 }}
                                     className="flex items-start gap-8 p-8 lg:p-10 bg-white hover:bg-gray-50/50 transition-colors duration-500 group"
                                 >
-                                    <span className="shrink-0 text-[10px] font-black font-mono text-black/10 group-hover:text-black transition-colors pt-2">
+                                    <span className="shrink-0 text-[10px] font-black font-sans text-black/10 group-hover:text-black transition-colors pt-2">
                                         0{i + 1}
                                     </span>
                                     <span className="text-gray-600 text-xl lg:text-2xl font-light tracking-tight leading-relaxed group-hover:text-black transition-colors">
@@ -209,3 +209,4 @@ export default function ToolClient() {
         </div>
     );
 }
+

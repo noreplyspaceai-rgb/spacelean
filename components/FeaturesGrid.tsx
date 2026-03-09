@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Layout, Clock, Zap, Users, Shield, Globe } from "lucide-react";
+import { Layout, Clock, Zap, Users, Shield, Globe, Sparkles } from "lucide-react";
 
 const features = [
   {
@@ -58,22 +58,31 @@ export default function FeaturesGrid() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-20">
           <div>
-            <p className="font-mono text-sm font-bold tracking-[0.25em] uppercase text-black/40 mb-4">
+            {/* Badge pill — matches HeroSection */}
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
               Capabilities
-            </p>
-            <h2 className="text-3xl md:text-4xl  tracking-tight">
-              Built for the way<br />
-              <span>teams actually work.</span>
+            </span>
+
+            <h2 className="text-3xl md:text-5xl font-normal tracking-tight leading-tight">
+              Built for the way <br />
+              <span className="font-bold text-cyan-500">teams actually work.</span>
             </h2>
           </div>
-          <p className="font-mono text-[14px] text-[#555] leading-[1.85] font-light max-w-[420px]">
-            We removed the bloat and added intelligence. SpaceLean replaces your
-            disjointed stack with one cohesive, AI-native platform.
-          </p>
+
+          {/* Pullquote — matches HeroSection/WhyUs style */}
+          <span className="block border-l-4 border-cyan-400 pl-4 max-w-xs">
+            <span className="block text-sm font-mono text-neutral-500 leading-relaxed">
+              We removed the bloat and added intelligence.
+            </span>
+            <span className="block text-sm font-mono font-semibold text-cyan-500 leading-relaxed">
+              SpaceLean replaces your disjointed stack with one cohesive, AI-native platform.
+            </span>
+          </span>
         </div>
 
         {/* Two-column Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#d8d8d8] border border-[#d8d8d8]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/8 border border-black/8">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             const isActive = activeIdx === idx;
@@ -85,42 +94,45 @@ export default function FeaturesGrid() {
                 key={idx}
                 className={`
                   relative flex flex-col overflow-hidden cursor-pointer
-                  transition-colors duration-[250ms] p-10
-                  ${isActive ? "bg-[#f0f0f0]" : isHovered ? "bg-[#f7f7f7]" : "bg-white"}
+                  transition-colors duration-[250ms] p-6
+                  ${isActive ? "bg-cyan-50/60" : isHovered ? "bg-cyan-50/30" : "bg-white"}
                 `}
                 onClick={() => setActiveIdx(isActive ? null : idx)}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
               >
-                {/* Top row: index + tag */}
+                {/* Top row: index + icon + tag */}
                 <div className="flex items-center justify-between mb-8">
-                  <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#bbb] font-medium">
+                  <span className="text-[11px] tracking-[0.22em] uppercase font-medium text-cyan-400/70">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
-                   <div
-                  className="mb-6 w-10 h-10 flex items-center justify-center transition-transform duration-300"
-                  style={{
-                    transform: isHighlighted
-                      ? "rotate(-18deg) scale(1.6)"
-                      : "none",
-                  }}
-                >
-                  <Icon className="w-6 h-6 text-black" strokeWidth={1.25} />
-                </div>
+
+                  <div
+                    className="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center transition-all duration-300"
+                    style={{
+                      transform: isHighlighted ? "rotate(-18deg) scale(1.6)" : "none",
+                      background: isHighlighted ? "#06b6d4" : undefined,
+                      borderColor: isHighlighted ? "#06b6d4" : undefined,
+                    }}
+                  >
+                    <Icon
+                      className="w-5 h-5 transition-colors duration-300"
+                      strokeWidth={1.25}
+                      style={{ color: isHighlighted ? "white" : "#06b6d4" }}
+                    />
+                  </div>
+
                   <span
-                    className={`font-mono text-xl tracking-[0.18em] uppercase font-medium transition-colors duration-250 ${
-                      isHighlighted ? "text-[#0a0a0a]" : "text-[#ccc]"
+                    className={`text-sm tracking-[0.18em] uppercase font-medium transition-colors duration-250 ${
+                      isHighlighted ? "text-cyan-500" : "text-black/20"
                     }`}
                   >
                     {feature.tag}
                   </span>
                 </div>
 
-                {/* Icon */}
-               
-
                 {/* Title */}
-                <h3 className="font-serif text-[26px] text-[#0a0a0a] leading-[1.2] mb-4">
+                <h3 className="text-2xl font-normal tracking-tight text-neutral-800 leading-snug mb-2">
                   {feature.title}
                 </h3>
 
@@ -130,17 +142,17 @@ export default function FeaturesGrid() {
                   style={{
                     maxHeight: isHighlighted ? "200px" : "0",
                     opacity: isHighlighted ? 1 : 0,
-                    marginTop: isHighlighted ? "16px" : "0",
+                    marginTop: isHighlighted ? "12px" : "0",
                   }}
                 >
-                  <p className="font-mono text-[16px] leading-[1.9] text-[#555] font-light m-0">
+                  <p className="text-sm font-mono text-neutral-500 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
 
-                {/* Animated bottom border */}
+                {/* Animated bottom border — cyan instead of black */}
                 <div
-                  className="absolute bottom-0 left-0 h-[2px] bg-[#0a0a0a] transition-all duration-[450ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                  className="absolute bottom-0 left-0 h-[2px] bg-cyan-500 transition-all duration-[450ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
                   style={{ width: isHighlighted ? "100%" : "0" }}
                 />
               </div>
@@ -150,11 +162,11 @@ export default function FeaturesGrid() {
 
         {/* Footer */}
         <div className="mt-10 flex items-center gap-4">
-          <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#888] font-medium">
+          <span className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-400">
             Hover to explore
           </span>
-          <div className="h-px flex-1 bg-[#d8d8d8]" />
-          <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#888] font-medium">
+          <div className="h-px flex-1 bg-black/8" />
+          <span className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-400">
             {features.length} capabilities
           </span>
         </div>
