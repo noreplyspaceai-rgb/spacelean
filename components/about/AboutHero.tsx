@@ -135,7 +135,7 @@ export default function AboutHero() {
                 transition={{ duration: 0.45, delay: 0.28 + i * 0.08, ease: EASE }}
                 className="flex items-start gap-3"
               >
-                <span className="w-5 h-5 rounded-full bg-black/[0.04] border border-black/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-5 h-5 rounded-full  border border-black/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
                 </span>
                 <span className="text-sm font-medium text-neutral-700">{item}</span>

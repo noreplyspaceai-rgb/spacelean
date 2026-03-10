@@ -21,7 +21,7 @@ const dots = [
 // Pure map — no heading, no description. AboutPresence owns the copy.
 export default function WorldMapDemo() {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full ">
       <WorldMap dots={dots} />
     </div>
   );

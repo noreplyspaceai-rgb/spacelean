@@ -64,7 +64,7 @@ export const stakeholderSolutions: Solution[] = [
       "digital construction brain",
       "construction knowledge graph",
     ],
-    heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop",
+    heroImage: "/general-cunstructers.webp",
     icon: "🏗️",
     category: "stakeholder",
     features: [
