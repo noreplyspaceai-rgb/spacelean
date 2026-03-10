@@ -7,17 +7,20 @@ const footerLinks = {
     links: [
       { label: "Features", href: "/features" },
       { label: "AI Task Generator", href: "/tool" },
-      { label: "Pricing", href: "/pricing" },
       { label: "Comparisons", href: "/compare" },
     ],
   },
   solutions: {
     title: "Solutions",
     links: [
-      { label: "Engineering", href: "/solutions/engineering-teams" },
-      { label: "Product", href: "/solutions/product-management" },
-      { label: "Marketing", href: "/solutions/marketing-teams" },
-      { label: "Startups", href: "/solutions/startups" },
+      { label: "For General Contractors", href: "/solutions/for-gcs" },
+      { label: "For Owners", href: "/solutions/for-owners" },
+      { label: "For Consultants", href: "/solutions/for-consultants" },
+      { label: "Industrial Projects", href: "/solutions/industrial" },
+      { label: "Infrastructure Projects", href: "/solutions/infrastructure" },
+      { label: "Commercial Projects", href: "/solutions/commercial" },
+      { label: "Ideal Projects", href: "/solutions/ideal-projects" },
+      { label: "Partners Program", href: "/solutions/partners-program" },
     ],
   },
   resources: {

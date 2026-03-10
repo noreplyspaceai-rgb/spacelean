@@ -81,12 +81,6 @@ export default function Header() {
             >
               Solutions
             </Link>
-            <Link
-              href="/pricing"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm"
-            >
-              Pricing
-            </Link>
           </div>
 
           {/* Desktop CTA */}
@@ -182,13 +176,6 @@ export default function Header() {
                 className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
               >
                 Compare
-              </Link>
-              <Link
-                href="/pricing"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3.5 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
-              >
-                Pricing
               </Link>
               <Link
                 href="/space-lean-core"

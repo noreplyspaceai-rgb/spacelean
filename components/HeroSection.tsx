@@ -88,7 +88,7 @@ export default function HeroSection() {
         videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
       />
 
-      <div className="relative z-10  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-15 pb-5 flex flex-col lg:flex-row items-center gap-12">
+      <div className="relative z-10  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-15 pb-2  flex flex-col lg:flex-row items-center gap-12">
 
         {/* ── Left: content ── */}
         <div className="flex-1 flex flex-col items-start text-left">

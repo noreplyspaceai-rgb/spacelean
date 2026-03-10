@@ -96,7 +96,7 @@ export default function WhyUs() {
   const imageInView = useInView(imageRef, { once: true, margin: "-60px" });
 
   return (
-    <section className="pb-10 pt-4 overflow-hidden">
+    <section className="pb-4 pt-2 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* ── Header ── */}
@@ -107,7 +107,7 @@ export default function WhyUs() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Badge — mirrors HeroSection's Sparkles pill */}
-            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3  mb-4 tracking-wide">
               <Zap className="w-3.5 h-3.5 text-cyan-500" />
               Why SPACE AI
             </span>
