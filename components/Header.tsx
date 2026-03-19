@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import StartFreeTrialButton from "@/components/StartFreeTrialButton";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -104,6 +105,7 @@ export default function Header() {
                 +65 8611 1900
               </a>
             </div>
+            <StartFreeTrialButton className="px-4 py-2 text-sm" />
             <Link
               href="/request-a-demo"
               className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 text-sm font-medium rounded-full border border-gray-300/80 hover:border-gray-400 hover:bg-gray-50 hover:shadow-md transition-all duration-200"

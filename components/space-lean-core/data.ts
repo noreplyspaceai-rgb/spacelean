@@ -28,6 +28,7 @@ export type FeatureBenefit = {
 
 export type Feature = {
   id: string;
+  slug: string;
   icon: LucideIcon;
   title: string;
   subtitle: string;
@@ -67,6 +68,7 @@ export const FEATURES: Feature[] = [
   // 1 ─ Kanban Board System
   {
     id: "kanban",
+    slug: "kanban",
     icon: LayoutDashboard,
     subtitle: "Task Management",
     title: "Kanban Board System",
@@ -93,6 +95,7 @@ export const FEATURES: Feature[] = [
   // 2 ─ BIM Element Selection
   {
     id: "bim-selection",
+    slug: "bim-selection",
     icon: Box,
     subtitle: "BIM Intelligence",
     title: "BIM Element Selection",
@@ -119,6 +122,7 @@ export const FEATURES: Feature[] = [
   // 3 ─ Task Adding & Management
   {
     id: "task-management",
+    slug: "task-management",
     icon: ClipboardPlus,
     subtitle: "AI Planning",
     title: "Task Adding & Management",
@@ -145,6 +149,7 @@ export const FEATURES: Feature[] = [
   // 4 ─ Risk Analysis
   {
     id: "risk-analysis",
+    slug: "risk-analysis",
     icon: ShieldAlert,
     subtitle: "Predictive Intelligence",
     title: "Risk Analysis",
@@ -171,6 +176,7 @@ export const FEATURES: Feature[] = [
   // 5 ─ AI Sequencing Engine
   {
     id: "ai-sequencing",
+    slug: "ai-sequencing",
     icon: Shuffle,
     subtitle: "Construction Graph",
     title: "AI Sequencing Engine",
@@ -197,6 +203,7 @@ export const FEATURES: Feature[] = [
   // 6 ─ Monte Carlo Critical Path
   {
     id: "monte-carlo",
+    slug: "monte-carlo",
     icon: BarChart3,
     subtitle: "Probabilistic Scheduling",
     title: "Monte Carlo Critical Path",
@@ -223,6 +230,7 @@ export const FEATURES: Feature[] = [
   // 7 ─ Real-Time Resequencing
   {
     id: "resequencing",
+    slug: "resequencing",
     icon: RefreshCcw,
     subtitle: "Self-Healing Schedule",
     title: "Real-Time Resequencing",
@@ -324,3 +332,11 @@ export const METRICS: Metric[] = [
   { metric: "1000+",  label: "Simulations per analysis"   },
   { metric: "∞",      label: "Schedule optimization cycles" },
 ];
+
+export function getCoreFeatureBySlug(slug: string) {
+  return FEATURES.find((feature) => feature.slug === slug);
+}
+
+export function getAllCoreFeatureSlugs() {
+  return FEATURES.map((feature) => feature.slug);
+}

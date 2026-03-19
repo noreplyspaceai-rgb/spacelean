@@ -41,6 +41,191 @@ const icons = [
   { Icon: Ruler,     shape: "rounded-full", size: "w-10 h-10" },
 ].map((icon, i) => ({ ...icon, keyframes: circleOrbit(R, i * 45) }));
 
+// ── Seeded random for deterministic positions ──
+const seededRandom = (seed: number) => {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+};
+
+// ── Floating particles animation ──
+const FloatingParticles = () => {
+  // Generate deterministic positions based on index
+  const particles = [...Array(8)].map((_, i) => ({
+    top: seededRandom(i * 2.1) * 100,
+    left: seededRandom(i * 3.7) * 100,
+    yOffset: seededRandom(i * 5.3) * 100 - 50,
+    xOffset: seededRandom(i * 7.9) * 100 - 50,
+    duration: 4 + seededRandom(i * 11.1) * 4,
+  }));
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Large floating orb - top left */}
+      <motion.div
+        className="absolute w-96 h-96 bg-gradient-to-br from-cyan-400/40 to-blue-500/20 rounded-full blur-3xl"
+        style={{
+          top: "-10%",
+          left: "-5%",
+        }}
+        animate={{
+          y: [0, 40, 0],
+          x: [0, 20, 0],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Large floating orb - bottom right */}
+      <motion.div
+        className="absolute w-96 h-96 bg-gradient-to-tl from-cyan-400/30 to-emerald-400/10 rounded-full blur-3xl"
+        style={{
+          bottom: "-10%",
+          right: "-5%",
+        }}
+        animate={{
+          y: [0, -40, 0],
+          x: [0, -20, 0],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Medium floating orb - center */}
+      <motion.div
+        className="absolute w-80 h-80 bg-gradient-to-br from-cyan-300/20 to-cyan-400/10 rounded-full blur-2xl"
+        style={{
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Floating particles */}
+      {particles.map((p, i) => (
+        <motion.div
+          key={`particle-${i}`}
+          className="absolute w-2 h-2 bg-cyan-400 rounded-full blur-sm"
+          style={{
+            top: `${p.top}%`,
+            left: `${p.left}%`,
+          }}
+          animate={{
+            y: [0, p.yOffset, 0],
+            x: [0, p.xOffset, 0],
+            opacity: [0, 0.6, 0],
+            scale: [0, 1, 0],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            delay: i * 0.3,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+// ── Animated ring layers ──
+const AnimatedRings = () => {
+  return (
+    <div className="absolute inset-0 pointer-events-none">
+      {/* Ring 1 - rotating clockwise */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      >
+        <svg className="w-full h-full" style={{ overflow: "visible" }}>
+          <circle
+            cx="50%"
+            cy="50%"
+            r={R * 0.8}
+            fill="none"
+            stroke="rgba(34, 211, 238, 0.1)"
+            strokeWidth="1"
+            strokeDasharray="8 12"
+          />
+        </svg>
+      </motion.div>
+
+      {/* Ring 2 - rotating counter-clockwise */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+      >
+        <svg className="w-full h-full" style={{ overflow: "visible" }}>
+          <circle
+            cx="50%"
+            cy="50%"
+            r={R * 1.2}
+            fill="none"
+            stroke="rgba(34, 211, 238, 0.08)"
+            strokeWidth="1"
+            strokeDasharray="6 14"
+          />
+        </svg>
+      </motion.div>
+
+      {/* Ring 3 - pulsing */}
+      <motion.svg
+        className="absolute inset-0 w-full h-full"
+        style={{ overflow: "visible" }}
+        animate={{ opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <circle
+          cx="50%"
+          cy="50%"
+          r={R * 1.05}
+          fill="none"
+          stroke="rgba(34, 211, 238, 0.15)"
+          strokeWidth="2"
+        />
+      </motion.svg>
+    </div>
+  );
+};
+
+// ── Radial glow effect ──
+const RadialGlow = () => {
+  return (
+    <motion.div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        background: "radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.15) 0%, transparent 70%)",
+      }}
+      animate={{
+        opacity: [0.5, 1, 0.5],
+      }}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    />
+  );
+};
+
 // ── Main hero ────────────────────────────────────────────────────────────────
 export default function HeroSection() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -64,9 +249,9 @@ export default function HeroSection() {
       const model = modelViewer.model;
       if (!model) return;
       for (const material of model.materials) {
-        material.pbrMetallicRoughness.setBaseColorFactor([0.1, 0.1, 0.1, 1]);
-        material.pbrMetallicRoughness.setMetallicFactor(0.9);
-        material.pbrMetallicRoughness.setRoughnessFactor(0.4);
+        material.pbrMetallicRoughness.setBaseColorFactor([0, 0, 0, 1]);
+        material.pbrMetallicRoughness.setMetallicFactor(0.95);
+        material.pbrMetallicRoughness.setRoughnessFactor(0.3);
       }
       setModelReady(true);
     };
@@ -79,7 +264,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative   overflow-hidden">
+    <section className="relative overflow-hidden">
 
       {/* Modals */}
       <VideoModal
@@ -88,7 +273,7 @@ export default function HeroSection() {
         videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
       />
 
-      <div className="relative z-10  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-15 pb-2  flex flex-col lg:flex-row items-center gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-15 pb-2 flex flex-col lg:flex-row items-center gap-12">
 
         {/* ── Left: content ── */}
         <div className="flex-1 flex flex-col items-start text-left">
@@ -109,18 +294,18 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p
-  {...fadeUp(0.18)}
-  className="mt-6 max-w-lg"
->
-  <span className="block border-l-4 border-cyan-400 pl-4">
-    <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">
-      We don&apos;t animate schedules.
-    </span>
-    <span className="block text-base sm:text-lg font-mono font-semibold text-cyan-500 leading-relaxed">
-      We build them.
-    </span>
-  </span>
-</motion.p>
+            {...fadeUp(0.18)}
+            className="mt-6 max-w-lg"
+          >
+            <span className="block border-l-4 border-cyan-400 pl-4">
+              <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">
+                We don&apos;t animate schedules.
+              </span>
+              <span className="block text-base sm:text-lg font-mono font-semibold text-cyan-500 leading-relaxed">
+                We build them.
+              </span>
+            </span>
+          </motion.p>
 
           <motion.div
             {...fadeUp(0.24)}
@@ -151,6 +336,15 @@ export default function HeroSection() {
         >
           <div className="relative aspect-square">
 
+            {/* Background animated blur layers */}
+            <FloatingParticles />
+
+            {/* Animated rings */}
+            <AnimatedRings />
+
+            {/* Radial glow effect */}
+            <RadialGlow />
+
             {/* 3-D model */}
             <div
               className="absolute inset-0 transition-opacity duration-500"
@@ -159,7 +353,7 @@ export default function HeroSection() {
               {/* @ts-ignore */}
               <model-viewer
                 ref={modelRef}
-                src="/ImageToStl.com_building-1.glb"
+                src="/city_pack_8.glb"
                 alt="3D building model"
                 camera-controls
                 auto-rotate
@@ -190,9 +384,13 @@ export default function HeroSection() {
                   key={i}
                   className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                               flex items-center justify-center ${size}
-                              ${shape} shadow-md border border-black/5`}
+                              ${shape} shadow-md border border-black/5 bg-white/80 backdrop-blur-sm`}
                   animate={keyframes}
                   transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                  whileHover={{
+                    scale: 1.2,
+                    boxShadow: "0 0 25px rgba(34, 211, 238, 0.6)",
+                  }}
                 >
                   <Icon className="w-[55%] h-[55%] text-cyan-500" />
                 </motion.div>

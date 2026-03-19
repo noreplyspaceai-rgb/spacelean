@@ -45,7 +45,7 @@ const faqSchema = {
 
 export default function FeaturesPage() {
     return (
-        <div className="min-h-screen bg-[#FAFAFA] text-primary-text font-sans">
+        <div className="min-h-screen text-primary-text font-sans">
             <main>
                 <FeaturesClient />
                 <script

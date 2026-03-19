@@ -123,7 +123,7 @@ interface ModelViewer3DProps {
 }
 
 export default function ModelViewer3D({
-  src = "/ImageToStl.com_building-1.glb",
+  src = "/city_pack_8.glb",
   alt = "3D building model",
   onReady,
 }: ModelViewer3DProps) {

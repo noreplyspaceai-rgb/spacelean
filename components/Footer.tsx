@@ -1,13 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FEATURES } from "./space-lean-core/data";
+import { comparisons } from "@/lib/compare-data";
 
 const footerLinks = {
-  product: {
-    title: "Product",
+  core: {
+    title: "Core",
     links: [
-      { label: "Features", href: "/features" },
-      { label: "AI Task Generator", href: "/tool" },
-      { label: "Comparisons", href: "/compare" },
+      { label: "Space Lean Core", href: "/space-lean-core" },
+      ...FEATURES.map((feature) => ({
+        label: feature.title,
+        href: `/space-lean-core/${feature.slug}`,
+      })),
+    ],
+  },
+  compare: {
+    title: "Compare",
+    links: comparisons.map((comparison) => ({
+      label: `SpaceLean vs ${comparison.competitorName}`,
+      href: `/compare/${comparison.slug}`,
+    })),
+  },
+  otherProducts: {
+    title: "Other Products",
+    links: [
+      { label: "pmspace", href: "https://pmspace.ai" },
+      { label: "space-sign", href: "https://space-sign.ai" },
+      { label: "space-capture", href: "https://spacecapture.ai" },
+      { label: "space-lizit", href: "https://spacelizit.com" },
+      { label: "spacehr", href: "https://spacehr.net" },
+      { label: "spacelean", href: "https://spacelean.ai" },
+      { label: "spacenexus", href: "https://spacenexus.net" },
+      { label: "spacecrm", href: "https://spacecrm.net" },
     ],
   },
   solutions: {
@@ -23,32 +47,16 @@ const footerLinks = {
       { label: "Partners Program", href: "/solutions/partners-program" },
     ],
   },
-  resources: {
-    title: "Resources",
-    links: [
-      { label: "Blog", href: "/blogs" },
-      { label: "Documentation", href: "/#features" },
-      { label: "Guides", href: "/blogs" },
-      { label: "Support", href: "/request-a-demo" },
-    ],
-  },
-  company: {
-    title: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/request-a-demo" },
-      { label: "Careers", href: "/about" },
-    ],
-  },
-  legal: {
-    title: "Legal",
-    links: [
-      { label: "Privacy", href: "/privacy" },
-      { label: "Terms", href: "/terms" },
-      { label: "Security", href: "/security" },
-    ],
-  },
 };
+
+const footerBaseLinks = [
+  { label: "Features", href: "/features" },
+  { label: "AI Task Generator", href: "/tool" },
+  { label: "Comparisons", href: "/compare" },
+  { label: "Blog", href: "/blogs" },
+  { label: "Request a Demo", href: "/request-a-demo" },
+  { label: "About", href: "/about" },
+];
 
 const socialLinks = [
   {
@@ -92,9 +100,23 @@ export default function Footer() {
             <p className="text-stone-600 text-sm leading-relaxed max-w-xs mb-8">
               AI-powered task management for high-velocity teams. Orchestrate chaos, automate workflows, and ship faster.
             </p>
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-stone-100 border border-stone-300 gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] font-bold text-stone-600 tracking-widest uppercase">Nodes Online</span>
+            <div className="w-full max-w-xs">
+              <label className="block text-[11px] font-bold text-stone-900 uppercase tracking-[0.2em] mb-3">
+                Subscribe
+              </label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="email"
+                  placeholder="you@company.com"
+                  className="w-full rounded-full border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400"
+                />
+                <button
+                  type="button"
+                  className="rounded-full bg-stone-900 px-4 py-2 text-sm font-semibold text-white hover:bg-stone-700 transition-colors"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
 
@@ -126,9 +148,20 @@ export default function Footer() {
             <p className="text-[12px] text-stone-600 font-medium">
               © 2026 SpaceLean AI Inc.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {footerBaseLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
             <div className="flex gap-6">
-              <Link href="#" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Privacy Policy</Link>
-              <Link href="#" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Terms of Service</Link>
             </div>
           </div>
 

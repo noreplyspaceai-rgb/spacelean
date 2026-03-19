@@ -8,7 +8,7 @@ import CtaSection from "@/components/space-lean-core/CtaSection";
 
 export default function SpaceLeanCorePage() {
   return (
-    <div className="bg-white">
+    <div className="">
       {/* <HeroSection /> */}
       <FeaturesSection />
       <ComparisonSection />
