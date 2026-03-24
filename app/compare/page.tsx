@@ -32,7 +32,7 @@ const itemVariants = {
 const FLOAT_ICONS = [
   {
     Icon: Brain,
-    label: "AI Planning ",
+    label: "AI Planning  ",
     // top-left
     className: "top-[8%] left-[-6%]",
     delay: 0,
