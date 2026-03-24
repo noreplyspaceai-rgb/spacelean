@@ -76,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body
         suppressHydrationWarning
         className="leading-[0.9] antialiased min-h-screen bg-white text-neutral-900"

@@ -160,7 +160,7 @@ export const FEATURES: Feature[] = [
       "Critical path volatility score updated daily",
       "Weather risk overlay pulls live forecasts onto your Gantt",
       "Supply chain delay alerts tied to specific material lead times",
-      "Auto-generated mitigation suggestions ranked by impact vs effort",
+      "Auto-built mitigation suggestions ranked by impact vs effort",
     ],
     benefits: [
       { icon: ShieldAlert, metric: "30%",       label: "Fewer unplanned delays" },
@@ -178,22 +178,22 @@ export const FEATURES: Feature[] = [
     id: "ai-sequencing",
     slug: "ai-sequencing",
     icon: Shuffle,
-    subtitle: "Construction Graph",
+    subtitle: "Construction Intelligence",
     title: "AI Sequencing Engine",
     description:
-      "SpaceLean converts your BIM geometry into a Construction Knowledge Graph, then uses a constraint solver to generate multiple valid build strategies simultaneously — fast-track, low-risk, and takt flow — without a single manual dependency link.",
+      "SpaceLean converts your BIM geometry into a Construction Knowledge Network, then uses a constraint solver to produce multiple valid build strategies simultaneously — fast-track, low-risk, and takt flow — without a single manual dependency link.",
     keyPoints: [
       "Penetration and adjacency constraints inferred directly from geometry",
-      "Generates 3–5 distinct strategies per project automatically",
+      "Produces 3–5 distinct strategies per project automatically",
       "Physical support logic encoded as hard solver constraints",
       "Trade stacking and crew continuity optimised per zone",
       "Strategies compared side-by-side with risk and duration tradeoffs",
     ],
     benefits: [
-      { icon: Shuffle, metric: "3–5",   label: "Strategies per project" },
-      { icon: Shuffle, metric: "Zero",  label: "Manual dependency links" },
-      { icon: Shuffle, metric: "Mins",  label: "BIM to first sequence" },
-      { icon: Shuffle, metric: "Graph", label: "Powered by Neo4j CKG" },
+      { icon: Shuffle, metric: "3–5",     label: "Strategies per project" },
+      { icon: Shuffle, metric: "Zero",    label: "Manual dependency links" },
+      { icon: Shuffle, metric: "Mins",    label: "BIM to first sequence" },
+      { icon: Shuffle, metric: "Network", label: "Powered by Neo4j CKN" },
     ],
     image: "/screenshots/ai-sequencing.png",
     accentColor: "text-cyan-500",
@@ -214,13 +214,13 @@ export const FEATURES: Feature[] = [
       "Criticality probability per task — not just binary critical/not",
       "Zone congestion and penetration penalties baked in to each run",
       "Crew bottleneck scoring detects resource-driven slippage early",
-      "Graph centrality via Neo4j GDS identifies structural risk nodes",
+      "Network centrality via Neo4j identifies structural risk nodes",
     ],
     benefits: [
-      { icon: BarChart3, metric: "1,000",  label: "Simulations per save" },
-      { icon: BarChart3, metric: "94%",    label: "Delay prediction accuracy" },
-      { icon: BarChart3, metric: "7-day",  label: "Average forecast lead time" },
-      { icon: BarChart3, metric: "GNN",    label: "Graph neural network CP" },
+      { icon: BarChart3, metric: "1,000", label: "Simulations per save" },
+      { icon: BarChart3, metric: "94%",   label: "Delay prediction accuracy" },
+      { icon: BarChart3, metric: "7-day", label: "Average forecast lead time" },
+      { icon: BarChart3, metric: "GNN",   label: "Neural network critical path" },
     ],
     image: "/screenshots/monte-carlo.png",
     accentColor: "text-cyan-500",
@@ -235,19 +235,19 @@ export const FEATURES: Feature[] = [
     subtitle: "Self-Healing Schedule",
     title: "Real-Time Resequencing",
     description:
-      "When a task slips, SpaceLean traverses the dependency graph, isolates only affected downstream tasks, re-runs the Monte Carlo simulation, and delivers a revised schedule in under one second — crew conflicts resolved automatically, no planner intervention needed.",
+      "When a task slips, SpaceLean traverses the dependency network, isolates only affected downstream tasks, re-runs the Monte Carlo simulation, and delivers a revised schedule in under one second — crew conflicts resolved automatically, no planner intervention needed.",
     keyPoints: [
-      "Graph traversal isolates only the impacted downstream subgraph",
+      "Network traversal isolates only the impacted downstream subset",
       "Monte Carlo + CP-SAT re-solves affected tasks in under 1 second",
       "Crew no-overlap constraints automatically re-enforced on every replan",
       "Zone congestion penalties reapplied to all revised assignments",
-      "Full audit trail of every resequencing event stored in graph",
+      "Full audit trail of every resequencing event stored in the system",
     ],
     benefits: [
-      { icon: RefreshCcw, metric: "0.3s",  label: "Replan time on delay" },
-      { icon: RefreshCcw, metric: "10×",   label: "Faster than manual replanning" },
-      { icon: RefreshCcw, metric: "100%",  label: "Crew conflicts auto-resolved" },
-      { icon: RefreshCcw, metric: "Sub-graph", label: "Only changed tasks updated" },
+      { icon: RefreshCcw, metric: "0.3s",    label: "Replan time on delay" },
+      { icon: RefreshCcw, metric: "10×",     label: "Faster than manual replanning" },
+      { icon: RefreshCcw, metric: "100%",    label: "Crew conflicts auto-resolved" },
+      { icon: RefreshCcw, metric: "Sub-set", label: "Only changed tasks updated" },
     ],
     image: "/screenshots/resequencing.png",
     accentColor: "text-cyan-500",
@@ -257,7 +257,7 @@ export const FEATURES: Feature[] = [
 
 export const COMPARISON_FEATURES: ComparisonFeature[] = [
   { feature: "Automatic BIM mapping",      spaceLean: true,  traditional: false },
-  { feature: "AI sequence generation",     spaceLean: true,  traditional: false },
+  { feature: "AI sequence planning",       spaceLean: true,  traditional: false },
   { feature: "Predictive risk scoring",    spaceLean: true,  traditional: false },
   { feature: "Auto-replanning on delay",   spaceLean: true,  traditional: false },
   { feature: "Monte Carlo simulation",     spaceLean: true,  traditional: false },
@@ -310,7 +310,7 @@ export const WORKFLOW_STEPS: WorkflowStep[] = [
   },
   {
     step: 3,
-    title: "Generate Sequences",
+    title: "Build Sequences",
     description:
       "Get multiple optimized build sequences with predictive risk scores for each task and path.",
     icon: "⚡",
@@ -325,11 +325,11 @@ export const WORKFLOW_STEPS: WorkflowStep[] = [
 ];
 
 export const METRICS: Metric[] = [
-  { metric: "< 60s",  label: "From upload to schedule"    },
-  { metric: "94%",    label: "Delay prediction accuracy"  },
-  { metric: "10×",    label: "Faster replanning"          },
-  { metric: "0",      label: "Manual task links needed"   },
-  { metric: "1000+",  label: "Simulations per analysis"   },
+  { metric: "< 60s",  label: "From upload to schedule"      },
+  { metric: "94%",    label: "Delay prediction accuracy"    },
+  { metric: "10×",    label: "Faster replanning"            },
+  { metric: "0",      label: "Manual task links needed"     },
+  { metric: "1000+",  label: "Simulations per analysis"     },
   { metric: "∞",      label: "Schedule optimization cycles" },
 ];
 

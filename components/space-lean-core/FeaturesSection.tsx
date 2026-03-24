@@ -7,6 +7,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { FEATURES } from "./data";
 import { FEATURE_MOCKUPS } from "./feature-mockups";
 
+
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const fadeUp = (delay = 0) => ({
@@ -38,61 +39,61 @@ function FeatureCard({
         animate={inView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.55, delay: 0.12 + index * 0.07, ease: EASE }}
         whileHover={{ y: -8, transition: { duration: 0.3 } }}
-        className="group flex h-full flex-col rounded-xl overflow-hidden border border-white/[0.08] hover:border-cyan-400/40 transition-all duration-300 hover:shadow-[0_0_60px_rgba(34,211,238,0.15)]"
+        className="group flex h-full flex-col rounded-xl overflow-hidden border border-gray-200 hover:border-blue-400/60 transition-all duration-300 hover:shadow-[0_8px_40px_rgba(59,130,246,0.12)]"
         style={{
-          background: "linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(15, 15, 15, 0.95) 100%)",
+          background: "linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%)",
           backgroundImage: `
-            linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(15, 15, 15, 0.95) 100%),
-            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" fill="white" filter="url(%23noise)" opacity="0.02"/></svg>')
+            linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%),
+            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" fill="black" filter="url(%23noise)" opacity="0.015"/></svg>')
           `,
           backgroundSize: "cover, 200px 200px",
         }}
       >
         {/* Screenshot / mockup area */}
-        <div className="relative w-full aspect-[16/9] bg-gradient-to-b from-white/[0.05] to-white/[0.02] border-b border-white/[0.05] overflow-hidden">
+        <div className="relative w-full aspect-[16/9] bg-gradient-to-b from-gray-100 to-gray-50 border-b border-gray-100 overflow-hidden">
           {/* Subtle vignette */}
-          <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none group-hover:opacity-30 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-radial-gradient opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity duration-300" />
 
           {/* Render real image if clean path exists */}
           {image && !image.includes(" ") && mockup === undefined ? (
             <img
               src={image}
               alt={`${title} screenshot`}
-              className="absolute inset-0 w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+              className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
             />
           ) : (
-            <div className="absolute inset-0 opacity-75 group-hover:opacity-85 transition-opacity duration-300">{mockup}</div>
+            <div className="absolute inset-0 opacity-80 group-hover:opacity-90 transition-opacity duration-300">{mockup}</div>
           )}
 
           {/* Animated glow overlay on hover */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-t from-cyan-400/[0.05] via-transparent to-transparent" />
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-t from-blue-400/[0.04] via-transparent to-transparent" />
 
           {/* Subtle bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[#141414] via-[#141414]/50 to-transparent group-hover:h-16 transition-all duration-300" />
+          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white via-white/60 to-transparent group-hover:h-16 transition-all duration-300" />
         </div>
 
-        {/* Card body — Minimal spacing */}
+        {/* Card body */}
         <div className="flex flex-col flex-1 p-5 gap-4">
-          {/* Icon + subtitle — Minimal layout */}
+          {/* Icon + subtitle */}
           <div className="flex items-center gap-2">
             <motion.div
               whileHover={{ scale: 1.15, rotate: 12 }}
               transition={{ duration: 0.3 }}
             >
-              <Icon className="w-4 h-4 text-cyan-400/80 group-hover:text-cyan-400 transition-colors duration-300" />
+              <Icon className="w-4 h-4 text-blue-500/80 group-hover:text-blue-600 transition-colors duration-300" />
             </motion.div>
-            <span className="text-[9px] font-medium text-white/50 group-hover:text-white/70 uppercase tracking-wider transition-colors duration-300">
+            <span className="text-[9px] font-medium text-gray-400 group-hover:text-gray-500 uppercase tracking-wider transition-colors duration-300">
               {subtitle}
             </span>
           </div>
 
-          {/* Title — Direct and clean */}
-          <h3 className="text-base font-medium !text-white leading-snug group-hover:text-cyan-100 transition-colors duration-300">
+          {/* Title */}
+          <h3 className="text-base font-medium text-gray-900 leading-snug group-hover:text-blue-700 transition-colors duration-300">
             {title}
           </h3>
 
-          {/* CTA — Subtle and minimal */}
-          <div className="mt-auto inline-flex items-center gap-1.5 text-xs font-medium text-cyan-400/70 group-hover:text-cyan-300 transition-all duration-300">
+          {/* CTA */}
+          <div className="mt-auto inline-flex items-center gap-1.5 text-xs font-medium text-blue-500/80 group-hover:text-blue-600 transition-all duration-300">
             Explore
             <motion.div
               whileHover={{ x: 4 }}
@@ -105,7 +106,7 @@ function FeatureCard({
 
         {/* Bottom accent line animation */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400/0 via-cyan-400/50 to-cyan-400/0 opacity-0 group-hover:opacity-100"
+          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400/0 via-blue-400/50 to-blue-400/0 opacity-0 group-hover:opacity-100"
           initial={{ scaleX: 0 }}
           whileHover={{ scaleX: 1 }}
           transition={{ duration: 0.5 }}

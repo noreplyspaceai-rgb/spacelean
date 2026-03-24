@@ -51,8 +51,8 @@ const seededRandom = (seed: number) => {
 const FloatingParticles = () => {
   // Generate deterministic positions based on index
   const particles = [...Array(8)].map((_, i) => ({
-    top: seededRandom(i * 2.1) * 100,
-    left: seededRandom(i * 3.7) * 100,
+    top: Number((seededRandom(i * 2.1) * 100).toFixed(4)),
+    left: Number((seededRandom(i * 3.7) * 100).toFixed(4)),
     yOffset: seededRandom(i * 5.3) * 100 - 50,
     xOffset: seededRandom(i * 7.9) * 100 - 50,
     duration: 4 + seededRandom(i * 11.1) * 4,

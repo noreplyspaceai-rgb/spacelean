@@ -92,6 +92,7 @@ export default function Footer() {
                 alt="Space Lean"
                 width={32}
                 height={32}
+                className="w-8 h-8"
               />
               <span className="text-xl font-black tracking-tighter text-stone-900">
                 SPACE<span className="text-stone-600 font-light">LEAN</span>
