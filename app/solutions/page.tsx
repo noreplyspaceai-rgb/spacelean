@@ -8,9 +8,9 @@ import {
 import { SolutionsIndexClient } from "@/components/SolutionsClient";
 
 export const metadata: Metadata = {
-  title: "Solutions | Space AI — AI-Powered Construction Scheduling & Intelligence",
+  title: "Solutions | Space Lean — AI-Powered Construction Scheduling & Intelligence",
   description:
-    "Discover how Space AI serves General Contractors, Owners, and Consultants across Industrial, Infrastructure, and Commercial projects — with AI-generated sequencing, probabilistic scheduling, and real-time construction intelligence.",
+    "Discover how Space Lean serves General Contractors, Owners, and Consultants across Industrial, Infrastructure, and Commercial projects — with AI-generated sequencing, probabilistic scheduling, and real-time construction intelligence.",
   keywords: [
     "AI construction scheduling software",
     "construction project management AI",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "construction technology partner program",
   ],
   openGraph: {
-    title: "Solutions | Space AI — AI-Powered Construction Scheduling",
+    title: "Solutions | Space Lean — AI-Powered Construction Scheduling",
     description:
       "AI-generated construction sequences, probabilistic critical path, and real-time schedule intelligence for GCs, Owners, and Consultants across every project type.",
     type: "website",

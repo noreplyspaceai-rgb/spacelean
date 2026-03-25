@@ -19,7 +19,7 @@ function SolutionPanelCard({
   onActivate: () => void;
   idx: number;
 }) {
-  const shortTitle = solution.title.replace("Space AI for ", "");
+  const shortTitle = solution.title.replace("Space Lean for ", "");
 
   return (
     <motion.button
@@ -200,7 +200,7 @@ export function SolutionsIndexClient({
                 From GCs to owners, industrial to commercial —
               </span>
               <span className="block text-sm font-mono font-semibold text-cyan-500 leading-relaxed">
-                Space AI adapts to how your project is delivered.
+                Space Lean adapts to how your project is delivered.
               </span>
             </span>
           </motion.div>

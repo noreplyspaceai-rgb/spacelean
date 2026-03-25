@@ -111,7 +111,7 @@ function LaptopMockup() {
             <div className="flex-1 overflow-hidden">
               <img
                 src="/dashboard.png"
-                alt="Space AI Dashboard"
+                alt="Space Lean Dashboard"
                 style={{ width: "100%", height: "100%", objectFit: "fill", objectPosition: "top", display: "block" }}
                 draggable={false}
               />

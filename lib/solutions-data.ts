@@ -39,14 +39,14 @@ export interface Solution {
 export const stakeholderSolutions: Solution[] = [
   {
     slug: "for-gcs",
-    title: "Space AI for General Contractors",
+    title: "Space Lean for General Contractors",
     tagline: "Build Smarter. Deliver Faster. Win More.",
     description:
-      "Give your project teams a decisive edge with AI-generated construction sequences, real-time schedule intelligence, and automated crew optimization. Space AI transforms how GCs plan, execute, and win projects — from bid through closeout.",
+      "Give your project teams a decisive edge with AI-generated construction sequences, real-time schedule intelligence, and automated crew optimization. Space Lean transforms how GCs plan, execute, and win projects — from bid through closeout.",
     metaDescription:
-      "Space AI for General Contractors: AI-powered 4D scheduling, automated sequencing, crew optimization, and real-time critical path prediction. Build smarter and deliver on time.",
+      "Space Lean for General Contractors: AI-powered 4D scheduling, automated sequencing, crew optimization, and real-time critical path prediction. Build smarter and deliver on time.",
     seoContent:
-      "Space AI for General Contractors replaces manual scheduling with an AI reasoning engine that converts BIM geometry directly into optimized construction sequences. Instead of spending weeks linking tasks in Primavera or Synchro, your project team gets a complete, physics-aware schedule in hours — with zone flow logic, crew/trade assignments, and penetration constraints already resolved. Real-time Monte Carlo simulations identify which tasks are most likely to slip before they actually do, enabling proactive mitigation and protecting your margins. Whether you're managing a 10-story commercial build or a complex industrial fit-out, Space AI gives GCs the predictive intelligence and scheduling confidence that separates winning contractors from the rest.",
+      "Space Lean for General Contractors replaces manual scheduling with an AI reasoning engine that converts BIM geometry directly into optimized construction sequences. Instead of spending weeks linking tasks in Primavera or Synchro, your project team gets a complete, physics-aware schedule in hours — with zone flow logic, crew/trade assignments, and penetration constraints already resolved. Real-time Monte Carlo simulations identify which tasks are most likely to slip before they actually do, enabling proactive mitigation and protecting your margins. Whether you're managing a 10-story commercial build or a complex industrial fit-out, Space Lean gives GCs the predictive intelligence and scheduling confidence that separates winning contractors from the rest.",
     keywords: [
       "general contractor scheduling software",
       "AI construction sequencing",
@@ -71,7 +71,7 @@ export const stakeholderSolutions: Solution[] = [
       {
         title: "AI-Generated Construction Sequences",
         description:
-          "Upload your BIM model and let Space AI automatically infer task dependencies from geometry — structural support, MEP penetrations, access constraints, and zone logic — without a single manual link.",
+          "Upload your BIM model and let Space Lean automatically infer task dependencies from geometry — structural support, MEP penetrations, access constraints, and zone logic — without a single manual link.",
         icon: "🤖",
       },
       {
@@ -83,7 +83,7 @@ export const stakeholderSolutions: Solution[] = [
       {
         title: "Real-Time Self-Healing Schedules",
         description:
-          "When a task slips on site, Space AI automatically propagates the impact through the dependency graph and reoptimizes downstream tasks — no manual rescheduling required.",
+          "When a task slips on site, Space Lean automatically propagates the impact through the dependency graph and reoptimizes downstream tasks — no manual rescheduling required.",
         icon: "🔄",
       },
       {
@@ -95,7 +95,7 @@ export const stakeholderSolutions: Solution[] = [
       {
         title: "Zone-Based Flow & Takt Planning",
         description:
-          "Automatically sequence work zone by zone for optimal trade flow. Space AI detects congestion before it happens and redistributes tasks to maintain steady progress.",
+          "Automatically sequence work zone by zone for optimal trade flow. Space Lean detects congestion before it happens and redistributes tasks to maintain steady progress.",
         icon: "🗺️",
       },
       {
@@ -143,7 +143,7 @@ export const stakeholderSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "Space AI cut our preconstruction schedule time in half. The AI sequences out of the BIM model and our project teams just refine — it's transformed how we bid and build.",
+        "Space Lean cut our preconstruction schedule time in half. The AI sequences out of the BIM model and our project teams just refine — it's transformed how we bid and build.",
       author: "James Whitfield",
       role: "VP of Construction Operations",
       company: "Meridian Construction Group",
@@ -156,14 +156,14 @@ export const stakeholderSolutions: Solution[] = [
 
   {
     slug: "for-owners",
-    title: "Space AI for Owners",
+    title: "Space Lean for Owners",
     tagline: "Full Visibility. Predictable Delivery. No Surprises.",
     description:
-      "Owners deserve more than a monthly report and a hope for the best. Space AI gives project owners real-time schedule intelligence, probabilistic delivery forecasting, and transparent risk visibility — so you can hold your GC accountable and protect your investment.",
+      "Owners deserve more than a monthly report and a hope for the best. Space Lean gives project owners real-time schedule intelligence, probabilistic delivery forecasting, and transparent risk visibility — so you can hold your GC accountable and protect your investment.",
     metaDescription:
-      "Space AI for Owners: real-time construction schedule visibility, predictive delivery forecasting, contractor accountability tools, and AI-powered project risk dashboards.",
+      "Space Lean for Owners: real-time construction schedule visibility, predictive delivery forecasting, contractor accountability tools, and AI-powered project risk dashboards.",
     seoContent:
-      "Space AI for Owners closes the information gap between what contractors report and what is actually happening on site. Our AI platform ingests BIM models, schedules, and live site data to produce an independent, probabilistic view of your project's health. Rather than waiting for end-of-month reports, owners receive live dashboards showing critical path probability, delay risk by zone, and confidence intervals on your project completion date. Space AI also enables smarter GC selection and accountability — with AI-scored schedules during bidding and automated progress validation during construction. Whether you're developing a commercial tower, an industrial facility, or a portfolio of assets, Space AI gives owners the intelligence to protect their investment and make confident decisions.",
+      "Space Lean for Owners closes the information gap between what contractors report and what is actually happening on site. Our AI platform ingests BIM models, schedules, and live site data to produce an independent, probabilistic view of your project's health. Rather than waiting for end-of-month reports, owners receive live dashboards showing critical path probability, delay risk by zone, and confidence intervals on your project completion date. Space Lean also enables smarter GC selection and accountability — with AI-scored schedules during bidding and automated progress validation during construction. Whether you're developing a commercial tower, an industrial facility, or a portfolio of assets, Space Lean gives owners the intelligence to protect their investment and make confident decisions.",
     keywords: [
       "construction owner project visibility",
       "AI construction risk dashboard",
@@ -187,7 +187,7 @@ export const stakeholderSolutions: Solution[] = [
       {
         title: "Independent Schedule Intelligence",
         description:
-          "Space AI generates its own AI-driven schedule assessment from BIM data, giving owners an independent view of project risk that doesn't rely solely on GC reporting.",
+          "Space Lean generates its own AI-driven schedule assessment from BIM data, giving owners an independent view of project risk that doesn't rely solely on GC reporting.",
         icon: "🔍",
       },
       {
@@ -259,7 +259,7 @@ export const stakeholderSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "For the first time, I'm not waiting for a GC's monthly narrative to know if my project is in trouble. Space AI gives me a live, independent view of schedule risk every day.",
+        "For the first time, I'm not waiting for a GC's monthly narrative to know if my project is in trouble. Space Lean gives me a live, independent view of schedule risk every day.",
       author: "Priya Nair",
       role: "Director of Capital Projects",
       company: "Apex Property Group",
@@ -272,14 +272,14 @@ export const stakeholderSolutions: Solution[] = [
 
   {
     slug: "for-consultants",
-    title: "Space AI for Consultants",
+    title: "Space Lean for Consultants",
     tagline: "Deliver Smarter Advice. Faster. At Scale.",
     description:
-      "Whether you're a project controls consultant, a scheduling specialist, or a construction manager, Space AI gives you AI-powered tools to produce better schedules, validate contractor submissions, and deliver predictive insights that make your advisory practice indispensable.",
+      "Whether you're a project controls consultant, a scheduling specialist, or a construction manager, Space Lean gives you AI-powered tools to produce better schedules, validate contractor submissions, and deliver predictive insights that make your advisory practice indispensable.",
     metaDescription:
-      "Space AI for Consultants: AI-powered construction schedule analysis, contractor submission review, Monte Carlo risk simulation, and predictive project intelligence for advisory firms.",
+      "Space Lean for Consultants: AI-powered construction schedule analysis, contractor submission review, Monte Carlo risk simulation, and predictive project intelligence for advisory firms.",
     seoContent:
-      "Space AI for Consultants transforms the speed and depth of construction advisory services. Project controls professionals and scheduling consultants can now analyze contractor submissions in minutes, generate independent probabilistic schedules from BIM, and deliver risk forecasts that go far beyond traditional CPM analysis. Our AI engine handles the heavy lifting — dependency inference, Monte Carlo simulation, crew conflict detection, zone congestion analysis — while your team focuses on insight, strategy, and client relationships. Space AI also enables consultants to scale their practice by automating routine analysis, freeing senior expertise for the decisions that matter most.",
+      "Space Lean for Consultants transforms the speed and depth of construction advisory services. Project controls professionals and scheduling consultants can now analyze contractor submissions in minutes, generate independent probabilistic schedules from BIM, and deliver risk forecasts that go far beyond traditional CPM analysis. Our AI engine handles the heavy lifting — dependency inference, Monte Carlo simulation, crew conflict detection, zone congestion analysis — while your team focuses on insight, strategy, and client relationships. Space Lean also enables consultants to scale their practice by automating routine analysis, freeing senior expertise for the decisions that matter most.",
     keywords: [
       "construction scheduling consultant tools",
       "project controls AI software",
@@ -303,7 +303,7 @@ export const stakeholderSolutions: Solution[] = [
       {
         title: "Contractor Schedule Review & Scoring",
         description:
-          "Upload a contractor's schedule and let Space AI score it for logic density, critical path integrity, resource plausibility, and risk exposure — in minutes.",
+          "Upload a contractor's schedule and let Space Lean score it for logic density, critical path integrity, resource plausibility, and risk exposure — in minutes.",
         icon: "🔎",
       },
       {
@@ -375,7 +375,7 @@ export const stakeholderSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "Space AI has completely changed our project controls practice. We can now deliver probabilistic risk analysis on day one of an engagement — it's become our strongest differentiator.",
+        "Space Lean has completely changed our project controls practice. We can now deliver probabilistic risk analysis on day one of an engagement — it's become our strongest differentiator.",
       author: "Marcus Osei",
       role: "Principal, Construction Advisory",
       company: "Vertex Project Controls",
@@ -394,14 +394,14 @@ export const stakeholderSolutions: Solution[] = [
 export const projectTypeSolutions: Solution[] = [
   {
     slug: "industrial",
-    title: "Space AI for Industrial Projects",
+    title: "Space Lean for Industrial Projects",
     tagline: "Complex Systems. Precision Sequencing. Zero Surprises.",
     description:
-      "Industrial construction — refineries, power plants, data centers, manufacturing facilities — demands sequencing logic that no manual planner can fully manage. Space AI's geometry-driven reasoning engine handles the complexity: thousands of pipe spools, equipment lifts, structural steel, and MEP systems, all sequenced with physical precision and optimized for your completion date.",
+      "Industrial construction — refineries, power plants, data centers, manufacturing facilities — demands sequencing logic that no manual planner can fully manage. Space Lean's geometry-driven reasoning engine handles the complexity: thousands of pipe spools, equipment lifts, structural steel, and MEP systems, all sequenced with physical precision and optimized for your completion date.",
     metaDescription:
-      "Space AI for Industrial Construction: AI-powered sequencing for complex industrial facilities, process plants, data centers, and manufacturing. Automate MEP logic, equipment lifts, and steel erection sequences.",
+      "Space Lean for Industrial Construction: AI-powered sequencing for complex industrial facilities, process plants, data centers, and manufacturing. Automate MEP logic, equipment lifts, and steel erection sequences.",
     seoContent:
-      "Industrial projects are the most scheduling-intensive construction category in existence. The interdependencies between structural steel, large equipment installation, piping systems, electrical infrastructure, and commissioning activities create sequencing complexity that overwhelms traditional CPM tools. Space AI's Construction Knowledge Graph captures every physical relationship — pipe penetrations through vessel nozzles, equipment access envelopes, crane reach constraints, module lift sequences — and converts them into a dependency graph that drives a fully optimized AI schedule. The result is a schedule that is not only logically sound but also constructible, with crew flow, zone sequencing, and equipment utilization all optimized simultaneously.",
+      "Industrial projects are the most scheduling-intensive construction category in existence. The interdependencies between structural steel, large equipment installation, piping systems, electrical infrastructure, and commissioning activities create sequencing complexity that overwhelms traditional CPM tools. Space Lean's Construction Knowledge Graph captures every physical relationship — pipe penetrations through vessel nozzles, equipment access envelopes, crane reach constraints, module lift sequences — and converts them into a dependency graph that drives a fully optimized AI schedule. The result is a schedule that is not only logically sound but also constructible, with crew flow, zone sequencing, and equipment utilization all optimized simultaneously.",
     keywords: [
       "industrial construction scheduling software",
       "process plant construction AI",
@@ -497,7 +497,7 @@ export const projectTypeSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "We used to spend six weeks developing the schedule for a major plant expansion. Space AI had a fully logic-linked AI schedule ready for review in two days. The quality was better than anything we'd done manually.",
+        "We used to spend six weeks developing the schedule for a major plant expansion. Space Lean had a fully logic-linked AI schedule ready for review in two days. The quality was better than anything we'd done manually.",
       author: "Chen Wei",
       role: "Project Controls Manager",
       company: "Pacific Industrial Constructors",
@@ -510,14 +510,14 @@ export const projectTypeSolutions: Solution[] = [
 
   {
     slug: "infrastructure",
-    title: "Space AI for Infrastructure Projects",
+    title: "Space Lean for Infrastructure Projects",
     tagline: "Long Programs. Complex Interfaces. Delivered On Time.",
     description:
-      "Infrastructure projects — highways, rail, bridges, utilities, water treatment — span years, involve multiple contractors, and carry enormous public accountability. Space AI's AI scheduling platform manages the complexity: linear scheduling, interface coordination, phased delivery, and real-time program risk management, all from a single intelligence platform.",
+      "Infrastructure projects — highways, rail, bridges, utilities, water treatment — span years, involve multiple contractors, and carry enormous public accountability. Space Lean's AI scheduling platform manages the complexity: linear scheduling, interface coordination, phased delivery, and real-time program risk management, all from a single intelligence platform.",
     metaDescription:
-      "Space AI for Infrastructure: AI-powered linear scheduling, multi-contractor coordination, phased delivery planning, and real-time program risk management for highways, rail, bridges, and utilities.",
+      "Space Lean for Infrastructure: AI-powered linear scheduling, multi-contractor coordination, phased delivery planning, and real-time program risk management for highways, rail, bridges, and utilities.",
     seoContent:
-      "Infrastructure programs are fundamentally different from building construction — they are linear, geographically dispersed, multi-contractor, and politically exposed. Traditional CPM tools weren't designed for these characteristics. Space AI for Infrastructure introduces spatial sequencing logic that matches the physical reality of linear projects: chainage-based task positioning, traffic stage sequencing, utility conflict resolution, and environmental constraint management. AI-driven resource flow optimization ensures work fronts are continuously advanced without crew conflicts or zone congestion. Portfolio-level risk dashboards give program managers and funding bodies the visibility they need to manage accountability across complex, multi-year infrastructure delivery programs.",
+      "Infrastructure programs are fundamentally different from building construction — they are linear, geographically dispersed, multi-contractor, and politically exposed. Traditional CPM tools weren't designed for these characteristics. Space Lean for Infrastructure introduces spatial sequencing logic that matches the physical reality of linear projects: chainage-based task positioning, traffic stage sequencing, utility conflict resolution, and environmental constraint management. AI-driven resource flow optimization ensures work fronts are continuously advanced without crew conflicts or zone congestion. Portfolio-level risk dashboards give program managers and funding bodies the visibility they need to manage accountability across complex, multi-year infrastructure delivery programs.",
     keywords: [
       "infrastructure construction scheduling AI",
       "linear scheduling software",
@@ -613,7 +613,7 @@ export const projectTypeSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "Managing interface risk across eight separate contractors on our rail program was a nightmare before Space AI. Now we have a live view of interface conflicts and AI-suggested resolution options. It's transformed our program management.",
+        "Managing interface risk across eight separate contractors on our rail program was a nightmare before Space Lean. Now we have a live view of interface conflicts and AI-suggested resolution options. It's transformed our program management.",
       author: "Sophie Laurent",
       role: "Program Director",
       company: "National Rail Infrastructure Authority",
@@ -626,14 +626,14 @@ export const projectTypeSolutions: Solution[] = [
 
   {
     slug: "commercial",
-    title: "Space AI for Commercial Projects",
+    title: "Space Lean for Commercial Projects",
     tagline: "On Budget. On Time. Every Time.",
     description:
-      "Commercial construction — offices, mixed-use, retail, hospitality, and healthcare — demands reliable schedules, smooth trade coordination, and fast response to change. Space AI delivers AI-powered sequencing, automated trade stacking, and real-time schedule intelligence to keep your commercial projects on track from ground-break to handover.",
+      "Commercial construction — offices, mixed-use, retail, hospitality, and healthcare — demands reliable schedules, smooth trade coordination, and fast response to change. Space Lean delivers AI-powered sequencing, automated trade stacking, and real-time schedule intelligence to keep your commercial projects on track from ground-break to handover.",
     metaDescription:
-      "Space AI for Commercial Construction: AI-powered scheduling, automated trade sequencing, zone-based flow planning, and real-time delay response for office, retail, healthcare, and mixed-use projects.",
+      "Space Lean for Commercial Construction: AI-powered scheduling, automated trade sequencing, zone-based flow planning, and real-time delay response for office, retail, healthcare, and mixed-use projects.",
     seoContent:
-      "Commercial construction projects are won and lost on schedule and trade coordination. The difference between a profitable project and a loss often comes down to how well trades are sequenced across zones, how quickly the team responds to delays, and how accurately durations are estimated at the start. Space AI for Commercial Projects introduces AI-native scheduling that eliminates the manual sequencing bottleneck: BIM geometry drives automatic task generation, zone flow planning distributes trades for maximum efficiency, and Monte Carlo simulation tells you which parts of your program are genuinely at risk. The result is a commercial construction team that plans with confidence, coordinates trades without conflict, and responds to site reality in real time.",
+      "Commercial construction projects are won and lost on schedule and trade coordination. The difference between a profitable project and a loss often comes down to how well trades are sequenced across zones, how quickly the team responds to delays, and how accurately durations are estimated at the start. Space Lean for Commercial Projects introduces AI-native scheduling that eliminates the manual sequencing bottleneck: BIM geometry drives automatic task generation, zone flow planning distributes trades for maximum efficiency, and Monte Carlo simulation tells you which parts of your program are genuinely at risk. The result is a commercial construction team that plans with confidence, coordinates trades without conflict, and responds to site reality in real time.",
     keywords: [
       "commercial construction scheduling AI",
       "office building construction planning",
@@ -729,7 +729,7 @@ export const projectTypeSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "We handed Space AI our BIM model on Monday and had a fully sequenced, zone-optimized schedule ready for the client by Wednesday. The trade stacking analysis alone saved us weeks of manual effort.",
+        "We handed Space Lean our BIM model on Monday and had a fully sequenced, zone-optimized schedule ready for the client by Wednesday. The trade stacking analysis alone saved us weeks of manual effort.",
       author: "Anita Rosenberg",
       role: "Project Director",
       company: "Summit Commercial Builders",
@@ -742,14 +742,14 @@ export const projectTypeSolutions: Solution[] = [
 
   {
     slug: "ideal-projects",
-    title: "Ideal Projects for Space AI",
+    title: "Ideal Projects for Space Lean",
     tagline: "Where AI Scheduling Delivers the Greatest Impact",
     description:
-      "Space AI delivers the most transformative results on projects where complexity, interdependency, and schedule risk are highest. Discover the project profiles where AI-powered sequencing creates the clearest competitive advantage — and why leading contractors and owners choose Space AI for their most demanding work.",
+      "Space Lean delivers the most transformative results on projects where complexity, interdependency, and schedule risk are highest. Discover the project profiles where AI-powered sequencing creates the clearest competitive advantage — and why leading contractors and owners choose Space Lean for their most demanding work.",
     metaDescription:
-      "Discover the ideal construction project types for Space AI: complex BIM-driven projects, multi-trade coordination, phased delivery, and high-risk programs where AI scheduling delivers maximum ROI.",
+      "Discover the ideal construction project types for Space Lean: complex BIM-driven projects, multi-trade coordination, phased delivery, and high-risk programs where AI scheduling delivers maximum ROI.",
     seoContent:
-      "Not every project needs an AI construction scheduling platform — but the projects that do are exactly where the difference between on-time delivery and costly overrun is decided. Space AI is purpose-built for projects with high element counts, complex trade interdependencies, tight delivery windows, and significant schedule risk. These are the projects where manual CPM scheduling simply cannot keep pace with the geometry, the resource constraints, and the real-time change that characterizes modern construction. If your project fits any of the profiles below, Space AI will deliver measurable value from day one.",
+      "Not every project needs an AI construction scheduling platform — but the projects that do are exactly where the difference between on-time delivery and costly overrun is decided. Space Lean is purpose-built for projects with high element counts, complex trade interdependencies, tight delivery windows, and significant schedule risk. These are the projects where manual CPM scheduling simply cannot keep pace with the geometry, the resource constraints, and the real-time change that characterizes modern construction. If your project fits any of the profiles below, Space Lean will deliver measurable value from day one.",
     keywords: [
       "best projects for AI construction scheduling",
       "complex construction project management",
@@ -799,7 +799,7 @@ export const projectTypeSolutions: Solution[] = [
       {
         title: "Repeat or Portfolio Programs",
         description:
-          "Programs with recurring project types — retail rollouts, residential developments, infrastructure corridors — where Space AI's self-learning engine compounds improvement across every successive project.",
+          "Programs with recurring project types — retail rollouts, residential developments, infrastructure corridors — where Space Lean's self-learning engine compounds improvement across every successive project.",
         icon: "📈",
       },
     ],
@@ -807,7 +807,7 @@ export const projectTypeSolutions: Solution[] = [
       {
         title: "Highest ROI on Complex Projects",
         description:
-          "The more complex the project, the greater the value Space AI delivers — AI scheduling creates exponential returns on complexity.",
+          "The more complex the project, the greater the value Space Lean delivers — AI scheduling creates exponential returns on complexity.",
         stat: "8x",
       },
       {
@@ -841,7 +841,7 @@ export const projectTypeSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "Space AI is purpose-built for the kind of projects we do. Complex, multi-trade, fast-track — the kind of work where manual scheduling always falls short. Now we have a platform that matches our project complexity.",
+        "Space Lean is purpose-built for the kind of projects we do. Complex, multi-trade, fast-track — the kind of work where manual scheduling always falls short. Now we have a platform that matches our project complexity.",
       author: "Daniel Okonkwo",
       role: "Chief Estimator",
       company: "Titan Construction Partners",
@@ -860,14 +860,14 @@ export const projectTypeSolutions: Solution[] = [
 export const solutionsSolutions: Solution[] = [
   {
     slug: "partners-program",
-    title: "Space AI Partners Program",
+    title: "Space Lean Partners Program",
     tagline: "Grow Together. Build the Future of Construction Intelligence.",
     description:
-      "The Space AI Partners Program is built for technology providers, consulting firms, BIM integrators, and construction software companies who want to bring AI-native scheduling intelligence to their clients and platforms. Join a network of partners who are reshaping the future of construction delivery.",
+      "The Space Lean Partners Program is built for technology providers, consulting firms, BIM integrators, and construction software companies who want to bring AI-native scheduling intelligence to their clients and platforms. Join a network of partners who are reshaping the future of construction delivery.",
     metaDescription:
-      "Join the Space AI Partners Program: technology integrations, consulting partnerships, reseller opportunities, and co-development programs for construction technology companies and advisors.",
+      "Join the Space Lean Partners Program: technology integrations, consulting partnerships, reseller opportunities, and co-development programs for construction technology companies and advisors.",
     seoContent:
-      "The Space AI Partners Program offers a structured path for organizations that want to embed, resell, or extend AI-native construction scheduling intelligence into their own platforms and client offerings. Whether you are a construction management consultancy, a BIM software provider, a project controls firm, or a technology integrator, Space AI's partnership ecosystem is designed to create mutual value through shared innovation, joint go-to-market, and technical integration. Partners gain early access to Space AI's Construction Knowledge Graph APIs, training and certification programs, co-marketing support, and revenue-sharing models that reward deep integration and client success. Together, we are building the intelligence layer that will define the next generation of construction delivery.",
+      "The Space Lean Partners Program offers a structured path for organizations that want to embed, resell, or extend AI-native construction scheduling intelligence into their own platforms and client offerings. Whether you are a construction management consultancy, a BIM software provider, a project controls firm, or a technology integrator, Space Lean's partnership ecosystem is designed to create mutual value through shared innovation, joint go-to-market, and technical integration. Partners gain early access to Space Lean's Construction Knowledge Graph APIs, training and certification programs, co-marketing support, and revenue-sharing models that reward deep integration and client success. Together, we are building the intelligence layer that will define the next generation of construction delivery.",
     keywords: [
       "construction technology partner program",
       "BIM software integration partner",
@@ -875,7 +875,7 @@ export const solutionsSolutions: Solution[] = [
       "project controls consulting partner",
       "construction software API integration",
       "construction technology ecosystem",
-      "Space AI integration partner",
+      "Space Lean integration partner",
       "construction intelligence platform partner",
       "AEC technology partnership program",
       "construction consulting partner network",
@@ -891,19 +891,19 @@ export const solutionsSolutions: Solution[] = [
       {
         title: "Technology Integration Partners",
         description:
-          "Embed Space AI's Construction Knowledge Graph and scheduling engine into your existing platform via our open API. Deliver AI-native scheduling as part of your product without building from scratch.",
+          "Embed Space Lean's Construction Knowledge Graph and scheduling engine into your existing platform via our open API. Deliver AI-native scheduling as part of your product without building from scratch.",
         icon: "🔌",
       },
       {
         title: "Consulting & Advisory Partners",
         description:
-          "Licensed access to Space AI's full platform for consulting firms to deliver AI-powered schedule analysis, risk simulation, and project intelligence to your clients.",
+          "Licensed access to Space Lean's full platform for consulting firms to deliver AI-powered schedule analysis, risk simulation, and project intelligence to your clients.",
         icon: "📐",
       },
       {
         title: "Reseller Program",
         description:
-          "Become an authorized Space AI reseller with competitive margin structures, sales enablement support, and co-branded marketing materials for your market region.",
+          "Become an authorized Space Lean reseller with competitive margin structures, sales enablement support, and co-branded marketing materials for your market region.",
         icon: "💼",
       },
       {
@@ -915,13 +915,13 @@ export const solutionsSolutions: Solution[] = [
       {
         title: "Co-Development Program",
         description:
-          "Strategic partners with access to our development roadmap, early API releases, and joint product development opportunities to shape the future of Space AI's platform.",
+          "Strategic partners with access to our development roadmap, early API releases, and joint product development opportunities to shape the future of Space Lean's platform.",
         icon: "🛠️",
       },
       {
         title: "Training & Certification",
         description:
-          "Space AI Partner Certification programs for consultants and integrators, including technical certification, client delivery methodology, and ongoing product education.",
+          "Space Lean Partner Certification programs for consultants and integrators, including technical certification, client delivery methodology, and ongoing product education.",
         icon: "🎓",
       },
     ],
@@ -935,7 +935,7 @@ export const solutionsSolutions: Solution[] = [
       {
         title: "Faster Client Outcomes",
         description:
-          "Deliver AI-powered project intelligence to clients faster by building on Space AI's proven platform rather than building from scratch.",
+          "Deliver AI-powered project intelligence to clients faster by building on Space Lean's proven platform rather than building from scratch.",
         stat: "6x",
       },
       {
@@ -954,7 +954,7 @@ export const solutionsSolutions: Solution[] = [
     useCases: [
       "Embedding AI scheduling into BIM platforms",
       "Delivering AI risk simulation for owner clients",
-      "Reselling Space AI to GCs in your region",
+      "Reselling Space Lean to GCs in your region",
       "Building custom integrations for ERP or PMIS systems",
       "Adding AI scheduling to construction consulting services",
       "Joint go-to-market with complementary technology providers",
@@ -963,7 +963,7 @@ export const solutionsSolutions: Solution[] = [
     ],
     testimonial: {
       quote:
-        "Partnering with Space AI has opened a completely new service line for our project controls practice. Our clients were asking for probabilistic scheduling — now we can deliver it with confidence on any project.",
+        "Partnering with Space Lean has opened a completely new service line for our project controls practice. Our clients were asking for probabilistic scheduling — now we can deliver it with confidence on any project.",
       author: "Nina Bartholomew",
       role: "Managing Partner",
       company: "Construct Advisory International",

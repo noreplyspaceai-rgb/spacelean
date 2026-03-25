@@ -109,7 +109,7 @@ export default function WhyUs() {
             {/* Badge — mirrors HeroSection's Sparkles pill */}
             <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3  mb-4 tracking-wide">
               <Zap className="w-3.5 h-3.5 text-cyan-500" />
-              Why SPACE AI
+              Why Space Lean
             </span>
 
             <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.05]">
@@ -130,7 +130,7 @@ export default function WhyUs() {
                 Every delay has a root cause.
               </span>
               <span className="block text-sm font-mono font-semibold text-cyan-500 leading-relaxed">
-                SPACE AI finds it before it finds you.
+                Space Lean finds it before it finds you.
               </span>
             </span>
           </motion.div>

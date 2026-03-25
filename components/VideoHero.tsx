@@ -12,7 +12,7 @@ const SLIDES = [
     poster: "/videos/hero-1-poster.jpg",
     eyebrow: "Construction Sequencing, Reimagined",
     heading: "Upload a Model.\nGet a Build Plan.",
-    body: "SPACE AI reads your BIM file and generates a fully sequenced, dependency-resolved construction plan — automatically. No manual linking. No guesswork.",
+    body: "Space Lean reads your BIM file and generates a fully sequenced, dependency-resolved construction plan — automatically. No manual linking. No guesswork.",
     cta: { label: "Start Free Trial", href: "https://cad.spaceaiapp.com/lean" },
   },
   {
@@ -21,7 +21,7 @@ const SLIDES = [
     poster: "/videos/hero-2-poster.jpg",
     eyebrow: "Intelligent Scheduling",
     heading: "Schedules That\nThink Ahead.",
-    body: "SPACE AI detects conflicts, crew clashes, and zone bottlenecks before they reach the site — then adapts the schedule in real time when conditions change.",
+    body: "Space Lean detects conflicts, crew clashes, and zone bottlenecks before they reach the site — then adapts the schedule in real time when conditions change.",
     cta: { label: "See How It Works", href: "#demo" },
   },
   {
@@ -30,7 +30,7 @@ const SLIDES = [
     poster: "/videos/hero-3-poster.jpg",
     eyebrow: "Built for AEC Teams",
     heading: "Less Planning Time.\nMore Build Time.",
-    body: "What takes experienced planners days now takes minutes. SPACE AI handles sequencing, crew allocation, and risk forecasting — so your team stays focused on delivery.",
+    body: "What takes experienced planners days now takes minutes. Space Lean handles sequencing, crew allocation, and risk forecasting — so your team stays focused on delivery.",
     cta: { label: "Explore Features", href: "#features" },
   },
 ];

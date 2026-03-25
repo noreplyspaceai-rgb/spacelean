@@ -50,7 +50,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
                 <div className="h-px w-6 bg-black/10" />
                 <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 tracking-wide">
                   <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
-                  {solution.title.replace("Space AI for ", "")}
+                  {solution.title.replace("Space Lean for ", "")}
                 </span>
               </div>
 
@@ -122,7 +122,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
             <p className="mt-4 max-w-lg">
               <span className="block border-l-4 border-cyan-400 pl-4">
                 <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">
-                  Space AI adapts to your process —
+                  Space Lean adapts to your process —
                 </span>
                 <span className="block text-base sm:text-lg font-mono font-semibold text-cyan-500 leading-relaxed">
                   not the other way around.
@@ -369,7 +369,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
                   <Link href={`/solutions/${other.slug}`} className="flex items-center gap-4 rounded-lg border border-transparent hover:border-black/[0.06] hover:bg-black/[0.015] transition-all duration-200 px-4 py-4 group">
                     <span className="text-2xl grayscale group-hover:grayscale-0 transition-all duration-500 shrink-0">{other.icon}</span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-bold text-neutral-900 tracking-tight">{other.title.replace("Space AI for ", "")}</p>
+                      <p className="text-sm font-bold text-neutral-900 tracking-tight">{other.title.replace("Space Lean for ", "")}</p>
                       <p className="text-xs text-neutral-400 font-mono mt-0.5 truncate">{other.tagline}</p>
                     </div>
                     <div className="w-7 h-7 rounded-full bg-black/[0.04] border border-black/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-300 shrink-0">
@@ -411,11 +411,11 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-normal lg:text-4xl tracking-tight leading-tight text-cyan-500 max-w-xl mb-4">
                   Build smarter with{" "}
-                  <span className="font-bold text-5xl lg:text-5xl">{solution.title.replace("Space AI for ", "")}.</span>
+                  <span className="font-bold text-5xl lg:text-5xl">{solution.title.replace("Space Lean for ", "")}.</span>
                 </h2>
                 <p className="max-w-lg">
                   <span className="block border-l-4 border-cyan-400 pl-4">
-                    <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">Join leading contractors and owners using Space AI.</span>
+                    <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">Join leading contractors and owners using Space Lean.</span>
                     <span className="block text-base sm:text-lg font-mono font-semibold text-cyan-500 leading-relaxed">Plan faster, reduce risk, deliver on time.</span>
                   </span>
                 </p>
