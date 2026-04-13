@@ -3,7 +3,17 @@ import { Shield, Lock, Eye, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Security Standards | SpaceLean AI",
-    description: "Explore the security protocols and encryption standards used at SpaceLean.",
+    description:
+        "Explore the security protocols, encryption standards, SOC 2 compliance, and infrastructure powering SpaceLean AI's construction scheduling platform.",
+    alternates: {
+        canonical: "/security",
+    },
+    openGraph: {
+        title: "Security Standards | SpaceLean AI",
+        description:
+            "Enterprise-grade security: AES-256 encryption, SOC 2 compliance, and multi-region cloud infrastructure.",
+        type: "website",
+    },
 };
 
 export default function SecurityPage() {

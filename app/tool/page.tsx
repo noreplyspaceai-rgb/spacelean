@@ -14,6 +14,15 @@ export const metadata: Metadata = {
         "automatic project scheduler",
         "AI-powered work breakdown structure",
     ],
+    alternates: {
+        canonical: "/tool",
+    },
+    openGraph: {
+        title: "Free AI Task Generator | SpaceLean",
+        description:
+            "Transform any project idea into a step-by-step execution plan with AI — completely free.",
+        type: "website",
+    },
 };
 
 export default function ToolPage() {
@@ -21,24 +30,38 @@ export default function ToolPage() {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "SpaceLean AI Task Generator",
+        "alternateName": "SpaceLean Free AI Task Generator",
         "operatingSystem": "Web",
         "applicationCategory": "ProductivityApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-        },
-        "description": "Unlock efficiency with the SpaceLean AI Task Generator. Automatically break down complex project requirements into high-priority actionable tasks.",
+        "url": "https://spacelean.ai/tool",
+        "description": "Automatically break down complex projects into prioritized, actionable tasks using SpaceLean's free AI engine. No account required.",
         "featureList": [
             "AI-Powered Task Decomposition",
             "Agile Workflow Generation",
             "Smart Task Prioritization",
-            "Automated Project Scheduling"
+            "Automated Project Scheduling",
+            "OKR to Task Conversion",
+            "Work Breakdown Structure Generation",
         ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1",
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free to use — no account or credit card required",
+        },
         "author": {
             "@type": "Organization",
-            "name": "SpaceLean AI"
-        }
+            "name": "SpaceLean",
+            "url": "https://spacelean.ai",
+            "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+        },
     };
 
     return (

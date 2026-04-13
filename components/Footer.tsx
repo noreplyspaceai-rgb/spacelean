@@ -51,7 +51,11 @@ const footerLinks = {
 
 const footerBaseLinks = [
   { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
   { label: "AI Task Generator", href: "/tool" },
+  { label: "Lean PM Software", href: "/blogs/lean-project-management-software" },
+  { label: "OKR Management Guide", href: "/blogs/okr-management-complete-guide" },
+  { label: "OKR Templates", href: "/blogs/okr-templates-every-team" },
   { label: "Comparisons", href: "/compare" },
   { label: "Blog", href: "/blogs" },
   { label: "Request a Demo", href: "/request-a-demo" },
@@ -163,6 +167,7 @@ export default function Footer() {
             <div className="flex gap-6">
               <Link href="/privacy" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Terms of Service</Link>
+              <Link href="/security" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Security</Link>
             </div>
           </div>
 

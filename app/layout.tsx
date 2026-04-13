@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,25 +6,37 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
-  title: "SPACE LEAN | Digital Construction Brain — AI Construction Scheduling",
+  title: "SpaceLean | AI-Powered Lean Project Management & Construction Scheduling Software",
   description:
-    "Space Lean is the world's first AI-native Digital Construction Brain. Auto-generate construction sequences, predict critical path risks, and optimize crew scheduling in real time.",
+    "SpaceLean is the AI-native Digital Construction Brain that auto-generates construction schedules from BIM models, predicts critical path risks, and optimizes crew scheduling. Free to start — try it today.",
   keywords: [
-    "Digital Construction Brain",
+    "SpaceLean",
+    "AI project management software",
     "AI construction scheduling software",
+    "Digital Construction Brain",
+    "lean project management tool",
     "BIM to schedule automation",
     "4D construction planning AI",
     "AI-powered construction sequencing",
     "construction knowledge graph",
     "predictive critical path software",
     "automated construction planning",
+    "AI task management",
     "Synchro 4D alternative",
     "Primavera P6 alternative",
   ],
-  authors: [{ name: "Space Lean Inc." }],
-  creator: "Space Lean Inc.",
-  publisher: "Space Lean Inc.",
+  authors: [{ name: "SpaceLean Inc." }],
+  creator: "SpaceLean Inc.",
+  publisher: "SpaceLean Inc.",
   robots: {
     index: true,
     follow: true,
@@ -40,24 +52,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://spacelean.ai",
-    siteName: "SPACE LEAN",
-    title: "SPACE LEAN | Digital Construction Brain",
+    siteName: "SpaceLean",
+    title: "SpaceLean | AI-Powered Lean Project Management & Construction Scheduling",
     description:
-      "The world's first AI-native construction intelligence platform. Auto-generate schedules from your construction model — in seconds.",
+      "Auto-generate construction schedules from BIM models in seconds. SpaceLean predicts risks, optimizes crews, and adapts in real time. Free to start.",
     images: [
       {
         url: "/marketing.jpg",
         width: 1200,
         height: 630,
-        alt: "SPACE LEAN - Digital Construction Brain",
+        alt: "SpaceLean — AI-Powered Lean Project Management Software",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPACE LEAN | Digital Construction Brain",
+    title: "SpaceLean | AI-Powered Lean Project Management Software",
     description:
-      "The world's first AI-native construction intelligence platform. Auto-generate schedules from your construction model — in seconds.",
+      "Auto-generate construction schedules from BIM models in seconds. Predict risks, optimize crews, and adapt in real time.",
     images: ["/marketing.jpg"],
     creator: "@spacelean",
   },
@@ -77,6 +89,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        {/* Preload critical fonts to reduce FOIT */}
+        <link rel="preload" href="/fonts/Verity-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Verity-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://unpkg.com" />
+      </head>
       <body
         suppressHydrationWarning
         className="leading-[0.9] antialiased min-h-screen bg-white text-neutral-900"

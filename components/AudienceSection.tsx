@@ -49,8 +49,8 @@ export default function AudienceSection() {
         </h2>
       </div>
 
-      {/* Accordion Cards — unchanged */}
-      <div className="flex w-full gap-4 h-[380px] items-stretch mb-8">
+      {/* Accordion Cards */}
+      <div className="flex flex-col md:flex-row w-full gap-4 md:h-[380px] items-stretch mb-8">
         {audiences.map((a) => {
           const isActive = active === a.id;
 
@@ -58,12 +58,16 @@ export default function AudienceSection() {
             <div
               key={a.id}
               onMouseEnter={() => setActive(a.id)}
-              className="relative rounded-2xl overflow-hidden cursor-pointer bg-[#1e2a4a] transition-all duration-500 ease-in-out flex-shrink-0"
+              onClick={() => setActive(a.id)}
+              className="relative rounded-2xl overflow-hidden cursor-pointer bg-[#1e2a4a] transition-all duration-500 ease-in-out flex-shrink-0 min-h-[120px] md:min-h-0"
               style={{ flex: isActive ? "2.2" : "0.7" }}
             >
               <img
                 src={a.image}
                 alt={a.title}
+                width={800}
+                height={600}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500"
                 style={{ opacity: isActive ? 0.45 : 0.25 }}
               />
@@ -106,7 +110,7 @@ export default function AudienceSection() {
       <div className="flex justify-start">
         <Link
           href="/solutions"
-          className="inline-flex items-center gap-2 bg-black/[0.04] border border-black/10 text-neutral-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-cyan-500 hover:border-cyan-500 hover:text-white transition-all duration-300"
+          className="inline-flex items-center gap-2 bg-black/[0.04] border border-black/10 text-neutral-800 font-medium px-6 py-3 rounded-full text-sm hover:bg-cyan-500 hover:border-cyan-500 hover:text-white active:bg-cyan-600 active:border-cyan-600 active:text-white transition-all duration-300"
         >
           See all solutions
           <ArrowRight className="w-4 h-4" />

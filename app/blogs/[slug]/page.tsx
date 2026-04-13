@@ -8,6 +8,20 @@ interface BlogPageProps {
   params: Promise<{ slug: string }>;
 }
 
+function extractFaqFromContent(content: string): { question: string; answer: string }[] {
+  const faqSectionMatch = content.split(/##\s*Frequently Asked Questions/i);
+  if (faqSectionMatch.length < 2) return [];
+
+  const faqSection = faqSectionMatch[1];
+  const faqBlocks = faqSection.split(/###\s+/).filter(Boolean);
+  return faqBlocks.map((block) => {
+    const lines = block.trim().split("\n").filter(Boolean);
+    const question = lines[0].trim();
+    const answer = lines.slice(1).join(" ").trim();
+    return { question, answer };
+  }).filter((faq) => faq.question && faq.answer);
+}
+
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
@@ -29,6 +43,9 @@ export async function generateMetadata({
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author }],
+    alternates: {
+      canonical: `/blogs/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -36,12 +53,14 @@ export async function generateMetadata({
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
+      images: [post.image],
       siteName: "SPACE LEAN",
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: [post.image],
     },
   };
 }
@@ -56,8 +75,41 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
 
+  const faqs = extractFaqFromContent(post.content);
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: post.image,
+    author: { "@type": "Person", name: post.author },
+    datePublished: post.date,
+    publisher: { "@type": "Organization", name: "SpaceLean" },
+  };
+
+  const faqJsonLd = faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  } : null;
+
   return (
     <main className="min-h-screen text-[#0a0a0a] pt-28 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
         {/* ── Breadcrumb ── */}

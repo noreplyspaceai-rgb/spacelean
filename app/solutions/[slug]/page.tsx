@@ -31,6 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${solution.title} | SpaceLean`,
     description: solution.metaDescription,
     keywords: solution.keywords,
+    alternates: {
+      canonical: `/solutions/${slug}`,
+    },
     openGraph: {
       title: solution.title,
       description: solution.metaDescription,
@@ -56,9 +59,59 @@ export default async function SolutionPage({ params }: Props) {
   // Get other solutions for cross-linking
   const otherSolutions = solutions.filter((s) => s.slug !== slug).slice(0, 3);
 
+  // Map solutions to relevant blog posts for internal linking
+  const relatedResources: Record<string, { label: string; href: string }[]> = {
+    "for-gcs": [
+      { label: "Lean Project Management Software Guide", href: "/blogs/lean-project-management-software" },
+      { label: "How to Stop Missing Deadlines", href: "/blogs/stop-missing-deadlines-intelligent-scheduling" },
+    ],
+    "for-owners": [
+      { label: "OKR Management: The Complete Guide", href: "/blogs/okr-management-complete-guide" },
+      { label: "Decision-Making Frameworks for Leaders", href: "/blogs/decision-making-frameworks-leaders" },
+    ],
+    "for-consultants": [
+      { label: "Remote Team Collaboration Tools", href: "/blogs/remote-team-collaboration-tools-2026" },
+      { label: "Productivity Hacks for Busy Professionals", href: "/blogs/productivity-hacks-busy-professionals" },
+    ],
+    "industrial": [
+      { label: "Lean Project Management Software Guide", href: "/blogs/lean-project-management-software" },
+      { label: "Kanban Board Best Practices", href: "/blogs/kanban-board-best-practices-teams" },
+    ],
+    "infrastructure": [
+      { label: "Lean Project Management Software Guide", href: "/blogs/lean-project-management-software" },
+      { label: "Strategic Goal Prioritization with OKRs", href: "/blogs/strategic-goal-prioritization-okrs" },
+    ],
+    "commercial": [
+      { label: "How to Stop Missing Deadlines", href: "/blogs/stop-missing-deadlines-intelligent-scheduling" },
+      { label: "AI Task Management: The Future", href: "/blogs/ai-task-management-future-productivity" },
+    ],
+    "ideal-projects": [
+      { label: "Agile Methodology: A Beginner's Guide", href: "/blogs/agile-methodology-beginners-guide" },
+      { label: "SpaceLean vs Excel & Trello", href: "/blogs/spacelean-vs-excel-trello-intelligent-planning" },
+    ],
+  };
+
+  const resources = relatedResources[slug] || [];
+
   return (
     <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
       <SolutionDetailClient solution={solution} otherSolutions={otherSolutions} />
+
+      {/* Server-rendered internal links for SEO */}
+      <div className="sr-only" aria-hidden="true">
+        <nav aria-label="Related resources">
+          <h2>Related Resources</h2>
+          <ul>
+            <li><a href="/features">Explore SpaceLean Features</a></li>
+            <li><a href="/pricing">View Pricing Plans</a></li>
+            <li><a href="/tool">Try the Free AI Task Generator</a></li>
+            <li><a href="/compare">Compare SpaceLean to Alternatives</a></li>
+            {resources.map((r) => (
+              <li key={r.href}><a href={r.href}>{r.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </main>
   );
 }

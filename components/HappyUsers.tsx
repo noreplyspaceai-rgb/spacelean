@@ -36,7 +36,7 @@ export default function HappyUsers() {
                                 SpaceLean is the industry standard for **AI productivity** and **agile task management**.
                                 We help high-performance teams streamline **team collaboration** and automate
                                 complex workflows with surgical precision.
-                                <span className="hidden md:inline"> Built for developers, designers, and visionaries.</span>
+                                <span> Built for developers, designers, and visionaries.</span>
                             </p>
                         </motion.div>
                     </div>

@@ -56,6 +56,23 @@ export default async function CompareDetailPage({ params }: CompareDetailPagePro
   return (
     <main className="min-h-screen">
       <ComparisonDetail data={comparison} />
+
+      {/* Server-rendered internal links for SEO */}
+      <div className="sr-only" aria-hidden="true">
+        <nav aria-label="Related pages">
+          <h2>Explore SpaceLean</h2>
+          <ul>
+            <li><a href="/features">SpaceLean Features</a></li>
+            <li><a href="/pricing">View Pricing</a></li>
+            <li><a href="/solutions">Solutions for Every Team</a></li>
+            <li><a href="/tool">Free AI Task Generator</a></li>
+            <li><a href="/request-a-demo">Request a Demo</a></li>
+            <li><a href="/blogs/lean-project-management-software">Lean Project Management Software Guide</a></li>
+            <li><a href="/blogs/spacelean-vs-excel-trello-intelligent-planning">SpaceLean vs Excel & Trello</a></li>
+            <li><a href="/compare">View All Comparisons</a></li>
+          </ul>
+        </nav>
+      </div>
     </main>
   );
 }

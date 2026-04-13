@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Terms of Service | SpaceLean AI",
-    description: "Read the terms and conditions for using SpaceLean AI platform.",
+    description:
+        "Read the terms and conditions for using the SpaceLean AI platform, including account policies, service usage, intellectual property, and liability.",
+    alternates: {
+        canonical: "/terms",
+    },
+    openGraph: {
+        title: "Terms of Service | SpaceLean AI",
+        description:
+            "Terms and conditions for using the SpaceLean AI construction scheduling platform.",
+        type: "website",
+    },
 };
 
 export default function TermsPage() {

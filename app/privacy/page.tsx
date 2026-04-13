@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Privacy Policy | SpaceLean AI",
-    description: "Learn how SpaceLean AI collects, uses, and protects your data.",
+    description:
+        "Learn how SpaceLean AI collects, uses, and protects your data. Our privacy policy covers data collection, security measures, cookies, and your rights.",
+    alternates: {
+        canonical: "/privacy",
+    },
+    openGraph: {
+        title: "Privacy Policy | SpaceLean AI",
+        description:
+            "How SpaceLean AI collects, uses, and protects your personal data.",
+        type: "website",
+    },
 };
 
 export default function PrivacyPage() {
