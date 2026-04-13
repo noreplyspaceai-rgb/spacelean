@@ -859,6 +859,122 @@ export const projectTypeSolutions: Solution[] = [
 
 export const solutionsSolutions: Solution[] = [
   {
+    slug: "engineering-teams",
+    title: "SpaceLean for Engineering Teams — AI Sprint Scheduling & Project Planning",
+    tagline: "Ship Faster. Plan Smarter. Stay Aligned.",
+    description:
+      "SpaceLean gives engineering teams AI-powered sprint scheduling, automated task decomposition, and OKR alignment — so you spend less time planning and more time building. Purpose-built for software, product, and technical teams running agile sprints.",
+    metaDescription:
+      "SpaceLean for engineering teams: AI sprint scheduling, automated task breakdown, agile sprint planner, OKR tracking, and engineering project management. Free to start.",
+    seoContent:
+      "SpaceLean's AI sprint scheduling engine transforms how engineering teams plan and execute work. Instead of spending hours manually creating sprint backlogs, dependency mapping, and story point estimation, SpaceLean's AI generates a complete, priority-ordered sprint plan from your feature brief or OKR in seconds. The platform integrates sprint scheduling with OKR goal tracking — every sprint task links directly to a Key Result, so engineering leads can see at a glance which work moves the product strategy forward and which is maintenance overhead. Agile sprint planner features include sprint capacity planning, burndown tracking, dependency visualization, and automated standup summaries. SpaceLean supports Scrum, Kanban, and hybrid workflows — adapting to how your team actually works rather than forcing a rigid methodology. For engineering teams scaling from 5 to 50+ engineers, SpaceLean provides the scheduling intelligence and goal alignment that spreadsheets and manual tools simply can't deliver.",
+    keywords: [
+      "engineering sprint scheduling",
+      "sprint scheduling tool",
+      "engineering team project management",
+      "agile sprint planner",
+      "AI sprint planning",
+      "engineering project management software",
+      "sprint planning tool",
+      "software engineering project management",
+      "agile project management tool",
+      "sprint backlog generator",
+      "engineering team OKR tracking",
+      "technical project management",
+      "scrum sprint planning tool",
+      "engineering workflow management",
+      "AI task generator for engineers",
+    ],
+    heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
+    icon: "⚙️",
+    category: "solutions",
+    features: [
+      {
+        title: "AI Sprint Backlog Generation",
+        description:
+          "Describe a feature, epic, or OKR and SpaceLean's AI generates a complete sprint backlog with user stories, subtasks, story point estimates, and dependency order — in under 30 seconds.",
+        icon: "🤖",
+      },
+      {
+        title: "Agile Sprint Scheduling",
+        description:
+          "Plan sprints with capacity-aware scheduling. SpaceLean automatically balances work across team members based on availability, skill, and current load — preventing over-commitment before it happens.",
+        icon: "📅",
+      },
+      {
+        title: "OKR-to-Sprint Alignment",
+        description:
+          "Link every sprint task to a Key Result. See in real time what percentage of each sprint advances your quarterly OKRs vs maintenance work — keeping engineering strategy-aligned.",
+        icon: "🎯",
+      },
+      {
+        title: "Dependency Visualization",
+        description:
+          "Automatic dependency detection flags blockers before sprint start. See the critical path through your sprint and proactively resolve blockers that would stall delivery.",
+        icon: "🔗",
+      },
+      {
+        title: "Burndown & Velocity Tracking",
+        description:
+          "Real-time sprint burndown, velocity charts, and cycle time analytics give engineering leads the data to improve sprint predictability and team throughput every cycle.",
+        icon: "📈",
+      },
+      {
+        title: "Kanban + Scrum Hybrid",
+        description:
+          "Switch between Scrum sprint mode and Kanban continuous flow — or run both simultaneously for different workstreams. SpaceLean adapts to your team's workflow, not the other way around.",
+        icon: "🔄",
+      },
+    ],
+    benefits: [
+      {
+        title: "Faster Sprint Planning",
+        description:
+          "AI sprint backlog generation cuts sprint planning sessions from 2 hours to 20 minutes — giving engineering teams more time to build and less time in planning ceremonies.",
+        stat: "80%",
+      },
+      {
+        title: "Fewer Mid-Sprint Blockers",
+        description:
+          "Automatic dependency detection and capacity-aware scheduling prevents the most common causes of mid-sprint stalls before work begins.",
+        stat: "40%",
+      },
+      {
+        title: "Higher OKR Hit Rate",
+        description:
+          "Teams that link sprint tasks to OKRs using SpaceLean report significantly higher quarterly goal achievement by keeping daily work anchored to strategic outcomes.",
+        stat: "2.3×",
+      },
+      {
+        title: "Faster Onboarding",
+        description:
+          "New engineers get up to speed faster when sprint plans are AI-generated with clear context, dependencies, and acceptance criteria — reducing onboarding friction.",
+        stat: "60%",
+      },
+    ],
+    useCases: [
+      "SaaS product engineering teams running 2-week sprints",
+      "Platform and infrastructure engineering teams",
+      "Startup engineering teams scaling from 5 to 50 engineers",
+      "Mobile app development teams",
+      "Data engineering and ML pipeline teams",
+      "DevOps and platform reliability teams",
+      "Engineering teams implementing OKRs for the first time",
+      "Technical teams transitioning from Jira to a simpler tool",
+    ],
+    testimonial: {
+      quote:
+        "Our sprint planning used to take half a day. With SpaceLean's AI backlog generator, we're done in 20 minutes — and the plans are better because the AI catches dependencies we'd have missed.",
+      author: "Priya Nair",
+      role: "Engineering Manager",
+      company: "Velocity Labs",
+    },
+    cta: {
+      primary: "Start Your Free Sprint Plan",
+      secondary: "See Engineering Features",
+    },
+  },
+  {
     slug: "partners-program",
     title: "Space Lean Partners Program",
     tagline: "Grow Together. Build the Future of Construction Intelligence.",

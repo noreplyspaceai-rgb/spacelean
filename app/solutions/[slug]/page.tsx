@@ -89,6 +89,12 @@ export default async function SolutionPage({ params }: Props) {
       { label: "Agile Methodology: A Beginner's Guide", href: "/blogs/agile-methodology-beginners-guide" },
       { label: "SpaceLean vs Excel & Trello", href: "/blogs/spacelean-vs-excel-trello-intelligent-planning" },
     ],
+    "engineering-teams": [
+      { label: "Sprint Planning for Engineering Teams", href: "/blogs/sprint-planning-engineering-teams" },
+      { label: "SpaceLean vs Linear", href: "/compare/spacelean-vs-linear" },
+      { label: "SpaceLean vs Asana", href: "/compare/spacelean-vs-asana" },
+      { label: "OKR Management: The Complete Guide", href: "/blogs/okr-management-complete-guide" },
+    ],
   };
 
   const resources = relatedResources[slug] || [];
