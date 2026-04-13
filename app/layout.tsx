@@ -75,6 +75,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://spacelean.ai",
+    languages: {
+      "en-US": "https://spacelean.ai",
+      "en-GB": "https://spacelean.ai",
+      "en-IN": "https://spacelean.ai",
+      "x-default": "https://spacelean.ai",
+    },
   },
   metadataBase: new URL("https://spacelean.ai"),
   verification: {

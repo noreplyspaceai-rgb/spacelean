@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     ],
     alternates: {
         canonical: "/features",
+        languages: {
+            "en-US": "/features",
+            "en-GB": "/features",
+            "en-IN": "/features",
+            "x-default": "/features",
+        },
     },
     openGraph: {
         title: "Features | SpaceLean — AI Task Management & Lean Scheduling",

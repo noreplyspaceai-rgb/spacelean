@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     "site navigation",
     "SpaceLean resources",
   ],
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "/sitemap-page",
   },

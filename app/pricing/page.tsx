@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     ],
     alternates: {
         canonical: "/pricing",
+        languages: {
+            "en-US": "/pricing",
+            "en-GB": "/pricing",
+            "en-IN": "/pricing",
+            "x-default": "/pricing",
+        },
     },
     openGraph: {
         title: "Pricing | SpaceLean — AI-Powered Task Management Plans",

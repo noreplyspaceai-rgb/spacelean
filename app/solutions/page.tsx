@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/solutions",
+    languages: {
+      "en-US": "/solutions",
+      "en-GB": "/solutions",
+      "en-IN": "/solutions",
+      "x-default": "/solutions",
+    },
   },
   openGraph: {
     title: "Solutions | SpaceLean — AI Scheduling for Every Team & Project Type",

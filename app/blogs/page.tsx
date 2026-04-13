@@ -10,6 +10,12 @@ export const metadata: Metadata = {
     'Insights on AI-powered construction scheduling, lean project management, team productivity, and the future of construction technology from the SpaceLean team.',
   alternates: {
     canonical: '/blogs',
+    languages: {
+      "en-US": "/blogs",
+      "en-GB": "/blogs",
+      "en-IN": "/blogs",
+      "x-default": "/blogs",
+    },
   },
   openGraph: {
     title: 'Blog | SpaceLean',

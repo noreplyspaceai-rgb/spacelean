@@ -67,25 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/request-a-demo`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/security`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
       priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.4,
     },
   ];
 

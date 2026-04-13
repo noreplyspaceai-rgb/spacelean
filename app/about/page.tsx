@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/about",
+    languages: {
+      "en-US": "/about",
+      "en-GB": "/about",
+      "en-IN": "/about",
+      "x-default": "/about",
+    },
   },
   openGraph: {
     title: "About SpaceLean | Shaping the Future of Work",

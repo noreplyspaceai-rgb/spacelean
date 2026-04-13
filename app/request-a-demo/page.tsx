@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: '/request-a-demo',
+    languages: {
+      "en-US": "/request-a-demo",
+      "en-GB": "/request-a-demo",
+      "en-IN": "/request-a-demo",
+      "x-default": "/request-a-demo",
+    },
   },
   openGraph: {
     title: 'Request a Free Demo | SpaceLean AI',

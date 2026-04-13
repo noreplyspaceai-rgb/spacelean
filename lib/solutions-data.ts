@@ -1089,6 +1089,354 @@ export const solutionsSolutions: Solution[] = [
       secondary: "Download Partner Guide",
     },
   },
+  {
+    slug: "remote-teams",
+    title: "SpaceLean for Remote Teams — AI Project Management Across Time Zones",
+    tagline: "Align, Execute, and Deliver — Anywhere in the World.",
+    description:
+      "SpaceLean gives distributed teams a single source of truth for tasks, goals, and project progress. AI-powered task generation, async-friendly OKR tracking, and real-time dashboards keep remote teams aligned without endless meetings.",
+    metaDescription:
+      "SpaceLean for remote teams: AI project management software that keeps distributed teams aligned with async OKR tracking, automated task generation, and real-time progress dashboards.",
+    seoContent:
+      "Managing remote teams is fundamentally harder than co-located work — and most project management tools were designed for office environments. SpaceLean is built for distributed teams from the ground up. When a project manager in New York creates a task, the AI automatically generates subtasks, assigns owners based on availability, and posts async updates that team members in London, Bangalore, or Sydney can act on during their own working hours. OKR tracking is async-first: every team member sees their Key Results updated in real time without needing a live meeting. SpaceLean's AI task generator breaks down vague project descriptions into actionable, assigned work items in seconds — eliminating the back-and-forth that kills remote team velocity. Visual project dashboards replace status meetings: stakeholders get a live view of what's done, what's at risk, and what's blocked — from any device, in any time zone. For engineering, product, and ops teams that span continents, SpaceLean is the project brain that keeps everyone moving in the same direction.",
+    keywords: [
+      "remote team project management software",
+      "project management for remote teams",
+      "async project management tool",
+      "distributed team collaboration software",
+      "remote work OKR tracking",
+      "AI task management for remote teams",
+      "virtual team project planning",
+      "remote team productivity tools",
+      "online project management for distributed teams",
+      "best project management software for remote teams",
+      "remote team task tracking",
+      "async team alignment tool",
+      "cross-timezone project management",
+      "remote agile project management",
+      "work from home project management",
+    ],
+    heroImage: "/marketing.jpg",
+    icon: "🌍",
+    category: "solutions",
+    features: [
+      {
+        title: "Async-First Task Management",
+        description:
+          "Tasks, comments, and updates are structured for async consumption. Every work item has full context attached — no one needs to be online simultaneously to understand what's needed and why.",
+        icon: "🔄",
+      },
+      {
+        title: "AI Task Generator",
+        description:
+          "Describe a project goal in plain English and SpaceLean's AI breaks it down into a full task tree with owners, deadlines, and dependencies — ready for your team in seconds, not hours.",
+        icon: "🤖",
+      },
+      {
+        title: "Cross-Timezone OKR Tracking",
+        description:
+          "Teams in different time zones update their Key Results independently. SpaceLean aggregates progress in real time so leadership always has a live view of company-wide goal achievement.",
+        icon: "🎯",
+      },
+      {
+        title: "Real-Time Progress Dashboards",
+        description:
+          "Replace status meetings with live dashboards. See task completion rates, blocked items, upcoming deadlines, and team velocity at a glance — across all projects and all regions.",
+        icon: "📊",
+      },
+      {
+        title: "Intelligent Deadline Prediction",
+        description:
+          "SpaceLean monitors task progress and team capacity to predict delivery dates and surface at-risk items before they become missed deadlines — critical when you can't just tap someone on the shoulder.",
+        icon: "⏰",
+      },
+      {
+        title: "Kanban & Sprint Boards",
+        description:
+          "Visual Kanban boards and sprint planning views give remote engineering and product teams familiar Agile workflows — fully integrated with OKR goals and AI-generated task breakdowns.",
+        icon: "📋",
+      },
+    ],
+    benefits: [
+      {
+        title: "Eliminate Status Meetings",
+        description:
+          "Live dashboards and async task updates give every stakeholder real-time visibility — cutting unnecessary sync meetings by over half.",
+        stat: "60%",
+      },
+      {
+        title: "Faster Task Kickoff",
+        description:
+          "AI task generation means distributed teams spend less time planning and more time executing — project kickoff time drops dramatically.",
+        stat: "75%",
+      },
+      {
+        title: "Higher Goal Alignment",
+        description:
+          "OKR visibility across time zones ensures every team member understands their contribution to company goals, regardless of location.",
+        stat: "3.2x",
+      },
+      {
+        title: "Reduce Missed Deadlines",
+        description:
+          "Predictive deadline intelligence flags at-risk items early, giving remote managers time to intervene before blockers derail delivery.",
+        stat: "40%",
+      },
+    ],
+    useCases: [
+      "Distributed engineering team sprint planning",
+      "Cross-timezone OKR tracking and check-ins",
+      "Async project kickoff and task generation",
+      "Remote product roadmap execution",
+      "Global ops team task coordination",
+      "Virtual team stand-up replacement",
+      "Remote contractor and freelancer task management",
+      "Multi-region startup team alignment",
+    ],
+    testimonial: {
+      quote:
+        "Our team spans 4 time zones and SpaceLean is the first tool that actually works async-first. The AI breaks down projects instantly and the OKR dashboards mean we rarely need a status meeting anymore.",
+      author: "Priya Nair",
+      role: "Head of Product",
+      company: "Nexora Labs",
+    },
+    cta: {
+      primary: "Start Free — No Credit Card",
+      secondary: "See Remote Teams Demo",
+    },
+  },
+  {
+    slug: "startups",
+    title: "SpaceLean for Startups — AI Project Management Built for Speed",
+    tagline: "Move Fast. Stay Aligned. Hit Your OKRs.",
+    description:
+      "Startups can't afford slow planning cycles or missed goals. SpaceLean gives early-stage and growth-stage teams AI-powered task generation, OKR goal tracking, and sprint planning in one lean tool — without the enterprise bloat.",
+    metaDescription:
+      "SpaceLean for startups: lightweight AI project management with OKR tracking, AI task generation, and sprint planning. Built for fast-moving teams. Free to start.",
+    seoContent:
+      "Most project management software is built for enterprises with dedicated program managers and months of onboarding time. Startups need something different: a tool that's powerful enough to run company OKRs and sprint cycles, but lightweight enough to be adopted by a 5-person team in a day. SpaceLean is purpose-built for startup velocity. Founders and team leads describe goals in plain language — SpaceLean's AI decomposes them into actionable tasks, assigns owners, estimates timelines, and flags dependencies automatically. OKR management is built in from day one: set quarterly objectives, cascade Key Results to every team, and track progress in real time without spreadsheets or weekly reporting rituals. For product and engineering sprints, SpaceLean's AI sprint planner generates a full sprint backlog from your OKRs and product backlog in minutes. Startup teams at SpaceLean customers have reported cutting planning overhead by 80%, shipping features 30% faster, and maintaining goal alignment through fundraising and rapid hiring phases. Whether you're a seed-stage team of 3 or a Series B company scaling to 50, SpaceLean grows with you — and keeps everyone focused on what actually moves the needle.",
+    keywords: [
+      "project management software for startups",
+      "startup project management tool",
+      "OKR software for startups",
+      "AI task management for startups",
+      "lean project management startup",
+      "startup sprint planning tool",
+      "best project management for early stage startups",
+      "free project management startup",
+      "startup goal tracking software",
+      "agile project management startup",
+      "startup productivity tool",
+      "OKR tracking for small teams",
+      "startup task manager",
+      "product management tool startup",
+      "fast project planning software",
+    ],
+    heroImage: "/marketing.jpg",
+    icon: "🚀",
+    category: "solutions",
+    features: [
+      {
+        title: "AI Task Generator",
+        description:
+          "Turn vague project goals into structured task breakdowns in seconds. Describe what you're building and SpaceLean's AI creates a full work breakdown with owners, timelines, and dependencies — no planning meetings required.",
+        icon: "🤖",
+      },
+      {
+        title: "OKR Goal Tracking",
+        description:
+          "Set company OKRs, cascade to team and individual Key Results, and track progress with weekly check-ins. Every team member sees how their work connects to company goals — keeping the whole startup rowing in the same direction.",
+        icon: "🎯",
+      },
+      {
+        title: "Sprint Planning for Product Teams",
+        description:
+          "Generate sprint backlogs from OKRs and product requirements automatically. AI sprint planning cuts ceremony time so your engineers spend more time shipping and less time in planning meetings.",
+        icon: "⚡",
+      },
+      {
+        title: "Kanban Boards",
+        description:
+          "Visual task boards give every team member a real-time view of work in progress, upcoming items, and blockers. Perfect for small teams that need visibility without complex project hierarchies.",
+        icon: "📋",
+      },
+      {
+        title: "Deadline Intelligence",
+        description:
+          "SpaceLean monitors task progress and team capacity to predict delivery risks before they become missed launches. Critical for startup teams with no room for last-minute surprises.",
+        icon: "⏰",
+      },
+      {
+        title: "Free to Start",
+        description:
+          "No credit card. No 30-day trial limits. Start with a full-featured free plan and upgrade only when your team grows. SpaceLean scales from solo founder to funded startup without forcing a plan change.",
+        icon: "💸",
+      },
+    ],
+    benefits: [
+      {
+        title: "Cut Planning Overhead",
+        description:
+          "AI task generation and automated sprint planning eliminate hours of manual planning work each week — time better spent building.",
+        stat: "80%",
+      },
+      {
+        title: "Ship Features Faster",
+        description:
+          "Startup teams using SpaceLean report faster feature delivery by eliminating coordination bottlenecks and dependency ambiguity.",
+        stat: "30%",
+      },
+      {
+        title: "Goal Alignment Through Growth",
+        description:
+          "OKR cascading keeps every new hire aligned to company strategy from day one — no lengthy onboarding or goal-setting workshops needed.",
+        stat: "4x",
+      },
+      {
+        title: "Free to Start",
+        description:
+          "Full-featured free plan means startups can get immediate value without budget approval or lengthy procurement processes.",
+        stat: "$0",
+      },
+    ],
+    useCases: [
+      "Founder-led task and project planning",
+      "Quarterly OKR setting and tracking",
+      "Product sprint planning from OKRs",
+      "Early-stage team onboarding and task assignment",
+      "Fundraising milestone tracking",
+      "Cross-functional launch coordination",
+      "Engineering backlog management",
+      "Startup KPI and goal dashboards",
+    ],
+    testimonial: {
+      quote:
+        "We replaced three tools with SpaceLean. Our OKRs, sprint planning, and task management are all in one place now. The AI task generator alone saves our team 4 hours every week.",
+      author: "Alex Chen",
+      role: "CTO & Co-founder",
+      company: "Stackflow AI",
+    },
+    cta: {
+      primary: "Start Free — No Credit Card",
+      secondary: "See Startup Demo",
+    },
+  },
+  {
+    slug: "product-teams",
+    title: "SpaceLean for Product Teams — AI-Powered Roadmap Execution",
+    tagline: "From Vision to Shipped Feature — Faster.",
+    description:
+      "SpaceLean connects product strategy to engineering execution. Define OKRs, build your roadmap, auto-generate sprint backlogs with AI, and track delivery in real time — all in one platform built for modern product teams.",
+    metaDescription:
+      "SpaceLean for product teams: connect OKR strategy to sprint execution with AI. Auto-generate backlogs, track roadmap progress, and ship features faster. Free to start.",
+    seoContent:
+      "The gap between product strategy and engineering execution is where great ideas die. Product managers spend hours translating roadmap items into sprint tickets, debating priorities in planning meetings, and chasing status updates in standups. SpaceLean closes that gap with AI. Product managers define their OKRs and roadmap themes — SpaceLean's AI translates them into structured sprint backlogs, estimates story points based on similar past work, and flags dependency conflicts before they block the team. Engineers pull from a well-structured, context-rich backlog instead of ambiguous tickets that require three follow-up conversations. Real-time delivery dashboards show PMs exactly where each roadmap item stands — without interrupting engineers or running status meetings. When priorities shift (and they always do), SpaceLean's AI reorders the backlog and updates sprint assignments automatically, keeping the team on the highest-value work at all times. For B2B SaaS, consumer apps, and platform product teams alike, SpaceLean is the AI-native layer between product strategy and engineering delivery — reducing planning waste, increasing feature throughput, and making roadmap commitments you can actually keep.",
+    keywords: [
+      "product team project management software",
+      "AI product roadmap tool",
+      "product management OKR software",
+      "sprint planning tool for product teams",
+      "product backlog management AI",
+      "product roadmap execution software",
+      "best project management for product managers",
+      "product team task tracking",
+      "agile product management software",
+      "product OKR tracking tool",
+      "feature delivery tracking software",
+      "product sprint planning",
+      "roadmap to sprint planning automation",
+      "product team collaboration tool",
+      "PM and engineering alignment software",
+    ],
+    heroImage: "/marketing.jpg",
+    icon: "🗺️",
+    category: "solutions",
+    features: [
+      {
+        title: "OKR-Driven Roadmap Planning",
+        description:
+          "Connect every roadmap item to a company or team OKR. SpaceLean shows how each feature initiative contributes to Key Results — giving leadership and engineering a shared understanding of what matters most and why.",
+        icon: "🎯",
+      },
+      {
+        title: "AI Backlog Generation",
+        description:
+          "Turn product requirements and user stories into fully structured sprint-ready tickets automatically. SpaceLean's AI infers acceptance criteria, estimates effort, and sequences items by dependency — cutting backlog grooming time by 70%.",
+        icon: "🤖",
+      },
+      {
+        title: "Sprint Planning Automation",
+        description:
+          "AI sprint planning pulls the highest-priority, dependency-free backlog items into a sprint that matches engineering capacity. No more manual drag-and-drop planning sessions that run 3 hours over.",
+        icon: "⚡",
+      },
+      {
+        title: "Real-Time Delivery Tracking",
+        description:
+          "Live roadmap dashboards show PM, engineering, and leadership exactly which features are on track, at risk, or blocked — without a single status meeting. Velocity charts and burndown updates automatically.",
+        icon: "📊",
+      },
+      {
+        title: "Dependency & Risk Visualization",
+        description:
+          "SpaceLean maps cross-team dependencies automatically and highlights risk paths that could delay roadmap commitments. Surface blockers weeks before they impact the launch date.",
+        icon: "🔗",
+      },
+      {
+        title: "PM–Engineering Alignment Layer",
+        description:
+          "Shared context between product specs and engineering tasks eliminates the translation layer that causes scope creep and missed acceptance criteria. PMs and engineers work from the same source of truth.",
+        icon: "🤝",
+      },
+    ],
+    benefits: [
+      {
+        title: "Cut Backlog Grooming Time",
+        description:
+          "AI-generated tickets with acceptance criteria and story point estimates reduce the time product teams spend in grooming sessions.",
+        stat: "70%",
+      },
+      {
+        title: "Faster Feature Delivery",
+        description:
+          "OKR-aligned sprint planning and dependency management keep engineering focused on the highest-value work — shipping features faster.",
+        stat: "35%",
+      },
+      {
+        title: "Roadmap Commitment Accuracy",
+        description:
+          "Predictive delivery tracking and early risk flagging help product teams make and keep roadmap commitments with confidence.",
+        stat: "2.4x",
+      },
+      {
+        title: "Reduce Planning Meeting Time",
+        description:
+          "AI sprint planning and async task updates dramatically reduce the time product and engineering spend in sync meetings per week.",
+        stat: "5 hrs/wk",
+      },
+    ],
+    useCases: [
+      "Quarterly product roadmap planning and OKR alignment",
+      "Sprint backlog generation from product requirements",
+      "Feature prioritization against OKR impact",
+      "Engineering capacity planning and sprint loading",
+      "Cross-team dependency identification",
+      "Roadmap progress reporting for stakeholders",
+      "Product launch milestone tracking",
+      "PM and engineering retrospective data analysis",
+    ],
+    testimonial: {
+      quote:
+        "SpaceLean changed how we connect strategy to delivery. Our roadmap OKRs drive the sprint backlog automatically — the AI generates tickets from our PRDs and our engineers actually know why they're building each feature.",
+      author: "Sarah Kim",
+      role: "Director of Product",
+      company: "Vantage Software",
+    },
+    cta: {
+      primary: "Start Free — No Credit Card",
+      secondary: "See Product Team Demo",
+    },
+  },
 ];
 
 // ─────────────────────────────────────────────

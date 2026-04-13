@@ -4464,6 +4464,1707 @@ Yes, but research consistently shows that OKR tracking in spreadsheets leads to 
 - [Try SpaceLean Free](/tool) — start tracking OKRs with AI-powered task generation today
     \`,
   },
+  {
+    slug: "lean-project-management-techniques",
+    title: "10 Lean Project Management Techniques That Actually Work in 2026",
+    description:
+      "Discover 10 proven lean project management techniques to eliminate waste, improve flow, and deliver projects faster. Practical frameworks with real examples for every team.",
+    author: "SpaceLean Team",
+    date: "2026-04-14",
+    readTime: "10 min read",
+    category: "Project Management",
+    tags: ["lean project management", "lean techniques", "project efficiency", "waste elimination", "continuous improvement"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Why Lean Project Management Matters in 2026
+
+Lean project management isn't just for manufacturing anymore. In 2026, software teams, marketing departments, and even construction firms are adopting Lean principles to ship faster, waste less, and deliver more value to customers.
+
+The core idea is simple: maximize customer value while minimizing waste. But applying this in practice requires specific techniques that work across industries.
+
+## The 10 Lean Techniques Every Team Should Know
+
+### 1. Value Stream Mapping
+
+Map every step from project kickoff to delivery. Identify which steps add customer value and which are pure waste — waiting, handoffs, rework, over-processing. Most teams find that 60–70% of their process is waste on the first mapping.
+
+### 2. 5S Workplace Organization
+
+Sort, Set in order, Shine, Standardize, Sustain. Applied to digital work, this means organizing your project boards, file structures, and communication channels so nothing is harder to find than it needs to be.
+
+### 3. Kanban Pull Systems
+
+Replace push scheduling (assigning work before capacity exists) with pull scheduling. Teams pull new work only when they have capacity — reducing multitasking and work-in-progress (WIP) overload.
+
+### 4. Kaizen (Continuous Improvement)
+
+Hold monthly Kaizen events: review metrics, identify the biggest bottleneck, implement one targeted improvement, measure the result. Small, continuous improvements compound into massive gains over time.
+
+### 5. Just-in-Time Delivery
+
+Deliver work outputs exactly when they're needed — not weeks before (creating inventory waste) or days late (creating delay waste). Align your sprint cadence to downstream consumption patterns.
+
+### 6. Root Cause Analysis (5 Whys)
+
+When a problem occurs, ask "Why?" five times to drill past symptoms to root causes. Most teams fix symptoms repeatedly; Lean teams fix root causes once and permanently.
+
+### 7. Gemba Walks (Go to the Source)
+
+Leaders observe work where it actually happens — not in status meetings or dashboards. For software teams, this means pair programming sessions, code reviews, and watching users interact with your product.
+
+### 8. Poka-Yoke (Error Proofing)
+
+Design processes that make mistakes impossible. In software: CI/CD pipelines that block bad deployments. In construction: checklists that prevent sequencing errors. Prevention always costs less than correction.
+
+### 9. Heijunka (Level Loading)
+
+Distribute work evenly across time and team members. Avoid the common pattern of feast-or-famine sprints where teams are idle one week and overloaded the next.
+
+### 10. A3 Problem Solving
+
+Document problems, analysis, and solutions on a single page (originally A3 paper size). This forces clarity and prevents over-engineering. One page, one problem, one countermeasure.
+
+## How to Implement Lean in Your Team
+
+Start with Value Stream Mapping to identify your biggest waste category. Then pick the single Lean technique that addresses that waste. Run a 30-day experiment, measure the impact, and iterate.
+
+Don't try to implement all 10 techniques simultaneously — that's anti-Lean. Focus on one improvement per cycle.
+
+## Lean + AI: The 2026 Advantage
+
+AI tools like SpaceLean amplify Lean principles by automatically identifying bottlenecks, predicting delivery risks, and generating optimized task sequences. The combination of Lean thinking + AI execution is the most powerful project management approach available today.
+
+---
+
+## Frequently Asked Questions
+
+### What is lean project management?
+
+Lean project management applies Toyota Production System principles to project delivery — focusing on maximizing customer value, eliminating waste (waiting, rework, over-processing), and continuously improving processes through small, iterative changes.
+
+### How is lean different from agile?
+
+Lean focuses on eliminating waste and optimizing flow across the entire value stream. Agile focuses on iterative delivery in short cycles (sprints). They're complementary — many teams use Lean Agile, combining sprint-based delivery with waste elimination principles.
+
+### Can lean project management work for software teams?
+
+Absolutely. Kanban boards, WIP limits, continuous improvement retrospectives, and value stream mapping are all widely adopted by software engineering and product teams. Most modern agile practices have Lean roots.
+
+---
+
+## Related Resources
+
+- [Lean Project Management Software Guide](/blogs/lean-project-management-software) — tools that support Lean workflows
+- [Lean vs Agile: Which Methodology?](/blogs/lean-vs-agile-methodology) — detailed comparison of both approaches
+- [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your visual workflow
+- [SpaceLean for Startups](/solutions/startups) — Lean project management built for speed
+    \`,
+  },
+  {
+    slug: "best-productivity-apps-teams-2026",
+    title: "Best Productivity Apps for Teams in 2026: 15 Tools Compared",
+    description:
+      "Compare the 15 best productivity apps for teams in 2026. From AI task managers to async communication tools — find the right stack for your team's workflow.",
+    author: "SpaceLean Team",
+    date: "2026-04-15",
+    readTime: "12 min read",
+    category: "Tools & Reviews",
+    tags: ["productivity apps", "team tools", "project management tools", "best productivity software", "team collaboration"],
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## The 2026 Productivity App Landscape
+
+The team productivity space has exploded. There are 500+ project management and collaboration tools available — and choosing the wrong stack wastes hours every week on context switching, duplicate notifications, and fragmented workflows.
+
+This guide cuts through the noise. We've evaluated the 15 best productivity apps for teams in 2026 across five categories: task management, communication, documentation, scheduling, and goal tracking.
+
+## Category 1: AI Task Management
+
+### SpaceLean — Best for AI-Powered Task Generation
+
+SpaceLean uses AI to automatically break down project goals into structured task trees with owners, deadlines, and dependencies. Combined with OKR goal tracking and sprint planning, it's the most complete AI-native project management platform available.
+
+- **Best for**: Teams that want AI to handle planning so they can focus on execution
+- **Price**: Free plan available; Pro from $15/month
+- **Key feature**: AI Task Generator that converts plain-English goals into full work breakdowns
+
+### ClickUp — Best for Feature Depth
+
+ClickUp offers the most features of any project management tool — custom fields, automations, docs, whiteboards, time tracking, and goals all in one platform.
+
+- **Best for**: Teams that want every feature in one tool
+- **Price**: Free plan available; Unlimited from $7/month/user
+
+### Linear — Best for Engineering Teams
+
+Linear is purpose-built for software engineering teams with fast keyboard shortcuts, GitHub integration, and cycle-based planning.
+
+- **Best for**: Engineering teams that prioritize speed
+- **Price**: Free for small teams; Standard from $8/month/user
+
+## Category 2: Team Communication
+
+### Slack — Best for Real-Time Chat
+
+Still the default for real-time team communication. Channels, threads, and integrations make Slack the hub for most team workflows.
+
+### Loom — Best for Async Video Updates
+
+Record quick video messages instead of scheduling meetings. Loom is essential for remote teams across time zones.
+
+## Category 3: Documentation
+
+### Notion — Best for Flexible Knowledge Bases
+
+Notion combines docs, databases, and wikis into one workspace. Excellent for team documentation and process libraries.
+
+### Confluence — Best for Enterprise Documentation
+
+Atlassian's documentation platform integrates tightly with Jira and is the standard for enterprise knowledge management.
+
+## Category 4: Scheduling & Calendar
+
+### Calendly — Best for External Meeting Scheduling
+
+Automate meeting scheduling with external clients and candidates. Eliminates the back-and-forth of finding available times.
+
+### Reclaim.ai — Best for Internal Calendar Optimization
+
+AI-powered calendar management that automatically schedules focus time, habits, and meetings based on priorities.
+
+## Category 5: Goal Tracking
+
+### SpaceLean — Best for OKR + Task Integration
+
+SpaceLean is the only platform that natively connects OKR goal tracking to AI task generation and sprint planning in one workflow.
+
+### Lattice — Best for HR-Focused Goal Setting
+
+Lattice connects employee goals to performance reviews. Best for HR teams managing company-wide OKR rollouts.
+
+## How to Choose Your Stack
+
+The ideal productivity stack has 3–4 tools maximum:
+1. **One task/project management tool** (SpaceLean, ClickUp, or Linear)
+2. **One communication tool** (Slack or Teams)
+3. **One documentation tool** (Notion or Confluence)
+4. **One scheduling tool** (Calendly or Reclaim)
+
+Avoid tool sprawl — every new tool adds context-switching cost.
+
+---
+
+## Frequently Asked Questions
+
+### What is the best free productivity app for teams?
+
+SpaceLean offers the most comprehensive free plan for teams — including AI task generation, OKR tracking, Kanban boards, and sprint planning. ClickUp and Linear also have free tiers but lack AI-powered task breakdown.
+
+### How many productivity tools should a team use?
+
+Aim for 3–4 tools maximum. Research shows that teams using more than 5 tools lose 60+ minutes per day to context switching. Consolidate where possible.
+
+### Is AI task management better than manual planning?
+
+AI task management is 4–5x faster for breaking down projects into tasks and significantly more consistent in identifying dependencies. Manual planning is still valuable for creative and ambiguous work where human judgment matters most.
+
+---
+
+## Related Resources
+
+- [SpaceLean vs ClickUp](/compare/spacelean-vs-clickup) — detailed feature comparison
+- [SpaceLean vs Notion](/compare/spacelean-vs-notion) — workspace vs. project management
+- [AI Task Management: The Future](/blogs/ai-task-management-future-productivity) — how AI is changing work
+- [Try SpaceLean Free](/tool) — AI task generation, OKR tracking, sprint planning
+    \`,
+  },
+  {
+    slug: "align-team-goals-company-okrs",
+    title: "How to Align Team Goals with Company OKRs: A Practical Guide",
+    description:
+      "Learn how to cascade company OKRs to team and individual goals. Step-by-step guide with examples for product, engineering, marketing, and sales teams.",
+    author: "SpaceLean Team",
+    date: "2026-04-16",
+    readTime: "9 min read",
+    category: "OKR & Goals",
+    tags: ["OKR alignment", "team goals", "goal cascading", "OKR examples", "strategic alignment"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## The Alignment Problem
+
+Most companies set ambitious goals at the top — then watch them die in translation. According to research, only 14% of employees understand their company's strategy and goals. The gap between C-suite OKRs and day-to-day team work is where strategic execution breaks down.
+
+OKR alignment fixes this. When done right, every team member can trace their daily work back to a company Objective — creating clarity, motivation, and accountability at every level.
+
+## The Cascading Framework
+
+### Level 1: Company OKRs (CEO + Leadership)
+
+Set 3–5 company-level Objectives that represent your biggest priorities for the quarter. These should be qualitative, inspiring, and ambitious.
+
+**Example Company Objective:** "Become the go-to AI project management platform for startups"
+
+**Key Results:**
+- Increase MRR from $50K to $85K
+- Grow active teams from 200 to 500
+- Achieve NPS score of 60+
+
+### Level 2: Team OKRs (Department Heads)
+
+Each team creates 2–3 Objectives that directly support company KRs. Teams should contribute to company goals, not replicate them.
+
+**Product Team Objective:** "Launch features that make startup teams choose SpaceLean over alternatives"
+
+**Key Results:**
+- Ship AI sprint planner feature by Week 6
+- Reduce onboarding time from 30 min to 10 min
+- Achieve 80% feature adoption within 2 weeks of launch
+
+**Engineering Team Objective:** "Build a platform that scales reliably for 500+ active teams"
+
+**Key Results:**
+- Achieve 99.9% uptime (max 43 min downtime/month)
+- Reduce P95 API latency from 800ms to 200ms
+- Zero critical bugs in production for 4+ consecutive weeks
+
+### Level 3: Individual OKRs (Team Members)
+
+Individual OKRs should cover 60–70% team-aligned work and 30–40% personal growth/stretch goals.
+
+## The 60/40 Rule
+
+- **60% bottom-up**: Teams propose their own OKRs based on what they believe will move company KRs
+- **40% top-down**: Leadership sets directional priorities that teams must address
+
+This balance creates buy-in (people own their goals) while maintaining strategic coherence.
+
+## Alignment Check: The One-Line Test
+
+Every team member should be able to complete this sentence: "My Key Result [X] supports Team Objective [Y] which drives Company KR [Z]."
+
+If they can't, the alignment chain is broken.
+
+## Common Alignment Mistakes
+
+### 1. Copy-Paste OKRs
+
+Don't just copy company OKRs down to teams. Each level should translate the goal into their specific domain of influence.
+
+### 2. Too Many OKRs
+
+More OKRs doesn't mean more alignment. 3 Objectives with 3 Key Results each = 9 things to track. That's the maximum for any team.
+
+### 3. No Cross-Team Dependencies
+
+When Team A's KR depends on Team B's delivery, both teams need to acknowledge the dependency explicitly. Unspoken dependencies are the #1 cause of missed OKRs.
+
+### 4. Annual Instead of Quarterly
+
+Annual OKRs are too slow. Quarterly cycles provide enough time to make meaningful progress while allowing course correction.
+
+## OKR Alignment by Team Type
+
+### Marketing Teams
+Focus KRs on pipeline contribution, content performance, and brand metrics that feed into revenue KRs.
+
+### Sales Teams
+Align KRs to revenue targets, deal velocity, and customer acquisition metrics from company growth OKRs.
+
+### Customer Success Teams
+Connect KRs to retention, NPS, and expansion revenue that support company retention or growth OKRs.
+
+---
+
+## Frequently Asked Questions
+
+### How often should teams check OKR alignment?
+
+Run a 15-minute weekly OKR check-in per team and a monthly cross-team alignment review. Quarterly is too infrequent — misalignment compounds quickly.
+
+### Should individual OKRs be mandatory?
+
+Not necessarily. Many successful companies use individual OKRs only for senior contributors and managers, with team-level OKRs covering everyone else's work.
+
+### What tool should I use for OKR alignment?
+
+Use a tool that connects individual, team, and company OKRs in a single view — like SpaceLean. Spreadsheets break down once you have more than 3 teams because they can't show cross-level dependencies.
+
+---
+
+## Related Resources
+
+- [OKR Management: The Complete Guide](/blogs/okr-management-complete-guide) — end-to-end OKR lifecycle
+- [Goal Setting with OKRs for Teams](/blogs/goal-setting-okrs-teams) — how to write effective team OKRs
+- [OKR Examples for Startups](/blogs/okr-examples-startups) — 30+ real startup OKR examples
+- [SpaceLean OKR Tracking](/features) — AI-powered OKR alignment and tracking
+    \`,
+  },
+  {
+    slug: "ai-project-management-guide",
+    title: "How to Use AI for Project Management: The 2026 Guide",
+    description:
+      "Learn how AI is transforming project management — from task generation to risk prediction. Practical guide with real examples of AI PM tools and workflows.",
+    author: "SpaceLean Team",
+    date: "2026-04-17",
+    readTime: "11 min read",
+    category: "AI & Productivity",
+    tags: ["AI project management", "AI task generation", "AI scheduling", "project management AI", "AI PM tools"],
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## AI Is Reshaping Project Management
+
+In 2026, AI isn't a future possibility for project management — it's a present reality. Teams using AI-powered PM tools report 40–80% reductions in planning time, 30% faster delivery, and significantly fewer missed deadlines.
+
+But most teams don't know where to start. This guide covers the five core areas where AI adds the most value to project management today.
+
+## 5 Ways AI Transforms Project Management
+
+### 1. AI Task Generation
+
+The biggest time sink in project management is breaking down goals into actionable tasks. Traditional approach: a PM spends 2–4 hours writing tickets, estimating effort, and mapping dependencies.
+
+**AI approach:** Describe the project goal in plain English. AI generates a full task tree — subtasks, owners, estimated timelines, and dependencies — in under 60 seconds.
+
+SpaceLean's AI Task Generator, for example, converts "Build a customer onboarding flow" into 15–20 structured tasks with acceptance criteria and sequencing.
+
+### 2. Predictive Scheduling & Risk Detection
+
+AI analyzes historical project data and current progress to predict:
+- Which tasks will slip before they actually do
+- Which team members are overloaded
+- When a project is likely to deliver (vs. the planned date)
+
+This is fundamentally different from manual status tracking — AI gives you a forward-looking risk view, not a backward-looking status report.
+
+### 3. Intelligent Resource Allocation
+
+AI matches tasks to team members based on skills, availability, workload, and past performance. This eliminates the common problem of overloading your best engineers while others have slack capacity.
+
+### 4. Automated Reporting & Dashboards
+
+AI-generated project reports replace the manual status updates that consume hours each week. Dashboards update in real time — stakeholders get visibility without interrupting the team.
+
+### 5. Natural Language Project Updates
+
+Instead of filling out forms and status fields, team members can type natural language updates: "Finished the API integration, starting frontend work tomorrow, blocked on design review." AI parses these into structured status updates, progress percentages, and blocker alerts.
+
+## AI PM Tools Comparison
+
+| Feature | SpaceLean | Monday.com AI | ClickUp AI | Asana AI |
+|---------|-----------|---------------|------------|----------|
+| AI Task Generation | ✅ Full task trees | ❌ Basic only | ✅ Subtasks | ❌ No |
+| OKR Integration | ✅ Native | ❌ No | ❌ Add-on | ❌ No |
+| Predictive Scheduling | ✅ Yes | ❌ No | ❌ No | ✅ Basic |
+| Sprint Planning AI | ✅ Full automation | ❌ No | ❌ No | ❌ No |
+| Free Plan | ✅ Yes | ❌ No | ✅ Limited | ✅ Limited |
+
+## Getting Started with AI PM
+
+### Step 1: Start with AI Task Generation
+
+This is the highest-ROI starting point. Use AI to break down your next project and compare the output quality to manual planning.
+
+### Step 2: Add Predictive Scheduling
+
+Once your tasks are in the system, enable AI-powered timeline predictions. Review the accuracy after 2–3 sprints and calibrate.
+
+### Step 3: Automate Reporting
+
+Replace your weekly status meetings with AI-generated dashboards. Most teams find they can cut 2–3 hours/week of meeting time.
+
+### Step 4: Connect Goals to Execution
+
+The final step is linking OKRs to AI-generated tasks, creating a complete strategy-to-execution pipeline.
+
+## When NOT to Use AI in PM
+
+AI struggles with:
+- Highly creative or ambiguous projects where the goal isn't clearly defined
+- Political or organizational decisions that require human judgment
+- Novel situations with no historical data to learn from
+
+Use AI for structured, repeatable planning work. Use humans for strategy, creativity, and relationship management.
+
+---
+
+## Frequently Asked Questions
+
+### Is AI project management replacing project managers?
+
+No. AI handles the repetitive parts of PM — task creation, scheduling, status tracking. PMs focus on stakeholder management, strategic decisions, and team leadership. AI makes PMs more effective, not obsolete.
+
+### How accurate is AI task generation?
+
+AI task generation is 80–90% accurate for well-defined projects. PMs typically need to refine 10–20% of AI-generated tasks — still a 5x speedup over manual creation.
+
+### What data does AI need to work well?
+
+AI PM tools need project history (past tasks, timelines, outcomes) to improve predictions. Most tools work well from day one for task generation but get better at scheduling predictions over 2–3 months of use.
+
+---
+
+## Related Resources
+
+- [AI Task Management: The Future](/blogs/ai-task-management-future-productivity) — deep dive on AI in task management
+- [Free AI Task Generator](/tool) — try AI task generation now
+- [SpaceLean vs Asana](/compare/spacelean-vs-asana) — compare AI PM capabilities
+- [Sprint Planning for Engineering Teams](/blogs/sprint-planning-engineering-teams) — AI sprint planning guide
+    \`,
+  },
+  {
+    slug: "okr-examples-startups",
+    title: "OKR Examples for Startups: 30+ Templates for Every Team (2026)",
+    description:
+      "Get 30+ real OKR examples for startups — covering product, engineering, marketing, sales, and company-wide goals. Copy-paste templates with scoring guidance.",
+    author: "SpaceLean Team",
+    date: "2026-04-18",
+    readTime: "14 min read",
+    category: "OKR & Goals",
+    tags: ["OKR examples", "startup OKRs", "OKR templates", "startup goals", "team OKR examples"],
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Why Startups Need OKRs
+
+Startups move fast — but speed without direction is chaos. OKRs (Objectives and Key Results) give fast-moving teams a framework to align effort, measure progress, and make hard prioritization decisions every quarter.
+
+Google, LinkedIn, and Spotify all adopted OKRs in their startup phase. Here are 30+ battle-tested OKR examples organized by team.
+
+## Company-Wide OKRs
+
+### Objective 1: Achieve Product-Market Fit
+
+- KR1: Increase weekly active users from 500 to 2,000
+- KR2: Achieve 40% user retention at 30 days (up from 22%)
+- KR3: Collect 50 customer interviews with NPS feedback
+
+### Objective 2: Build a Sustainable Revenue Engine
+
+- KR1: Grow MRR from $10K to $40K
+- KR2: Reduce customer acquisition cost (CAC) from $200 to $120
+- KR3: Achieve LTV:CAC ratio of 3:1
+
+### Objective 3: Build a World-Class Founding Team
+
+- KR1: Hire 3 senior engineers (Staff+ level)
+- KR2: Achieve employee NPS of 70+
+- KR3: Zero regrettable attrition this quarter
+
+## Product Team OKRs
+
+### Objective: Launch Features That Users Love
+
+- KR1: Ship 3 features that achieve 60%+ adoption within 2 weeks
+- KR2: Reduce average onboarding time from 30 min to 10 min
+- KR3: Achieve feature request resolution rate of 40% (shipped vs. requested)
+
+### Objective: Nail the Core User Experience
+
+- KR1: Increase task completion rate from 65% to 85%
+- KR2: Reduce P95 page load time from 3.2s to 1.5s
+- KR3: Decrease support tickets about UX confusion by 50%
+
+## Engineering Team OKRs
+
+### Objective: Ship Reliable, Fast Software
+
+- KR1: Achieve 99.9% uptime (max 43 min downtime/month)
+- KR2: Reduce P95 API latency from 800ms to 200ms
+- KR3: Zero critical bugs in production for 6+ consecutive weeks
+
+### Objective: Accelerate Engineering Velocity
+
+- KR1: Increase sprint velocity from 40 to 55 story points
+- KR2: Reduce average PR review time from 24 hours to 4 hours
+- KR3: Achieve 80% automated test coverage on all new code
+
+## Marketing Team OKRs
+
+### Objective: Build an Organic Growth Engine
+
+- KR1: Grow organic traffic from 5K to 20K monthly visits
+- KR2: Publish 15 SEO-optimized blog posts targeting high-intent keywords
+- KR3: Achieve 5 referring domains from DR 40+ sites
+
+### Objective: Generate Qualified Pipeline
+
+- KR1: Generate 200 marketing-qualified leads (MQLs)
+- KR2: Achieve email list growth from 2K to 6K subscribers
+- KR3: Improve lead-to-trial conversion rate from 8% to 15%
+
+## Sales Team OKRs
+
+### Objective: Close Revenue That Sticks
+
+- KR1: Close $120K in new ARR (annual recurring revenue)
+- KR2: Achieve average deal size of $8K+ (up from $5K)
+- KR3: Maintain 90-day churn rate under 5%
+
+## Customer Success OKRs
+
+### Objective: Turn Customers into Champions
+
+- KR1: Achieve NPS score of 60+ (up from 42)
+- KR2: Increase net revenue retention to 115%
+- KR3: Generate 10 customer case studies or testimonials
+
+## How to Score Startup OKRs
+
+Use a 0.0–1.0 scoring scale:
+- **0.0–0.3**: Significant miss — investigate root cause
+- **0.4–0.6**: Partial progress — good effort, missed target
+- **0.7–0.8**: Sweet spot — ambitious goal nearly achieved
+- **0.9–1.0**: Sandbagging alert — goals were too easy, stretch more next quarter
+
+The ideal average OKR score across the company should be 0.6–0.7.
+
+---
+
+## Frequently Asked Questions
+
+### How many OKRs should a startup have?
+
+3–5 company Objectives with 2–4 Key Results each. Startups with fewer than 20 people often work best with 3 company OKRs and team-level OKRs for each department.
+
+### Should startups use annual or quarterly OKRs?
+
+Quarterly. Startups change too fast for annual goal cycles. Quarterly OKRs provide enough runway to achieve meaningful results while allowing rapid course correction.
+
+### When should a startup start using OKRs?
+
+As soon as you have 5+ people or 2+ teams. Before that, a simple prioritized task list works fine. OKRs become essential when alignment across multiple people and functions matters.
+
+---
+
+## Related Resources
+
+- [OKR Management: The Complete Guide](/blogs/okr-management-complete-guide) — full OKR lifecycle from planning to scoring
+- [OKR Templates for Every Team](/blogs/okr-templates-every-team) — 40+ copy-paste templates
+- [How to Align Team Goals with Company OKRs](/blogs/align-team-goals-company-okrs) — cascading guide
+- [SpaceLean for Startups](/solutions/startups) — OKR + sprint planning built for speed
+    \`,
+  },
+  {
+    slug: "lean-vs-agile-methodology",
+    title: "Lean vs Agile: Which Project Management Methodology Is Right for Your Team?",
+    description:
+      "Lean vs Agile — understand the differences, strengths, and when to use each methodology. Includes a comparison table and hybrid approach guide.",
+    author: "SpaceLean Team",
+    date: "2026-04-19",
+    readTime: "9 min read",
+    category: "Project Management",
+    tags: ["lean vs agile", "agile methodology", "lean methodology", "project management methodology", "scrumban"],
+    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Lean vs Agile: The Core Difference
+
+Both Lean and Agile aim to deliver value faster — but they approach the problem differently.
+
+**Lean** focuses on eliminating waste across the entire value stream. It asks: "What steps in our process don't add value to the customer?"
+
+**Agile** focuses on iterative delivery in short cycles. It asks: "How can we deliver working software (or product) every 1–4 weeks?"
+
+## Side-by-Side Comparison
+
+| Dimension | Lean | Agile |
+|-----------|------|-------|
+| Origin | Toyota Production System (1950s) | Agile Manifesto (2001) |
+| Primary focus | Waste elimination | Iterative delivery |
+| Planning horizon | Continuous flow | Sprint-based (1–4 weeks) |
+| Key metric | Lead time, cycle time | Velocity, burndown |
+| Team structure | Cross-functional value streams | Scrum teams or squads |
+| Change approach | Continuous improvement (Kaizen) | Sprint retrospectives |
+| Best for | Operations, manufacturing, support | Product development, software |
+
+## When to Choose Lean
+
+Choose Lean when your team:
+- Handles continuous work (support tickets, ops, maintenance)
+- Needs to optimize an existing process for speed and cost
+- Wants to reduce bottlenecks and waiting time
+- Works on predictable, repeatable tasks
+
+**Lean tools**: Kanban boards, Value Stream Maps, WIP limits, 5 Whys, Kaizen events
+
+## When to Choose Agile
+
+Choose Agile when your team:
+- Builds new products with evolving requirements
+- Needs stakeholder feedback every 1–4 weeks
+- Works on complex, uncertain projects
+- Wants to ship incrementally and learn from users
+
+**Agile frameworks**: Scrum, XP, SAFe, LeSS
+
+## The Hybrid Approach: Lean Agile (Scrumban)
+
+Most modern teams don't choose one or the other — they combine both. Scrumban uses Agile sprints for planning cadence but Lean WIP limits and flow metrics for execution.
+
+**How to implement Lean Agile:**
+1. Plan work in 2-week sprints (Agile)
+2. Use Kanban boards with WIP limits (Lean)
+3. Track both velocity (Agile) and cycle time (Lean)
+4. Run sprint retrospectives + monthly Kaizen reviews
+5. Eliminate non-value-adding ceremonies over time
+
+## Common Mistakes
+
+### Mistake 1: "We're Agile so we don't plan"
+Agile is not anti-planning. It's anti-big-upfront-planning. You still need a product roadmap and sprint goals.
+
+### Mistake 2: "Lean means cutting corners"
+Lean means cutting waste, not quality. Every step that adds customer value is preserved and improved.
+
+### Mistake 3: "We have to pick one"
+The best teams use both. Lean optimizes the process; Agile structures the delivery.
+
+---
+
+## Frequently Asked Questions
+
+### Can you use Lean and Agile together?
+
+Yes — most successful teams combine both. Use Agile sprints for planning cadence and Lean principles (WIP limits, waste elimination, continuous improvement) for execution. This hybrid is often called Scrumban or Lean Agile.
+
+### Is Lean better than Agile for software teams?
+
+Neither is universally better. Agile (Scrum/XP) suits product development with changing requirements. Lean (Kanban) suits continuous delivery and ops work. Many software teams use both depending on the work type.
+
+### What is Scrumban?
+
+Scrumban combines Scrum's time-boxed sprints with Kanban's pull-based flow and WIP limits. Teams plan in sprints but manage daily work with Kanban boards. It's ideal for teams transitioning from Scrum to a more flow-based approach.
+
+---
+
+## Related Resources
+
+- [10 Lean Project Management Techniques](/blogs/lean-project-management-techniques) — practical Lean techniques
+- [Agile Methodology: A Beginner's Guide](/blogs/agile-methodology-beginners-guide) — complete Agile introduction
+- [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your Kanban workflow
+- [Scrum vs Kanban](/blogs/scrum-vs-kanban-comparison) — detailed framework comparison
+    \`,
+  },
+  {
+    slug: "quarterly-review-guide",
+    title: "How to Run Effective Quarterly Reviews: A Leader's Playbook",
+    description:
+      "Learn how to run quarterly business reviews that drive alignment, accountability, and action. Includes agenda templates, OKR scoring, and retrospective frameworks.",
+    author: "SpaceLean Team",
+    date: "2026-04-20",
+    readTime: "8 min read",
+    category: "OKR & Goals",
+    tags: ["quarterly review", "QBR", "OKR review", "quarterly planning", "business review"],
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Why Quarterly Reviews Matter
+
+Quarterly reviews are the heartbeat of OKR-driven organizations. They're where you score the quarter just finished, celebrate wins, analyze misses, and set direction for the next 90 days.
+
+Done poorly, they're a 4-hour PowerPoint marathon. Done well, they're the single most valuable meeting on the leadership calendar.
+
+## The 3-Part Quarterly Review Framework
+
+### Part 1: Score & Reflect (60 minutes)
+
+**Step 1: Score each Key Result (0.0–1.0)**
+Go through every team's OKRs and assign a score. Be honest — the value of OKRs comes from accurate assessment, not inflated numbers.
+
+**Step 2: Categorize results**
+- 🟢 Hit (0.7–1.0): Achieved or exceeded
+- 🟡 Partial (0.4–0.6): Progress made, target missed
+- 🔴 Miss (0.0–0.3): Significant shortfall — requires root cause analysis
+
+**Step 3: Identify patterns**
+Look across all teams: Are misses concentrated in one area? Did external factors cause multiple KRs to slip? Is there a systemic issue?
+
+### Part 2: Retrospective (45 minutes)
+
+Use a simple framework:
+- **What went well?** — celebrate wins and reinforce what's working
+- **What didn't go well?** — honest assessment without blame
+- **What will we change?** — specific, actionable improvements for next quarter
+
+The most important output is 2–3 concrete process improvements to carry into next quarter.
+
+### Part 3: Next Quarter Planning (60 minutes)
+
+**Step 1: Review company strategy** — has anything changed since last quarter?
+
+**Step 2: Draft company OKRs** — 3–5 Objectives with 2–4 Key Results each
+
+**Step 3: Identify cross-team dependencies** — which team needs what from another?
+
+**Step 4: Set check-in cadence** — weekly team check-ins, monthly cross-team alignment
+
+## Quarterly Review Agenda Template
+
+| Time | Activity | Owner |
+|------|----------|-------|
+| 0:00–0:15 | Company metrics overview | CEO/COO |
+| 0:15–0:45 | Team OKR scoring (each team presents) | Team leads |
+| 0:45–1:15 | Retrospective discussion | All |
+| 1:15–1:30 | Break | — |
+| 1:30–2:15 | Next quarter OKR drafting | Leadership |
+| 2:15–2:30 | Cross-team dependencies & commitments | All |
+
+## 5 Rules for Better Quarterly Reviews
+
+1. **No surprises** — OKR scores should be tracked weekly, not discovered at quarter-end
+2. **Data over stories** — bring metrics, not narratives
+3. **Root causes, not blame** — ask "what caused this?" not "who caused this?"
+4. **Limit attendees** — only people who own or depend on OKRs
+5. **Action items with owners** — every retrospective insight needs an owner and a deadline
+
+---
+
+## Frequently Asked Questions
+
+### How long should a quarterly review be?
+
+2–3 hours is ideal for most companies under 100 people. Larger organizations may need 4 hours or split across two sessions. Avoid going beyond 4 hours — attention drops sharply after that.
+
+### Should individual OKR scores be shared publicly?
+
+Yes, within the company. OKR transparency drives accountability and helps teams understand cross-functional performance. Public scoring also prevents score inflation.
+
+### What if the quarterly review reveals misaligned teams?
+
+This is exactly what the review is for. Document the misalignment, agree on a corrective action, and add an explicit dependency commitment for next quarter. Don't wait until the next review to fix it.
+
+---
+
+## Related Resources
+
+- [OKR Management: The Complete Guide](/blogs/okr-management-complete-guide) — scoring methodology and cadence
+- [How to Align Team Goals with Company OKRs](/blogs/align-team-goals-company-okrs) — cascading framework
+- [Quarterly OKRs vs Annual Goals](/blogs/quarterly-okrs-vs-annual-goals) — why quarterly wins
+- [SpaceLean OKR Tracking](/features) — real-time OKR dashboards and scoring
+    \`,
+  },
+  {
+    slug: "manage-multiple-projects",
+    title: "How to Manage Multiple Projects Without Losing Your Sanity",
+    description:
+      "Juggling multiple projects? Learn proven frameworks for multi-project management — from priority matrices to time-blocking strategies that prevent burnout.",
+    author: "SpaceLean Team",
+    date: "2026-04-21",
+    readTime: "10 min read",
+    category: "Productivity",
+    tags: ["multi-project management", "project prioritization", "time management", "workload management", "project portfolio"],
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## The Multi-Project Problem
+
+Managing one project is hard. Managing three, five, or ten simultaneously is where most project managers break down. The challenge isn't individual project complexity — it's the cognitive load of context-switching, competing priorities, and cascading dependencies across projects.
+
+## The 5 Frameworks for Multi-Project Success
+
+### Framework 1: The Priority Matrix
+
+Score every project on two axes:
+- **Impact** (1–10): How much does this project contribute to company goals?
+- **Urgency** (1–10): How soon does this need to deliver?
+
+Plot them on a 2x2 matrix:
+- **High Impact + High Urgency**: Do first (60% of your time)
+- **High Impact + Low Urgency**: Schedule (25% of your time)
+- **Low Impact + High Urgency**: Delegate (10% of your time)
+- **Low Impact + Low Urgency**: Eliminate or defer (5% of your time)
+
+### Framework 2: Time-Blocking by Project
+
+Assign each project specific days or half-days. Monday/Tuesday = Project A. Wednesday = Project B. Thursday/Friday = Project C.
+
+This eliminates within-day context switching, which is the biggest productivity killer in multi-project management.
+
+### Framework 3: Master Task List with Daily Top 3
+
+Maintain a single master task list across all projects. Each morning, select your Top 3 tasks — the three things that will have the most impact today. Complete these before touching anything else.
+
+### Framework 4: Weekly Project Pulse Reviews
+
+Every Friday, spend 30 minutes reviewing all active projects:
+- What's the current status? (On track / At risk / Blocked)
+- What's the #1 priority for next week?
+- Are there any cross-project dependencies to resolve?
+
+This prevents the "I haven't looked at Project C in two weeks" syndrome.
+
+### Framework 5: Delegation Ladder
+
+For each project, define your role on the delegation ladder:
+1. **Own**: You do the work yourself
+2. **Guide**: You set direction, someone else executes
+3. **Review**: Someone else does everything, you approve
+4. **Inform**: You just need to stay aware
+
+Move as many projects as possible to levels 3 and 4.
+
+## Common Multi-Project Mistakes
+
+### Saying Yes to Everything
+
+Every new project you accept reduces your effectiveness on existing ones. Protect your capacity by saying no to low-impact work.
+
+### Equal Time Distribution
+
+Not all projects deserve equal attention. Allocate time based on impact and urgency, not fairness.
+
+### Skipping the Weekly Review
+
+Without a regular pulse check, low-priority projects drift until they become urgent crises. The 30-minute weekly review prevents this.
+
+## How AI Helps Multi-Project Managers
+
+AI project management tools like SpaceLean can:
+- Generate task breakdowns for all projects simultaneously
+- Surface cross-project dependency conflicts
+- Predict which projects are at risk of slipping
+- Auto-prioritize tasks based on deadlines and impact
+
+This is where AI delivers the biggest ROI — replacing the cognitive overhead of tracking dozens of tasks across multiple projects.
+
+---
+
+## Frequently Asked Questions
+
+### How many projects can one person manage effectively?
+
+Research suggests 3–5 active projects is the maximum for effective management. Beyond 5, quality drops significantly unless you delegate most execution. AI tools can extend this limit by handling planning and tracking automation.
+
+### How do I handle conflicting deadlines across projects?
+
+Use the Priority Matrix to rank projects by impact and urgency. Communicate trade-offs to stakeholders transparently: "Accelerating Project A means Project B delivers 1 week late. Here's why that trade-off makes sense."
+
+### Should I use one tool for all projects or separate tools?
+
+One tool. Using separate tools for different projects creates information silos and makes cross-project dependency tracking impossible. Consolidate everything into a single project management platform.
+
+---
+
+## Related Resources
+
+- [Productivity Hacks for Busy Professionals](/blogs/productivity-hacks-busy-professionals) — 15 science-backed tips
+- [Focus & Deep Work Strategies](/blogs/focus-deep-work-strategies) — protect your attention
+- [Delegation Mastery: A Leader's Guide](/blogs/delegation-guide-leaders) — delegate effectively
+- [Free AI Task Generator](/tool) — break down multiple projects instantly
+    \`,
+  },
+  {
+    slug: "delegation-guide-leaders",
+    title: "Delegation Mastery: A Leader's Complete Guide to Delegating Work",
+    description:
+      "Master the art of delegation with this complete guide. Learn the 5 levels of delegation, what to delegate (and what not to), and how to build trust through empowerment.",
+    author: "SpaceLean Team",
+    date: "2026-04-22",
+    readTime: "9 min read",
+    category: "Leadership",
+    tags: ["delegation", "leadership skills", "team management", "empowerment", "management guide"],
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Why Leaders Struggle to Delegate
+
+Delegation is the most important and least practiced leadership skill. Most leaders know they should delegate more — but they don't, because:
+
+- **"It's faster if I do it myself"** — true today, catastrophic at scale
+- **"Nobody can do it as well as I can"** — a sign you haven't invested in team development
+- **"I'll lose control"** — delegation with clear expectations doesn't mean losing control
+
+The math is simple: if you're the only person who can do critical work, you're a bottleneck, not a leader.
+
+## The 5 Levels of Delegation
+
+### Level 1: Do Exactly as I Say
+
+You give specific instructions and expect exact execution. Appropriate for new team members or high-risk tasks.
+
+### Level 2: Research and Report Back
+
+The delegate investigates options and presents recommendations, but you make the final decision.
+
+### Level 3: Recommend and Execute (with Approval)
+
+The delegate recommends a course of action, gets your approval, then executes. This is the sweet spot for most delegation.
+
+### Level 4: Decide and Inform
+
+The delegate makes the decision and tells you what they decided. You only intervene if something goes wrong.
+
+### Level 5: Full Ownership
+
+The delegate owns the outcome completely. You don't need to be informed of every decision — just the results.
+
+## What to Delegate (and What Not To)
+
+### Always Delegate
+- Recurring operational tasks
+- Data gathering and analysis preparation
+- First drafts of documents and presentations
+- Meeting scheduling and coordination
+- Routine client communications
+
+### Never Delegate
+- Hiring and firing decisions (your direct reports)
+- Strategic direction and vision setting
+- Performance conversations and feedback
+- Crisis management with existential risk
+- Relationship-building with key stakeholders
+
+### The Delegation Decision Framework
+
+Ask three questions:
+1. **Can someone else do this 80% as well as me?** If yes → delegate
+2. **Will this help them grow?** If yes → delegate even if they'll do it 60% as well initially
+3. **Is this the highest-value use of my time?** If no → delegate
+
+## How to Delegate Effectively
+
+### Step 1: Define the Outcome, Not the Process
+
+Tell people what success looks like, not how to get there. "We need the Q3 board presentation ready by Friday with revenue forecasts and product roadmap updates" — not a 15-step instruction manual.
+
+### Step 2: Match the Task to the Person
+
+Consider skills, interest, and growth goals. The best delegation develops people, not just distributes work.
+
+### Step 3: Set Checkpoints, Not Surveillance
+
+Agree on 2–3 check-in points for progress updates. Don't hover or micro-manage between checkpoints.
+
+### Step 4: Give Authority with Responsibility
+
+If someone is responsible for a deliverable, they need the authority to make decisions about it. Responsibility without authority is a recipe for frustration.
+
+### Step 5: Debrief After Completion
+
+Review the outcome together. What went well? What could improve? This builds capability for future delegation.
+
+---
+
+## Frequently Asked Questions
+
+### How do I delegate when my team is already overloaded?
+
+If your whole team is overloaded, the answer isn't more delegation — it's prioritization. Use the Priority Matrix to identify low-impact work that can be eliminated or deferred entirely. Then delegate the remaining high-impact work.
+
+### How do I trust someone with an important task?
+
+Start small. Delegate a lower-stakes version of the task first and evaluate the result. Build trust incrementally — moving from Level 1 to Level 3 to Level 5 over multiple cycles.
+
+### What if the delegated work isn't good enough?
+
+Provide specific feedback and ask them to revise. Don't take the work back — that teaches them to do poor work because you'll fix it anyway. Invest in coaching now to save time permanently.
+
+---
+
+## Related Resources
+
+- [Decision-Making Frameworks for Leaders](/blogs/decision-making-frameworks-leaders) — structured decision making
+- [How to Manage Multiple Projects](/blogs/manage-multiple-projects) — multi-project delegation strategies
+- [Burnout Prevention Strategies](/blogs/burnout-prevention-strategies-teams) — avoid overload
+- [SpaceLean for Product Teams](/solutions/product-teams) — AI-powered task delegation
+    \`,
+  },
+  {
+    slug: "digital-minimalism-professionals",
+    title: "Digital Minimalism for Professionals: Reclaim Your Focus in 2026",
+    description:
+      "Apply digital minimalism to your professional life. Learn how to eliminate digital distractions, simplify your tool stack, and reclaim 10+ hours per week of deep work time.",
+    author: "SpaceLean Team",
+    date: "2026-04-23",
+    readTime: "8 min read",
+    category: "Productivity",
+    tags: ["digital minimalism", "focus", "deep work", "digital wellness", "productivity"],
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## The Digital Overload Crisis
+
+The average professional uses 9.4 apps per day, receives 120+ notifications, and checks their phone 96 times. The result: fragmented attention, shallow work, and the persistent feeling of being busy without being productive.
+
+Digital minimalism is the antidote. It's not about rejecting technology — it's about being intentional about which tools earn a place in your workflow.
+
+## The 5 Principles of Professional Digital Minimalism
+
+### Principle 1: The Tool Audit
+
+List every digital tool you used this week. For each, ask: "Does this tool directly support my top 3 priorities?" If not, remove it or reduce your usage.
+
+Most professionals find that 3–4 tools handle 90% of their productive work. The other 5–6 tools are distractions disguised as productivity.
+
+### Principle 2: Notification Zero
+
+Turn off all notifications except:
+- Direct messages from your manager
+- Calendar reminders for meetings
+- Critical system alerts
+
+Everything else — Slack channels, email, social media, app updates — should be checked on your schedule, not interrupt your schedule.
+
+### Principle 3: Single-Tab Focus
+
+When doing deep work, have only one browser tab open. Every additional tab is a latent distraction and a cognitive load on your working memory.
+
+### Principle 4: Scheduled Communication Windows
+
+Check email and Slack at scheduled times (e.g., 9 AM, 12 PM, 4 PM) instead of continuously. This creates uninterrupted blocks for deep work while still being responsive.
+
+### Principle 5: Weekly Digital Declutter
+
+Every Friday, spend 15 minutes:
+- Closing unnecessary browser tabs
+- Unsubscribing from emails you haven't read
+- Removing apps you haven't used this month
+- Organizing your downloads folder
+
+## The Minimal Professional Tool Stack
+
+Replace 10 apps with 4:
+
+| Category | Recommended Tool |
+|----------|-----------------|
+| Task Management + Goals | SpaceLean (AI task generation + OKR tracking) |
+| Communication | Slack (with notification rules) |
+| Documentation | Notion or Google Docs |
+| Calendar | Google Calendar (with focus blocks) |
+
+That's it. Resist adding tools unless they replace an existing one.
+
+## Reclaiming Deep Work Time
+
+### The 4-Hour Deep Work Block
+
+Block 4 hours every morning for deep, focused work. This is where your highest-value output happens — strategic thinking, creative problem-solving, complex analysis.
+
+Protect this block like a meeting with your CEO. No Slack. No email. No notifications.
+
+### The 90-Minute Rule
+
+Within your deep work block, work in 90-minute focused sprints followed by 15-minute breaks. This aligns with your brain's natural ultradian rhythm.
+
+### The Evening Shutdown Ritual
+
+End each workday with a 10-minute shutdown:
+1. Review what you completed today
+2. Write tomorrow's Top 3 priorities
+3. Close all work applications
+4. Mentally confirm: "I'm done for today"
+
+This ritual creates a clean boundary between work and rest.
+
+---
+
+## Frequently Asked Questions
+
+### How do I practice digital minimalism without missing important messages?
+
+Set up "VIP" notifications for key people (your manager, direct reports, key clients). Everything else goes to scheduled communication windows. In practice, very few messages are truly urgent — most can wait 2–3 hours.
+
+### Won't I be seen as unresponsive?
+
+Set expectations proactively. Tell your team: "I check Slack at 9, 12, and 4. For urgent matters, call me." Most people respect this boundary and appreciate the transparency.
+
+### How long does it take to see benefits from digital minimalism?
+
+Most professionals report noticeable focus improvements within 1 week and significant productivity gains within 3–4 weeks. The hardest part is the first 3 days when notification withdrawal feels uncomfortable.
+
+---
+
+## Related Resources
+
+- [Focus & Deep Work Strategies](/blogs/focus-deep-work-strategies) — science-backed concentration techniques
+- [Burnout Prevention Strategies](/blogs/burnout-prevention-strategies-teams) — avoid digital exhaustion
+- [Smart Calendar Scheduling Tips](/blogs/smart-calendar-scheduling-tips) — optimize your calendar
+- [Productivity Hacks for Busy Professionals](/blogs/productivity-hacks-busy-professionals) — 15 actionable tips
+    \`,
+  },
+  {
+    slug: "product-roadmap-planning-guide",
+    title: "Product Roadmap Planning: A Complete Guide for 2026",
+    description:
+      "Learn how to plan, prioritize, and execute a product roadmap. Includes roadmap templates, prioritization frameworks, and how to connect roadmaps to OKRs.",
+    author: "SpaceLean Team",
+    date: "2026-04-24",
+    readTime: "11 min read",
+    category: "Product Management",
+    tags: ["product roadmap", "roadmap planning", "product strategy", "feature prioritization", "product management"],
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## What Is a Product Roadmap?
+
+A product roadmap is a strategic communication tool that shows where your product is headed and why. It translates business strategy into a sequence of product initiatives, organized by time horizon and priority.
+
+A good roadmap answers three questions: What are we building? Why are we building it? When will it be available?
+
+## The 3 Types of Product Roadmaps
+
+### 1. Theme-Based Roadmaps (Recommended)
+
+Organize initiatives by strategic themes instead of specific features. Example themes: "Improve Onboarding", "Scale Enterprise Features", "Reduce Churn".
+
+**Best for**: Teams that want flexibility and strategic alignment without committing to exact feature specs too early.
+
+### 2. Feature-Based Roadmaps
+
+List specific features with estimated delivery dates. Classic Gantt-chart style.
+
+**Best for**: Teams with stable requirements and stakeholders who need precise delivery commitments.
+
+### 3. Outcome-Based Roadmaps
+
+Define target outcomes (metrics) and let teams figure out the features. Example: "Reduce onboarding time from 30 min to 10 min."
+
+**Best for**: Teams with high autonomy and strong product analytics capabilities.
+
+## How to Build a Product Roadmap (Step by Step)
+
+### Step 1: Start with Company OKRs
+
+Your roadmap should be a direct translation of company and product OKRs into product initiatives. Every roadmap item should connect to at least one Key Result.
+
+### Step 2: Gather Inputs
+
+- Customer feedback and feature requests
+- Sales team competitive intelligence
+- Support ticket themes and pain points
+- Market trends and competitor analysis
+- Technical debt and infrastructure needs
+
+### Step 3: Prioritize with a Framework
+
+Use the **RICE framework** (Reach × Impact × Confidence / Effort) or **ICE** (Impact × Confidence × Ease) to score and rank initiatives objectively.
+
+### Step 4: Organize by Time Horizon
+
+- **Now** (this sprint/month): committed, in progress
+- **Next** (next 1–3 months): planned, estimated
+- **Later** (3–6 months): exploratory, directional
+
+### Step 5: Communicate and Iterate
+
+Share the roadmap with stakeholders, engineering, and the broader team. Update monthly or after each sprint review based on new learnings.
+
+## Connecting Roadmaps to OKRs
+
+The most effective product teams connect every roadmap initiative to a measurable OKR:
+
+| Roadmap Initiative | OKR Connection |
+|-------------------|----------------|
+| AI Task Generator v2 | Product KR: "Increase task generation adoption from 40% to 70%" |
+| Enterprise SSO | Sales KR: "Close 5 enterprise deals at $50K+ ACV" |
+| Mobile App Launch | Growth KR: "Increase WAU from 2K to 5K" |
+
+SpaceLean makes this connection automatic — OKR progress updates as features are shipped and adopted.
+
+## Common Roadmap Mistakes
+
+1. **Date-driven roadmaps** — promising exact dates for unscoped features creates false expectations
+2. **Feature factories** — building everything requested without strategic filtering
+3. **No customer input** — internal priorities should be validated against customer needs
+4. **Static roadmaps** — updating quarterly instead of monthly misses market changes
+5. **Missing "Why"** — features without strategic context create confusion about priorities
+
+---
+
+## Frequently Asked Questions
+
+### How far ahead should a product roadmap plan?
+
+Plan in detail for 1–3 months (Now/Next), directionally for 3–6 months (Later), and thematically for 6–12 months. Avoid detailed planning beyond 3 months — the accuracy drops dramatically.
+
+### How do I handle roadmap changes mid-quarter?
+
+Roadmaps should be flexible documents. When new information changes priorities, update the roadmap and communicate the change with rationale. Don't treat the roadmap as a contract.
+
+### What tool should I use for product roadmap planning?
+
+Use a tool that connects roadmap initiatives to OKRs and sprint backlogs — like SpaceLean. This creates traceability from strategy to execution. Standalone roadmap tools (ProductPlan, Aha!) work but require manual syncing with project management.
+
+---
+
+## Related Resources
+
+- [SpaceLean for Product Teams](/solutions/product-teams) — AI-powered roadmap execution
+- [Sprint Planning for Engineering Teams](/blogs/sprint-planning-engineering-teams) — connect roadmap to sprints
+- [OKR Management: The Complete Guide](/blogs/okr-management-complete-guide) — align roadmaps with OKRs
+- [Agile Methodology: Beginner's Guide](/blogs/agile-methodology-beginners-guide) — iterative delivery framework
+    \`,
+  },
+  {
+    slug: "project-management-small-teams",
+    title: "Project Management for Small Teams: Tools, Tips & Best Practices",
+    description:
+      "A practical guide to project management for small teams (2–15 people). Learn lightweight frameworks, tool recommendations, and the mistakes small teams make.",
+    author: "SpaceLean Team",
+    date: "2026-04-25",
+    readTime: "8 min read",
+    category: "Project Management",
+    tags: ["small team project management", "lightweight PM", "team tools", "startup project management", "team productivity"],
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Small Teams Need Different PM Approaches
+
+Enterprise project management frameworks (PMI, PRINCE2, SAFe) are designed for organizations with hundreds of people. Applying them to a 5-person team creates more overhead than value.
+
+Small teams need lightweight, flexible project management that maximizes execution time and minimizes process time.
+
+## The Lightweight PM Framework for Small Teams
+
+### 1. One Tool, One Board
+
+Use a single project management tool with a single Kanban board. No complex project hierarchies, no multi-layer portfolios. One board with 4 columns: Backlog → In Progress → Review → Done.
+
+### 2. Weekly Planning, Not Sprints
+
+Small teams often lack the stability for formal 2-week sprints. Instead, do a 30-minute weekly planning session every Monday:
+- Review what was completed last week
+- Pick the top 5–7 tasks for this week
+- Assign owners and identify blockers
+
+### 3. Async-First Updates
+
+Replace daily standups with async updates. Each team member posts a 2-sentence daily update in a shared channel: what they completed and what they're working on next.
+
+### 4. Monthly OKRs (Not Quarterly)
+
+Small teams move too fast for quarterly OKR cycles. Set monthly goals with 2–3 Key Results. Review and reset every 30 days.
+
+### 5. One Decision-Maker Per Project
+
+Small teams can't afford decision-by-committee. Assign one person as the project lead who makes final calls on scope, priority, and deadlines.
+
+## Best PM Tools for Small Teams
+
+| Tool | Best For | Free Plan? |
+|------|----------|-----------|
+| SpaceLean | AI task generation + OKR tracking | ✅ Yes |
+| Linear | Engineering-focused teams | ✅ Yes (up to 250 issues) |
+| Notion | Teams that combine docs + tasks | ✅ Yes |
+| Todoist | Simple personal task management | ✅ Yes |
+
+## The 5 Biggest Small Team PM Mistakes
+
+### 1. Over-Engineering Processes
+
+Adding Gantt charts, resource leveling, and earned value management to a 5-person team is process waste. Keep it simple.
+
+### 2. No Written Goals
+
+"Everyone knows what we're working on" is false once you have more than 3 people. Write your goals down, even if it's just a shared doc.
+
+### 3. Ignoring Dependencies
+
+Small teams assume everyone knows what everyone else is doing. They don't. Make dependencies explicit on your task board.
+
+### 4. No Retrospectives
+
+Small teams skip retrospectives because "we talk all the time anyway." Structured 30-minute monthly retros catch issues that casual conversation misses.
+
+### 5. Tool Sprawl
+
+Adding a new tool for every new problem (Trello for tasks, Notion for docs, Slack for chat, Loom for videos, Calendly for scheduling) creates context-switching overhead that kills small-team velocity.
+
+---
+
+## Frequently Asked Questions
+
+### What's the best project management approach for a team of 3?
+
+Keep it simple: one Kanban board, weekly planning meetings, async daily updates, and monthly goals. You don't need sprints, story points, or velocity tracking until you're past 8–10 people.
+
+### Do small teams need a dedicated project manager?
+
+Usually not. In small teams, the founder, tech lead, or product lead takes on PM responsibilities part-time. A dedicated PM becomes valuable around 10–15 people when coordination complexity increases.
+
+### How do I manage projects with freelancers and contractors?
+
+Add freelancers to your task board with clear task descriptions, acceptance criteria, and deadlines. Use async communication and set weekly check-in calls. Don't assume they understand context — write everything down.
+
+---
+
+## Related Resources
+
+- [SpaceLean for Startups](/solutions/startups) — lightweight PM built for speed
+- [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your board
+- [Best Productivity Apps for Teams](/blogs/best-productivity-apps-teams-2026) — tool comparison guide
+- [Free AI Task Generator](/tool) — break down projects instantly
+    \`,
+  },
+  {
+    slug: "scrum-vs-kanban-comparison",
+    title: "Scrum vs Kanban: Which Agile Framework Should Your Team Use?",
+    description:
+      "A detailed comparison of Scrum and Kanban frameworks. Learn the differences, strengths, and how to choose the right approach for your team's workflow.",
+    author: "SpaceLean Team",
+    date: "2026-04-26",
+    readTime: "9 min read",
+    category: "Project Management",
+    tags: ["scrum vs kanban", "agile frameworks", "scrum", "kanban", "agile project management"],
+    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Scrum vs Kanban: Two Flavors of Agile
+
+Both Scrum and Kanban are Agile frameworks — but they solve different problems. Scrum provides structure and cadence. Kanban provides flow and flexibility. Understanding when to use each (or both) is critical for team performance.
+
+## Feature Comparison
+
+| Feature | Scrum | Kanban |
+|---------|-------|--------|
+| Work cadence | Fixed sprints (1–4 weeks) | Continuous flow |
+| Planning | Sprint Planning at start of each sprint | On-demand, as capacity opens |
+| Roles | Scrum Master, Product Owner, Dev Team | No prescribed roles |
+| Meetings | Daily standup, sprint review, retrospective | Daily board review (optional) |
+| Metrics | Velocity, burndown chart | Lead time, cycle time, throughput |
+| WIP limits | Sprint capacity acts as implicit limit | Explicit WIP limits per column |
+| Change handling | Changes wait until next sprint | Changes can enter immediately |
+| Board resets | Board clears at end of each sprint | Board is continuous, never resets |
+
+## When to Use Scrum
+
+Scrum works best when:
+- You're building a product with evolving requirements
+- Your team needs structure and predictable delivery cadence
+- Stakeholders need regular demos and progress visibility
+- You want to improve velocity over time with sprint retrospectives
+- Team size is 5–9 people
+
+**Common Scrum teams**: Product development, software engineering, design teams
+
+## When to Use Kanban
+
+Kanban works best when:
+- Work is continuous and unpredictable (support, ops, maintenance)
+- You need maximum flexibility to handle urgent requests
+- Your team handles mixed work types (bugs + features + ops)
+- You want to optimize flow speed (lead time reduction)
+- Team size is flexible (works with any size)
+
+**Common Kanban teams**: DevOps, customer support, IT, marketing, operations
+
+## The Scrumban Hybrid
+
+Many teams combine both frameworks:
+- **From Scrum**: Sprint planning cadence, retrospectives, demo meetings
+- **From Kanban**: WIP limits, continuous flow within sprints, pull-based work
+
+**How it works**: Plan in 2-week sprints, but use a Kanban board with WIP limits during the sprint. If you finish sprint work early, pull from the backlog immediately (don't wait for the next sprint).
+
+## Implementation Guide
+
+### Starting with Scrum
+
+1. Define your sprint length (start with 2 weeks)
+2. Assign roles: Product Owner, Scrum Master
+3. Create and prioritize your backlog
+4. Run your first Sprint Planning
+5. Hold daily 15-minute standups
+6. Demo work at Sprint Review, improve at Retrospective
+
+### Starting with Kanban
+
+1. Map your workflow into board columns
+2. Set WIP limits (start with 2–3 items per person)
+3. Populate the board with current work
+4. Hold daily 10-minute board reviews (right-to-left)
+5. Track cycle time and throughput weekly
+6. Identify and eliminate bottlenecks monthly
+
+---
+
+## Frequently Asked Questions
+
+### Can you switch from Scrum to Kanban?
+
+Yes. Many teams start with Scrum for structure, then transition to Kanban as they mature. The key is to maintain retrospectives and continuous improvement even without formal sprints.
+
+### Is Kanban easier than Scrum?
+
+Kanban has fewer rules and ceremonies, making it simpler to start. But it requires more discipline — without sprint boundaries, it's easy to lose focus and over-commit. Scrum's structure helps less disciplined teams stay on track.
+
+### What is the best framework for a new team?
+
+Start with Scrum if your team is new to Agile. The structure (sprints, ceremonies, roles) provides guardrails that help teams build good habits. After 3–6 months, evaluate whether moving to Kanban or Scrumban would improve flow.
+
+---
+
+## Related Resources
+
+- [Agile Methodology: A Beginner's Guide](/blogs/agile-methodology-beginners-guide) — comprehensive Agile introduction
+- [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your Kanban board
+- [Lean vs Agile: Which Methodology?](/blogs/lean-vs-agile-methodology) — broader methodology comparison
+- [Sprint Planning for Engineering Teams](/blogs/sprint-planning-engineering-teams) — Scrum sprint planning guide
+    \`,
+  },
+  {
+    slug: "construction-project-management-ai",
+    title: "AI Construction Scheduling: The Complete Guide for 2026",
+    description:
+      "How AI is transforming construction project scheduling — from BIM-to-schedule automation to predictive risk analysis. Complete guide for GCs, PMs, and owners.",
+    author: "SpaceLean Team",
+    date: "2026-04-27",
+    readTime: "12 min read",
+    category: "Construction",
+    tags: ["AI construction scheduling", "construction project management", "BIM scheduling", "construction AI", "4D construction planning"],
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## The Problem with Traditional Construction Scheduling
+
+Construction projects are notoriously late and over-budget. Industry data shows 77% of construction projects finish late, with an average cost overrun of 28%. The root cause? Scheduling processes that haven't fundamentally changed since the 1960s.
+
+Traditional construction scheduling requires a specialist to manually link thousands of activities in tools like Primavera P6 or Microsoft Project — a process that takes weeks and produces a static schedule that becomes outdated the moment work begins on site.
+
+## How AI Changes Construction Scheduling
+
+### 1. BIM-to-Schedule Automation
+
+AI construction platforms like SpaceLean can analyze a BIM (Building Information Model) and automatically generate a construction schedule. The AI infers task dependencies from geometry — structural support sequences, MEP penetration paths, zone flow logic — without a single manual link.
+
+What took a scheduler 2–4 weeks now takes hours.
+
+### 2. Predictive Critical Path Analysis
+
+Traditional Critical Path Method (CPM) shows you the longest sequence of tasks. AI goes further — running Monte Carlo simulations across thousands of schedule scenarios to identify which tasks carry the highest probability of becoming critical.
+
+This probabilistic approach surfaces risks that deterministic CPM misses entirely.
+
+### 3. Real-Time Schedule Adaptation
+
+When a task slips on site, AI automatically propagates the impact through the dependency graph, reoptimizes downstream tasks, and updates the schedule — no manual rescheduling required.
+
+Traditional approach: Re-baseline the schedule every 2 weeks. AI approach: Continuous, real-time schedule adaptation.
+
+### 4. Crew & Trade Optimization
+
+AI assigns crews across tasks and zones to prevent resource overlap, minimize idle time, and maximize daily output. Trade stacking logic is built-in — the AI knows you can't have electrical rough-in and drywall installation in the same zone simultaneously.
+
+### 5. Automated Lookahead Planning
+
+AI generates 3-week and 6-week lookahead plans automatically, linking material lead times, subcontractor readiness, and access constraints. Superintendents get a ready-to-execute weekly plan instead of building one from scratch.
+
+## AI vs Traditional Scheduling Comparison
+
+| Capability | Traditional (P6/MSP) | AI-Powered (SpaceLean) |
+|-----------|----------------------|----------------------|
+| Schedule creation time | 2–4 weeks | 2–4 hours |
+| Dependency logic | Manual linking | Auto-inferred from BIM |
+| Risk analysis | Deterministic CPM | Probabilistic (Monte Carlo) |
+| Schedule updates | Manual re-baseline | Real-time auto-adaptation |
+| Crew optimization | Manual resource leveling | AI-powered assignment |
+| Lookahead plans | Manual every week | Auto-generated continuously |
+
+## Getting Started with AI Construction Scheduling
+
+### Step 1: Prepare Your BIM Model
+
+Ensure your BIM model has accurate geometry and system classifications (structural, MEP, architectural). The AI's schedule quality directly depends on model quality.
+
+### Step 2: Upload and Generate
+
+Upload the BIM to SpaceLean's AI engine. Review the auto-generated schedule, verify key logic sequences, and refine as needed.
+
+### Step 3: Set Risk Parameters
+
+Define your risk tolerance and simulation parameters. The AI will run Monte Carlo simulations and highlight activities with the highest delay probability.
+
+### Step 4: Deploy to Field Teams
+
+Push the schedule to superintendents and foremen as automated weekly lookaheads. Field updates flow back to the AI, keeping the master schedule current.
+
+## Who Benefits from AI Scheduling?
+
+- **General Contractors**: Faster preconstruction, better bid accuracy, reduced rework
+- **Project Owners**: Real-time visibility into schedule risk and progress
+- **Subcontractors**: Clear daily assignments and conflict-free zone access
+- **Construction Managers**: Data-driven decisions instead of experience-only guesswork
+
+---
+
+## Frequently Asked Questions
+
+### Does AI replace construction schedulers?
+
+No. AI handles the labor-intensive parts of scheduling — linking activities, resolving conflicts, running simulations. Schedulers focus on strategy, judgment calls, and stakeholder communication. AI makes schedulers 5x more productive, not obsolete.
+
+### How accurate is AI-generated scheduling?
+
+AI schedules from high-quality BIM models achieve 85–90% accuracy on first generation. Schedulers typically refine 10–15% of activities — still a massive time savings over starting from scratch.
+
+### What BIM formats does AI scheduling support?
+
+Most AI construction platforms support IFC (Industry Foundation Classes), Revit (.rvt), and Navisworks (.nwc/.nwd) formats. SpaceLean works with all major BIM formats and model federation tools.
+
+---
+
+## Related Resources
+
+- [SpaceLean for General Contractors](/solutions/for-gcs) — AI scheduling for GCs
+- [Lean Project Management Software Guide](/blogs/lean-project-management-software) — Lean principles for construction
+- [SpaceLean for Owners](/solutions/for-owners) — real-time project visibility
+- [Try SpaceLean Free](/tool) — AI-powered scheduling and task generation
+    \`,
+  },
+  {
+    slug: "startup-growth-metrics-okrs",
+    title: "Startup Growth Metrics: 12 KPIs to Track with OKRs in 2026",
+    description:
+      "The 12 most important startup growth metrics and how to track them using OKRs. Includes formulas, benchmarks, and OKR template examples for each metric.",
+    author: "SpaceLean Team",
+    date: "2026-04-28",
+    readTime: "10 min read",
+    category: "OKR & Goals",
+    tags: ["startup metrics", "startup KPIs", "growth metrics", "OKR KPIs", "startup analytics"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    content: \`
+## Why Metrics Matter for Startups
+
+Startups drown in data but starve for insight. Tracking everything means tracking nothing. The best startups focus on 8–12 metrics that directly measure growth, retention, and unit economics — then use OKRs to set targets and drive improvement.
+
+## The 12 Essential Startup Growth Metrics
+
+### Revenue Metrics
+
+#### 1. Monthly Recurring Revenue (MRR)
+
+**Formula**: Sum of all recurring revenue per month
+
+**Benchmark**: 15–20% month-over-month growth for early-stage SaaS
+
+**OKR Example**:
+- Objective: Build a predictable revenue engine
+- KR: Grow MRR from $25K to $50K by end of Q2
+
+#### 2. Annual Recurring Revenue (ARR)
+
+**Formula**: MRR × 12
+
+**Benchmark**: $1M ARR is the first major milestone; $10M ARR = Series B readiness
+
+#### 3. Average Revenue Per User (ARPU)
+
+**Formula**: Total Revenue / Active Users
+
+**Benchmark**: Varies by segment. B2B SaaS: $50–500/mo; Consumer: $5–20/mo
+
+### Acquisition Metrics
+
+#### 4. Customer Acquisition Cost (CAC)
+
+**Formula**: Total Sales + Marketing Spend / New Customers Acquired
+
+**Benchmark**: CAC payback period should be under 12 months
+
+**OKR Example**:
+- Objective: Make acquisition more efficient
+- KR: Reduce CAC from $200 to $120 while maintaining volume
+
+#### 5. Lead-to-Customer Conversion Rate
+
+**Formula**: Customers / Leads × 100
+
+**Benchmark**: B2B SaaS: 3–7% (free trial to paid)
+
+### Retention Metrics
+
+#### 6. Net Revenue Retention (NRR)
+
+**Formula**: (Starting MRR + Expansion − Contraction − Churn) / Starting MRR
+
+**Benchmark**: 100%+ is good; 120%+ is excellent (means you grow even without new customers)
+
+**OKR Example**:
+- Objective: Turn customers into expansion revenue
+- KR: Increase NRR from 95% to 115%
+
+#### 7. Monthly Churn Rate
+
+**Formula**: Customers Lost / Starting Customers × 100
+
+**Benchmark**: Under 5% monthly for early-stage; under 2% at scale
+
+#### 8. Daily/Weekly Active Users (DAU/WAU)
+
+**Formula**: Unique users who perform a core action per day/week
+
+**Benchmark**: DAU/MAU ratio above 20% indicates strong engagement
+
+### Unit Economics
+
+#### 9. Lifetime Value (LTV)
+
+**Formula**: ARPU × Average Customer Lifespan (in months)
+
+**Benchmark**: LTV:CAC ratio should be 3:1 or better
+
+#### 10. LTV:CAC Ratio
+
+**Formula**: LTV / CAC
+
+**Benchmark**: 3:1 = healthy; 5:1+ = very efficient; below 1:1 = burning money
+
+**OKR Example**:
+- Objective: Achieve sustainable unit economics
+- KR: Improve LTV:CAC ratio from 2.1:1 to 3.5:1
+
+### Product Metrics
+
+#### 11. Activation Rate
+
+**Formula**: Users who complete core onboarding action / Total signups × 100
+
+**Benchmark**: 40–60% is good; below 25% signals onboarding problems
+
+#### 12. Net Promoter Score (NPS)
+
+**Formula**: % Promoters − % Detractors
+
+**Benchmark**: 30+ is good; 50+ is excellent; 70+ is world-class
+
+## How to Track Metrics with OKRs
+
+### The Framework
+
+Each metric becomes a Key Result within a broader Objective:
+
+- **Company Objective**: "Achieve product-market fit this quarter"
+  - KR1: Increase WAU from 500 to 2,000 (Product metric)
+  - KR2: Achieve NRR of 110%+ (Retention metric)
+  - KR3: Reduce CAC from $200 to $120 (Acquisition metric)
+  - KR4: Achieve NPS of 50+ (Satisfaction metric)
+
+### Weekly Tracking
+
+Update each metric weekly during your OKR check-in. Flag any metric that's trending below target by more than 10% — early intervention prevents quarter-end misses.
+
+## Metrics Dashboard
+
+Build a simple dashboard with these 12 metrics visible to the entire company. Transparency drives alignment and accountability.
+
+SpaceLean's OKR dashboards automatically track Key Result progress and alert you when metrics go off-track — connecting goal-setting to real-time measurement.
+
+---
+
+## Frequently Asked Questions
+
+### Which metrics should an early-stage startup prioritize?
+
+Pre-product-market-fit: focus on Activation Rate, DAU/WAU, and NPS (are people using and loving the product?). Post-PMF: shift focus to MRR growth, CAC, NRR, and LTV:CAC (is the business model sustainable?).
+
+### How often should startups review their metrics?
+
+Review your 3–5 most critical metrics weekly. Do a full 12-metric review monthly. Deep-dive into trends and benchmarks quarterly during your OKR review.
+
+### Should every team member see all company metrics?
+
+Yes. Metric transparency is a core principle of OKR-driven organizations. When everyone sees the numbers, they make better decisions about where to focus their effort.
+
+---
+
+## Related Resources
+
+- [OKR Examples for Startups](/blogs/okr-examples-startups) — 30+ real startup OKR templates
+- [OKR vs KPI: Which Is Better?](/blogs/okr-vs-kpi) — understand the relationship between KPIs and OKRs
+- [SpaceLean for Startups](/solutions/startups) — OKR tracking and sprint planning
+- [How to Align Team Goals with Company OKRs](/blogs/align-team-goals-company-okrs) — cascading framework
+    \`,
+  },
 ];
 
 export function getBlogBySlug(slug: string): BlogPost | undefined {

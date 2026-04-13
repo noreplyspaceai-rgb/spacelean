@@ -4,6 +4,10 @@ export const metadata: Metadata = {
     title: "Terms of Service | SpaceLean AI",
     description:
         "Read the terms and conditions for using the SpaceLean AI platform, including account policies, service usage, intellectual property, and liability.",
+    robots: {
+      index: false,
+      follow: false,
+    },
     alternates: {
         canonical: "/terms",
     },

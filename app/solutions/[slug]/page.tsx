@@ -33,6 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: solution.keywords,
     alternates: {
       canonical: `/solutions/${slug}`,
+      languages: {
+        "en-US": `/solutions/${slug}`,
+        "en-GB": `/solutions/${slug}`,
+        "en-IN": `/solutions/${slug}`,
+        "x-default": `/solutions/${slug}`,
+      },
     },
     openGraph: {
       title: solution.title,
@@ -94,6 +100,24 @@ export default async function SolutionPage({ params }: Props) {
       { label: "SpaceLean vs Linear", href: "/compare/spacelean-vs-linear" },
       { label: "SpaceLean vs Asana", href: "/compare/spacelean-vs-asana" },
       { label: "OKR Management: The Complete Guide", href: "/blogs/okr-management-complete-guide" },
+    ],
+    "remote-teams": [
+      { label: "Remote Team Collaboration Tools 2026", href: "/blogs/remote-team-collaboration-tools-2026" },
+      { label: "Team Communication: Async vs Sync", href: "/blogs/team-communication-async-sync" },
+      { label: "SpaceLean vs Asana", href: "/compare/spacelean-vs-asana" },
+      { label: "OKR Management: The Complete Guide", href: "/blogs/okr-management-complete-guide" },
+    ],
+    "startups": [
+      { label: "OKR Management: The Complete Guide", href: "/blogs/okr-management-complete-guide" },
+      { label: "AI Task Management: The Future of Productivity", href: "/blogs/ai-task-management-future-productivity" },
+      { label: "SpaceLean vs Notion", href: "/compare/spacelean-vs-notion" },
+      { label: "Goal Setting with OKRs for Teams", href: "/blogs/goal-setting-okrs-teams" },
+    ],
+    "product-teams": [
+      { label: "Sprint Planning for Engineering Teams", href: "/blogs/sprint-planning-engineering-teams" },
+      { label: "Agile Methodology: A Complete Beginner's Guide", href: "/blogs/agile-methodology-beginners-guide" },
+      { label: "SpaceLean vs ClickUp", href: "/compare/spacelean-vs-clickup" },
+      { label: "Strategic Goal Prioritization with OKRs", href: "/blogs/strategic-goal-prioritization-okrs" },
     ],
   };
 

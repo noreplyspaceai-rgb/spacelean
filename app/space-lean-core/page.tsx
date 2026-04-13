@@ -27,6 +27,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/space-lean-core",
+    languages: {
+      "en-US": "/space-lean-core",
+      "en-GB": "/space-lean-core",
+      "en-IN": "/space-lean-core",
+      "x-default": "/space-lean-core",
+    },
   },
   openGraph: {
     title: "Space Lean Core | AI Construction Scheduling Engine",

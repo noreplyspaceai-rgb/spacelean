@@ -5,6 +5,10 @@ export const metadata: Metadata = {
     title: "Security Standards | SpaceLean AI",
     description:
         "Explore the security protocols, encryption standards, SOC 2 compliance, and infrastructure powering SpaceLean AI's construction scheduling platform.",
+    robots: {
+      index: false,
+      follow: false,
+    },
     alternates: {
         canonical: "/security",
     },

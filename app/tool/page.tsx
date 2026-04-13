@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     ],
     alternates: {
         canonical: "/tool",
+        languages: {
+            "en-US": "/tool",
+            "en-GB": "/tool",
+            "en-IN": "/tool",
+            "x-default": "/tool",
+        },
     },
     openGraph: {
         title: "Free AI Task Generator — Turn Any Project into an Actionable Plan",

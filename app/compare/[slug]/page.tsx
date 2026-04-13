@@ -30,6 +30,12 @@ export async function generateMetadata({
     description: comparison.description,
     alternates: {
       canonical: `/compare/${comparison.slug}`,
+      languages: {
+        "en-US": `/compare/${comparison.slug}`,
+        "en-GB": `/compare/${comparison.slug}`,
+        "en-IN": `/compare/${comparison.slug}`,
+        "x-default": `/compare/${comparison.slug}`,
+      },
     },
     openGraph: {
       title: comparison.title,

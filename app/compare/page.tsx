@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/compare",
+    languages: {
+      "en-US": "/compare",
+      "en-GB": "/compare",
+      "en-IN": "/compare",
+      "x-default": "/compare",
+    },
   },
   openGraph: {
     title: "SpaceLean vs Competitors — Full Comparison Hub",

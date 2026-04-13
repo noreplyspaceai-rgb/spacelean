@@ -1,16 +1,12 @@
-# Robots.txt for Space Lean
+# Robots.txt for SpaceLean
 # https://spacelean.ai
+# NOTE: This file is served statically. It mirrors app/robots.ts exactly.
+# To update robots rules, edit app/robots.ts and keep this file in sync.
 
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://spacelean.ai/sitemap.xml
-
-# Crawl-delay (optional, for politeness)
-Crawl-delay: 1
-
-# Disallow admin or private paths (if any)
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
+
+Sitemap: https://spacelean.ai/sitemap.xml
