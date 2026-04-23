@@ -1329,7 +1329,7 @@ Stress is a temporary response to pressure — you feel overwhelmed but believe 
     category: "Leadership",
     tags: ["Decision Making", "Decision Making Frameworks", "Leadership", "Strategy", "Problem Solving", "Critical Thinking", "Management Frameworks"],
     image: "https://julienflorkin.com/wp-content/uploads/2023/11/Decision-Making-1.webp",
-    content: \`
+    content: `
 ## What Is a Decision-Making Framework?
 
 A decision-making framework is a structured, repeatable process that helps leaders evaluate options, weigh trade-offs, and choose the best course of action. Instead of relying on gut instinct or consensus alone, frameworks provide a systematic approach to reduce bias, improve consistency, and make better decisions under uncertainty.
@@ -1701,7 +1701,7 @@ Frameworks create structured processes that override cognitive shortcuts. For ex
 - [OKR Management: The Complete Guide](/blogs/okr-management-complete-guide) — master the OKR cycle from planning to scoring
 - [Productivity Hacks for Busy Professionals](/blogs/productivity-hacks-busy-professionals) — optimize your daily decision load
 - [Try SpaceLean's AI Task Generator](/tool) — let AI handle task prioritization so you focus on strategic decisions
-    \`,
+    `,
   },
   {
     slug: "focus-deep-work-strategies",
@@ -2551,7 +2551,7 @@ Spreadsheets weren't built for OKR tracking. SpaceLean uses AI to automatically 
     category: "Goal Setting",
     tags: ["OKR", "Strategic Planning", "Goal Prioritization", "Leadership", "Business Strategy", "OKR Management"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why Strategic Goal Prioritization Matters
 
 Every organization has more goals than resources. The difference between high-performing companies and struggling ones isn't the quality of their ideas — it's their ability to **prioritize ruthlessly** and execute on the few things that matter most.
@@ -2715,7 +2715,7 @@ Yes — OKRs make resource allocation decisions explicit. When you have 3 Object
 - [OKR vs KPI: Which Is Better for Your Team?](/blogs/okr-vs-kpi) — understand how OKRs and KPIs differ
 - [Quarterly OKRs vs Annual Goals](/blogs/quarterly-okrs-vs-annual-goals) — find the right planning cadence
 - [Try SpaceLean's Free AI Task Generator](/tool) — turn OKRs into actionable task plans
-    \`,
+    `,
   },
   {
     slug: "okr-management-complete-guide",
@@ -2728,7 +2728,7 @@ Yes — OKRs make resource allocation decisions explicit. When you have 3 Object
     category: "Goal Setting",
     tags: ["OKR Management", "OKR Tracking", "OKR Scoring", "Goal Setting", "Team Alignment", "Strategic Planning", "Objectives and Key Results"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## What Is OKR Management?
 
 OKR Management is the end-to-end process of setting, tracking, reviewing, and scoring Objectives and Key Results across an organization. It's not just about writing goals — it's about building a **system** that turns strategy into measurable execution, quarter after quarter.
@@ -2984,7 +2984,7 @@ Use a combination of top-down and bottom-up: company leadership sets 2–3 strat
 - [Quarterly OKRs vs Annual Goals](/blogs/quarterly-okrs-vs-annual-goals) — choose the right planning cadence
 - [Best OKR Software Comparison](/blogs/okr-software-comparison) — find the right OKR tool for your team
 - [Try SpaceLean's Free AI Task Generator](/tool) — turn OKRs into actionable task plans instantly
-    \`,
+    `,
   },
   {
     slug: "lean-project-management-software",
@@ -2997,7 +2997,7 @@ Use a combination of top-down and bottom-up: company leadership sets 2–3 strat
     category: "Project Management",
     tags: ["Lean Project Management", "Lean Project Management Software", "Lean Scheduling Tools", "Lean Methodology", "Project Management Software", "Construction Scheduling", "AI Project Management"],
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## What Is Lean Project Management?
 
 Lean project management is a methodology focused on **maximizing value while minimizing waste**. Originating from Toyota's production system in the 1950s, lean principles have been adapted from manufacturing to software development, construction, healthcare, and every industry where efficiency matters.
@@ -3286,7 +3286,7 @@ The 8 wastes are: (1) Overproduction — building features or deliverables nobod
 - [Kanban Guide for Project Teams](/blogs/kanban-guide-project-teams) — implement lean Kanban boards
 - [Decision-Making Frameworks for Leaders](/blogs/decision-making-frameworks-leaders) — structured approaches for project decisions
 - [Try SpaceLean's Free AI Task Generator](/tool) — experience AI-powered lean task breakdown
-    \`,
+    `,
   },
   {
     slug: "sprint-planning-engineering-teams",
@@ -3299,7 +3299,7 @@ The 8 wastes are: (1) Overproduction — building features or deliverables nobod
     category: "Engineering",
     tags: ["Sprint Planning", "Engineering Sprint Scheduling", "Agile Sprint Planner", "Sprint Scheduling Tool", "Engineering Team Project Management", "Scrum Sprint Planning", "Agile Project Management"],
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## What Is Sprint Planning?
 
 Sprint planning is the agile ceremony that kicks off every sprint — typically a 1–4 week development cycle. The goal: decide exactly what your engineering team will build, in what order, and how long it will take.
@@ -3347,9 +3347,9 @@ Sprint goals:
 Over-commitment is the #1 cause of failed sprints. Use **velocity** — average story points completed per sprint — as your capacity guide.
 
 Capacity formula:
-```
+\`\`\`
 Sprint capacity = (team members × working days) × individual productivity factor
-```
+\`\`\`
 
 For a team of 6 engineers in a 10-day sprint at 6 productive hours/day per person:
 - Gross capacity: 6 × 10 × 6 = 360 hours
@@ -3447,7 +3447,7 @@ AI sprint planning tools like SpaceLean automate steps 2–4:
 "Build a notification system that sends email and push alerts when a task is overdue, with user preferences for frequency and type."
 
 **Step 2: AI generates sprint tasks**
-```
+\`\`\`
 Sprint: Notification System v1
 
 Critical Path Tasks:
@@ -3462,7 +3462,7 @@ Critical Path Tasks:
 9. QA + bug fixes (2 pts) [depends on #3, #4, #6, #7]
 
 Total: 28 story points | Est. duration: 9 working days for 3 engineers
-```
+\`\`\`
 
 **Step 3: Review, adjust, assign**
 Engineers review the AI-generated plan, adjust estimates based on team-specific context, and assign tasks to owners. What used to take 90 minutes takes 20.
@@ -3547,7 +3547,7 @@ Backlog refinement (grooming) happens 1–2 times per sprint to ensure the backl
 - [SpaceLean vs Linear](/compare/spacelean-vs-linear) — AI sprint planning vs engineering issue tracker
 - [SpaceLean vs Asana](/compare/spacelean-vs-asana) — compare sprint management tools
 - [Agile Methodology: A Beginner's Guide](/blogs/agile-methodology-beginners-guide) — understand the full agile framework
-    \`,
+    `,
   },
   {
     slug: "okr-vs-kpi",
@@ -3560,7 +3560,7 @@ Backlog refinement (grooming) happens 1–2 times per sprint to ensure the backl
     category: "OKR Management",
     tags: ["OKR vs KPI", "OKR", "KPI", "Goal Setting", "Performance Management", "OKR Framework", "Business Strategy"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## OKR vs KPI: The Core Difference
 
 Every organization measures performance — but **how** you measure it determines whether your team makes progress or just tracks it.
@@ -3759,7 +3759,7 @@ Best practice is 5–10 KPIs per team or function. Tracking more creates noise a
 - [Free OKR Templates for Every Team](/blogs/okr-templates-every-team) — 40+ copy-paste OKR examples
 - [OKR vs SMART Goals: Complete Comparison](/blogs/okr-vs-smart-goals) — another popular goal framework comparison
 - [SpaceLean OKR Tracking Tool](/features) — track OKRs and KPIs in one AI-powered platform
-    \`,
+    `,
   },
   {
     slug: "okr-vs-smart-goals",
@@ -3772,7 +3772,7 @@ Best practice is 5–10 KPIs per team or function. Tracking more creates noise a
     category: "OKR Management",
     tags: ["OKR vs SMART Goals", "OKR", "SMART Goals", "Goal Setting", "Performance Management", "OKR Framework", "Goal Framework"],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## OKR vs SMART Goals: Two Powerful Frameworks, Different Results
 
 If you've tried to improve your team's goal-setting, you've almost certainly encountered both **OKRs** and **SMART goals**. They're the two most widely used goal frameworks in business — but they're designed with different purposes in mind.
@@ -3995,7 +3995,7 @@ OKRs tend to work better for remote teams because their transparency and cascade
 - [Free OKR Templates for Every Team](/blogs/okr-templates-every-team) — 40+ copy-paste OKR examples by function
 - [Quarterly OKRs vs Annual Goals](/blogs/quarterly-okrs-vs-annual-goals) — find the right OKR cadence for your team
 - [SpaceLean OKR & Goal Tracking](/features) — track OKRs and SMART goals in one AI-powered workspace
-    \`,
+    `,
   },
   {
     slug: "quarterly-okrs-vs-annual-goals",
@@ -4008,7 +4008,7 @@ OKRs tend to work better for remote teams because their transparency and cascade
     category: "OKR Management",
     tags: ["Quarterly OKRs", "Annual Goals", "OKR Cadence", "OKR Planning", "Goal Setting", "Strategic Planning", "OKR Framework"],
     image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## The Planning Cadence Question Every Leader Faces
 
 "Should we set goals annually or quarterly?" is one of the most debated questions in organizational planning. The answer has massive implications for how your team operates, adapts, and achieves results.
@@ -4208,7 +4208,7 @@ Best practice is 3–5 Objectives per team or level, with 2–5 Key Results per 
 - [OKR vs SMART Goals: Complete Comparison](/blogs/okr-vs-smart-goals) — compare the two most popular goal frameworks
 - [Free OKR Templates for Every Team](/blogs/okr-templates-every-team) — quarterly OKR templates for every function
 - [SpaceLean OKR Planning & Tracking](/features) — AI-powered OKR management with quarterly cycle support
-    \`,
+    `,
   },
   {
     slug: "okr-software-comparison",
@@ -4221,7 +4221,7 @@ Best practice is 3–5 Objectives per team or level, with 2–5 Key Results per 
     category: "OKR Management",
     tags: ["OKR Software", "OKR Tools", "Best OKR Software", "OKR Software Comparison", "SpaceLean", "Lattice", "Asana OKR", "Notion OKR"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why OKR Software Matters
 
 Teams that set OKRs in spreadsheets achieve them at roughly half the rate of teams using dedicated OKR software. The reason isn't magic — it's visibility. OKR software makes goals transparent, check-ins consistent, and progress measurable in real time.
@@ -4462,7 +4462,7 @@ Yes, but research consistently shows that OKR tracking in spreadsheets leads to 
 - [OKR vs SMART Goals: Complete Comparison](/blogs/okr-vs-smart-goals) — compare the two most popular goal frameworks
 - [Free OKR Templates for Every Team](/blogs/okr-templates-every-team) — 40+ copy-paste OKR examples
 - [Try SpaceLean Free](/tool) — start tracking OKRs with AI-powered task generation today
-    \`,
+    `,
   },
   {
     slug: "lean-project-management-techniques",
@@ -4475,7 +4475,7 @@ Yes, but research consistently shows that OKR tracking in spreadsheets leads to 
     category: "Project Management",
     tags: ["lean project management", "lean techniques", "project efficiency", "waste elimination", "continuous improvement"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why Lean Project Management Matters in 2026
 
 Lean project management isn't just for manufacturing anymore. In 2026, software teams, marketing departments, and even construction firms are adopting Lean principles to ship faster, waste less, and deliver more value to customers.
@@ -4558,7 +4558,7 @@ Absolutely. Kanban boards, WIP limits, continuous improvement retrospectives, an
 - [Lean vs Agile: Which Methodology?](/blogs/lean-vs-agile-methodology) — detailed comparison of both approaches
 - [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your visual workflow
 - [SpaceLean for Startups](/solutions/startups) — Lean project management built for speed
-    \`,
+    `,
   },
   {
     slug: "best-productivity-apps-teams-2026",
@@ -4571,7 +4571,7 @@ Absolutely. Kanban boards, WIP limits, continuous improvement retrospectives, an
     category: "Tools & Reviews",
     tags: ["productivity apps", "team tools", "project management tools", "best productivity software", "team collaboration"],
     image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## The 2026 Productivity App Landscape
 
 The team productivity space has exploded. There are 500+ project management and collaboration tools available — and choosing the wrong stack wastes hours every week on context switching, duplicate notifications, and fragmented workflows.
@@ -4676,7 +4676,7 @@ AI task management is 4–5x faster for breaking down projects into tasks and si
 - [SpaceLean vs Notion](/compare/spacelean-vs-notion) — workspace vs. project management
 - [AI Task Management: The Future](/blogs/ai-task-management-future-productivity) — how AI is changing work
 - [Try SpaceLean Free](/tool) — AI task generation, OKR tracking, sprint planning
-    \`,
+    `,
   },
   {
     slug: "align-team-goals-company-okrs",
@@ -4689,7 +4689,7 @@ AI task management is 4–5x faster for breaking down projects into tasks and si
     category: "OKR & Goals",
     tags: ["OKR alignment", "team goals", "goal cascading", "OKR examples", "strategic alignment"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## The Alignment Problem
 
 Most companies set ambitious goals at the top — then watch them die in translation. According to research, only 14% of employees understand their company's strategy and goals. The gap between C-suite OKRs and day-to-day team work is where strategic execution breaks down.
@@ -4797,7 +4797,7 @@ Use a tool that connects individual, team, and company OKRs in a single view —
 - [Goal Setting with OKRs for Teams](/blogs/goal-setting-okrs-teams) — how to write effective team OKRs
 - [OKR Examples for Startups](/blogs/okr-examples-startups) — 30+ real startup OKR examples
 - [SpaceLean OKR Tracking](/features) — AI-powered OKR alignment and tracking
-    \`,
+    `,
   },
   {
     slug: "ai-project-management-guide",
@@ -4810,7 +4810,7 @@ Use a tool that connects individual, team, and company OKRs in a single view —
     category: "AI & Productivity",
     tags: ["AI project management", "AI task generation", "AI scheduling", "project management AI", "AI PM tools"],
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## AI Is Reshaping Project Management
 
 In 2026, AI isn't a future possibility for project management — it's a present reality. Teams using AI-powered PM tools report 40–80% reductions in planning time, 30% faster delivery, and significantly fewer missed deadlines.
@@ -4909,7 +4909,7 @@ AI PM tools need project history (past tasks, timelines, outcomes) to improve pr
 - [Free AI Task Generator](/tool) — try AI task generation now
 - [SpaceLean vs Asana](/compare/spacelean-vs-asana) — compare AI PM capabilities
 - [Sprint Planning for Engineering Teams](/blogs/sprint-planning-engineering-teams) — AI sprint planning guide
-    \`,
+    `,
   },
   {
     slug: "okr-examples-startups",
@@ -4922,7 +4922,7 @@ AI PM tools need project history (past tasks, timelines, outcomes) to improve pr
     category: "OKR & Goals",
     tags: ["OKR examples", "startup OKRs", "OKR templates", "startup goals", "team OKR examples"],
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why Startups Need OKRs
 
 Startups move fast — but speed without direction is chaos. OKRs (Objectives and Key Results) give fast-moving teams a framework to align effort, measure progress, and make hard prioritization decisions every quarter.
@@ -5041,7 +5041,7 @@ As soon as you have 5+ people or 2+ teams. Before that, a simple prioritized tas
 - [OKR Templates for Every Team](/blogs/okr-templates-every-team) — 40+ copy-paste templates
 - [How to Align Team Goals with Company OKRs](/blogs/align-team-goals-company-okrs) — cascading guide
 - [SpaceLean for Startups](/solutions/startups) — OKR + sprint planning built for speed
-    \`,
+    `,
   },
   {
     slug: "lean-vs-agile-methodology",
@@ -5054,7 +5054,7 @@ As soon as you have 5+ people or 2+ teams. Before that, a simple prioritized tas
     category: "Project Management",
     tags: ["lean vs agile", "agile methodology", "lean methodology", "project management methodology", "scrumban"],
     image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Lean vs Agile: The Core Difference
 
 Both Lean and Agile aim to deliver value faster — but they approach the problem differently.
@@ -5141,7 +5141,7 @@ Scrumban combines Scrum's time-boxed sprints with Kanban's pull-based flow and W
 - [Agile Methodology: A Beginner's Guide](/blogs/agile-methodology-beginners-guide) — complete Agile introduction
 - [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your Kanban workflow
 - [Scrum vs Kanban](/blogs/scrum-vs-kanban-comparison) — detailed framework comparison
-    \`,
+    `,
   },
   {
     slug: "quarterly-review-guide",
@@ -5154,7 +5154,7 @@ Scrumban combines Scrum's time-boxed sprints with Kanban's pull-based flow and W
     category: "OKR & Goals",
     tags: ["quarterly review", "QBR", "OKR review", "quarterly planning", "business review"],
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why Quarterly Reviews Matter
 
 Quarterly reviews are the heartbeat of OKR-driven organizations. They're where you score the quarter just finished, celebrate wins, analyze misses, and set direction for the next 90 days.
@@ -5238,7 +5238,7 @@ This is exactly what the review is for. Document the misalignment, agree on a co
 - [How to Align Team Goals with Company OKRs](/blogs/align-team-goals-company-okrs) — cascading framework
 - [Quarterly OKRs vs Annual Goals](/blogs/quarterly-okrs-vs-annual-goals) — why quarterly wins
 - [SpaceLean OKR Tracking](/features) — real-time OKR dashboards and scoring
-    \`,
+    `,
   },
   {
     slug: "manage-multiple-projects",
@@ -5251,7 +5251,7 @@ This is exactly what the review is for. Document the misalignment, agree on a co
     category: "Productivity",
     tags: ["multi-project management", "project prioritization", "time management", "workload management", "project portfolio"],
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## The Multi-Project Problem
 
 Managing one project is hard. Managing three, five, or ten simultaneously is where most project managers break down. The challenge isn't individual project complexity — it's the cognitive load of context-switching, competing priorities, and cascading dependencies across projects.
@@ -5347,7 +5347,7 @@ One tool. Using separate tools for different projects creates information silos 
 - [Focus & Deep Work Strategies](/blogs/focus-deep-work-strategies) — protect your attention
 - [Delegation Mastery: A Leader's Guide](/blogs/delegation-guide-leaders) — delegate effectively
 - [Free AI Task Generator](/tool) — break down multiple projects instantly
-    \`,
+    `,
   },
   {
     slug: "delegation-guide-leaders",
@@ -5360,7 +5360,7 @@ One tool. Using separate tools for different projects creates information silos 
     category: "Leadership",
     tags: ["delegation", "leadership skills", "team management", "empowerment", "management guide"],
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why Leaders Struggle to Delegate
 
 Delegation is the most important and least practiced leadership skill. Most leaders know they should delegate more — but they don't, because:
@@ -5462,7 +5462,7 @@ Provide specific feedback and ask them to revise. Don't take the work back — t
 - [How to Manage Multiple Projects](/blogs/manage-multiple-projects) — multi-project delegation strategies
 - [Burnout Prevention Strategies](/blogs/burnout-prevention-strategies-teams) — avoid overload
 - [SpaceLean for Product Teams](/solutions/product-teams) — AI-powered task delegation
-    \`,
+    `,
   },
   {
     slug: "digital-minimalism-professionals",
@@ -5475,7 +5475,7 @@ Provide specific feedback and ask them to revise. Don't take the work back — t
     category: "Productivity",
     tags: ["digital minimalism", "focus", "deep work", "digital wellness", "productivity"],
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## The Digital Overload Crisis
 
 The average professional uses 9.4 apps per day, receives 120+ notifications, and checks their phone 96 times. The result: fragmented attention, shallow work, and the persistent feeling of being busy without being productive.
@@ -5574,7 +5574,7 @@ Most professionals report noticeable focus improvements within 1 week and signif
 - [Burnout Prevention Strategies](/blogs/burnout-prevention-strategies-teams) — avoid digital exhaustion
 - [Smart Calendar Scheduling Tips](/blogs/smart-calendar-scheduling-tips) — optimize your calendar
 - [Productivity Hacks for Busy Professionals](/blogs/productivity-hacks-busy-professionals) — 15 actionable tips
-    \`,
+    `,
   },
   {
     slug: "product-roadmap-planning-guide",
@@ -5587,7 +5587,7 @@ Most professionals report noticeable focus improvements within 1 week and signif
     category: "Product Management",
     tags: ["product roadmap", "roadmap planning", "product strategy", "feature prioritization", "product management"],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## What Is a Product Roadmap?
 
 A product roadmap is a strategic communication tool that shows where your product is headed and why. It translates business strategy into a sequence of product initiatives, organized by time horizon and priority.
@@ -5686,7 +5686,7 @@ Use a tool that connects roadmap initiatives to OKRs and sprint backlogs — lik
 - [Sprint Planning for Engineering Teams](/blogs/sprint-planning-engineering-teams) — connect roadmap to sprints
 - [OKR Management: The Complete Guide](/blogs/okr-management-complete-guide) — align roadmaps with OKRs
 - [Agile Methodology: Beginner's Guide](/blogs/agile-methodology-beginners-guide) — iterative delivery framework
-    \`,
+    `,
   },
   {
     slug: "project-management-small-teams",
@@ -5699,7 +5699,7 @@ Use a tool that connects roadmap initiatives to OKRs and sprint backlogs — lik
     category: "Project Management",
     tags: ["small team project management", "lightweight PM", "team tools", "startup project management", "team productivity"],
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Small Teams Need Different PM Approaches
 
 Enterprise project management frameworks (PMI, PRINCE2, SAFe) are designed for organizations with hundreds of people. Applying them to a 5-person team creates more overhead than value.
@@ -5786,7 +5786,7 @@ Add freelancers to your task board with clear task descriptions, acceptance crit
 - [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your board
 - [Best Productivity Apps for Teams](/blogs/best-productivity-apps-teams-2026) — tool comparison guide
 - [Free AI Task Generator](/tool) — break down projects instantly
-    \`,
+    `,
   },
   {
     slug: "scrum-vs-kanban-comparison",
@@ -5799,7 +5799,7 @@ Add freelancers to your task board with clear task descriptions, acceptance crit
     category: "Project Management",
     tags: ["scrum vs kanban", "agile frameworks", "scrum", "kanban", "agile project management"],
     image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Scrum vs Kanban: Two Flavors of Agile
 
 Both Scrum and Kanban are Agile frameworks — but they solve different problems. Scrum provides structure and cadence. Kanban provides flow and flexibility. Understanding when to use each (or both) is critical for team performance.
@@ -5891,7 +5891,7 @@ Start with Scrum if your team is new to Agile. The structure (sprints, ceremonie
 - [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — optimize your Kanban board
 - [Lean vs Agile: Which Methodology?](/blogs/lean-vs-agile-methodology) — broader methodology comparison
 - [Sprint Planning for Engineering Teams](/blogs/sprint-planning-engineering-teams) — Scrum sprint planning guide
-    \`,
+    `,
   },
   {
     slug: "construction-project-management-ai",
@@ -5904,7 +5904,7 @@ Start with Scrum if your team is new to Agile. The structure (sprints, ceremonie
     category: "Construction",
     tags: ["AI construction scheduling", "construction project management", "BIM scheduling", "construction AI", "4D construction planning"],
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## The Problem with Traditional Construction Scheduling
 
 Construction projects are notoriously late and over-budget. Industry data shows 77% of construction projects finish late, with an average cost overrun of 28%. The root cause? Scheduling processes that haven't fundamentally changed since the 1960s.
@@ -5999,7 +5999,7 @@ Most AI construction platforms support IFC (Industry Foundation Classes), Revit 
 - [Lean Project Management Software Guide](/blogs/lean-project-management-software) — Lean principles for construction
 - [SpaceLean for Owners](/solutions/for-owners) — real-time project visibility
 - [Try SpaceLean Free](/tool) — AI-powered scheduling and task generation
-    \`,
+    `,
   },
   {
     slug: "startup-growth-metrics-okrs",
@@ -6012,7 +6012,7 @@ Most AI construction platforms support IFC (Industry Foundation Classes), Revit 
     category: "OKR & Goals",
     tags: ["startup metrics", "startup KPIs", "growth metrics", "OKR KPIs", "startup analytics"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    content: \`
+    content: `
 ## Why Metrics Matter for Startups
 
 Startups drown in data but starve for insight. Tracking everything means tracking nothing. The best startups focus on 8–12 metrics that directly measure growth, retention, and unit economics — then use OKRs to set targets and drive improvement.
@@ -6163,7 +6163,7 @@ Yes. Metric transparency is a core principle of OKR-driven organizations. When e
 - [OKR vs KPI: Which Is Better?](/blogs/okr-vs-kpi) — understand the relationship between KPIs and OKRs
 - [SpaceLean for Startups](/solutions/startups) — OKR tracking and sprint planning
 - [How to Align Team Goals with Company OKRs](/blogs/align-team-goals-company-okrs) — cascading framework
-    \`,
+    `,
   },
 ];
 

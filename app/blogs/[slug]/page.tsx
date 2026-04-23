@@ -16,6 +16,7 @@ function extractFaqFromContent(content: string): { question: string; answer: str
   const faqBlocks = faqSection.split(/###\s+/).filter(Boolean);
   return faqBlocks.map((block) => {
     const lines = block.trim().split("\n").filter(Boolean);
+    if (!lines.length) return { question: "", answer: "" };
     const question = lines[0].trim();
     const answer = lines.slice(1).join(" ").trim();
     return { question, answer };
