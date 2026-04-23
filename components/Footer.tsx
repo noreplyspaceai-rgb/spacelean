@@ -40,6 +40,10 @@ const footerLinks = {
       { label: "For General Contractors", href: "/solutions/for-gcs" },
       { label: "For Owners", href: "/solutions/for-owners" },
       { label: "For Consultants", href: "/solutions/for-consultants" },
+      { label: "For Engineering Teams", href: "/solutions/engineering-teams" },
+      { label: "For Remote Teams", href: "/solutions/remote-teams" },
+      { label: "For Startups", href: "/solutions/startups" },
+      { label: "For Product Teams", href: "/solutions/product-teams" },
       { label: "Industrial Projects", href: "/solutions/industrial" },
       { label: "Infrastructure Projects", href: "/solutions/infrastructure" },
       { label: "Commercial Projects", href: "/solutions/commercial" },
@@ -51,7 +55,16 @@ const footerLinks = {
 
 const footerBaseLinks = [
   { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
   { label: "AI Task Generator", href: "/tool" },
+  { label: "Engineering Sprint Scheduling", href: "/solutions/engineering-teams" },
+  { label: "Sprint Planning Guide", href: "/blogs/sprint-planning-engineering-teams" },
+  { label: "Lean PM Software", href: "/blogs/lean-project-management-software" },
+  { label: "OKR Management Guide", href: "/blogs/okr-management-complete-guide" },
+  { label: "OKR Templates", href: "/blogs/okr-templates-every-team" },
+  { label: "OKR vs KPI", href: "/blogs/okr-vs-kpi" },
+  { label: "OKR vs SMART Goals", href: "/blogs/okr-vs-smart-goals" },
+  { label: "Best OKR Software", href: "/blogs/okr-software-comparison" },
   { label: "Comparisons", href: "/compare" },
   { label: "Blog", href: "/blogs" },
   { label: "Request a Demo", href: "/request-a-demo" },
@@ -163,6 +176,7 @@ export default function Footer() {
             <div className="flex gap-6">
               <Link href="/privacy" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Terms of Service</Link>
+              <Link href="/security" className="text-[12px] text-stone-600 hover:text-stone-900 transition-colors">Security</Link>
             </div>
           </div>
 

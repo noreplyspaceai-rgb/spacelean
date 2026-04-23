@@ -26,7 +26,7 @@ const SLIDES = [
   },
   {
     id: 2,
-    videoSrc: "/videos/Space lean Systems Infrastructure Engineering Software.mp4",
+    videoSrc: "/videos/converted_V1.mp4",
     poster: "/videos/hero-3-poster.jpg",
     eyebrow: "Built for AEC Teams",
     heading: "Less Planning Time.\nMore Build Time.",
@@ -112,7 +112,7 @@ export default function VideoHero() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload={i === 0 ? "auto" : "none"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             i === current ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
@@ -169,7 +169,7 @@ export default function VideoHero() {
         <button
           onClick={() => setPaused((p) => !p)}
           aria-label={paused ? "Play slideshow" : "Pause slideshow"}
-          className="w-9 h-9 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          className="w-12 h-12 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors"
         >
           {paused
             ? <Play className="w-4 h-4 fill-white" />
@@ -183,7 +183,7 @@ export default function VideoHero() {
             key={s.id}
             onClick={() => { setPaused(false); goTo(i); }}
             aria-label={`Go to slide ${i + 1}`}
-            className="relative rounded-full flex items-center justify-center"
+            className="relative rounded-full flex items-center justify-center w-12 h-12"
           >
             <svg width="32" height="32" viewBox="0 0 32 32" className="-rotate-90">
               <circle

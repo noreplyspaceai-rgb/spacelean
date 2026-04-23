@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Script from "next/script";
 import {
   Play, Sparkles,
   Brain, HardHat, Cpu, Layers, Ruler, Zap, BarChart2, Shield,
@@ -233,12 +234,7 @@ export default function HeroSection() {
   const modelRef = useRef<any>(null);
 
   useEffect(() => {
-    const existing = document.querySelector('script[src*="model-viewer.min.js"]');
-    if (existing) return;
-    const script = document.createElement("script");
-    script.type = "module";
-    script.src = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js";
-    document.head.appendChild(script);
+    // Model-viewer script loaded via Next.js Script component below
   }, []);
 
   useEffect(() => {
@@ -265,6 +261,13 @@ export default function HeroSection() {
 
   return (
     <section className="relative overflow-hidden">
+
+      {/* Model Viewer Script - loaded after page interactive */}
+      <Script
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        type="module"
+        strategy="lazyOnload"
+      />
 
       {/* Modals */}
       <VideoModal

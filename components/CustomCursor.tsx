@@ -20,18 +20,16 @@ export default function CustomCursor() {
         };
 
         const handleMouseOver = (e: MouseEvent) => {
-            if ((e.target as HTMLElement).tagName === 'BUTTON' ||
-                (e.target as HTMLElement).tagName === 'A' ||
-                (e.target as HTMLElement).closest('button') ||
-                (e.target as HTMLElement).closest('a')) {
-                setIsHovering(true);
-            } else {
-                setIsHovering(false);
-            }
+            const target = e.target as HTMLElement;
+            const hovering = target.tagName === 'BUTTON' ||
+                target.tagName === 'A' ||
+                !!target.closest('button') ||
+                !!target.closest('a');
+            setIsHovering(hovering);
         };
 
-        window.addEventListener('mousemove', moveCursor);
-        window.addEventListener('mouseover', handleMouseOver);
+        window.addEventListener('mousemove', moveCursor, { passive: true });
+        window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
         return () => {
             window.removeEventListener('mousemove', moveCursor);

@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { getAllBlogSlugs } from "@/lib/blog-data";
 import { getAllSolutionSlugs } from "@/lib/solutions-data";
+import { getAllCoreFeatureSlugs } from "@/components/space-lean-core/data";
+import { getAllComparisonSlugs } from "@/lib/compare-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://spacelean.ai";
@@ -15,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/features`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/space-lean-core`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.9,
@@ -38,10 +46,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/compare`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tool`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/request-a-demo`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.5,
     },
   ];
 
@@ -63,5 +89,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...solutionPages, ...blogPages];
+  // Core feature pages
+  const coreFeatureSlugs = getAllCoreFeatureSlugs();
+  const coreFeaturePages = coreFeatureSlugs.map((slug) => ({
+    url: `${baseUrl}/space-lean-core/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  // Comparison pages
+  const comparisonSlugs = getAllComparisonSlugs();
+  const comparisonPages = comparisonSlugs.map((slug) => ({
+    url: `${baseUrl}/compare/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticPages,
+    ...solutionPages,
+    ...blogPages,
+    ...coreFeaturePages,
+    ...comparisonPages,
+  ];
 }
