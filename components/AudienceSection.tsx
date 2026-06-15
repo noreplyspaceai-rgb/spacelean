@@ -92,7 +92,7 @@ export default function AudienceSection() {
                 <p className="text-white/60 text-lg mb-1">{a.label}</p>
                 <h3 className="!text-white text-3xl font-bold mb-4">{a.title}</h3>
                 <p className="text-white/70 text-sm leading-relaxed mb-7 max-w-xs">{a.body}</p>
-                <button className="inline-flex items-center gap-3 border border-white/40 hover:border-white/80 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
+                <button suppressHydrationWarning className="inline-flex items-center gap-3 border border-white/40 hover:border-white/80 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
                   {a.cta}
                   <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/15 text-xs">›</span>
                 </button>

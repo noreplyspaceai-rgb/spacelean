@@ -425,7 +425,126 @@ export const comparisons: ComparisonData[] = [
             }
         ],
         verdict: 'Choose Visilean if you want a clean 4D visualization tool with good Last Planner System support and you have the planning bandwidth to manually sequence projects. Choose SpaceLean if you want AI to handle sequencing and real-time adaptation, so your team can focus on execution and constraint resolution instead of constant rescheduling.'
-    }
+    },
+    {
+    slug: 'spacelean-vs-space-lean',
+    competitorName: 'SPACE Lean',
+    title: 'SpaceLean vs SPACE Lean: AI Decision Engine vs Digital Lean Tool',
+    description: 'Compare SpaceLean vs SPACE Lean. Discover how SpaceLean’s AI-driven scheduling and constraint intelligence delivers a 10× leap over traditional Lean workflow tools.',
+    logo: 'space-lean',
+    color: '#6B7280',
+    summary: 'SPACE Lean digitizes Lean Construction workflows like Last Planner System, pull planning, and constraint tracking. However, it relies heavily on manual inputs and human decision-making. SpaceLean goes beyond digitization—acting as an AI-powered decision engine that predicts delays, auto-generates plans, and continuously optimizes execution in real-time.',
+
+    pros: [
+        'Strong Last Planner System support',
+        'Good for structured Lean workflows',
+        'Collaborative planning interface',
+        'Reliable for manual pull planning and tracking'
+    ],
+
+    cons: [
+        'Highly manual planning process',
+        'No AI-driven decision making',
+        'Limited predictive capabilities',
+        'Constraint tracking requires manual input',
+        'No real-time adaptive scheduling',
+        'No computer vision or automation in progress tracking'
+    ],
+
+    features: [
+        {
+            category: 'Planning & Scheduling',
+            items: [
+                { name: 'Pull Planning', spacelean: 'AI Auto-Generated', competitor: 'Manual Sticky Notes / Boards' },
+                { name: 'Lookahead Planning', spacelean: 'AI Dynamic (Auto-updated)', competitor: 'Static 3–6 week planning' },
+                { name: 'Schedule Optimization', spacelean: 'AI-driven', competitor: 'Planner dependent' },
+                { name: 'Planning Speed', spacelean: 'Minutes with AI', competitor: 'Hours / Days manually' },
+            ]
+        },
+        {
+            category: 'Constraint & Risk Management',
+            items: [
+                { name: 'Constraint Detection', spacelean: 'AI auto-detection (RFIs, drawings, photos)', competitor: 'Manual tracking' },
+                { name: 'Predictive Delay Alerts', spacelean: 'AI risk prediction', competitor: 'After issue occurs' },
+                { name: 'Constraint Heatmap', spacelean: true, competitor: false },
+                { name: 'Risk Scoring Engine', spacelean: 'Probabilistic AI', competitor: false },
+            ]
+        },
+        {
+            category: 'Execution & Intelligence',
+            items: [
+                { name: 'PPC (Percent Plan Complete)', spacelean: 'Predictive (ML-based)', competitor: 'Historical tracking only' },
+                { name: 'Trade Coordination', spacelean: 'AI clash detection', competitor: 'Manual coordination' },
+                { name: 'Daily Huddle Automation', spacelean: 'AI-generated', competitor: 'Manual preparation' },
+                { name: 'Decision Support', spacelean: 'AI recommendations + simulations', competitor: 'Human-driven' },
+            ]
+        },
+        {
+            category: 'Data & Automation',
+            items: [
+                { name: 'Progress Tracking', spacelean: 'Computer vision + AI', competitor: 'Manual updates' },
+                { name: 'Site Data Capture', spacelean: 'Voice-enabled + automated', competitor: 'Forms & checklists' },
+                { name: 'Learning from Past Projects', spacelean: 'Continuous AI learning', competitor: 'Limited reuse' },
+                { name: 'Waste Detection', spacelean: 'AI-driven insights', competitor: 'Manual interpretation' },
+            ]
+        }
+    ],
+
+    faqs: [
+        {
+            question: "What is the main difference between SPACE Lean and SpaceLean?",
+            answer: "SPACE Lean digitizes Lean workflows like pull planning and constraint tracking, but relies on human planners to make decisions. SpaceLean acts as an AI decision engine—automatically generating plans, predicting risks, and optimizing execution in real-time."
+        },
+        {
+            question: "Does SPACE Lean provide predictive analytics?",
+            answer: "No. SPACE Lean primarily tracks historical performance like PPC. SpaceLean predicts future PPC, delays, and constraint risks using machine learning models."
+        },
+        {
+            question: "Can SPACE Lean automatically detect constraints?",
+            answer: "No. Constraints must be manually identified and logged by users. SpaceLean automatically detects constraints from RFIs, drawings, specifications, and even site photos."
+        },
+        {
+            question: "Is SpaceLean replacing Lean methodology?",
+            answer: "No. SpaceLean enhances Lean practices by automating them. It acts like an AI Lean Planner—making Lean faster, smarter, and more predictive without removing core principles."
+        }
+    ],
+
+    featuresDeepDive: [
+        {
+            title: "Manual Lean vs Autonomous Lean",
+            description: "SPACE Lean depends on planners to create pull plans, identify constraints, and manage workflows. SpaceLean automates these processes using AI—generating pull plans, detecting risks, and continuously optimizing schedules without manual intervention."
+        },
+        {
+            title: "Reactive vs Predictive Planning",
+            description: "SPACE Lean helps teams react to issues once they are identified. SpaceLean predicts delays, constraint chains, and productivity drops weeks in advance—allowing teams to act before problems impact the schedule."
+        },
+        {
+            title: "Data Entry vs Data Intelligence",
+            description: "SPACE Lean requires teams to input and manage data manually. SpaceLean captures data automatically via voice, integrations, and computer vision—then transforms it into actionable intelligence."
+        },
+        {
+            title: "Workflow Tool vs Decision Engine",
+            description: "SPACE Lean is a workflow tool that organizes planning activities. SpaceLean is a decision engine that actively guides project execution, suggesting optimal actions and simulating outcomes."
+        }
+    ],
+
+    useCases: [
+        {
+            title: "Teams Practicing Lean Construction",
+            description: "If you're already using Lean methodologies, SpaceLean accelerates adoption by automating pull planning, lookahead updates, and constraint detection—reducing manual effort significantly."
+        },
+        {
+            title: "Projects with High Complexity & Risk",
+            description: "For projects with multiple trades, tight deadlines, and high uncertainty, SpaceLean’s predictive AI helps prevent delays before they occur—something SPACE Lean cannot do."
+        },
+        {
+            title: "Firms Scaling Across Multiple Projects",
+            description: "SpaceLean learns across all projects—improving planning accuracy, trade coordination, and risk detection over time. SPACE Lean operates project-by-project without intelligence carryover."
+        }
+    ],
+
+    verdict: 'Choose SPACE Lean if you want a structured, digital approach to Lean Construction workflows and are comfortable with manual planning. Choose SpaceLean if you want a 10× leap in productivity through AI-driven planning, predictive intelligence, and autonomous decision support.'
+}
 ];
 
 export function getComparisonBySlug(slug: string) {

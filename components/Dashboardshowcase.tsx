@@ -203,6 +203,7 @@ function SlideCard({
         <button
           onClick={prev}
           aria-label="Previous slide"
+          suppressHydrationWarning
           className="w-9 h-9 rounded-full bg-black/5 border border-black/10 flex items-center justify-center text-neutral-600 hover:bg-cyan-500 hover:border-cyan-500 hover:text-white transition-all duration-300"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
@@ -214,6 +215,7 @@ function SlideCard({
               key={i}
               onClick={() => setActiveSlide(i, i > activeSlide ? 1 : -1)}
               aria-label={`Go to slide ${i + 1}`}
+              suppressHydrationWarning
               className="p-0 flex items-center justify-center"
             >
               <span
@@ -230,6 +232,7 @@ function SlideCard({
         <button
           onClick={next}
           aria-label="Next slide"
+          suppressHydrationWarning
           className="w-9 h-9 rounded-full bg-black/5 border border-black/10 flex items-center justify-center text-neutral-600 hover:bg-cyan-500 hover:border-cyan-500 hover:text-white transition-all duration-300"
         >
           <ArrowRight className="w-3.5 h-3.5" />

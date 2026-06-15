@@ -110,10 +110,12 @@ export default function Footer() {
                   type="email"
                   placeholder="you@company.com"
                   className="w-full rounded-full border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400"
+                  suppressHydrationWarning
                 />
                 <button
                   type="button"
                   className="rounded-full bg-stone-900 px-4 py-2 text-sm font-semibold text-white hover:bg-stone-700 transition-colors"
+                  suppressHydrationWarning
                 >
                   Submit
                 </button>

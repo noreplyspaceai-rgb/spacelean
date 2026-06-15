@@ -100,6 +100,7 @@ function ZoomBtn({
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
+      suppressHydrationWarning
       className={`
         w-8 h-8 flex items-center justify-center rounded-lg
         border border-black/10 bg-white/80 backdrop-blur-sm shadow-sm
@@ -123,7 +124,7 @@ interface ModelViewer3DProps {
 }
 
 export default function ModelViewer3D({
-  src = "/city_pack_8.glb",
+  src = "/ImageToStl.com_building-1.glb",
   alt = "3D building model",
   onReady,
 }: ModelViewer3DProps) {

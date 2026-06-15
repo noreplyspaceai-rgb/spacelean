@@ -48,6 +48,7 @@ export default function StartFreeTrialButton({
         type={type}
         className={mergedClassName}
         onClick={handleButtonClick}
+        suppressHydrationWarning
         {...props}
       >
         {label}

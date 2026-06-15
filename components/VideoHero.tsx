@@ -169,6 +169,7 @@ export default function VideoHero() {
         <button
           onClick={() => setPaused((p) => !p)}
           aria-label={paused ? "Play slideshow" : "Pause slideshow"}
+          suppressHydrationWarning
           className="w-9 h-9 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
         >
           {paused
@@ -183,6 +184,7 @@ export default function VideoHero() {
             key={s.id}
             onClick={() => { setPaused(false); goTo(i); }}
             aria-label={`Go to slide ${i + 1}`}
+            suppressHydrationWarning
             className="relative rounded-full flex items-center justify-center"
           >
             <svg width="32" height="32" viewBox="0 0 32 32" className="-rotate-90">
