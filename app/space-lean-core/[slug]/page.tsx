@@ -33,6 +33,12 @@ export async function generateMetadata({
     description: feature.description,
     alternates: {
       canonical: `/space-lean-core/${feature.slug}`,
+      languages: {
+        "en-US": `/space-lean-core/${feature.slug}`,
+        "en-GB": `/space-lean-core/${feature.slug}`,
+        "en-IN": `/space-lean-core/${feature.slug}`,
+        "x-default": `/space-lean-core/${feature.slug}`,
+      },
     },
     openGraph: {
       title: feature.title,

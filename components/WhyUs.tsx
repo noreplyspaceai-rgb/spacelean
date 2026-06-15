@@ -152,6 +152,9 @@ export default function WhyUs() {
               <img
                 src="/4dmodel.gif"
                 alt="Construction site planning"
+                width={600}
+                height={800}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
               />
 

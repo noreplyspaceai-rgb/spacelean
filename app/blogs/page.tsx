@@ -5,8 +5,24 @@ import { blogPosts } from '@/lib/blog-data';
 import { Sparkles, ArrowRight, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Blog | SpaceLean',
-  description: 'Insights on productivity, AI, and project management.',
+  title: 'Blog | SpaceLean — AI Construction Scheduling & Productivity Insights',
+  description:
+    'Insights on AI-powered construction scheduling, lean project management, team productivity, and the future of construction technology from the SpaceLean team.',
+  alternates: {
+    canonical: '/blogs',
+    languages: {
+      "en-US": "/blogs",
+      "en-GB": "/blogs",
+      "en-IN": "/blogs",
+      "x-default": "/blogs",
+    },
+  },
+  openGraph: {
+    title: 'Blog | SpaceLean',
+    description:
+      'Articles on AI construction scheduling, productivity, lean methodologies, and construction technology.',
+    type: 'website',
+  },
 };
 
 export default function BlogPage() {

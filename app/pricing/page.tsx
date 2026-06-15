@@ -15,6 +15,18 @@ export const metadata: Metadata = {
     ],
     alternates: {
         canonical: "/pricing",
+        languages: {
+            "en-US": "/pricing",
+            "en-GB": "/pricing",
+            "en-IN": "/pricing",
+            "x-default": "/pricing",
+        },
+    },
+    openGraph: {
+        title: "Pricing | SpaceLean — AI-Powered Task Management Plans",
+        description:
+            "Transparent pricing from free to enterprise. Find the right SpaceLean plan for your team.",
+        type: "website",
     },
 };
 
@@ -22,18 +34,27 @@ export default function PricingPage() {
     const pricingSchema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Space Lean",
+        "name": "SpaceLean",
         "url": "https://spacelean.ai",
-        "description": "Space Lean pricing page describing available subscription tiers for the AI-powered project management platform.",
-        "applicationCategory": "ProjectManagement",
+        "description": "SpaceLean AI-powered construction scheduling and project management platform. Free to start — plans for individuals, teams, and enterprises.",
+        "applicationCategory": "ConstructionManagementSoftware",
+        "screenshot": "https://spacelean.ai/dashboard.png",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1",
+        },
         "offers": [
             {
                 "@type": "Offer",
                 "name": "Free",
                 "price": "0.00",
                 "priceCurrency": "USD",
-                "url": "https://spacelean.ai/#signup",
-                "availability": "https://schema.org/InStock"
+                "url": "https://spacelean.ai/pricing",
+                "availability": "https://schema.org/InStock",
+                "description": "Free forever for individuals and small teams. AI task generation, Kanban boards, basic scheduling.",
             },
             {
                 "@type": "Offer",
@@ -45,10 +66,11 @@ export default function PricingPage() {
                     "billingIncrement": 1,
                     "price": "15.00",
                     "priceCurrency": "USD",
-                    "unitText": "month"
+                    "unitText": "month",
                 },
-                "url": "https://spacelean.ai/pricing#pro",
-                "availability": "https://schema.org/InStock"
+                "url": "https://spacelean.ai/pricing",
+                "availability": "https://schema.org/InStock",
+                "description": "Full AI scheduling, BIM integration, critical path analysis, and priority support.",
             },
             {
                 "@type": "Offer",
@@ -60,17 +82,19 @@ export default function PricingPage() {
                     "billingIncrement": 1,
                     "price": "50.00",
                     "priceCurrency": "USD",
-                    "unitText": "month"
+                    "unitText": "month",
                 },
-                "url": "https://spacelean.ai/pricing#teams",
-                "availability": "https://schema.org/InStock"
-            }
+                "url": "https://spacelean.ai/pricing",
+                "availability": "https://schema.org/InStock",
+                "description": "Everything in Pro plus SSO, audit logs, advanced analytics, and dedicated onboarding.",
+            },
         ],
         "publisher": {
             "@type": "Organization",
-            "name": "Space Lean Inc.",
-            "url": "https://spacelean.ai"
-        }
+            "name": "SpaceLean Inc.",
+            "url": "https://spacelean.ai",
+            "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+        },
     } as const;
     return (
         <main className="min-h-screen bg-[#fafafa]">

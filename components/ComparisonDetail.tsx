@@ -102,8 +102,9 @@ export default function ComparisonDetail({ data }: ComparisonDetailProps) {
             transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
             className="rounded-2xl border border-black/[0.07] overflow-hidden shadow-sm"
           >
+            <div className="overflow-x-auto">
             {/* Table header */}
-            <div className="grid grid-cols-3 bg-black/[0.02] px-8 py-5 border-b border-black/[0.06]">
+            <div className="grid grid-cols-3 bg-black/[0.02] px-4 sm:px-8 py-5 border-b border-black/[0.06] min-w-[480px]">
               <div className="col-span-1 text-[10px] font-bold text-neutral-400 uppercase tracking-widest self-center">
                 Feature Capability
               </div>
@@ -115,18 +116,18 @@ export default function ComparisonDetail({ data }: ComparisonDetailProps) {
               </div>
             </div>
 
-            <div className="divide-y divide-black/[0.04]">
+            <div className="divide-y divide-black/[0.04] min-w-[480px]">
               {data.features.map((category) => (
                 <div key={category.category}>
                   {/* Category row */}
-                  <div className="px-8 py-3 bg-black/[0.015] text-[10px] font-bold text-neutral-400 uppercase tracking-[0.2em] border-y border-black/[0.04]">
+                  <div className="px-4 sm:px-8 py-3 bg-black/[0.015] text-[10px] font-bold text-neutral-400 uppercase tracking-[0.2em] border-y border-black/[0.04]">
                     {category.category}
                   </div>
 
                   {category.items.map((item) => (
                     <div
                       key={item.name}
-                      className="grid grid-cols-3 px-8 py-5 hover:bg-black/[0.015] transition-colors"
+                      className="grid grid-cols-3 px-4 sm:px-8 py-5 hover:bg-black/[0.015] transition-colors"
                     >
                       <div className="col-span-1 text-sm font-medium text-neutral-800 flex items-center">
                         {item.name}
@@ -163,6 +164,7 @@ export default function ComparisonDetail({ data }: ComparisonDetailProps) {
                   ))}
                 </div>
               ))}
+            </div>
             </div>
           </motion.div>
         </div>

@@ -112,6 +112,9 @@ function LaptopMockup() {
               <img
                 src="/dashboard.png"
                 alt="Space Lean Dashboard"
+                width={1440}
+                height={900}
+                loading="lazy"
                 style={{ width: "100%", height: "100%", objectFit: "fill", objectPosition: "top", display: "block" }}
                 draggable={false}
               />

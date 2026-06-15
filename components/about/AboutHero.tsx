@@ -71,6 +71,7 @@ function StatCard({
 // • 35+ live projects: small but real — shows the product is in active use
 // • 99.9% uptime: infrastructure SLA, achievable from day one on modern cloud
 // • 4s avg plan: a concrete product performance claim, not a vanity metric
+//check
 const stats = [
   { number: "120", suffix: "+",  label: "Pilot Teams",    sublabel: "across 4 countries" },
   { number: "35",  suffix: "+",  label: "Live Projects",  sublabel: "in active use"      },

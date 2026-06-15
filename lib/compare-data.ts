@@ -426,125 +426,572 @@ export const comparisons: ComparisonData[] = [
         ],
         verdict: 'Choose Visilean if you want a clean 4D visualization tool with good Last Planner System support and you have the planning bandwidth to manually sequence projects. Choose SpaceLean if you want AI to handle sequencing and real-time adaptation, so your team can focus on execution and constraint resolution instead of constant rescheduling.'
     },
+
+    // ── 5. ASANA ─────────────────────────────────────────────────────────────────
     {
-    slug: 'spacelean-vs-space-lean',
-    competitorName: 'SPACE Lean',
-    title: 'SpaceLean vs SPACE Lean: AI Decision Engine vs Digital Lean Tool',
-    description: 'Compare SpaceLean vs SPACE Lean. Discover how SpaceLean’s AI-driven scheduling and constraint intelligence delivers a 10× leap over traditional Lean workflow tools.',
-    logo: 'space-lean',
-    color: '#6B7280',
-    summary: 'SPACE Lean digitizes Lean Construction workflows like Last Planner System, pull planning, and constraint tracking. However, it relies heavily on manual inputs and human decision-making. SpaceLean goes beyond digitization—acting as an AI-powered decision engine that predicts delays, auto-generates plans, and continuously optimizes execution in real-time.',
+        slug: 'spacelean-vs-asana',
+        competitorName: 'Asana',
+        title: 'SpaceLean vs Asana: AI-Powered Task Management vs Traditional Project Management',
+        description: 'Compare SpaceLean vs Asana for project and task management. See how SpaceLean\'s AI task generation, OKR tracking, and construction scheduling outperform Asana for technical teams.',
+        logo: 'asana',
+        color: '#F06A6A',
+        summary: 'Asana is one of the most popular work management platforms, offering task lists, boards, timelines, and portfolios. It excels at structured workflow management for marketing, operations, and product teams. SpaceLean targets a different need: AI-first task generation, construction-grade scheduling, and OKR alignment — making it a superior choice for teams that want intelligence built into their planning, not just a smarter to-do list.',
+        pros: [
+            'Widely adopted with large integration ecosystem (200+ apps)',
+            'Strong workflow automation rules',
+            'Excellent for marketing, HR, and ops teams',
+            'Clean UI with multiple project views',
+            'Enterprise-grade security and admin controls'
+        ],
+        cons: [
+            'No AI task generation — you build every task manually',
+            'No OKR management built in',
+            'Goals feature requires expensive Advanced/Enterprise plan ($24.99+/seat)',
+            'No construction or BIM scheduling capabilities',
+            'Timeline view limited vs dedicated scheduling tools',
+            'Gets expensive fast — 10+ person teams pay $250+/month'
+        ],
+        features: [
+            {
+                category: 'AI & Automation',
+                items: [
+                    { name: 'AI Task Generation from Description', spacelean: true, competitor: false },
+                    { name: 'AI Schedule Risk Detection', spacelean: true, competitor: false },
+                    { name: 'Workflow Automation Rules', spacelean: 'AI-driven', competitor: 'Rule-based only' },
+                    { name: 'Smart Task Prioritization', spacelean: 'AI-ranked', competitor: 'Manual' },
+                ]
+            },
+            {
+                category: 'Goal & OKR Management',
+                items: [
+                    { name: 'OKR Tracking (Objectives + Key Results)', spacelean: true, competitor: 'Goals add-on (Advanced plan only)' },
+                    { name: 'OKR → Task Cascade', spacelean: true, competitor: 'Partial' },
+                    { name: 'Quarterly OKR Cycles', spacelean: true, competitor: false },
+                    { name: 'OKR Scoring (0.0–1.0)', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Project Views',
+                items: [
+                    { name: 'Kanban Board', spacelean: true, competitor: true },
+                    { name: 'Timeline / Gantt', spacelean: true, competitor: true },
+                    { name: 'Calendar View', spacelean: true, competitor: true },
+                    { name: 'Construction 4D Sequencing', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Pricing',
+                items: [
+                    { name: 'Free Plan', spacelean: true, competitor: 'Free (very limited)' },
+                    { name: 'Starting Paid Price', spacelean: '$19/mo flat', competitor: '$10.99/seat/mo' },
+                    { name: 'Goals / OKR Feature on Paid', spacelean: 'All plans', competitor: 'Advanced only ($24.99/seat)' },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: 'Can Asana generate tasks automatically with AI?',
+                answer: 'No. Asana requires you to manually create every task, subtask, and dependency. SpaceLean\'s AI generates a complete task breakdown from a project description in seconds — including dependencies, duration estimates, and priority order.'
+            },
+            {
+                question: 'Does Asana have OKR tracking?',
+                answer: 'Asana has a "Goals" feature, but it requires the Advanced or Enterprise plan (starting at $24.99/seat/month). It lacks proper OKR scoring, quarterly cycle management, and confidence ratings. SpaceLean includes full OKR management on all plans, including free.'
+            },
+            {
+                question: 'Is SpaceLean cheaper than Asana for teams?',
+                answer: 'Yes, significantly. Asana charges per seat — a 20-person team on Asana Starter pays $219/month. SpaceLean\'s Pro plan starts at $19/month flat, making it dramatically more affordable for growing teams.'
+            },
+            {
+                question: 'Can construction teams use Asana?',
+                answer: 'Asana can be adapted for construction project management, but it lacks BIM integration, 4D sequencing, zone/crew scheduling, and construction-specific logic. SpaceLean is purpose-built for construction, AEC, and technical project teams.'
+            },
+            {
+                question: 'Should I switch from Asana to SpaceLean?',
+                answer: 'Consider switching if you want AI-generated task plans, OKR goal tracking, or construction-grade scheduling. Asana excels at structured workflow management for marketing and operations teams. SpaceLean excels at intelligent, adaptive project execution for technical teams.'
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: 'AI Task Generation vs Manual Task Entry',
+                description: 'The most significant difference: Asana requires you to manually build every project plan — every task, subtask, dependency, and estimate. SpaceLean generates a complete project plan from a natural language description. Describe your project, and SpaceLean returns a prioritized, dependency-mapped task list ready to execute. For complex projects, this saves hours of planning work every sprint.'
+            },
+            {
+                title: 'OKR Management Built-In vs Locked Behind Paywall',
+                description: 'SpaceLean integrates OKR goal tracking with daily task execution — you can link every task to a Key Result and see real-time progress toward your objectives. Asana\'s Goals feature requires upgrading to Advanced ($24.99/seat/month) and lacks proper OKR scoring, cadence management, and the methodology depth that serious OKR programs need.'
+            },
+            {
+                title: 'Flat Pricing vs Per-Seat Pricing',
+                description: 'Asana\'s per-seat pricing creates a penalty for team growth — every new hire increases your monthly bill. SpaceLean\'s flat Pro pricing means you can add team members without cost anxiety. For a 25-person team, SpaceLean Pro ($19/mo) vs Asana Starter ($274/mo) represents a 14x cost difference.'
+            }
+        ],
+        useCases: [
+            {
+                title: 'Engineering & Product Teams',
+                description: 'SpaceLean\'s AI task generation + sprint planning fits engineering teams that need fast, intelligent backlog building. Asana\'s rigid manual structure slows sprint planning significantly.'
+            },
+            {
+                title: 'Construction & AEC Teams',
+                description: 'SpaceLean is the only choice — Asana has no BIM integration, construction sequencing, or crew optimization. Construction teams using Asana are using a tool designed for marketing workflows on projects with very different requirements.'
+            },
+            {
+                title: 'OKR-Driven Organizations',
+                description: 'Teams running OKR programs should choose SpaceLean for its native OKR tracking on all plans. With Asana, you pay extra for a basic Goals feature and then need a separate OKR tool to fill the gaps.'
+            }
+        ],
+        verdict: 'Choose Asana if your team is primarily in marketing, operations, or HR and needs a proven workflow platform with a large integration ecosystem. Choose SpaceLean if you want AI-generated task plans, native OKR tracking, flat pricing, or construction/AEC scheduling capabilities.'
+    },
 
-    pros: [
-        'Strong Last Planner System support',
-        'Good for structured Lean workflows',
-        'Collaborative planning interface',
-        'Reliable for manual pull planning and tracking'
-    ],
+    // ── 6. MONDAY.COM ─────────────────────────────────────────────────────────────
+    {
+        slug: 'spacelean-vs-monday',
+        competitorName: 'Monday.com',
+        title: 'SpaceLean vs Monday.com: AI Task Management vs Visual Work OS',
+        description: 'Compare SpaceLean vs Monday.com. See how SpaceLean\'s AI-powered task generation, OKR tracking, and intelligent scheduling stack up against Monday.com\'s visual work management platform.',
+        logo: 'monday',
+        color: '#FF3D57',
+        summary: 'Monday.com is a highly visual, flexible work management platform popular with operations, marketing, and product teams. Its colorful boards and extensive automation make it appealing for structured workflows. SpaceLean focuses on intelligence: AI-generated task plans, construction-grade scheduling, and OKR alignment — making it the stronger choice for teams that want their project management tool to think alongside them, not just display their work.',
+        pros: [
+            'Highly visual, intuitive interface',
+            'Extremely flexible — adapts to almost any workflow',
+            'Strong automation builder (no-code)',
+            'Good integrations (200+ apps)',
+            'Strong for CRM and sales pipeline use cases'
+        ],
+        cons: [
+            'No AI task generation — manual task entry only',
+            'No native OKR management',
+            'Expensive — Basic plan is $9/seat/mo but most features require Standard ($12) or Pro ($19)',
+            'No construction or BIM features',
+            'Minimum 3 seats on all paid plans',
+            'Reporting locked behind Pro/Enterprise tiers'
+        ],
+        features: [
+            {
+                category: 'AI & Intelligence',
+                items: [
+                    { name: 'AI Task Generation from Description', spacelean: true, competitor: false },
+                    { name: 'AI Risk Detection', spacelean: true, competitor: false },
+                    { name: 'Smart Scheduling', spacelean: 'AI-optimized', competitor: 'Timeline view (manual)' },
+                    { name: 'Intelligent Automation', spacelean: 'AI-driven', competitor: 'Rule-based (no-code builder)' },
+                ]
+            },
+            {
+                category: 'Goal Management',
+                items: [
+                    { name: 'OKR Framework Support', spacelean: true, competitor: false },
+                    { name: 'Goal-to-Task Linking', spacelean: true, competitor: 'Manual via boards' },
+                    { name: 'Company → Team → Individual Cascade', spacelean: true, competitor: false },
+                    { name: 'Quarterly OKR Scoring', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Project Views',
+                items: [
+                    { name: 'Board / Kanban', spacelean: true, competitor: true },
+                    { name: 'Gantt / Timeline', spacelean: true, competitor: 'Pro plan+' },
+                    { name: 'Workload View', spacelean: true, competitor: 'Pro plan+' },
+                    { name: 'Construction Sequencing', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Pricing',
+                items: [
+                    { name: 'Free Plan', spacelean: true, competitor: 'Free (2 seats only)' },
+                    { name: 'Starting Paid Price', spacelean: '$19/mo flat', competitor: '$9/seat/mo (3-seat min = $27/mo)' },
+                    { name: 'Gantt + Workload', spacelean: 'All plans', competitor: 'Pro plan ($19/seat/mo)' },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: 'Does Monday.com have AI features?',
+                answer: 'Monday.com has added some AI capabilities (AI column formulas, AI-generated summaries) but does not offer AI task generation from a project description. You still have to build your boards and tasks manually. SpaceLean generates a complete project plan with tasks, dependencies, and estimates from a single text prompt.'
+            },
+            {
+                question: 'Is Monday.com good for OKR management?',
+                answer: 'Monday.com doesn\'t have native OKR support. You can build an OKR tracker using Monday\'s flexible boards, but it\'s a DIY solution — no scoring, no cascade, no quarterly cycle management. SpaceLean has purpose-built OKR tracking integrated with task execution on all plans.'
+            },
+            {
+                question: 'How does Monday.com pricing compare to SpaceLean?',
+                answer: 'Monday.com requires a minimum of 3 seats on all paid plans. A 15-person team on Monday Pro pays $285/month. SpaceLean Pro is $19/month flat. Monday also locks Gantt views, time tracking, and workload views behind the Pro tier, adding hidden cost for teams that need these features.'
+            },
+            {
+                question: 'Can Monday.com handle construction projects?',
+                answer: 'Monday.com can track construction tasks, but lacks BIM integration, 4D sequencing, crew optimization, and zone-level scheduling logic. It\'s a generic work management tool. SpaceLean is purpose-built for construction and AEC project teams with specialized scheduling intelligence.'
+            },
+            {
+                question: 'What is the main difference between SpaceLean and Monday.com?',
+                answer: 'Monday.com is a visual work OS built for displaying and organizing tasks — you bring the intelligence. SpaceLean is an AI-powered project brain — it generates the tasks, predicts risks, tracks OKRs, and adapts schedules. Monday is better for teams with structured, repeatable workflows. SpaceLean is better for teams building complex, adaptive project plans.'
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: 'Visual Flexibility vs Intelligent Planning',
+                description: 'Monday.com\'s strength is its extreme visual flexibility — you can configure boards for almost any workflow. But flexibility requires effort: every board, column, automation, and integration must be manually configured. SpaceLean trades some visual flexibility for intelligence — let the AI structure your project, then customize from a strong starting point.'
+            },
+            {
+                title: 'AI Task Generation: A Fundamental Difference',
+                description: 'Monday.com recently added AI for text generation and formula building — useful, but not the same as AI project planning. SpaceLean\'s AI understands project context: it breaks down complex initiatives into granular tasks, maps dependencies, estimates durations, and flags risks before you start. This is the difference between a word processor with AI spell-check and an AI that writes the document.'
+            },
+            {
+                title: 'OKR Management Integration',
+                description: 'Monday.com\'s board system can mimic OKR tracking, but it requires significant setup and maintenance. SpaceLean has OKR tracking built into its core — every task can be linked to a Key Result, progress updates automatically, and quarterly cycles are managed within the platform. For OKR-driven organizations, SpaceLean eliminates the need for a separate OKR tool.'
+            }
+        ],
+        useCases: [
+            {
+                title: 'Operations & Admin Teams',
+                description: 'Monday.com excels for operations teams managing recurring processes, intake workflows, and structured SOPs. SpaceLean is better suited for project-based teams dealing with new, complex, or adaptive work each cycle.'
+            },
+            {
+                title: 'Product & Engineering Teams',
+                description: 'SpaceLean\'s AI sprint planning, OKR tracking, and intelligent backlog management make it the stronger choice for product and engineering teams running quarterly goal cycles.'
+            }
+        ],
+        verdict: 'Choose Monday.com if your team needs a highly visual, flexible work OS for structured operational workflows, CRM-style tracking, or marketing campaign management. Choose SpaceLean if you need AI-generated project plans, OKR management, flat pricing, or intelligent scheduling that adapts to real-world complexity.'
+    },
 
-    cons: [
-        'Highly manual planning process',
-        'No AI-driven decision making',
-        'Limited predictive capabilities',
-        'Constraint tracking requires manual input',
-        'No real-time adaptive scheduling',
-        'No computer vision or automation in progress tracking'
-    ],
+    // ── 7. NOTION ─────────────────────────────────────────────────────────────────
+    {
+        slug: 'spacelean-vs-notion',
+        competitorName: 'Notion',
+        title: 'SpaceLean vs Notion: Intelligent Task Management vs All-in-One Workspace',
+        description: 'Compare SpaceLean vs Notion for project management and OKR tracking. See how SpaceLean\'s AI-powered planning and purpose-built features outperform Notion\'s flexible-but-manual workspace.',
+        logo: 'notion',
+        color: '#000000',
+        summary: 'Notion is an extraordinarily flexible all-in-one workspace — docs, wikis, databases, and project boards all in one place. Its flexibility is both its strength and its weakness: everything is possible, but everything requires manual setup and maintenance. SpaceLean is purpose-built for project execution and goal management, with AI that generates plans, tracks OKRs, and adapts to change — without the maintenance overhead.',
+        pros: [
+            'All-in-one: docs, wikis, databases, and projects',
+            'Extremely flexible — build any system you can imagine',
+            'Affordable ($10/person/month)',
+            'Great for knowledge management and documentation',
+            'Large template ecosystem (community + official)',
+            'Notion AI adds writing and summarization capabilities'
+        ],
+        cons: [
+            'Requires significant manual setup for project management',
+            'No native OKR system — must DIY with databases',
+            'No AI task generation from project description',
+            'Progress tracking requires manual updates',
+            'Databases get complex and slow at scale',
+            'No construction or scheduling features',
+            'Best practices require constant maintenance'
+        ],
+        features: [
+            {
+                category: 'AI Capabilities',
+                items: [
+                    { name: 'AI Task Generation from Description', spacelean: true, competitor: false },
+                    { name: 'AI Writing & Summarization', spacelean: false, competitor: 'Notion AI (add-on)' },
+                    { name: 'AI Risk Detection', spacelean: true, competitor: false },
+                    { name: 'Automatic Progress Tracking', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Project Management',
+                items: [
+                    { name: 'Native Kanban Board', spacelean: true, competitor: 'Yes (Board view)' },
+                    { name: 'Gantt / Timeline View', spacelean: true, competitor: 'Yes (Timeline view)' },
+                    { name: 'Sprint Planning', spacelean: 'AI-assisted', competitor: 'Manual (custom database)' },
+                    { name: 'Task Dependencies', spacelean: true, competitor: 'Limited (manual)' },
+                ]
+            },
+            {
+                category: 'Goal & OKR Management',
+                items: [
+                    { name: 'Native OKR Framework', spacelean: true, competitor: 'Template-based (DIY)' },
+                    { name: 'OKR Scoring & Cadence', spacelean: true, competitor: false },
+                    { name: 'OKR → Task Cascade', spacelean: true, competitor: 'Manual relations' },
+                    { name: 'Progress Auto-Rollup', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Pricing',
+                items: [
+                    { name: 'Free Plan', spacelean: true, competitor: 'Yes (limited blocks)' },
+                    { name: 'Starting Paid Price', spacelean: '$19/mo flat', competitor: '$10/person/mo' },
+                    { name: 'AI Features Included', spacelean: 'Built-in', competitor: '+$8/person/mo (add-on)' },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: 'Is Notion good for OKR management?',
+                answer: 'Notion can be used for OKR tracking using database templates, but it\'s a DIY system — no built-in OKR scoring, quarterly cycle prompts, or cascade visualization. You need to manually update progress, maintain formulas, and build your own views. SpaceLean has purpose-built OKR management with automatic progress tracking from linked tasks.'
+            },
+            {
+                question: 'Does Notion have AI project planning?',
+                answer: 'Notion AI can write text, summarize pages, and generate content — but it cannot generate a project plan from a description. SpaceLean\'s AI breaks down any project into a structured task list with dependencies, duration estimates, and risk flags. These are fundamentally different AI capabilities.'
+            },
+            {
+                question: 'Can I use Notion for construction project management?',
+                answer: 'Notion can track construction-related tasks and documentation, but has no BIM integration, sequencing logic, crew scheduling, or 4D visualization. It\'s a general workspace tool, not a construction management platform.'
+            },
+            {
+                question: 'Is SpaceLean cheaper than Notion?',
+                answer: 'For larger teams, yes. Notion charges $10/person/month (plus $8/person/month for Notion AI). A 20-person team on Notion Plus + AI pays $360/month. SpaceLean Pro is $19/month flat — 19x cheaper at that team size.'
+            },
+            {
+                question: 'Should I use SpaceLean or Notion for my startup?',
+                answer: 'Use Notion if knowledge management and documentation are core to your workflow — product wikis, engineering specs, meeting notes. Use SpaceLean if you want AI-powered project planning, OKR tracking, and task execution in one tool. Many teams use both: Notion for docs and wikis, SpaceLean for projects and goals.'
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: 'Flexibility vs Intelligence',
+                description: 'Notion\'s superpower is flexibility — you can build almost anything with its blocks and databases. SpaceLean\'s superpower is intelligence — it generates structure for you. For teams that want a blank canvas to build their own systems, Notion is unmatched. For teams that want a smart system that builds itself from their project descriptions, SpaceLean is the better choice.'
+            },
+            {
+                title: 'The Maintenance Problem',
+                description: 'Notion systems require ongoing maintenance: formulas break, views get cluttered, databases grow slow, and team members build inconsistent systems. SpaceLean\'s structured approach means less setup and less ongoing maintenance — the AI enforces consistent project structure automatically.'
+            },
+            {
+                title: 'OKR Quality Difference',
+                description: 'The best Notion OKR templates are impressive — but they\'re still spreadsheets with a nice interface. Progress updates are manual, scoring is manual, and the cascade is visual-only. SpaceLean\'s OKR system automatically rolls up progress from linked tasks, sends weekly check-in prompts, and manages quarterly scoring — making OKR management a habit rather than a quarterly chore.'
+            }
+        ],
+        useCases: [
+            {
+                title: 'Documentation-Heavy Teams',
+                description: 'Notion wins for teams where knowledge management is central — product wikis, engineering runbooks, company handbooks. SpaceLean doesn\'t replace Notion\'s document capabilities.'
+            },
+            {
+                title: 'OKR-Driven Teams',
+                description: 'SpaceLean wins for teams running formal OKR programs. Purpose-built OKR tracking with automatic progress rollup, weekly check-ins, and quarterly scoring beats any Notion template.'
+            },
+            {
+                title: 'Startups Needing Both',
+                description: 'Many startups use Notion for docs and SpaceLean for projects + goals — getting the best of both tools without the maintenance overhead of trying to force one tool to do everything.'
+            }
+        ],
+        verdict: 'Choose Notion if documentation, knowledge management, and extreme flexibility are your priorities. Choose SpaceLean if you want AI-generated project plans, purpose-built OKR tracking, automatic progress rollup, and flat pricing that scales with your team.'
+    },
 
-    features: [
-        {
-            category: 'Planning & Scheduling',
-            items: [
-                { name: 'Pull Planning', spacelean: 'AI Auto-Generated', competitor: 'Manual Sticky Notes / Boards' },
-                { name: 'Lookahead Planning', spacelean: 'AI Dynamic (Auto-updated)', competitor: 'Static 3–6 week planning' },
-                { name: 'Schedule Optimization', spacelean: 'AI-driven', competitor: 'Planner dependent' },
-                { name: 'Planning Speed', spacelean: 'Minutes with AI', competitor: 'Hours / Days manually' },
-            ]
-        },
-        {
-            category: 'Constraint & Risk Management',
-            items: [
-                { name: 'Constraint Detection', spacelean: 'AI auto-detection (RFIs, drawings, photos)', competitor: 'Manual tracking' },
-                { name: 'Predictive Delay Alerts', spacelean: 'AI risk prediction', competitor: 'After issue occurs' },
-                { name: 'Constraint Heatmap', spacelean: true, competitor: false },
-                { name: 'Risk Scoring Engine', spacelean: 'Probabilistic AI', competitor: false },
-            ]
-        },
-        {
-            category: 'Execution & Intelligence',
-            items: [
-                { name: 'PPC (Percent Plan Complete)', spacelean: 'Predictive (ML-based)', competitor: 'Historical tracking only' },
-                { name: 'Trade Coordination', spacelean: 'AI clash detection', competitor: 'Manual coordination' },
-                { name: 'Daily Huddle Automation', spacelean: 'AI-generated', competitor: 'Manual preparation' },
-                { name: 'Decision Support', spacelean: 'AI recommendations + simulations', competitor: 'Human-driven' },
-            ]
-        },
-        {
-            category: 'Data & Automation',
-            items: [
-                { name: 'Progress Tracking', spacelean: 'Computer vision + AI', competitor: 'Manual updates' },
-                { name: 'Site Data Capture', spacelean: 'Voice-enabled + automated', competitor: 'Forms & checklists' },
-                { name: 'Learning from Past Projects', spacelean: 'Continuous AI learning', competitor: 'Limited reuse' },
-                { name: 'Waste Detection', spacelean: 'AI-driven insights', competitor: 'Manual interpretation' },
-            ]
-        }
-    ],
+    // ── 8. CLICKUP ─────────────────────────────────────────────────────────────────
+    {
+        slug: 'spacelean-vs-clickup',
+        competitorName: 'ClickUp',
+        title: 'SpaceLean vs ClickUp: AI Project Management vs Feature-Packed Work Platform',
+        description: 'Compare SpaceLean vs ClickUp. See how SpaceLean\'s focused AI-powered approach to task management, OKR tracking, and construction scheduling compares to ClickUp\'s comprehensive but complex platform.',
+        logo: 'clickup',
+        color: '#7B68EE',
+        summary: 'ClickUp markets itself as "one app to replace them all" — and it comes close, with an overwhelming feature set covering tasks, docs, goals, sprints, and more. But its complexity is a double-edged sword: ClickUp teams often spend as much time configuring and maintaining their workspace as they do executing projects. SpaceLean takes the opposite approach: fewer, sharper features with AI doing the heavy lifting on planning, goal alignment, and scheduling.',
+        pros: [
+            'Enormous feature set — tasks, docs, whiteboards, sprints, goals',
+            'Highly customizable at every level',
+            'Strong automation and workflow builder',
+            'Good free plan with many features',
+            'Built-in Goals feature (OKR-lite)',
+            'Affordable pricing per seat'
+        ],
+        cons: [
+            'Notorious for overwhelming complexity and steep learning curve',
+            'Frequent performance issues with large workspaces',
+            'No true AI project plan generation — AI is content/writing focused',
+            'Goals feature is basic vs purpose-built OKR tools',
+            'No construction or BIM scheduling features',
+            'Teams often spend weeks configuring before using'
+        ],
+        features: [
+            {
+                category: 'AI Capabilities',
+                items: [
+                    { name: 'AI Task Generation from Project Description', spacelean: true, competitor: 'Writing/text AI only' },
+                    { name: 'AI Risk Prediction', spacelean: true, competitor: false },
+                    { name: 'AI Schedule Optimization', spacelean: true, competitor: false },
+                    { name: 'AI Subtask Generation', spacelean: true, competitor: 'Limited' },
+                ]
+            },
+            {
+                category: 'Goal & OKR Management',
+                items: [
+                    { name: 'OKR Framework (Obj + Key Results)', spacelean: true, competitor: 'Goals (OKR-lite)' },
+                    { name: 'OKR Scoring (0.0–1.0)', spacelean: true, competitor: false },
+                    { name: 'Quarterly Cycle Management', spacelean: true, competitor: false },
+                    { name: 'Goal → Task Progress Rollup', spacelean: true, competitor: 'Targets (manual)' },
+                ]
+            },
+            {
+                category: 'Project Features',
+                items: [
+                    { name: 'Kanban / Board View', spacelean: true, competitor: true },
+                    { name: 'Gantt Chart', spacelean: true, competitor: 'Business plan+' },
+                    { name: 'Workload Management', spacelean: true, competitor: 'Business plan+' },
+                    { name: 'Construction / BIM Scheduling', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Ease of Use',
+                items: [
+                    { name: 'Time to First Project', spacelean: '< 5 minutes (AI generates)', competitor: '1–3 hours (manual setup)' },
+                    { name: 'Configuration Overhead', spacelean: 'Low (AI-assisted)', competitor: 'High (extensive customization)' },
+                    { name: 'Onboarding Complexity', spacelean: 'Simple', competitor: 'Complex (many features to learn)' },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: 'Does ClickUp have AI project planning?',
+                answer: 'ClickUp AI focuses on content generation — writing task descriptions, summaries, and action items from text. It doesn\'t generate a full project plan (tasks, dependencies, estimates) from a high-level description. SpaceLean\'s AI does: describe your project in plain language and get back a structured, prioritized task list ready to execute.'
+            },
+            {
+                question: 'Is ClickUp good for OKR management?',
+                answer: 'ClickUp\'s Goals feature supports basic OKR-style tracking with targets and rollups, but it lacks proper OKR methodology features: scoring (0.0–1.0), quarterly check-in prompts, and confidence ratings. For teams running a serious OKR program, SpaceLean\'s purpose-built OKR system is more effective.'
+            },
+            {
+                question: 'Is ClickUp too complex for small teams?',
+                answer: 'ClickUp\'s power comes with complexity. Many small teams report spending days or weeks setting up their ideal workspace only to abandon it when maintenance becomes burdensome. SpaceLean\'s AI-first approach means your project structure is generated intelligently from day one, with minimal configuration required.'
+            },
+            {
+                question: 'Can ClickUp replace SpaceLean for construction teams?',
+                answer: 'No. ClickUp has no BIM integration, construction sequencing, zone/crew scheduling, or 4D visualization. Construction and AEC teams need purpose-built scheduling intelligence that ClickUp simply doesn\'t provide.'
+            },
+            {
+                question: 'How does ClickUp pricing compare to SpaceLean?',
+                answer: 'ClickUp Unlimited is $7/member/month (billed annually). For a 20-person team, that\'s $140/month. SpaceLean Pro is $19/month flat. ClickUp Business (required for Gantt and workload views) is $12/member/month — $240/month for 20 people. SpaceLean includes these features at $19/month total.'
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: 'Feature Depth vs Feature Intelligence',
+                description: 'ClickUp has more features than almost any competitor. But features alone don\'t execute projects — teams do. SpaceLean trades feature breadth for intelligence: fewer views, but AI that generates your project plan, flags risks automatically, and keeps your goals aligned. For teams drowning in ClickUp\'s feature ocean, SpaceLean\'s focused intelligence is often the better choice.'
+            },
+            {
+                title: 'Setup Time and Maintenance',
+                description: 'One of ClickUp\'s most common user complaints: the time spent setting up and maintaining the workspace. Custom statuses, fields, views, automations, and space hierarchies require continuous maintenance. SpaceLean\'s AI-generated project structure means your workspace is organized from minute one without manual configuration.'
+            },
+            {
+                title: 'OKR System Depth',
+                description: 'ClickUp Goals can track targets and link them to tasks, but it doesn\'t enforce OKR methodology — no 60–70% ambition guidance, no confidence scoring, no quarterly retrospective prompts. SpaceLean\'s OKR system is built on methodology: it guides teams through the right process, not just the right fields.'
+            }
+        ],
+        useCases: [
+            {
+                title: 'Teams Escaping ClickUp Complexity',
+                description: 'Teams that have struggled with ClickUp\'s configuration overhead often find SpaceLean\'s AI-first approach a relief — less setup, smarter structure, and a cleaner focus on execution.'
+            },
+            {
+                title: 'Construction & Technical Teams',
+                description: 'SpaceLean is the clear choice for construction, AEC, and engineering teams that need scheduling intelligence beyond what any general-purpose tool can provide.'
+            }
+        ],
+        verdict: 'Choose ClickUp if you want maximum feature breadth and are willing to invest significant time in configuration and maintenance. Choose SpaceLean if you want AI to generate your project structure, focused OKR tracking, and a simpler tool that does the most important things exceptionally well.'
+    },
 
-    faqs: [
-        {
-            question: "What is the main difference between SPACE Lean and SpaceLean?",
-            answer: "SPACE Lean digitizes Lean workflows like pull planning and constraint tracking, but relies on human planners to make decisions. SpaceLean acts as an AI decision engine—automatically generating plans, predicting risks, and optimizing execution in real-time."
-        },
-        {
-            question: "Does SPACE Lean provide predictive analytics?",
-            answer: "No. SPACE Lean primarily tracks historical performance like PPC. SpaceLean predicts future PPC, delays, and constraint risks using machine learning models."
-        },
-        {
-            question: "Can SPACE Lean automatically detect constraints?",
-            answer: "No. Constraints must be manually identified and logged by users. SpaceLean automatically detects constraints from RFIs, drawings, specifications, and even site photos."
-        },
-        {
-            question: "Is SpaceLean replacing Lean methodology?",
-            answer: "No. SpaceLean enhances Lean practices by automating them. It acts like an AI Lean Planner—making Lean faster, smarter, and more predictive without removing core principles."
-        }
-    ],
-
-    featuresDeepDive: [
-        {
-            title: "Manual Lean vs Autonomous Lean",
-            description: "SPACE Lean depends on planners to create pull plans, identify constraints, and manage workflows. SpaceLean automates these processes using AI—generating pull plans, detecting risks, and continuously optimizing schedules without manual intervention."
-        },
-        {
-            title: "Reactive vs Predictive Planning",
-            description: "SPACE Lean helps teams react to issues once they are identified. SpaceLean predicts delays, constraint chains, and productivity drops weeks in advance—allowing teams to act before problems impact the schedule."
-        },
-        {
-            title: "Data Entry vs Data Intelligence",
-            description: "SPACE Lean requires teams to input and manage data manually. SpaceLean captures data automatically via voice, integrations, and computer vision—then transforms it into actionable intelligence."
-        },
-        {
-            title: "Workflow Tool vs Decision Engine",
-            description: "SPACE Lean is a workflow tool that organizes planning activities. SpaceLean is a decision engine that actively guides project execution, suggesting optimal actions and simulating outcomes."
-        }
-    ],
-
-    useCases: [
-        {
-            title: "Teams Practicing Lean Construction",
-            description: "If you're already using Lean methodologies, SpaceLean accelerates adoption by automating pull planning, lookahead updates, and constraint detection—reducing manual effort significantly."
-        },
-        {
-            title: "Projects with High Complexity & Risk",
-            description: "For projects with multiple trades, tight deadlines, and high uncertainty, SpaceLean’s predictive AI helps prevent delays before they occur—something SPACE Lean cannot do."
-        },
-        {
-            title: "Firms Scaling Across Multiple Projects",
-            description: "SpaceLean learns across all projects—improving planning accuracy, trade coordination, and risk detection over time. SPACE Lean operates project-by-project without intelligence carryover."
-        }
-    ],
-
-    verdict: 'Choose SPACE Lean if you want a structured, digital approach to Lean Construction workflows and are comfortable with manual planning. Choose SpaceLean if you want a 10× leap in productivity through AI-driven planning, predictive intelligence, and autonomous decision support.'
-}
+    // ── 9. LINEAR ─────────────────────────────────────────────────────────────────
+    {
+        slug: 'spacelean-vs-linear',
+        competitorName: 'Linear',
+        title: 'SpaceLean vs Linear: AI Construction & OKR Planning vs Engineering Issue Tracker',
+        description: 'Compare SpaceLean vs Linear. See how SpaceLean\'s AI task generation, OKR management, and construction scheduling compare to Linear\'s streamlined engineering issue tracker.',
+        logo: 'linear',
+        color: '#5E6AD2',
+        summary: 'Linear is an elegant, fast issue tracker purpose-built for software engineering teams. Its speed, Git integration, and clean interface have made it beloved by developers. But Linear\'s scope is intentionally narrow — it\'s an engineering tool, not a full project management platform. SpaceLean covers a broader surface: AI task generation for any project type, OKR tracking, construction scheduling, and multi-team alignment — making it a better fit for organizations beyond pure software development.',
+        pros: [
+            'Blazing fast — the fastest UI in project management',
+            'Excellent Git/GitHub integration for engineering teams',
+            'Beautiful, opinionated design that enforces good practices',
+            'Cycles (sprints) built in with velocity tracking',
+            'Roadmaps feature for strategic planning',
+            'Slack-first collaboration'
+        ],
+        cons: [
+            'Built exclusively for software engineering teams',
+            'No AI task generation — manual issue creation',
+            'Limited OKR support — Initiatives are not true OKRs',
+            'No construction, AEC, or physical project features',
+            'Less useful for cross-functional teams (marketing, ops)',
+            'Roadmaps and Initiatives locked to higher-tier plans'
+        ],
+        features: [
+            {
+                category: 'AI & Automation',
+                items: [
+                    { name: 'AI Task/Issue Generation', spacelean: true, competitor: false },
+                    { name: 'AI Priority Suggestions', spacelean: true, competitor: false },
+                    { name: 'AI Risk Detection', spacelean: true, competitor: false },
+                    { name: 'Git Commit → Issue Auto-Close', spacelean: false, competitor: true },
+                ]
+            },
+            {
+                category: 'Goal Management',
+                items: [
+                    { name: 'OKR Framework (Obj + Key Results)', spacelean: true, competitor: 'Initiatives (OKR-lite)' },
+                    { name: 'Company → Team OKR Cascade', spacelean: true, competitor: false },
+                    { name: 'OKR Scoring (0.0–1.0)', spacelean: true, competitor: false },
+                    { name: 'Quarterly OKR Cycles', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Team Coverage',
+                items: [
+                    { name: 'Engineering Teams', spacelean: true, competitor: true },
+                    { name: 'Product Teams', spacelean: true, competitor: 'Partial' },
+                    { name: 'Marketing / Ops Teams', spacelean: true, competitor: false },
+                    { name: 'Construction / AEC Teams', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Pricing',
+                items: [
+                    { name: 'Free Plan', spacelean: true, competitor: 'Free (up to 250 issues)' },
+                    { name: 'Starting Paid Price', spacelean: '$19/mo flat', competitor: '$8/member/mo' },
+                    { name: 'Roadmaps & OKRs', spacelean: 'All plans', competitor: 'Business plan ($16/member/mo)' },
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: 'Is Linear good for non-engineering teams?',
+                answer: 'Linear is designed exclusively for software engineering workflows. Its terminology (issues, cycles, git branches), default views, and integrations assume a development context. Marketing, operations, and non-technical teams find it awkward to use. SpaceLean works equally well for engineering, product, marketing, construction, and any other project-based team.'
+            },
+            {
+                question: 'Does Linear have OKR support?',
+                answer: 'Linear has "Initiatives" which provide some OKR-like goal tracking, but it lacks proper OKR methodology features: no Objective + Key Result structure, no 0.0–1.0 scoring, no quarterly cadence management, and Initiatives are locked to the Business plan ($16/member/month). SpaceLean has purpose-built OKR tracking available on all plans.'
+            },
+            {
+                question: 'Can SpaceLean replace Linear for software teams?',
+                answer: 'SpaceLean covers sprint planning, backlog management, and task tracking well for software teams. However, Linear\'s Git integration (auto-closing issues from commits, branch linking, PR tracking) is currently more mature for developer-specific workflows. For organizations that need both engineering tracking AND cross-team goal management, SpaceLean is the better all-in-one choice.'
+            },
+            {
+                question: 'Is Linear cheaper than SpaceLean?',
+                answer: 'Linear charges $8/member/month (Plus). For a 10-person team, that\'s $80/month. SpaceLean Pro is $19/month flat — SpaceLean is cheaper for teams of 3 or more. Linear Business (required for Roadmaps and Initiatives) is $16/member/month, making a 10-person team $160/month vs SpaceLean\'s $19.'
+            },
+            {
+                question: 'Which is faster, Linear or SpaceLean?',
+                answer: 'Linear is renowned for its UI speed — keyboard shortcuts, instant loading, and frictionless issue creation make it the fastest issue tracker available. SpaceLean trades some UI speed for AI intelligence — task generation takes a few seconds but produces a complete project plan, which is far faster than manually creating 30+ issues in Linear.'
+            }
+        ],
+        featuresDeepDive: [
+            {
+                title: 'Engineering Depth vs Cross-Team Breadth',
+                description: 'Linear goes deep on engineering-specific workflows: Git integration, cycle velocity tracking, triage queues, and a shortcut-driven interface designed for developers. SpaceLean goes broad: AI task generation works for any project type, OKR tracking covers every department, and construction scheduling serves AEC teams. If your entire company is engineering, Linear\'s depth is compelling. If you need one tool that works across functions, SpaceLean\'s breadth wins.'
+            },
+            {
+                title: 'AI Generation vs Manual Speed',
+                description: 'Linear is the fastest manual issue tracker available. SpaceLean is the fastest AI-assisted project planner. Linear gets you from 0 to 10 issues in 2 minutes with keyboard shortcuts. SpaceLean gets you from 0 to 40 tasks with dependencies and estimates in the same 2 minutes using AI generation. For complex projects, AI generation wins on both speed and quality.'
+            },
+            {
+                title: 'Initiatives vs True OKRs',
+                description: 'Linear\'s Initiatives group related projects under a shared theme — useful for roadmap planning, but not a proper OKR system. SpaceLean\'s OKR module enforces OKR methodology: Objective + Key Results, scoring, quarterly cycles, and cascade from company to team to individual. For organizations running a formal OKR program, SpaceLean\'s system is purpose-built; Linear\'s is an approximation.'
+            }
+        ],
+        useCases: [
+            {
+                title: 'Pure Software Engineering Teams',
+                description: 'Linear excels if your entire team is engineers and Git integration is critical. For dev-only teams that don\'t need OKRs or cross-functional alignment, Linear\'s depth and speed are unmatched.'
+            },
+            {
+                title: 'Product + Engineering + Goals',
+                description: 'SpaceLean wins when product, engineering, and leadership need to align on OKRs while managing sprint execution. One tool instead of Linear + a separate OKR platform.'
+            },
+            {
+                title: 'Mixed or Cross-Functional Teams',
+                description: 'SpaceLean is the clear winner for organizations with engineering, marketing, operations, and construction teams — Linear simply doesn\'t serve non-engineering functions well.'
+            }
+        ],
+        verdict: 'Choose Linear if your entire organization is software engineers who value Git integration, keyboard-driven speed, and an opinionated engineering workflow. Choose SpaceLean if you need AI task generation, cross-functional team support, built-in OKR management, or any use case beyond pure software development.'
+    }
 ];
 
 export function getComparisonBySlug(slug: string) {
