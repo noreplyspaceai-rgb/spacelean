@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Blog | SpaceLean',
     description:
-      'Articles on AI   construction scheduling, productivity, lean methodologies, and construction technology.',
+      'Articles on AI   construction scheduling,  productivity, lean methodologies, and construction technology.',
     type: 'website',
   },
 };
