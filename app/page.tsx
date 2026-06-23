@@ -10,7 +10,7 @@ import HappyUsers from "@/components/HappyUsers";
 import FAQ from "@/components/FAQ";
 import TrySection from "@/components/TrySection";
 import VideoHero from "@/components/VideoHero";
-import DashboardShowcase from "@/components/DashboardShowcase";
+import DashboardShowcase from "@/components/Dashboardshowcase";
 import AudienceSection from "@/components/AudienceSection";
 
 export default function Home() {

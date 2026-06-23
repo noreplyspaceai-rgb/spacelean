@@ -3283,7 +3283,7 @@ The 8 wastes are: (1) Overproduction — building features or deliverables nobod
 ## Related Resources
 
 - [SpaceLean vs Excel & Trello](/blogs/spacelean-vs-excel-trello-intelligent-planning) — see how lean AI planning compares to manual tools
-- [Kanban Guide for Project Teams](/blogs/kanban-guide-project-teams) — implement lean Kanban boards
+- [Kanban Board Best Practices](/blogs/kanban-board-best-practices-teams) — implement lean Kanban boards
 - [Decision-Making Frameworks for Leaders](/blogs/decision-making-frameworks-leaders) — structured approaches for project decisions
 - [Try SpaceLean's Free AI Task Generator](/tool) — experience AI-powered lean task breakdown
     `,

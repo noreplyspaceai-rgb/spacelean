@@ -6,8 +6,14 @@ export const metadata: Metadata = {
     description:
         "Explore the security protocols, encryption standards, SOC 2 compliance, and infrastructure powering SpaceLean AI's construction scheduling platform.",
     robots: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
     alternates: {
         canonical: "/security",
@@ -53,9 +59,18 @@ export default function SecurityPage() {
                         <span className="text-gray-500">Stability.</span>
                     </h1>
                     <p className="text-2xl text-gray-400 font-light leading-relaxed">
-                        Enterprise-grade security for teams that ship fast. We protect your intellectual property with modern security architecture.
+                        Enterprise-grade security for construction teams using SpaceLean&apos;s AI scheduling, BIM-to-schedule automation, and project management platform. We protect your project data, BIM files, schedules, and intellectual property with modern security architecture.
                     </p>
                 </header>
+
+                <section className="mb-20 max-w-4xl">
+                    <h2 className="text-3xl font-bold mb-6 tracking-tight">
+                        Security for AI construction project data
+                    </h2>
+                    <p className="text-lg text-gray-400 font-light leading-relaxed">
+                        SpaceLean is designed for general contractors, owners, consultants, and project controls teams that need secure construction scheduling software. Our platform protects sensitive model data, schedule logic, task assignments, and risk forecasts while keeping teams aligned across planning, execution, and reporting workflows.
+                    </p>
+                </section>
 
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
                     {pillars.map((pillar, index) => (

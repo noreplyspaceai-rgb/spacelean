@@ -44,6 +44,16 @@ export async function generateMetadata({
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author }],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     alternates: {
       canonical: `/blogs/${slug}`,
       languages: {
@@ -393,6 +403,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                 .replace(/^\d+\. \*\*(.*?)\*\*: (.*$)/gm, '<li class="mb-2"><strong>$1</strong>: $2</li>')
                 .replace(/^\d+\. (.*$)/gm, '<li class="mb-2">$1</li>')
                 .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
                 .replace(/\n\n/g, '</p><p class="mb-4">')
                 .replace(/^(?!<[hl])/gm, '<p class="mb-4">'),
             }}
