@@ -1,13 +1,75 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import StartFreeTrialButton from "@/components/StartFreeTrialButton";
 
+const CONTACTS = [
+  {
+    country: "USA",
+    flag: "🇺🇸",
+    phone: "+1 646 421 5740",
+    email: "usa@pmspace.ai",
+    address: "2500 MARCONI AVE, STE 101,\nSACRAMENTO, CA 95821, USA",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=2500+Marconi+Ave+STE+101+Sacramento+CA+95821+USA",
+  },
+  {
+    country: "UAE",
+    flag: "🇦🇪",
+    phone: "+971 56 256 7509",
+    email: "uae@pmspace.ai",
+    address: "Middle East Regional Office,\nDubai, UAE",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Middle+East+Regional+Office+Dubai+UAE",
+  },
+  {
+    country: "Singapore",
+    flag: "🇸🇬",
+    phone: "+65 86 111 900",
+    email: "sg@pmspace.ai",
+    address: "7 Soon Lee St,\n#04-39 ISPACE BUILDING,\nSingapore 627608",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=7+Soon+Lee+St+%2304-39+ISPACE+BUILDING+Singapore+627608",
+  },
+];
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedContact, setSelectedContact] = useState(CONTACTS[0]);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleOutsideClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (containerRef.current && !containerRef.current.contains(target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
+  const handleBlur = (event: React.FocusEvent) => {
+    if (
+      containerRef.current &&
+      !containerRef.current.contains(event.relatedTarget as Node)
+    ) {
+      setIsOpen(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,24 +149,138 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-2">
-            {/* Phone Numbers */}
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-gray-100/60 rounded-full border border-gray-200/60 mr-1">
-              <svg className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <a
-                href="tel:+19169690451"
-                className="text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap"
+            {/* Contact Dropdown */}
+            <div 
+              ref={containerRef}
+              onBlur={handleBlur}
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => setIsOpen(false)}
+              className="relative hidden lg:block mr-1"
+            >
+              <button
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-expanded={isOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-2 px-3 py-1.5 bg-gray-100/60 hover:bg-gray-100/80 rounded-full border border-gray-200/60 transition-all duration-200 cursor-pointer select-none text-xs font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
               >
-                +1 916-969-0451
-              </a>
-              <span className="text-gray-300 text-xs select-none">|</span>
-              <a
-                href="tel:+6586111900"
-                className="text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap"
+                <span className="text-sm leading-none">{selectedContact.flag}</span>
+                <span className="font-semibold text-gray-700">{selectedContact.country}</span>
+                <span className="text-gray-500 font-medium whitespace-nowrap">{selectedContact.phone}</span>
+                <svg 
+                  className={`w-3 h-3 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor" 
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute right-0 top-full mt-2 w-[350px] bg-white border border-gray-200/80 rounded-2xl shadow-[0_10px_40px_-10px_rgba(147,51,234,0.12)] transition-all duration-300 ease-out origin-top-right z-50 ${
+                  isOpen 
+                    ? "opacity-100 translate-y-0 scale-100 visible" 
+                    : "opacity-0 -translate-y-2 scale-95 invisible pointer-events-none"
+                }`}
               >
-                +65 8611 1900
-              </a>
+                <div className="flex flex-col">
+                  {CONTACTS.map((contact) => (
+                    <div
+                      key={contact.country}
+                      tabIndex={0}
+                      role="button"
+                      onClick={() => {
+                        setSelectedContact(contact);
+                        setIsOpen(false);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setSelectedContact(contact);
+                          setIsOpen(false);
+                        }
+                      }}
+                      className="p-3.5 outline-none focus-visible:bg-purple-50/30 focus-visible:ring-2 focus-visible:ring-purple-500/20 cursor-pointer hover:bg-gray-50/70 transition-all duration-200 flex flex-col gap-2 w-full text-left first:rounded-t-2xl last:rounded-b-2xl border-b border-gray-100 last:border-b-0"
+                    >
+                      {/* Row 1: Flag, Phone Number, Call Icon */}
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <span className="text-base leading-none">{contact.flag}</span>
+                          <a 
+                            href={`tel:${contact.phone.replace(/\s+/g, '')}`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setSelectedContact(contact);
+                              setTimeout(() => {
+                                setIsOpen(false);
+                              }, 150);
+                            }}
+                            className="text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors duration-150 cursor-pointer"
+                            aria-label={`Call ${contact.country} office phone at ${contact.phone}`}
+                          >
+                            {contact.phone}
+                          </a>
+                        </div>
+                        <a
+                          href={`tel:${contact.phone.replace(/\s+/g, '')}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedContact(contact);
+                            setTimeout(() => {
+                              setIsOpen(false);
+                            }, 150);
+                          }}
+                          className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-600 flex items-center justify-center transition-all duration-200 cursor-pointer"
+                          aria-label={`Call ${contact.country} office`}
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.01-1.049.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                          </svg>
+                        </a>
+                      </div>
+
+                      {/* Row 2: Email Only */}
+                      <div className="text-xs text-gray-500">
+                        <a 
+                          href={`mailto:${contact.email}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedContact(contact);
+                            setTimeout(() => {
+                              setIsOpen(false);
+                            }, 150);
+                          }}
+                          className="hover:text-purple-600 transition-colors duration-150 font-medium cursor-pointer"
+                          aria-label={`Send email to ${contact.email}`}
+                        >
+                          {contact.email}
+                        </a>
+                      </div>
+
+                      {/* Row 3: Address Only */}
+                      <a
+                        href={contact.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedContact(contact);
+                          setTimeout(() => {
+                            setIsOpen(false);
+                          }, 150);
+                        }}
+                        className="block text-[11px] text-gray-400 hover:text-gray-600 transition-colors duration-150 font-normal leading-normal w-full cursor-pointer"
+                        aria-label={`View ${contact.country} office address on Google Maps`}
+                      >
+                        {contact.address.replace(/\n/g, " ")}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             <StartFreeTrialButton className="px-4 py-2 text-sm" />
             <Link
@@ -113,7 +289,6 @@ export default function Header() {
             >
               Request a Demo
             </Link>
-          
           </div>
 
           {/* Mobile menu button */}
@@ -197,24 +372,22 @@ export default function Header() {
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-200/60">
                 {/* Phone Numbers (Mobile) */}
                 <div className="flex flex-col gap-1 px-1">
-                  <a
-                    href="tel:+19169690451"
-                    className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
-                  >
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    +1 916-969-0451
-                  </a>
-                  <a
-                    href="tel:+6586111900"
-                    className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
-                  >
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    +65 8611 1900
-                  </a>
+                  {CONTACTS.map((contact) => (
+                    <a
+                      key={contact.country}
+                      href={`tel:${contact.phone.replace(/\s+/g, '')}`}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
+                    >
+                      <span className="text-base leading-none">{contact.flag}</span>
+                      <span className="flex-1 text-left">
+                        <span className="font-semibold text-gray-700 mr-1.5">{contact.country}</span>
+                        <span className="text-gray-500">{contact.phone}</span>
+                      </span>
+                      <svg className="w-4 h-4 text-purple-600 flex-shrink-0 opacity-80" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.01-1.049.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      </svg>
+                    </a>
+                  ))}
                 </div>
                 <Link
                   href="/request-a-demo"
