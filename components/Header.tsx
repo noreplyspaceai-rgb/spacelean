@@ -10,25 +10,43 @@ const CONTACTS = [
     country: "USA",
     flag: "🇺🇸",
     phone: "+1 646 421 5740",
-    email: "usa@pmspace.ai",
-    address: "2500 MARCONI AVE, STE 101,\nSACRAMENTO, CA 95821, USA",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=2500+Marconi+Ave+STE+101+Sacramento+CA+95821+USA",
+    email: "usa@aibizmod.com",
+  },
+  {
+    country: "Canada",
+    flag: "🇨🇦",
+    phone: "+1 (979) 326-9493",
+    email: "canada@aibizmod.com",
   },
   {
     country: "UAE",
     flag: "🇦🇪",
     phone: "+971 56 256 7509",
-    email: "uae@pmspace.ai",
-    address: "Middle East Regional Office,\nDubai, UAE",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Middle+East+Regional+Office+Dubai+UAE",
+    email: "uae@aibizmod.com",
+  },
+  {
+    country: "Saudi Arabia",
+    flag: "🇸🇦",
+    phone: "+966 56 208 1999",
+    email: "saudi@aibizmod.com",
+  },
+  {
+    country: "Kuwait",
+    flag: "🇰🇼",
+    phone: "+965 9724 3755",
+    email: "kuwait@aibizmod.com",
   },
   {
     country: "Singapore",
     flag: "🇸🇬",
     phone: "+65 86 111 900",
-    email: "sg@pmspace.ai",
-    address: "7 Soon Lee St,\n#04-39 ISPACE BUILDING,\nSingapore 627608",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=7+Soon+Lee+St+%2304-39+ISPACE+BUILDING+Singapore+627608",
+    email: "sg@aibizmod.com",
+  },
+  {
+    country: "Malaysia",
+    flag: "🇲🇾",
+    phone: "+60 10660 7357",
+    email: "malaysia@aibizmod.com",
   },
 ];
 
@@ -260,23 +278,7 @@ export default function Header() {
                         </a>
                       </div>
 
-                      {/* Row 3: Address Only */}
-                      <a
-                        href={contact.mapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedContact(contact);
-                          setTimeout(() => {
-                            setIsOpen(false);
-                          }, 150);
-                        }}
-                        className="block text-[11px] text-gray-400 hover:text-gray-600 transition-colors duration-150 font-normal leading-normal w-full cursor-pointer"
-                        aria-label={`View ${contact.country} office address on Google Maps`}
-                      >
-                        {contact.address.replace(/\n/g, " ")}
-                      </a>
+
                     </div>
                   ))}
                 </div>
