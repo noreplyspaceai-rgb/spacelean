@@ -172,7 +172,7 @@ function PlatformCard({
     >
       <div className="p-5 flex flex-col flex-1">
         {/* Header */}
-        <div className="flex items-start justify-between gap-3 mb-3">
+        <div className="flex items-start justify-between gap-3 mb-3 flex-wrap">
           <div className="flex items-center gap-2.5 min-w-0">
             <span className="w-9 h-9 rounded-xl bg-black/[0.03] border border-black/[0.07] flex items-center justify-center flex-shrink-0 text-neutral-500 group-hover:text-cyan-600 transition-colors">
               {getPlatformIcon(platform.id)}
@@ -324,10 +324,10 @@ function SearchAndFilter({
   const categories: Array<"All" | PlatformCategory> = ["All", ...PLATFORM_CATEGORIES];
 
   return (
-    <div className="sticky top-0 z-20 bg-white/90 backdrop-blur-md border-b border-black/[0.06] py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+    <div className="sticky top-[72px] z-20 bg-white/90 backdrop-blur-md border-b border-black/[0.06] py-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
         {/* Search */}
-        <div className="relative flex-1 max-w-xs w-full">
+        <div className="relative flex-shrink-0 max-w-md lg:max-w-xs w-full">
           <label htmlFor="platform-search" className="sr-only">
             Search platforms
           </label>
@@ -360,7 +360,7 @@ function SearchAndFilter({
         <div
           role="tablist"
           aria-label="Filter by category"
-          className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pb-1 sm:pb-0 flex-nowrap"
+          className="flex items-center gap-2.5 overflow-x-auto scrollbar-none pb-1 lg:pb-0 flex-nowrap -mx-4 px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0 scroll-smooth"
         >
           {categories.map((cat) => (
             <button

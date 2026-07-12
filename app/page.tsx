@@ -8,6 +8,7 @@ import WorkSmarter from "@/components/WorkSmarter";
 import Testimonials from "@/components/Testimonials";
 import HappyUsers from "@/components/HappyUsers";
 import FAQ from "@/components/FAQ";
+import AskSpaceLeanAI from "@/components/AskSpaceLeanAI";
 import TrySection from "@/components/TrySection";
 import VideoHero from "@/components/VideoHero";
 import DashboardShowcase from "@/components/Dashboardshowcase";
@@ -265,6 +266,9 @@ export default function Home() {
 
       {/* 11. FAQ */}
       <FAQ />
+
+      {/* 11b. Ask SpaceLean AI */}
+      <AskSpaceLeanAI />
 
       {/* Server-rendered internal links for SEO crawlability */}
       <div className="sr-only" aria-hidden="true">

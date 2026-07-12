@@ -22,7 +22,7 @@ const footerLinks = {
     })),
   },
   otherProducts: {
-    title: "Other Products",
+    title: "Space AI Ecosystem",
     links: [
       { label: "pmspace", href: "https://pmspace.ai" },
       { label: "space-sign", href: "https://space-sign.ai" },

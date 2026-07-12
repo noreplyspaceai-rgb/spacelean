@@ -54,6 +54,24 @@ const presenceLocations = [
     color: "#06b6d4",
     mapsUrl: "https://maps.google.com/?q=29.08,48.13",
   },
+  {
+    country: "Canada",
+    role: "North America – Regional Office",
+    address: "Toronto, ON, Canada",
+    lat: 43.65107,
+    lng: -79.347015,
+    color: "#06b6d4",
+    mapsUrl: "https://www.google.com/maps/place/43%C2%B039'03.9%22N+79%C2%B020'49.3%22W/@43.65107,-79.3495899,17z/data=!3m1!4b1!4m4!3m3!8m2!3d43.65107!4d-79.347015?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
+    country: "Saudi Arabia",
+    role: "Middle East Regional Office",
+    address: "Riyadh, Kingdom of Saudi Arabia",
+    lat: 24.7136,
+    lng: 46.6753,
+    color: "#06b6d4",
+    mapsUrl: "https://www.google.com/maps/place/24%C2%B042'49.0%22N+46%C2%B040'31.1%22E/@24.7135421,46.6751244,21z/data=!4m4!3m3!8m2!3d24.7136!4d46.6753?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D",
+  },
 ];
 
 export default function AboutPresence() {
@@ -87,7 +105,7 @@ export default function AboutPresence() {
           <p className="mt-6 max-w-lg">
             <span className="block border-l-4 border-cyan-400 pl-4">
               <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">
-                Five offices. One platform.
+                Seven offices. One platform.
               </span>
               <span className="block text-base sm:text-lg font-mono font-semibold text-cyan-500 leading-relaxed">
                 Deployed wherever construction happens.
