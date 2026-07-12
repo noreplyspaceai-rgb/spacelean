@@ -16,6 +16,12 @@ const dots = [
   { start: { lat: 25.28, lng: 55.31  }, end: { lat: 29.08, lng: 48.13 } },
   // Singapore → Dubai
   { start: { lat: 1.34,  lng: 103.7  }, end: { lat: 25.28, lng: 55.31 } },
+  // Sacramento → Toronto
+  { start: { lat: 38.62, lng: -121.38 }, end: { lat: 43.65107, lng: -79.347015 } },
+  // Sacramento → Riyadh (Saudi Arabia)
+  { start: { lat: 38.62, lng: -121.38 }, end: { lat: 24.7136, lng: 46.6753 } },
+  // Dubai → Riyadh (Saudi Arabia)
+  { start: { lat: 25.28, lng: 55.31  }, end: { lat: 24.7136, lng: 46.6753 } },
 ];
 
 // Pure map — no heading, no description. AboutPresence owns the copy.
