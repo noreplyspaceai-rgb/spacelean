@@ -37,6 +37,7 @@ export default function BlogPage() {
             Insights &amp; Perspectives
           </span>
 
+
           {/* Heading  + GIF side by side */}
           <div className="flex items-center gap-4">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-none text-[#0a0a0a] mb-5">
