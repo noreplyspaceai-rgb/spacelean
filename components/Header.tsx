@@ -99,18 +99,18 @@ export default function Header() {
   }, [scrolled]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
+    <header className="fixed top-0 left-0 right-0 z-50 px-2 sm:px-4 lg:px-4 min-[1200px]:px-8 pt-4">
       <nav
         className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${scrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm border border-black/5"
           : "bg-transparent border border-transparent"
           }`}
       >
-        <div className="flex h-14 items-center justify-between px-6">
+        <div className="flex h-14 items-center justify-between px-3 sm:px-4 lg:px-3 min-[1200px]:px-6">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-1.5 hover:scale-105 transition-transform duration-200"
+            className="flex items-center gap-1.5 hover:scale-105 transition-transform duration-200 whitespace-nowrap flex-shrink-0"
           >
             <div className="relative w-9 h-9 flex-shrink-0">
               <Image
@@ -122,51 +122,51 @@ export default function Header() {
               />
             </div>
             <div className="flex items-center h-9">
-              <span className="text-lg sm:text-[22px] font-black tracking-tight bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent leading-[36px]">
+              <span className="text-lg sm:text-[22px] font-black tracking-tight bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent leading-[36px] whitespace-nowrap">
                 SPACE
               </span>
-              <span className="text-lg sm:text-[22px] font-light tracking-tight text-secondary-text ml-1 leading-[36px]">
+              <span className="text-lg sm:text-[22px] font-light tracking-tight text-secondary-text ml-1 leading-[36px] whitespace-nowrap">
                 LEAN
               </span>
             </div>
           </Link>
 
-          {/* Navigation Links (visible on Tablet and Desktop) */}
-          <div className="hidden md:flex items-center gap-1 bg-gray-100/50 rounded-full p-1 max-lg:gap-0.5 max-lg:p-0.5">
+          {/* Navigation Links (visible on Desktop) */}
+          <div className="hidden lg:flex items-center gap-0.5 min-[1200px]:gap-1 bg-gray-100/50 rounded-full p-0.5 min-[1200px]:p-1">
             <Link
               href="/about"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm max-lg:px-2 max-lg:py-1 max-lg:text-xs"
+              className="px-2.5 min-[1200px]:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
             >
               About
             </Link>
             <Link
               href="/space-lean-core"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm max-lg:px-2 max-lg:py-1 max-lg:text-xs"
+              className="px-2.5 min-[1200px]:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
             >
               Space Lean Core
             </Link>
             <Link
               href="/blogs"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm max-lg:px-2 max-lg:py-1 max-lg:text-xs"
+              className="px-2.5 min-[1200px]:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
             >
               Blog
             </Link>
             <Link
               href="/compare"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm max-lg:px-2 max-lg:py-1 max-lg:text-xs"
+              className="px-2.5 min-[1200px]:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
             >
               Compare
             </Link>
             <Link
               href="/solutions"
-              className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm max-lg:px-2 max-lg:py-1 max-lg:text-xs"
+              className="px-2.5 min-[1200px]:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
             >
               Solutions
             </Link>
           </div>
 
           {/* Actions Container */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 min-[1200px]:gap-2 flex-shrink-0">
             {/* Contact Dropdown (always visible in navbar) */}
             <div 
               ref={containerRef}
@@ -180,11 +180,11 @@ export default function Header() {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 aria-haspopup="true"
-                className="flex items-center gap-2 px-3 py-1.5 bg-gray-100/60 hover:bg-gray-100/80 rounded-full border border-gray-200/60 transition-all duration-200 cursor-pointer select-none text-xs font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500/50 min-h-[44px] md:min-h-[32px]"
+                className="flex items-center gap-1.5 min-[1200px]:gap-2 px-2.5 min-[1200px]:px-3 py-1.5 bg-gray-100/60 hover:bg-gray-100/80 rounded-full border border-gray-200/60 transition-all duration-200 cursor-pointer select-none text-xs font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500/50 min-h-[44px] md:min-h-[32px] whitespace-nowrap"
               >
                 <span className="text-sm leading-none">{selectedContact.flag}</span>
                 <span className="font-semibold text-gray-700">{selectedContact.country}</span>
-                <span className="hidden sm:inline text-gray-500 font-medium whitespace-nowrap">{selectedContact.phone}</span>
+                <span className="hidden sm:inline lg:hidden min-[1200px]:inline text-gray-500 font-medium whitespace-nowrap">{selectedContact.phone}</span>
                 <svg 
                   className={`w-3 h-3 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
                   fill="none" 
@@ -231,23 +231,23 @@ export default function Header() {
             </div>
 
             {/* Start Free Button */}
-            {/* On desktop/tablet (md+), always visible. On mobile (< md), visible only if space allows (sm+) */}
+            {/* On desktop/tablet (lg+), always visible if space allows (sm+) */}
             <div className="hidden sm:block">
-              <StartFreeTrialButton className="px-4 py-2 text-sm max-lg:px-3 max-lg:py-1.5 max-lg:text-xs" />
+              <StartFreeTrialButton className="px-3 min-[1200px]:px-4 py-2 text-sm whitespace-nowrap" />
             </div>
 
-            {/* Request a Demo Button (visible on md+) */}
+            {/* Request a Demo Button (visible on lg+) */}
             <Link
               href="/request-a-demo"
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 text-sm font-medium rounded-full border border-gray-300/80 hover:border-gray-400 hover:bg-gray-50 hover:shadow-md transition-all duration-200 max-lg:px-3 max-lg:py-1.5 max-lg:text-xs"
+              className="hidden lg:inline-flex items-center gap-1.5 min-[1200px]:gap-2 px-3 min-[1200px]:px-4 py-2 bg-white text-gray-900 text-sm font-medium rounded-full border border-gray-300/80 hover:border-gray-400 hover:bg-gray-50 hover:shadow-md transition-all duration-200 whitespace-nowrap"
             >
               Request a Demo
             </Link>
 
-            {/* Mobile menu button (visible on < md) */}
+            {/* Mobile menu button (visible on < lg) */}
             <button
               type="button"
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-full text-gray-600 hover:text-gray-900 hover:bg-gray-100/70 border border-transparent hover:border-gray-200 transition-all duration-200 w-11 h-11"
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-full text-gray-600 hover:text-gray-900 hover:bg-gray-100/70 border border-transparent hover:border-gray-200 transition-all duration-200 w-11 h-11"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -286,7 +286,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-gradient-to-br from-white via-purple-50 to-blue-50 border border-gray-200 shadow-2xl shadow-purple-900/20 rounded-2xl overflow-hidden transition-all duration-300 ease-out origin-top z-50 ${
+          className={`lg:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-gradient-to-br from-white via-purple-50 to-blue-50 border border-gray-200 shadow-2xl shadow-purple-900/20 rounded-2xl overflow-hidden transition-all duration-300 ease-out origin-top z-50 ${
             mobileMenuOpen
               ? "opacity-100 translate-y-0 scale-100 visible"
               : "opacity-0 -translate-y-4 scale-95 invisible pointer-events-none"
