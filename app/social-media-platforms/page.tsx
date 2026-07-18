@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   keywords: [
     "SpaceLean social media",
     "SpaceLean LinkedIn",
+    "SpaceLean YouTube",
     "SpaceLean Twitter",
     "SpaceLean Instagram",
     "SpaceLean GitHub",

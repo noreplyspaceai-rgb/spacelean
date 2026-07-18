@@ -51,6 +51,15 @@ export const socialPlatforms: SocialPlatform[] = [
     url: "https://wa.me/6586111900",
     status: "Registered",
   },
+  {
+    id: "beacons",
+    name: "Beacons",
+    category: "Social Networks",
+    description:
+      "Official SpaceLean profile on Beacons — check out our link aggregator for quick access to all our resources.",
+    url: "https://beacons.ai/spacelean",
+    status: "Registered",
+  },
 
   // ── Developer Communities ─────────────────────────────────────────────────────
   {
@@ -80,6 +89,15 @@ export const socialPlatforms: SocialPlatform[] = [
     url: "https://www.reddit.com/user/spacelean1/",
     status: "Registered",
   },
+  {
+    id: "sourceforge",
+    name: "SourceForge",
+    category: "Developer Communities",
+    description:
+      "Official SpaceLean profile on SourceForge — access open-source components, development releases, and community discussions.",
+    url: "https://sourceforge.net/u/spacelean/profile/",
+    status: "Registered",
+  },
 
   // ── Design Communities ────────────────────────────────────────────────────────
 
@@ -104,6 +122,15 @@ export const socialPlatforms: SocialPlatform[] = [
     status: "Registered",
   },
   {
+    id: "youtube",
+    name: "YouTube",
+    category: "Content Platforms",
+    description:
+      "Official SpaceLean YouTube channel — watch product tutorials, feature updates, and engineering insights.",
+    url: "https://www.youtube.com/@Spacelean-w2g",
+    status: "Registered",
+  },
+  {
     id: "medium",
     name: "Medium",
     category: "Content Platforms",
@@ -118,6 +145,15 @@ export const socialPlatforms: SocialPlatform[] = [
     description:
       "Subscribe to the SpaceLean newsletter on Substack for curated insights on AI, construction, and productivity.",
     url: "https://spacelean.substack.com/",
+    status: "Registered",
+  },
+  {
+    id: "microblog",
+    name: "Micro.blog",
+    category: "Content Platforms",
+    description:
+      "Follow SpaceLean on Micro.blog for bite-sized updates, micro-posts, and quick thoughts on construction technology.",
+    url: "https://spacelean.micro.blog/",
     status: "Registered",
   },
 ];

@@ -56,6 +56,29 @@ export default function Header() {
   const [selectedContact, setSelectedContact] = useState(CONTACTS[0]);
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 200);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -171,8 +194,8 @@ export default function Header() {
             <div 
               ref={containerRef}
               onBlur={handleBlur}
-              onMouseEnter={() => setIsOpen(true)}
-              onMouseLeave={() => setIsOpen(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               className="relative mr-1"
             >
               <button
@@ -198,7 +221,7 @@ export default function Header() {
 
               {/* Redesigned Dropdown Menu */}
               <div
-                className={`absolute right-0 top-full mt-2 w-[500px] md:w-[460px] bg-white border border-gray-200/80 rounded-2xl shadow-[0_10px_40px_-10px_rgba(147,51,234,0.12)] transition-all duration-300 ease-out origin-top-right z-50 max-md:fixed max-md:top-[76px] max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[90vw] max-md:max-h-[70vh] max-md:overflow-y-auto max-md:origin-top ${
+                className={`absolute right-0 top-full mt-2 w-[500px] md:w-[460px] bg-white border border-gray-200/80 rounded-2xl shadow-[0_10px_40px_-10px_rgba(147,51,234,0.12)] transition-all duration-300 ease-out origin-top-right z-50 max-md:fixed max-md:top-[76px] max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-[90vw] max-md:max-h-[70vh] max-md:overflow-y-auto max-md:origin-top before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 before:content-[''] ${
                   isOpen 
                     ? "opacity-100 translate-y-0 scale-100 visible" 
                     : "opacity-0 -translate-y-2 scale-95 invisible pointer-events-none"

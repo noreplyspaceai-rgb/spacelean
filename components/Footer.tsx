@@ -14,6 +14,13 @@ const footerLinks = {
       })),
     ],
   },
+  resources: {
+    title: "Resources",
+    links: [
+      { label: "Blog", href: "/blogs" },
+      { label: "Videos", href: "/videos" },
+    ],
+  },
   compare: {
     title: "Compare",
     links: comparisons.map((comparison) => ({
@@ -93,6 +100,16 @@ const socialLinks = [
     ),
   },
   {
+    label: "YouTube",
+    href: "https://www.youtube.com/@Spacelean-w2g",
+    external: true,
+    icon: (
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+    ),
+  },
+  {
     label: "Social Media Platforms",
     href: "/social-media-platforms",
     external: false,
@@ -111,7 +128,7 @@ export default function Footer() {
   return (
     <footer className=" text-stone-900 border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 lg:gap-8 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 lg:gap-8 mb-20">
           {/* Brand Section */}
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">

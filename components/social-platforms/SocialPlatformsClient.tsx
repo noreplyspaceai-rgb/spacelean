@@ -144,6 +144,18 @@ const getPlatformIcon = (id: string): React.ReactNode => {
           <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42s-3.38-2.88-3.38-6.42 1.51-6.42 3.38-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z"/>
         </svg>
       );
+    case "youtube":
+      return (
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      );
+    case "beacons":
+      return <Link2 className="w-4 h-4" />;
+    case "microblog":
+      return <Link2 className="w-4 h-4" />;
+    case "sourceforge":
+      return <Link2 className="w-4 h-4" />;
     default:
       return <Globe className="w-4 h-4" />;
   }
@@ -404,7 +416,7 @@ export default function SocialPlatformsClient() {
     });
   }, [query, activeCategory]);
 
-  const CHANNEL_IDS = ["linkedin", "instagram", "pinterest", "whatsapp"];
+  const CHANNEL_IDS = ["linkedin", "instagram", "pinterest", "whatsapp", "youtube"];
 
   const { channels, profiles } = useMemo(() => {
     const channelsList: SocialPlatform[] = [];
