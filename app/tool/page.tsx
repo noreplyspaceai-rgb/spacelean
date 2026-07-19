@@ -21,12 +21,12 @@ export const metadata: Metadata = {
         "AI-powered work breakdown structure",
     ],
     alternates: {
-        canonical: "/tool",
+        canonical: "https://spacelean.ai/tool",
         languages: {
-            "en-US": "/tool",
-            "en-GB": "/tool",
-            "en-IN": "/tool",
-            "x-default": "/tool",
+            "en-US": "https://spacelean.ai/tool",
+            "en-GB": "https://spacelean.ai/tool",
+            "en-IN": "https://spacelean.ai/tool",
+            "x-default": "https://spacelean.ai/tool",
         },
     },
     openGraph: {

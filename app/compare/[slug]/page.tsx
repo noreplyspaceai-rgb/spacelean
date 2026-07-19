@@ -29,12 +29,12 @@ export async function generateMetadata({
     title: comparison.title,
     description: comparison.description,
     alternates: {
-      canonical: `/compare/${comparison.slug}`,
+      canonical: `https://spacelean.ai/compare/${comparison.slug}`,
       languages: {
-        "en-US": `/compare/${comparison.slug}`,
-        "en-GB": `/compare/${comparison.slug}`,
-        "en-IN": `/compare/${comparison.slug}`,
-        "x-default": `/compare/${comparison.slug}`,
+        "en-US": `https://spacelean.ai/compare/${comparison.slug}`,
+        "en-GB": `https://spacelean.ai/compare/${comparison.slug}`,
+        "en-IN": `https://spacelean.ai/compare/${comparison.slug}`,
+        "x-default": `https://spacelean.ai/compare/${comparison.slug}`,
       },
     },
     openGraph: {

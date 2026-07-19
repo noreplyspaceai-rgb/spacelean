@@ -32,12 +32,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: solution.metaDescription,
     keywords: solution.keywords,
     alternates: {
-      canonical: `/solutions/${slug}`,
+      canonical: `https://spacelean.ai/solutions/${slug}`,
       languages: {
-        "en-US": `/solutions/${slug}`,
-        "en-GB": `/solutions/${slug}`,
-        "en-IN": `/solutions/${slug}`,
-        "x-default": `/solutions/${slug}`,
+        "en-US": `https://spacelean.ai/solutions/${slug}`,
+        "en-GB": `https://spacelean.ai/solutions/${slug}`,
+        "en-IN": `https://spacelean.ai/solutions/${slug}`,
+        "x-default": `https://spacelean.ai/solutions/${slug}`,
       },
     },
     openGraph: {

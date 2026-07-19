@@ -198,7 +198,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: #301659 
+  color: #301659;
   /* font-weight: 200 !important; thin */
 }
 

@@ -2,7 +2,8 @@ export interface Video {
   id: string;
   title: string;
   description: string;
-  category: "Product Demo" | "Feature Demo" | "Overview";
+  category: "Product Demo" | "Feature Demo" | "Overview" | "YouTube Short";
+  type?: "video" | "short";
 }
 
 export const videos: Video[] = [
@@ -23,5 +24,12 @@ export const videos: Video[] = [
     title: "SpaceLean Product Overview",
     description: "Discover how SpaceLean brings together AI-powered scheduling, BIM, documentation, collaboration, and project management into one intelligent construction platform.",
     category: "Overview"
+  },
+  {
+    id: "XMGtxpQNCUs",
+    title: "AI Risk Analysis",
+    description: "Discover how SpaceLean AI helps identify, assess, and manage construction project risks with intelligent risk analysis, real-time insights, and proactive decision-making.",
+    category: "YouTube Short",
+    type: "short"
   }
 ];

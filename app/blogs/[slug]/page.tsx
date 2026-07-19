@@ -55,12 +55,12 @@ export async function generateMetadata({
       },
     },
     alternates: {
-      canonical: `/blogs/${slug}`,
+      canonical: `https://spacelean.ai/blogs/${slug}`,
       languages: {
-        "en-US": `/blogs/${slug}`,
-        "en-GB": `/blogs/${slug}`,
-        "en-IN": `/blogs/${slug}`,
-        "x-default": `/blogs/${slug}`,
+        "en-US": `https://spacelean.ai/blogs/${slug}`,
+        "en-GB": `https://spacelean.ai/blogs/${slug}`,
+        "en-IN": `https://spacelean.ai/blogs/${slug}`,
+        "x-default": `https://spacelean.ai/blogs/${slug}`,
       },
     },
     openGraph: {

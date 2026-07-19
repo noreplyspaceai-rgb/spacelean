@@ -101,14 +101,18 @@ export default function VideosClient() {
       {/* Video Grid Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {filteredVideos.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {filteredVideos.map((video) => (
               <div
                 key={video.id}
                 className="group flex flex-col rounded-2xl bg-white border border-black/[0.06] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                {/* 16:9 Aspect Ratio Responsive Embedded Player */}
-                <div className="relative aspect-video w-full bg-neutral-900 overflow-hidden">
+                {/* Aspect Ratio Responsive Embedded Player */}
+                <div
+                  className={`relative w-full bg-neutral-900 overflow-hidden ${
+                    video.type === "short" ? "aspect-[9/16]" : "aspect-video"
+                  }`}
+                >
                   <iframe
                     src={`https://www.youtube.com/embed/${video.id}`}
                     title={video.title}

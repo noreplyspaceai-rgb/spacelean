@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     "construction technology partner program",
   ],
   alternates: {
-    canonical: "/solutions",
+    canonical: "https://spacelean.ai/solutions",
     languages: {
-      "en-US": "/solutions",
-      "en-GB": "/solutions",
-      "en-IN": "/solutions",
-      "x-default": "/solutions",
+      "en-US": "https://spacelean.ai/solutions",
+      "en-GB": "https://spacelean.ai/solutions",
+      "en-IN": "https://spacelean.ai/solutions",
+      "x-default": "https://spacelean.ai/solutions",
     },
   },
   openGraph: {
