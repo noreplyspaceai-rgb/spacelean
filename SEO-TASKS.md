@@ -3,9 +3,9 @@
 
 ---
 
-## Site Analysis Summary
+## Site Analysis Summary 
 
-| Issue | Location |
+| Issue | Location | 
 |---|---|
 | JSON-LD script type has trailing space (breaks structured data) | `app/page.tsx:70` |
 | Meta title uses "Digital Construction Brain" — zero search volume | `app/layout.tsx:10` |
