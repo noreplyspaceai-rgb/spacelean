@@ -18,6 +18,8 @@
 
 ---
 
+
+
 ## Top Keyword Opportunities
 
 | Keyword | Avg Monthly Searches | Competition | YoY Change |
