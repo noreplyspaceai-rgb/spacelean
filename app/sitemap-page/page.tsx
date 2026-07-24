@@ -18,7 +18,13 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "/sitemap-page",
+    canonical: "https://spacelean.ai/sitemap-page",
+    languages: {
+      "en-US": "https://spacelean.ai/sitemap-page",
+      "en-GB": "https://spacelean.ai/sitemap-page",
+      "en-IN": "https://spacelean.ai/sitemap-page",
+      "x-default": "https://spacelean.ai/sitemap-page",
+    },
   },
   openGraph: {
     title: "Sitemap | SpaceLean",

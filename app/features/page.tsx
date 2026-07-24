@@ -21,12 +21,12 @@ export const metadata: Metadata = {
         "automated task breakdown",
     ],
     alternates: {
-        canonical: "/features",
+        canonical: "https://spacelean.ai/features",
         languages: {
-            "en-US": "/features",
-            "en-GB": "/features",
-            "en-IN": "/features",
-            "x-default": "/features",
+            "en-US": "https://spacelean.ai/features",
+            "en-GB": "https://spacelean.ai/features",
+            "en-IN": "https://spacelean.ai/features",
+            "x-default": "https://spacelean.ai/features",
         },
     },
     openGraph: {

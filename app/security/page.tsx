@@ -16,7 +16,13 @@ export const metadata: Metadata = {
       },
     },
     alternates: {
-        canonical: "/security",
+        canonical: "https://spacelean.ai/security",
+        languages: {
+            "en-US": "https://spacelean.ai/security",
+            "en-GB": "https://spacelean.ai/security",
+            "en-IN": "https://spacelean.ai/security",
+            "x-default": "https://spacelean.ai/security",
+        },
     },
     openGraph: {
         title: "Security Standards | SpaceLean AI",

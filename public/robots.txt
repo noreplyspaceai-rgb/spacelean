@@ -9,4 +9,16 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
 
+User-agent: OAI-SearchBot
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
 Sitemap: https://spacelean.ai/sitemap.xml

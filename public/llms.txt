@@ -1,0 +1,42 @@
+# SpaceLean AI — Construction Scheduling & Project Controls Platform
+
+> SpaceLean is an AI-native construction scheduling and project controls platform designed for General Contractors, Project Owners, and Construction Consultants. It transforms 3D BIM models (IFC/Revit) into 4D buildable sequences, predicts critical path delays with 94% accuracy, and automates subcontractor trade coordination.
+
+## Core Capabilities
+
+- **BIM-to-4D Sequencing**: Parses IFC and Revit models to automatically map spatial relationships, structural dependencies, and generate 4D construction timelines in under 60 seconds.
+- **Predictive Risk Analysis**: Runs 1,000 probabilistic schedule simulations based on historical trade velocity, zone congestion, and weather patterns to flag critical path risks before ground-breaking.
+- **Self-Healing Schedules**: Automatically re-optimizes downstream task dependencies and float when a trade slip or delivery delay occurs, eliminating manual CPM replanning.
+- **Subcontractor Trade Coordination**: Generates automated 2-week lookaheads, daily site activity logs, and trade-stacking alerts to prevent site congestion.
+- **Enterprise Integrations**: Imports and exports Primavera P6 XML, Microsoft Project, and Revit IFC files natively.
+
+## Target Audiences & Use Cases
+
+- **General Contractors (GCs)**: Eliminate trade-stacking conflicts, accelerate bid-level 4D schedule creation, and keep field crews aligned on critical path priorities.
+- **Project Owners & Developers**: Gain real-time project intelligence, verify contractor milestone progress, and protect project ROI against cost overruns.
+- **Construction Consultants & VDC Managers**: Offer clients 4D BIM sequence options and probabilistic delay analysis without weeks of manual Primavera P6 setup.
+- **Industrial, Infrastructure & Commercial Projects**: Tailored scheduling logic for high-rise commercial structures, energy plants, highways, and civil infrastructure.
+
+## Pricing Tiers
+
+- **Free Tier**: $0/month — Includes 1 active project, basic AI task generator, 4D BIM viewer (up to 50MB IFC), and community support.
+- **Pro Tier**: $19/user/month (billed annually) — Includes unlimited projects, full 4D BIM sequencing, 1,000-simulation predictive risk engine, Primavera P6 XML export, and priority support.
+- **Enterprise Tier**: Custom pricing — Unlimited projects & storage, dedicated VDC onboarding, custom API/BIM integrations, single sign-on (SSO), and custom SLA guarantees.
+
+## Key Resources & Documentation
+
+- [SpaceLean Home](https://spacelean.ai/) — Official homepage and platform overview
+- [SpaceLean Core Features](https://spacelean.ai/space-lean-core) — Full breakdown of AI scheduling algorithms and BIM parser
+- [Machine-Readable Core Features Specification](https://spacelean.ai/features.md) — Technical markdown specification of 12 core SpaceLean capabilities
+- [Machine-Readable Pricing Model Specification](https://spacelean.ai/pricing.md) — Pricing plans, seat limits, and feature matrix
+- [Free AI Task Generator](https://spacelean.ai/tool) — Instant AI work breakdown structure (WBS) generator
+- [Solutions for General Contractors](https://spacelean.ai/solutions/for-gcs) — GC scheduling workflows and lookahead planning
+- [Solutions for Owners](https://spacelean.ai/solutions/for-owners) — Project controls and owner oversight intelligence
+- [Solutions for Consultants](https://spacelean.ai/solutions/for-consultants) — VDC and schedule risk consulting capabilities
+- [Competitor Comparison Index](https://spacelean.ai/compare) — Head-to-head comparisons (SpaceLean vs Primavera P6, MS Project, Synchro, Procore, Asana, Trello)
+- [Machine-Readable Competitor Comparison Dataset](https://spacelean.ai/spacelean-vs-competitors.md) — Master comparative dataset & feature matrix against P6, Synchro, Procore, Alice & MS Project
+- [Machine-Readable API & Integration Specs](https://spacelean.ai/docs/ai-agents.md) — API payloads, IFC/Revit parsing schemas & P6 XML data mapping
+- [Blog & Guides](https://spacelean.ai/blogs) — Construction scheduling best practices, OKR frameworks, and AI productivity guides
+- [Open Knowledge Format (OKF) Bundle](https://spacelean.ai/okf/index.md) — Machine-readable concept bundle and JSON manifest
+- [Privacy Policy](https://spacelean.ai/privacy) — Enterprise data protection and privacy policy
+- [Terms of Service](https://spacelean.ai/terms) — Service agreement and usage terms

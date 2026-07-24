@@ -14,12 +14,12 @@ export const metadata: Metadata = {
         "enterprise project management",
     ],
     alternates: {
-        canonical: "/pricing",
+        canonical: "https://spacelean.ai/pricing",
         languages: {
-            "en-US": "/pricing",
-            "en-GB": "/pricing",
-            "en-IN": "/pricing",
-            "x-default": "/pricing",
+            "en-US": "https://spacelean.ai/pricing",
+            "en-GB": "https://spacelean.ai/pricing",
+            "en-IN": "https://spacelean.ai/pricing",
+            "x-default": "https://spacelean.ai/pricing",
         },
     },
     openGraph: {
@@ -49,7 +49,7 @@ export default function PricingPage() {
         "offers": [
             {
                 "@type": "Offer",
-                "name": "Free",
+                "name": "Individual",
                 "price": "0.00",
                 "priceCurrency": "USD",
                 "url": "https://spacelean.ai/pricing",
@@ -59,12 +59,12 @@ export default function PricingPage() {
             {
                 "@type": "Offer",
                 "name": "Pro",
-                "price": "15.00",
+                "price": "19.00",
                 "priceCurrency": "USD",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
                     "billingIncrement": 1,
-                    "price": "15.00",
+                    "price": "19.00",
                     "priceCurrency": "USD",
                     "unitText": "month",
                 },
@@ -74,19 +74,12 @@ export default function PricingPage() {
             },
             {
                 "@type": "Offer",
-                "name": "Teams",
-                "price": "50.00",
+                "name": "Enterprise",
+                "price": "0.00",
                 "priceCurrency": "USD",
-                "priceSpecification": {
-                    "@type": "UnitPriceSpecification",
-                    "billingIncrement": 1,
-                    "price": "50.00",
-                    "priceCurrency": "USD",
-                    "unitText": "month",
-                },
-                "url": "https://spacelean.ai/pricing",
-                "availability": "https://schema.org/InStock",
-                "description": "Everything in Pro plus SSO, audit logs, advanced analytics, and dedicated onboarding.",
+                "url": "https://spacelean.ai/request-a-demo",
+                "availability": "https://schema.org/PreOrder",
+                "description": "Enterprise-grade security, SSO/SAML, audit logs, custom AI training, and dedicated onboarding manager.",
             },
         ],
         "publisher": {
@@ -96,9 +89,66 @@ export default function PricingPage() {
             "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
         },
     } as const;
+
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "SpaceLean AI Construction Scheduling Platform",
+        "image": "https://spacelean.ai/dashboard.png",
+        "description": "SpaceLean is an AI-powered construction scheduling and project management platform. Choose from Individual (Free), Pro ($19/mo), and Enterprise (Custom) plans.",
+        "brand": {
+            "@type": "Brand",
+            "name": "SpaceLean"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "0.00",
+            "highPrice": "19.00",
+            "offerCount": "3",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "SpaceLean Individual Plan",
+                    "price": "0.00",
+                    "priceCurrency": "USD",
+                    "url": "https://spacelean.ai/pricing",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Free forever for individuals and small teams. Includes basic AI task generation, Kanban boards, and manual tracking."
+                },
+                {
+                    "@type": "Offer",
+                    "name": "SpaceLean Pro Plan",
+                    "price": "19.00",
+                    "priceCurrency": "USD",
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "billingIncrement": 1,
+                        "price": "19.00",
+                        "priceCurrency": "USD",
+                        "unitText": "month"
+                    },
+                    "url": "https://spacelean.ai/pricing",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Full AI scheduling, BIM integration, critical path analysis, and priority email support."
+                },
+                {
+                    "@type": "Offer",
+                    "name": "SpaceLean Enterprise Plan",
+                    "price": "0.00",
+                    "priceCurrency": "USD",
+                    "url": "https://spacelean.ai/pricing",
+                    "availability": "https://schema.org/PreOrder",
+                    "description": "Enterprise-grade security, SSO/SAML, audit logs, custom AI training, and dedicated onboarding manager."
+                }
+            ]
+        }
+    } as const;
+
     return (
         <main className="min-h-screen bg-[#fafafa]">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
             <section className="pt-32">
                 <Pricing />
             </section>

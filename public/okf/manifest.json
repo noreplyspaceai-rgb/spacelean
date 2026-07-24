@@ -1,0 +1,41 @@
+{
+  "spec_version": "0.1",
+  "bundle_name": "spacelean-ai-knowledge-bundle",
+  "title": "SpaceLean.ai Open Knowledge Format (OKF) Bundle",
+  "description": "Agent-readable catalog metadata for SpaceLean AI construction scheduling, 4D BIM sequencing, and project controls platform.",
+  "publisher": "SpaceLean AI Inc.",
+  "url": "https://spacelean.ai/okf/",
+  "updated_at": "2026-07-21",
+  "resources": [
+    {
+      "type": "ProductOverview",
+      "title": "SpaceLean Platform Overview",
+      "path": "spacelean-overview.md",
+      "canonical": "https://spacelean.ai/"
+    },
+    {
+      "type": "Solution",
+      "title": "Solutions for General Contractors",
+      "path": "solutions-general-contractors.md",
+      "canonical": "https://spacelean.ai/solutions/for-gcs"
+    },
+    {
+      "type": "Solution",
+      "title": "Solutions for Project Owners & Developers",
+      "path": "solutions-owners.md",
+      "canonical": "https://spacelean.ai/solutions/for-owners"
+    },
+    {
+      "type": "Solution",
+      "title": "Solutions for Construction Consultants & VDC Teams",
+      "path": "solutions-consultants.md",
+      "canonical": "https://spacelean.ai/solutions/for-consultants"
+    },
+    {
+      "type": "Pricing",
+      "title": "Pricing Tiers & License Model",
+      "path": "pricing-tiers.md",
+      "canonical": "https://spacelean.ai/pricing"
+    }
+  ]
+}

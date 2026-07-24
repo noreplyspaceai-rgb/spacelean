@@ -123,8 +123,83 @@ export default async function SolutionPage({ params }: Props) {
 
   const resources = relatedResources[slug] || [];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Solutions",
+        "item": "https://spacelean.ai/solutions",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": solution.title,
+        "item": `https://spacelean.ai/solutions/${slug}`,
+      },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": solution.faqs && solution.faqs.length > 0
+      ? solution.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+          },
+        }))
+      : [
+          {
+            "@type": "Question",
+            "name": `What is ${solution.title}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": solution.description,
+            },
+          },
+          ...solution.features.map((feature) => ({
+            "@type": "Question",
+            "name": `How does ${feature.title} work in ${solution.title}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": feature.description,
+            },
+          })),
+          {
+            "@type": "Question",
+            "name": `What are the key benefits of ${solution.title}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": solution.benefits
+                .map((b) => `${b.title}: ${b.description}${b.stat ? ` (${b.stat} improvement)` : ""}`)
+                .join(" "),
+            },
+          },
+        ],
+  };
+
   return (
     <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <SolutionDetailClient solution={solution} otherSolutions={otherSolutions} />
 
       {/* Server-rendered internal links for SEO */}

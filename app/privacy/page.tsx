@@ -9,7 +9,13 @@ export const metadata: Metadata = {
       follow: false,
     },
     alternates: {
-        canonical: "/privacy",
+        canonical: "https://spacelean.ai/privacy",
+        languages: {
+            "en-US": "https://spacelean.ai/privacy",
+            "en-GB": "https://spacelean.ai/privacy",
+            "en-IN": "https://spacelean.ai/privacy",
+            "x-default": "https://spacelean.ai/privacy",
+        },
     },
     openGraph: {
         title: "Privacy Policy | SpaceLean AI",

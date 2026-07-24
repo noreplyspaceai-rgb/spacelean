@@ -21,7 +21,13 @@ export const metadata: Metadata = {
     "construction software social media",
   ],
   alternates: {
-    canonical: "/social-media-platforms",
+    canonical: "https://spacelean.ai/social-media-platforms",
+    languages: {
+      "en-US": "https://spacelean.ai/social-media-platforms",
+      "en-GB": "https://spacelean.ai/social-media-platforms",
+      "en-IN": "https://spacelean.ai/social-media-platforms",
+      "x-default": "https://spacelean.ai/social-media-platforms",
+    },
   },
   openGraph: {
     title: "Social Media Platforms | SpaceLean",

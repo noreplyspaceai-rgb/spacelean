@@ -110,7 +110,7 @@ function LaptopMockup() {
             {/* Dashboard image */}
             <div className="flex-1 overflow-hidden">
               <img
-                src="/dashboard.png"
+                src="/dashboard.webp"
                 alt="Space Lean Dashboard"
                 width={1440}
                 height={900}

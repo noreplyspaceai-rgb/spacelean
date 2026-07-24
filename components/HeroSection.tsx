@@ -357,7 +357,7 @@ export default function HeroSection() {
               <model-viewer
                 ref={modelRef}
                 src="/city_pack_8.glb"
-                alt="3D building model"
+                alt="Interactive 3D BIM building model showing digital construction planning and AI project scheduling"
                 camera-controls
                 auto-rotate
                 shadow-intensity="1"

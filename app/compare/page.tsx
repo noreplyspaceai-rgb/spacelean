@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     "best project management software 2026",
   ],
   alternates: {
-    canonical: "/compare",
+    canonical: "https://spacelean.ai/compare",
     languages: {
-      "en-US": "/compare",
-      "en-GB": "/compare",
-      "en-IN": "/compare",
-      "x-default": "/compare",
+      "en-US": "https://spacelean.ai/compare",
+      "en-GB": "https://spacelean.ai/compare",
+      "en-IN": "https://spacelean.ai/compare",
+      "x-default": "https://spacelean.ai/compare",
     },
   },
   openGraph: {

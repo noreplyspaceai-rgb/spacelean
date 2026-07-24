@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'AI productivity tool demo',
   ],
   alternates: {
-    canonical: '/request-a-demo',
+    canonical: 'https://spacelean.ai/request-a-demo',
     languages: {
-      "en-US": "/request-a-demo",
-      "en-GB": "/request-a-demo",
-      "en-IN": "/request-a-demo",
-      "x-default": "/request-a-demo",
+      "en-US": "https://spacelean.ai/request-a-demo",
+      "en-GB": "https://spacelean.ai/request-a-demo",
+      "en-IN": "https://spacelean.ai/request-a-demo",
+      "x-default": "https://spacelean.ai/request-a-demo",
     },
   },
   openGraph: {

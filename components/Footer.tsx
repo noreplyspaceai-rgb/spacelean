@@ -144,7 +144,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-stone-600 text-sm leading-relaxed max-w-xs mb-8">
-              AI-powered task management for high-velocity teams. Orchestrate chaos, automate workflows, and ship faster.
+              AI-powered construction scheduling and project controls platform. Convert BIM models into 4D plans, predict critical path risks, and optimize trade crews.
             </p>
             <div className="w-full max-w-xs">
               <label className="block text-[11px] font-bold text-stone-900 uppercase tracking-[0.2em] mb-3">

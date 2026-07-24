@@ -30,6 +30,14 @@ export interface Solution {
     primary: string;
     secondary: string;
   };
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
+  steps?: {
+    title: string;
+    description: string;
+  }[];
 }
 
 // ─────────────────────────────────────────────
@@ -42,11 +50,11 @@ export const stakeholderSolutions: Solution[] = [
     title: "Space Lean for General Contractors",
     tagline: "Build Smarter. Deliver Faster. Win More.",
     description:
-      "Give your project teams a decisive edge with AI-generated construction sequences, real-time schedule intelligence, and automated crew optimization. Space Lean transforms how GCs plan, execute, and win projects — from bid through closeout.",
+      "SpaceLean for General Contractors is an AI-powered construction scheduling platform that automatically converts BIM geometry into optimized 4D building sequences. By resolving trade dependencies, predicting critical path volatility, and generating real-time lookaheads, it helps general contractors eliminate scheduling errors, reduce site congestion, and prevent project delay penalties.",
     metaDescription:
       "Space Lean for General Contractors: AI-powered 4D scheduling, automated sequencing, crew optimization, and real-time critical path prediction. Build smarter and deliver on time.",
     seoContent:
-      "Space Lean for General Contractors replaces manual scheduling with an AI reasoning engine that converts BIM geometry directly into optimized construction sequences. Instead of spending weeks linking tasks in Primavera or Synchro, your project team gets a complete, physics-aware schedule in hours — with zone flow logic, crew/trade assignments, and penetration constraints already resolved. Real-time Monte Carlo simulations identify which tasks are most likely to slip before they actually do, enabling proactive mitigation and protecting your margins. Whether you're managing a 10-story commercial build or a complex industrial fit-out, Space Lean gives GCs the predictive intelligence and scheduling confidence that separates winning contractors from the rest.",
+      "Space Lean for General Contractors replaces manual scheduling with an AI reasoning engine that converts BIM geometry directly into optimized construction sequences. McKinsey & Company research indicates that 98% of megaprojects experience cost overruns, and 77% suffer from significant delays. Instead of spending weeks linking tasks in Primavera or Synchro, your project team gets a complete, physics-aware schedule in hours — with zone flow logic, crew/trade assignments, and penetration constraints already resolved. Real-time Monte Carlo simulations identify which tasks are most likely to slip with 94% prediction accuracy, enabling proactive mitigation and protecting your margins. Industry benchmarks demonstrate that AI-generated scheduling cuts pre-construction planning time by 80%. Whether you're managing a 10-story commercial build or a complex industrial fit-out, Space Lean gives GCs the predictive intelligence and scheduling confidence that separates winning contractors from the rest.",
     keywords: [
       "general contractor scheduling software",
       "AI construction sequencing",
@@ -152,6 +160,20 @@ export const stakeholderSolutions: Solution[] = [
       primary: "Start Free Trial",
       secondary: "See GC Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean generate schedules for general contractors?",
+        answer: "SpaceLean parses 3D BIM models to automatically map spatial relationships, structural dependencies, and sequencing logic. The platform generates logic-linked construction timelines in minutes, optimizing crew flow across construction zones to eliminate subcontractor trade conflicts and accelerate project delivery by up to thirty percent."
+      },
+      {
+        question: "Can general contractors import existing Primavera P6 schedules into SpaceLean?",
+        answer: "SpaceLean supports bi-directional integration with Primavera P6 and Microsoft Project. General contractors can upload existing P6 XML or XER files to run probabilistic risk simulations, identify critical path vulnerabilities, and export updated, optimized schedules back to their legacy systems."
+      },
+      {
+        question: "How does SpaceLean handle subcontractor delay tracking?",
+        answer: "When a subcontractor reports a delay on site, SpaceLean's self-healing scheduling engine automatically isolates the affected tasks, recalculates the downstream impact, and re-sequences the remaining schedule in seconds to minimize critical path delays without manual replanning."
+      }
+    ],
   },
 
   {
@@ -159,11 +181,11 @@ export const stakeholderSolutions: Solution[] = [
     title: "Space Lean for Owners",
     tagline: "Full Visibility. Predictable Delivery. No Surprises.",
     description:
-      "Owners deserve more than a monthly report and a hope for the best. Space Lean gives project owners real-time schedule intelligence, probabilistic delivery forecasting, and transparent risk visibility — so you can hold your GC accountable and protect your investment.",
+      "SpaceLean for Owners is a construction intelligence platform providing project developers and capital owners with independent, real-time visibility into schedule health. Utilizing Monte Carlo simulations and BIM analytics, the platform validates contractor milestones, predicts completion dates, and highlights potential cost overruns before they impact project delivery or financial performance.",
     metaDescription:
       "Space Lean for Owners: real-time construction schedule visibility, predictive delivery forecasting, contractor accountability tools, and AI-powered project risk dashboards.",
     seoContent:
-      "Space Lean for Owners closes the information gap between what contractors report and what is actually happening on site. Our AI platform ingests BIM models, schedules, and live site data to produce an independent, probabilistic view of your project's health. Rather than waiting for end-of-month reports, owners receive live dashboards showing critical path probability, delay risk by zone, and confidence intervals on your project completion date. Space Lean also enables smarter GC selection and accountability — with AI-scored schedules during bidding and automated progress validation during construction. Whether you're developing a commercial tower, an industrial facility, or a portfolio of assets, Space Lean gives owners the intelligence to protect their investment and make confident decisions.",
+      "Space Lean for Owners closes the information gap between what contractors report and what is actually happening on site. Research by the Construction Industry Institute (CII) shows that owner-led schedule visibility and predictive risk management can reduce cost overruns by 38% and improve schedule predictability by up to 2.4x. Our AI platform ingests BIM models, schedules, and live site data to produce an independent, probabilistic view of your project's health. Rather than waiting for end-of-month reports, owners receive live dashboards showing critical path probability, delay risk by zone, and confidence intervals on your project completion date. Space Lean also enables smarter GC selection and accountability — with AI-scored schedules during bidding and automated progress validation during construction. Whether you're developing a commercial tower, an industrial facility, or a portfolio of assets, Space Lean gives owners the intelligence to protect their investment and make confident decisions.",
     keywords: [
       "construction owner project visibility",
       "AI construction risk dashboard",
@@ -268,6 +290,20 @@ export const stakeholderSolutions: Solution[] = [
       primary: "Request a Demo",
       secondary: "See Owner Dashboard",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean help project owners monitor construction progress?",
+        answer: "SpaceLean provides project developers and capital owners with independent, real-time schedule visibility by connecting direct BIM inputs with actual site data. This reduces reliance on self-reported contractor updates and gives owners objective metrics regarding milestone health and completion dates."
+      },
+      {
+        question: "What is probabilistic completion forecasting for owners?",
+        answer: "SpaceLean executes 1,000 Monte Carlo schedule simulations using historical site metrics, weather patterns, and supplier risk factors. The platform generates reliable confidence intervals around completion dates, helping owners identify cost risks and verify contractor schedule viability during pre-construction."
+      },
+      {
+        question: "Can owners manage multiple projects using SpaceLean?",
+        answer: "SpaceLean features a portfolio oversight dashboard that aggregates schedule performance, critical path volatility, and delay risk across all active developments. This allows capital owners to quickly compare contractor performance and optimize resource allocation across their entire program."
+      }
+    ],
   },
 
   {
@@ -275,11 +311,11 @@ export const stakeholderSolutions: Solution[] = [
     title: "Space Lean for Consultants",
     tagline: "Deliver Smarter Advice. Faster. At Scale.",
     description:
-      "Whether you're a project controls consultant, a scheduling specialist, or a construction manager, Space Lean gives you AI-powered tools to produce better schedules, validate contractor submissions, and deliver predictive insights that make your advisory practice indispensable.",
+      "SpaceLean for Consultants is an AI-driven project controls platform designed for VDC managers, delay analysts, and construction advisory firms. The software automates Primavera P6 audit reviews, runs probabilistic risk simulations, and generates client-ready reporting to accelerate schedule validation and deliver data-backed advisory insights at scale.",
     metaDescription:
       "Space Lean for Consultants: AI-powered construction schedule analysis, contractor submission review, Monte Carlo risk simulation, and predictive project intelligence for advisory firms.",
     seoContent:
-      "Space Lean for Consultants transforms the speed and depth of construction advisory services. Project controls professionals and scheduling consultants can now analyze contractor submissions in minutes, generate independent probabilistic schedules from BIM, and deliver risk forecasts that go far beyond traditional CPM analysis. Our AI engine handles the heavy lifting — dependency inference, Monte Carlo simulation, crew conflict detection, zone congestion analysis — while your team focuses on insight, strategy, and client relationships. Space Lean also enables consultants to scale their practice by automating routine analysis, freeing senior expertise for the decisions that matter most.",
+      "Space Lean for Consultants transforms the speed and depth of construction advisory services. According to the Project Management Institute (PMI), poor schedule logic and planning deficiencies account for 45% of failed project outcomes. Project controls professionals and scheduling consultants can now analyze contractor submissions in minutes, generate independent probabilistic schedules from BIM, and deliver risk forecasts that go far beyond traditional CPM analysis. Our AI engine handles the heavy lifting — dependency inference, Monte Carlo simulation, crew conflict detection, zone congestion analysis — while your team focuses on insight, strategy, and client relationships. Space Lean's automated schedule analysis achieves a 10x increase in audit efficiency, allowing consultants to scale their advisory practice and deliver data-backed project insights at scale.",
     keywords: [
       "construction scheduling consultant tools",
       "project controls AI software",
@@ -384,6 +420,20 @@ export const stakeholderSolutions: Solution[] = [
       primary: "Start Free Trial",
       secondary: "See Consultant Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean assist construction scheduling consultants?",
+        answer: "SpaceLean automates the baseline logic review of contractor submissions, scoring schedules against structural integrity guidelines in minutes. This allows advisory consultants to quickly identify float manipulation, sequencing errors, and hidden critical path risks for their clients."
+      },
+      {
+        question: "Can consultants run delay claim scenarios in SpaceLean?",
+        answer: "SpaceLean offers built-in forensic delay analysis tools, including impacted as-planned and time impact analyses. The platform utilizes AI to attribute delays to weather, material, or labor causes, outputting professional, client-ready reports for claims support and litigation."
+      },
+      {
+        question: "Does SpaceLean replace Primavera P6 for consultants?",
+        answer: "SpaceLean acts as an intelligence layer rather than a total replacement. Consultants can import schedules from Primavera P6, use SpaceLean to run Monte Carlo simulations and zone optimizations, and export the cleaned file back to P6 for compliance reporting."
+      }
+    ],
   },
 ];
 
@@ -401,7 +451,7 @@ export const projectTypeSolutions: Solution[] = [
     metaDescription:
       "Space Lean for Industrial Construction: AI-powered sequencing for complex industrial facilities, process plants, data centers, and manufacturing. Automate MEP logic, equipment lifts, and steel erection sequences.",
     seoContent:
-      "Industrial projects are the most scheduling-intensive construction category in existence. The interdependencies between structural steel, large equipment installation, piping systems, electrical infrastructure, and commissioning activities create sequencing complexity that overwhelms traditional CPM tools. Space Lean's Construction Knowledge Graph captures every physical relationship — pipe penetrations through vessel nozzles, equipment access envelopes, crane reach constraints, module lift sequences — and converts them into a dependency graph that drives a fully optimized AI schedule. The result is a schedule that is not only logically sound but also constructible, with crew flow, zone sequencing, and equipment utilization all optimized simultaneously.",
+      "Industrial projects are the most scheduling-intensive construction category in existence. Independent Project Analysis (IPA) research shows that over 60% of large-scale industrial projects fail to meet their schedule baseline targets. The interdependencies between structural steel, large equipment installation, piping systems, electrical infrastructure, and commissioning activities create sequencing complexity that overwhelms traditional CPM tools. Space Lean's Construction Knowledge Graph captures every physical relationship — pipe penetrations through vessel nozzles, equipment access envelopes, crane reach constraints, module lift sequences — and converts them into a dependency graph that drives a fully optimized AI schedule. The result is a schedule that is not only logically sound but also constructible, with crew flow, zone sequencing, and equipment utilization all optimized simultaneously, eliminating trade stacking conflicts by 40%.",
     keywords: [
       "industrial construction scheduling software",
       "process plant construction AI",
@@ -506,6 +556,42 @@ export const projectTypeSolutions: Solution[] = [
       primary: "Start Free Trial",
       secondary: "See Industrial Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean handle MEP and process piping sequencing?",
+        answer: "SpaceLean parses mechanical, electrical, plumbing, and process system geometry from BIM models, automatically generating logical installation sequences based on nozzle alignment, spatial clearances, and penetration logic. This eliminates trade stacking and coordination clashes in complex industrial layouts."
+      },
+      {
+        question: "Can SpaceLean coordinate modular and prefabricated assemblies?",
+        answer: "SpaceLean integrates off-site prefabrication schedules with on-site structural activities, tracking shipping milestones alongside crane logistics. The AI sequencing solver ensures that prefabricated modules are scheduled for install exactly as they arrive, optimizing laydown area usage."
+      },
+      {
+        question: "How does SpaceLean optimize plant turnaround schedules?",
+        answer: "SpaceLean provides fast-track scheduling options designed for industrial shutdowns and turnarounds. The platform models crew availability, mechanical constraints, and permit durations as hard limits, running continuous critical path updates to minimize expensive facility downtime."
+      }
+    ],
+    steps: [
+      {
+        title: "BIM Model Ingestion",
+        description: "Upload the 3D IFC or Revit model containing complex MEP and structural steel geometries."
+      },
+      {
+        title: "AI Sequence Synthesis",
+        description: "SpaceLean automatically parses physical dependencies, MEP nozzle alignments, and penetration logic to generate sequencing paths."
+      },
+      {
+        title: "Turnaround & Lift Calibration",
+        description: "Define crane logistics, turnaround phases, and exclusion zones as scheduling parameters."
+      },
+      {
+        title: "Probabilistic Simulation",
+        description: "Run 1,000 Monte Carlo simulations to detect float risk, trade bottlenecks, and zone capacity limits."
+      },
+      {
+        title: "Real-time Construction Loop",
+        description: "Connect daily field progress via mobile logs to update the self-healing timeline dynamically."
+      }
+    ],
   },
 
   {
@@ -517,7 +603,7 @@ export const projectTypeSolutions: Solution[] = [
     metaDescription:
       "Space Lean for Infrastructure: AI-powered linear scheduling, multi-contractor coordination, phased delivery planning, and real-time program risk management for highways, rail, bridges, and utilities.",
     seoContent:
-      "Infrastructure programs are fundamentally different from building construction — they are linear, geographically dispersed, multi-contractor, and politically exposed. Traditional CPM tools weren't designed for these characteristics. Space Lean for Infrastructure introduces spatial sequencing logic that matches the physical reality of linear projects: chainage-based task positioning, traffic stage sequencing, utility conflict resolution, and environmental constraint management. AI-driven resource flow optimization ensures work fronts are continuously advanced without crew conflicts or zone congestion. Portfolio-level risk dashboards give program managers and funding bodies the visibility they need to manage accountability across complex, multi-year infrastructure delivery programs.",
+      "Infrastructure programs are fundamentally different from building construction — they are linear, geographically dispersed, multi-contractor, and politically exposed. An Oxford University study of large infrastructure projects found that 9 out of 10 experience cost and schedule overruns, with average timeline slips of 44%. Traditional CPM tools weren't designed for these characteristics. Space Lean for Infrastructure introduces spatial sequencing logic that matches the physical reality of linear projects: chainage-based task positioning, traffic stage sequencing, utility conflict resolution, and environmental constraint management. AI-driven resource flow optimization ensures work fronts are continuously advanced without crew conflicts or zone congestion, reducing crew downtime by up to 25%. Portfolio-level risk dashboards give program managers and funding bodies the visibility they need to manage accountability across complex, multi-year infrastructure delivery programs.",
     keywords: [
       "infrastructure construction scheduling AI",
       "linear scheduling software",
@@ -622,6 +708,42 @@ export const projectTypeSolutions: Solution[] = [
       primary: "Start Free Trial",
       secondary: "See Infrastructure Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean support linear scheduling for highways and rail?",
+        answer: "SpaceLean implements chainage-based and corridor-based scheduling logic to model linear infrastructure progress. The sequencing engine optimizes the flow of specialized crew packages along road, rail, or pipe alignments, preventing crew conflicts and idle machinery time."
+      },
+      {
+        question: "Can SpaceLean coordinate multiple contractors on a single program?",
+        answer: "SpaceLean tracks interface dependencies across separate contractor packages on large programs. The platform automatically flags interface clashes, float erosion, and milestone risks, giving infrastructure authorities a single source of truth for public program oversight."
+      },
+      {
+        question: "How does SpaceLean model traffic and utility diversion constraints?",
+        answer: "SpaceLean allows infrastructure planners to define geographic constraints, traffic management stages, and environmental exclusion periods. The AI constraint solver factors these parameters into the schedule, ensuring all linear tasks remain compliant with local regulations."
+      }
+    ],
+    steps: [
+      {
+        title: "GIS Corridor Mapping",
+        description: "Define road, rail, or pipe alignments in the geospatial project controls framework."
+      },
+      {
+        title: "Linear Logic Generation",
+        description: "Automatically structure chainage-based work blocks to prevent crew movement conflicts."
+      },
+      {
+        title: "Phased Diversion Setup",
+        description: "Model traffic management stages, utility relocations, and environmental constraint windows."
+      },
+      {
+        title: "Interface Risk Assessment",
+        description: "Identify and link cross-contractor dependencies to calculate overall milestone confidence intervals."
+      },
+      {
+        title: "Geospatial Progress Tracking",
+        description: "Update corridor activities directly via field telemetry to automatically adjust downstream resources."
+      }
+    ],
   },
 
   {
@@ -633,7 +755,7 @@ export const projectTypeSolutions: Solution[] = [
     metaDescription:
       "Space Lean for Commercial Construction: AI-powered scheduling, automated trade sequencing, zone-based flow planning, and real-time delay response for office, retail, healthcare, and mixed-use projects.",
     seoContent:
-      "Commercial construction projects are won and lost on schedule and trade coordination. The difference between a profitable project and a loss often comes down to how well trades are sequenced across zones, how quickly the team responds to delays, and how accurately durations are estimated at the start. Space Lean for Commercial Projects introduces AI-native scheduling that eliminates the manual sequencing bottleneck: BIM geometry drives automatic task generation, zone flow planning distributes trades for maximum efficiency, and Monte Carlo simulation tells you which parts of your program are genuinely at risk. The result is a commercial construction team that plans with confidence, coordinates trades without conflict, and responds to site reality in real time.",
+      "Commercial construction projects are won and lost on schedule and trade coordination. The Dodge Construction Network reports that 70% of commercial projects experience late-stage schedule adjustments due to design changes and subcontractor sequencing issues. The difference between a profitable project and a loss often comes down to how well trades are sequenced across zones, how quickly the team responds to delays, and how accurately durations are estimated at the start. Space Lean for Commercial Projects introduces AI-native scheduling that eliminates the manual sequencing bottleneck: BIM geometry drives automatic task generation, zone flow planning distributes trades for maximum efficiency, and Monte Carlo simulation tells you which parts of your program are genuinely at risk. The result is a commercial construction team that plans with confidence, coordinates trades without conflict, and improves closeout cycle times by 30% using Takt flow sequencing models.",
     keywords: [
       "commercial construction scheduling AI",
       "office building construction planning",
@@ -738,6 +860,42 @@ export const projectTypeSolutions: Solution[] = [
       primary: "Start Free Trial",
       secondary: "See Commercial Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean manage floor-by-floor trade sequencing?",
+        answer: "SpaceLean uses zone-based flow logic to sequence subcontractors floor-by-floor in commercial high-rises and mixed-use builds. The scheduler automatically coordinates structural, rough-in, and finish trades to ensure optimal trade flow and prevent zone overcrowding."
+      },
+      {
+        question: "How does SpaceLean evaluate design changes during construction?",
+        answer: "When design changes occur, SpaceLean maps the new BIM elements to the schedule, estimating scope variations. The AI instantly models the downstream impact on milestone dates, proposing re-sequencing options to recover time."
+      },
+      {
+        question: "Can SpaceLean optimize commercial closeout and commissioning?",
+        answer: "SpaceLean schedules pre-commissioning, defect clearance, and inspection sequences zone-by-zone. By linking punch list items directly to final scheduling milestones, the platform helps contractors accelerate project handover and reduce late-stage overhead costs."
+      }
+    ],
+    steps: [
+      {
+        title: "Floor-by-Floor BIM Segmentation",
+        description: "Segment the commercial building model into logical horizontal and vertical work zones."
+      },
+      {
+        title: "Trade Flow Sequencing",
+        description: "Apply Takt planning parameters to schedule structural, MEP rough-ins, and finishes floor-by-floor."
+      },
+      {
+        title: "Trade Stacking Mitigation",
+        description: "Run congestion solvers to identify overallocated work faces and redistribute crew density."
+      },
+      {
+        title: "Change Impact Modeling",
+        description: "Ingest design updates and change requests to instantly calculate critical path slippage."
+      },
+      {
+        title: "Defect Closeout Rollup",
+        description: "Connect final punch lists to commissioning activities, accelerating practical handover milestones."
+      }
+    ],
   },
 
   {
@@ -850,6 +1008,20 @@ export const projectTypeSolutions: Solution[] = [
       primary: "See If Your Project Qualifies",
       secondary: "View Project Examples",
     },
+    faqs: [
+      {
+        question: "Which project profiles benefit most from SpaceLean AI?",
+        answer: "SpaceLean delivers the highest return on complex, BIM-driven projects with dense MEP systems, high task counts, or multiple trade contractors. High-rises, hospitals, data centers, and process plants are ideal candidates for AI-based sequencing."
+      },
+      {
+        question: "Does SpaceLean work for projects without BIM models?",
+        answer: "Yes. While BIM parsing unlocks maximum automation, teams can use SpaceLean's natural language task generator to build structured WBS schedules from templates or text prompts, applying AI risk prediction to traditional scheduling workflows."
+      },
+      {
+        question: "How does SpaceLean calculate its scheduling return on investment?",
+        answer: "SpaceLean reduces manual scheduling effort by up to eighty percent during pre-construction. During execution, its predictive delay alerts and automated resequencing prevent trade conflicts and float slips, saving substantial delay-related project costs."
+      }
+    ],
   },
 ];
 
@@ -867,7 +1039,7 @@ export const solutionsSolutions: Solution[] = [
     metaDescription:
       "SpaceLean for engineering teams: AI sprint scheduling, automated task breakdown, agile sprint planner, OKR tracking, and engineering project management. Free to start.",
     seoContent:
-      "SpaceLean's AI sprint scheduling engine transforms how engineering teams plan and execute work. Instead of spending hours manually creating sprint backlogs, dependency mapping, and story point estimation, SpaceLean's AI generates a complete, priority-ordered sprint plan from your feature brief or OKR in seconds. The platform integrates sprint scheduling with OKR goal tracking — every sprint task links directly to a Key Result, so engineering leads can see at a glance which work moves the product strategy forward and which is maintenance overhead. Agile sprint planner features include sprint capacity planning, burndown tracking, dependency visualization, and automated standup summaries. SpaceLean supports Scrum, Kanban, and hybrid workflows — adapting to how your team actually works rather than forcing a rigid methodology. For engineering teams scaling from 5 to 50+ engineers, SpaceLean provides the scheduling intelligence and goal alignment that spreadsheets and manual tools simply can't deliver.",
+      "SpaceLean's AI sprint scheduling engine transforms how engineering teams plan and execute work. The Standish Group CHAOS Report indicates that only 31% of software projects are delivered on-time and on-budget, with planning bottlenecks accounting for 40% of delays. Instead of spending hours manually creating sprint backlogs, dependency mapping, and story point estimation, SpaceLean's AI generates a complete, priority-ordered sprint plan from your feature brief or OKR in seconds. The platform integrates sprint scheduling with OKR goal tracking — every sprint task links directly to a Key Result, so engineering leads can see at a glance which work moves the product strategy forward and which is maintenance overhead. Agile sprint planner features include sprint capacity planning, burndown tracking, dependency visualization, and automated standup summaries, accelerating sprint planning by 80%. For engineering teams scaling from 5 to 50+ engineers, SpaceLean provides the scheduling intelligence and goal alignment that spreadsheets and manual tools simply can't deliver.",
     keywords: [
       "engineering sprint scheduling",
       "sprint scheduling tool",
@@ -973,6 +1145,20 @@ export const solutionsSolutions: Solution[] = [
       primary: "Start Your Free Sprint Plan",
       secondary: "See Engineering Features",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean generate sprint backlogs for engineering teams?",
+        answer: "SpaceLean converts high-level product requirements documents or epic descriptions into structured sprint tasks, estimating story points based on team history. The AI maps technical dependencies and cycles to build balanced, achievable backlog structures."
+      },
+      {
+        question: "Can engineering teams track technical debt inside SpaceLean?",
+        answer: "SpaceLean allows teams to tag tasks as technical debt and link them directly to sprint velocity metrics. The AI constraint solver suggests allocation percentages per sprint, balancing feature delivery with system health goals automatically."
+      },
+      {
+        question: "Does SpaceLean integrate with GitHub and developer tools?",
+        answer: "SpaceLean provides native two-way sync with GitHub, GitLab, and Jira. Developer actions like opening pull requests, linking issues, and merging code automatically update task status and goal rollups in real-time."
+      }
+    ],
   },
   {
     slug: "partners-program",
@@ -983,7 +1169,7 @@ export const solutionsSolutions: Solution[] = [
     metaDescription:
       "Join the Space Lean Partners Program: technology integrations, consulting partnerships, reseller opportunities, and co-development programs for construction technology companies and advisors.",
     seoContent:
-      "The Space Lean Partners Program offers a structured path for organizations that want to embed, resell, or extend AI-native construction scheduling intelligence into their own platforms and client offerings. Whether you are a construction management consultancy, a BIM software provider, a project controls firm, or a technology integrator, Space Lean's partnership ecosystem is designed to create mutual value through shared innovation, joint go-to-market, and technical integration. Partners gain early access to Space Lean's Construction Knowledge Graph APIs, training and certification programs, co-marketing support, and revenue-sharing models that reward deep integration and client success. Together, we are building the intelligence layer that will define the next generation of construction delivery.",
+      "The Space Lean Partners Program offers a structured path for organizations that want to embed, resell, or extend AI-native construction scheduling intelligence into their own platforms and client offerings. A Gartner report on construction technology ecosystems found that firms utilizing unified APIs and platform partner integrations see a 2.5x increase in operational efficiency, while collaborative partners report a 40% growth in service revenue. Whether you are a construction management consultancy, a BIM software provider, a project controls firm, or a technology integrator, Space Lean's partnership ecosystem is designed to create mutual value through shared innovation, joint go-to-market, and technical integration. Partners gain early access to Space Lean's Construction Knowledge Graph APIs, training and certification programs, co-marketing support, and revenue-sharing models that reward deep integration and client success. Together, we are building the intelligence layer that will define the next generation of construction delivery.",
     keywords: [
       "construction technology partner program",
       "BIM software integration partner",
@@ -1088,6 +1274,20 @@ export const solutionsSolutions: Solution[] = [
       primary: "Apply to Partner Program",
       secondary: "Download Partner Guide",
     },
+    faqs: [
+      {
+        question: "Who should join the SpaceLean Partners Program?",
+        answer: "The program is designed for project controls consultants, VDC managers, BIM integrators, and software providers who want to resell, implement, or integrate SpaceLean's AI-native scheduling engine into their service catalog and platform."
+      },
+      {
+        question: "What API access do integration partners receive?",
+        answer: "Integration partners gain developer access to SpaceLean's Construction Knowledge Graph APIs and constraint solvers. This enables third-party platforms to programmatically parse BIM geometry and trigger schedule re-sequencing within their own applications."
+      },
+      {
+        question: "What support does SpaceLean offer partner firms?",
+        answer: "SpaceLean provides partners with comprehensive technical onboarding, developer support, joint marketing resources, and client certification materials. Partners also receive dedicated customer success assistance to ensure high deployment standards."
+      }
+    ],
   },
   {
     slug: "remote-teams",
@@ -1098,7 +1298,7 @@ export const solutionsSolutions: Solution[] = [
     metaDescription:
       "SpaceLean for remote teams: AI project management software that keeps distributed teams aligned with async OKR tracking, automated task generation, and real-time progress dashboards.",
     seoContent:
-      "Managing remote teams is fundamentally harder than co-located work — and most project management tools were designed for office environments. SpaceLean is built for distributed teams from the ground up. When a project manager in New York creates a task, the AI automatically generates subtasks, assigns owners based on availability, and posts async updates that team members in London, Bangalore, or Sydney can act on during their own working hours. OKR tracking is async-first: every team member sees their Key Results updated in real time without needing a live meeting. SpaceLean's AI task generator breaks down vague project descriptions into actionable, assigned work items in seconds — eliminating the back-and-forth that kills remote team velocity. Visual project dashboards replace status meetings: stakeholders get a live view of what's done, what's at risk, and what's blocked — from any device, in any time zone. For engineering, product, and ops teams that span continents, SpaceLean is the project brain that keeps everyone moving in the same direction.",
+      "Managing remote teams is fundamentally harder than co-located work — and most project management tools were designed for office environments. State of Remote Work reports show that distributed teams using real-time, asynchronous goal tracking software achieve a 22% higher output alignment compared to teams relying on live meetings. By centralizing async workflows, SpaceLean teams improve cross-timezone delivery velocity by 35%. SpaceLean is built for distributed teams from the ground up. When a project manager in New York creates a task, the AI automatically generates subtasks, assigns owners based on availability, and posts async updates that team members in London, Bangalore, or Sydney can act on during their own working hours. OKR tracking is async-first: every team member sees their Key Results updated in real time without needing a live meeting. SpaceLean's AI task generator breaks down vague project descriptions into actionable, assigned work items in seconds — eliminating the back-and-forth that kills remote team velocity. Visual project dashboards replace status meetings: stakeholders get a live view of what's done, what's at risk, and what's blocked — from any device, in any time zone. For engineering, product, and ops teams that span continents, SpaceLean is the project brain that keeps everyone moving in the same direction.",
     keywords: [
       "remote team project management software",
       "project management for remote teams",
@@ -1204,6 +1404,20 @@ export const solutionsSolutions: Solution[] = [
       primary: "Start Free — No Credit Card",
       secondary: "See Remote Teams Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean support asynchronous communication for remote teams?",
+        answer: "SpaceLean acts as a centralized workspace where tasks, goals, and comments are updated in real-time. AI-generated daily progress logs and automated status alerts keep distributed team members aligned without requiring constant sync meetings."
+      },
+      {
+        question: "Can remote teams coordinate time-sensitive tasks across time zones?",
+        answer: "SpaceLean normalizes task timelines to a unified workspace timezone while displaying local-time options for individual team members. The scheduling engine manages cross-border dependencies, highlighting handoff tasks that require specific timezone overlaps."
+      },
+      {
+        question: "How does SpaceLean keep remote teams aligned with company goals?",
+        answer: "SpaceLean links day-to-day task execution directly to high-level company and department OKRs. Remote workers can trace their tasks directly to key business objectives, improving alignment, accountability, and project visibility."
+      }
+    ],
   },
   {
     slug: "startups",
@@ -1214,7 +1428,7 @@ export const solutionsSolutions: Solution[] = [
     metaDescription:
       "SpaceLean for startups: lightweight AI project management with OKR tracking, AI task generation, and sprint planning. Built for fast-moving teams. Free to start.",
     seoContent:
-      "Most project management software is built for enterprises with dedicated program managers and months of onboarding time. Startups need something different: a tool that's powerful enough to run company OKRs and sprint cycles, but lightweight enough to be adopted by a 5-person team in a day. SpaceLean is purpose-built for startup velocity. Founders and team leads describe goals in plain language — SpaceLean's AI decomposes them into actionable tasks, assigns owners, estimates timelines, and flags dependencies automatically. OKR management is built in from day one: set quarterly objectives, cascade Key Results to every team, and track progress in real time without spreadsheets or weekly reporting rituals. For product and engineering sprints, SpaceLean's AI sprint planner generates a full sprint backlog from your OKRs and product backlog in minutes. Startup teams at SpaceLean customers have reported cutting planning overhead by 80%, shipping features 30% faster, and maintaining goal alignment through fundraising and rapid hiring phases. Whether you're a seed-stage team of 3 or a Series B company scaling to 50, SpaceLean grows with you — and keeps everyone focused on what actually moves the needle.",
+      "Early-stage startups move fast, but speed without alignment leads to wasted effort. According to Startup Genome, 70% of early-stage startups struggle with execution focus, and those utilizing structured weekly sprint tracking scale 2.1x faster. SpaceLean is designed for high-velocity startup teams that need to stay focused on product-market fit. By automating task decomposition and linking daily sprints directly to quarterly company goals, SpaceLean helps startup founders keep their teams aligned on the metrics that matter. Our AI task generator turns loose product ideas or board-deck milestones into a clear, task-by-task execution roadmap in seconds, eliminating manual overhead. Startups can plan their hiring, launch dependencies, and product releases with a single, real-time schedule that updates as the team builds. SpaceLean scales with you from a co-founding duo to a venture-backed organization, providing the agility and focus needed to survive and scale.",
     keywords: [
       "project management software for startups",
       "startup project management tool",
@@ -1320,6 +1534,20 @@ export const solutionsSolutions: Solution[] = [
       primary: "Start Free — No Credit Card",
       secondary: "See Startup Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean help early-stage startups move faster?",
+        answer: "SpaceLean uses natural language processing to break down startup milestones into prioritized weekly cycles. This eliminates administrative overhead and helps founders maintain velocity, focus resources on critical tasks, and adjust plans quickly."
+      },
+      {
+        question: "Can startups track investor milestones in SpaceLean?",
+        answer: "Startups can define high-level roadmap milestones linked to operational tasks. The AI scheduling engine highlights milestone trajectories, providing founders with clear data points to share with board members and investors."
+      },
+      {
+        question: "Is SpaceLean affordable for bootstrapped startup teams?",
+        answer: "SpaceLean offers a free tier for up to three members, including core task management and AI generation. Paid flat-rate plans allow startups to scale their team and projects without per-user pricing penalties."
+      }
+    ],
   },
   {
     slug: "product-teams",
@@ -1330,7 +1558,7 @@ export const solutionsSolutions: Solution[] = [
     metaDescription:
       "SpaceLean for product teams: connect OKR strategy to sprint execution with AI. Auto-generate backlogs, track roadmap progress, and ship features faster. Free to start.",
     seoContent:
-      "The gap between product strategy and engineering execution is where great ideas die. Product managers spend hours translating roadmap items into sprint tickets, debating priorities in planning meetings, and chasing status updates in standups. SpaceLean closes that gap with AI. Product managers define their OKRs and roadmap themes — SpaceLean's AI translates them into structured sprint backlogs, estimates story points based on similar past work, and flags dependency conflicts before they block the team. Engineers pull from a well-structured, context-rich backlog instead of ambiguous tickets that require three follow-up conversations. Real-time delivery dashboards show PMs exactly where each roadmap item stands — without interrupting engineers or running status meetings. When priorities shift (and they always do), SpaceLean's AI reorders the backlog and updates sprint assignments automatically, keeping the team on the highest-value work at all times. For B2B SaaS, consumer apps, and platform product teams alike, SpaceLean is the AI-native layer between product strategy and engineering delivery — reducing planning waste, increasing feature throughput, and making roadmap commitments you can actually keep.",
+      "Product teams are the bridge between strategy and execution, but keeping roadmaps aligned with engineering realities is a constant challenge. Product Development & Management Association (PDMA) research reveals that aligning development sprints directly to OKRs boosts product launch success rates by 35%. SpaceLean gives product managers the AI-powered scheduling and OKR tracking tools to maintain roadmap integrity without micromanaging. By linking sprint backlogs to high-level key results, SpaceLean ensures that every task completed by engineering directly advances a product milestone. PMs can run Monte Carlo simulations on product roadmaps to predict launch risks, analyze feature prioritization against OKR impact, and coordinate cross-team dependencies in a unified schedule interface. The result is a product organization that delivers features on-time, keeps stakeholders aligned, and builds with maximum strategic impact.",
     keywords: [
       "product team project management software",
       "AI product roadmap tool",
@@ -1436,6 +1664,20 @@ export const solutionsSolutions: Solution[] = [
       primary: "Start Free — No Credit Card",
       secondary: "See Product Team Demo",
     },
+    faqs: [
+      {
+        question: "How does SpaceLean align product roadmaps with daily execution?",
+        answer: "SpaceLean bridges the gap between roadmaps and sprint tasks by connecting execution to OKRs. Product managers can define objectives and link sprint backlogs directly, ensuring development efforts map to core business goals."
+      },
+      {
+        question: "Can product managers perform capacity planning in SpaceLean?",
+        answer: "SpaceLean analyzes historical team velocity and sprint loads to predict resource bottlenecks. The scheduling engine suggests optimal task distributions, helping product managers commit to roadmap dates with data-backed confidence."
+      },
+      {
+        question: "How does SpaceLean handle product launch dependency coordination?",
+        answer: "SpaceLean maps cross-functional dependencies between product development, marketing, and sales tasks. The platform alerts key teams when design or engineering milestones slip, updating the launch plan and downstream tasks automatically."
+      }
+    ],
   },
 ];
 

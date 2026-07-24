@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "future of agile work",
   ],
   alternates: {
-    canonical: "/about",
+    canonical: "https://spacelean.ai/about",
     languages: {
-      "en-US": "/about",
-      "en-GB": "/about",
-      "en-IN": "/about",
-      "x-default": "/about",
+      "en-US": "https://spacelean.ai/about",
+      "en-GB": "https://spacelean.ai/about",
+      "en-IN": "https://spacelean.ai/about",
+      "x-default": "https://spacelean.ai/about",
     },
   },
   openGraph: {
