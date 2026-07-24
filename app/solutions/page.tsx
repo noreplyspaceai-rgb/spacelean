@@ -75,29 +75,56 @@ export default function SolutionsPage() {
     "@type": "SoftwareApplication",
     "name": "SpaceLean",
     "url": "https://spacelean.ai/solutions",
-    "description": "AI-powered construction scheduling solutions for every team type and project category — from General Contractors and Project Owners to Industrial, Infrastructure, and Commercial projects.",
-    "applicationCategory": "ConstructionManagementSoftware",
+    "description": "AI-powered construction scheduling platform delivering targeted planning solutions for General Contractors, Owners, and Consultants across Industrial, Infrastructure, and Commercial projects.",
+    "applicationCategory": "ConstructionManagementApplication",
     "operatingSystem": "Web",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "127",
-      "bestRating": "5",
-      "worstRating": "1",
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "url": "https://spacelean.ai/pricing",
-      "description": "Free plan available",
-    },
+    "featureList": [
+      "Stakeholder-specific scheduling platforms",
+      "Linear and chainage-based infrastructure scheduling",
+      "MEP process and turnaround optimization",
+      "Takt floor-by-floor commercial sequencing",
+      "Bi-directional Primavera P6 integration",
+      "AI-driven delay analysis and forensic audits"
+    ],
     "publisher": {
       "@type": "Organization",
-      "name": "SpaceLean Inc.",
-      "url": "https://spacelean.ai",
-      "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
-    },
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Solutions",
+        "item": "https://spacelean.ai/solutions"
+      }
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://spacelean.ai",
+    "name": "SpaceLean",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://spacelean.ai/solutions?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   };
 
   return (
@@ -109,6 +136,14 @@ export default function SolutionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       {/* Server-rendered content for SEO crawlers */}

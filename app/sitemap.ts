@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from "next";
 import { getAllBlogSlugs } from "@/lib/blog-data";
 import { getAllSolutionSlugs } from "@/lib/solutions-data";
@@ -80,6 +81,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/videos`,

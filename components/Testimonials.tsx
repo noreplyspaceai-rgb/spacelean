@@ -10,19 +10,19 @@ const testimonials = [
         content: "SpaceLean stripped away the noise. We just drag, drop, and done. It’s the cleanest tool we’ve ever used. The AI suggestions are actually useful, not just a gimmick.",
         author: "Sarah Jenkins",
         role: "Product Manager, TechFlow",
-        image: "/design.jpg"
+        image: "/design.webp"
     },
     {
         content: "The AI doesn't guess; it knows. Our scheduling accuracy improved by 40% in the first week. It feels like having a dedicated project manager for every single team member.",
         author: "Michael Chen",
         role: "CTO, StartupX",
-        image: "/engineering.jpg"
+        image: "/engineering.webp"
     },
     {
         content: "Finally, a project management tool that respects my time. No clutter, just clarity. I spend less time managing tickets and more time actually building the product.",
         author: "Emily Rodriguez",
         role: "Marketing Lead",
-        image: "/marketing.jpg"
+        image: "/marketing.webp"
     }
 ];
 

@@ -218,6 +218,33 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         { "@type": "HowToStep", position: 5, name: "Review and adjust weekly", text: "Every Friday, spend 15 minutes reviewing next week's calendar. Move or decline anything that doesn't align with your top 3 weekly priorities." },
       ],
     },
+    "construction-project-management-ai": {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "How to Automate Construction Scheduling with 4D BIM",
+      description: "A step-by-step workflow for integrating 3D BIM geometry with 4D schedule timelines to automate construction planning.",
+      totalTime: "PT4H",
+      step: [
+        { "@type": "HowToStep", position: 1, name: "Geometry and Element Parsing", text: "Upload the 3D IFC or Revit model into the SpaceLean AI Engine. The platform parses physical dependencies, spatial relationships, and structural support sequences from the geometry." },
+        { "@type": "HowToStep", position: 2, name: "Workface Constraint Detection", text: "The engine runs constraint solvers to flag trade stacking and spatial conflicts, ensuring trades are not scheduled in the same zone simultaneously." },
+        { "@type": "HowToStep", position: 3, name: "Automated CPM Network Generation", text: "Generate the logic-linked baseline schedule. The AI defines tasks, durations, and dependencies with realistic lag buffers based on historical trade velocity." },
+        { "@type": "HowToStep", position: 4, name: "Lock Baseline and Distribute", text: "Verify the auto-sequenced timeline, lock the baseline schedule, and export lookaheads to subcontractors for alignment." },
+        { "@type": "HowToStep", position: 5, name: "Enable Real-time Site Loop", text: "Provide field superintendents with mobile access to report daily progress, allowing the self-healing scheduler to dynamically update downstream dependencies." }
+      ]
+    },
+    "ai-project-management-guide": {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "How to Integrate AI into Your Project Management Workflow",
+      description: "A practical 4-step implementation guide to adopting AI-powered project controls and task management tools.",
+      totalTime: "P14D",
+      step: [
+        { "@type": "HowToStep", position: 1, name: "Start with AI Task Generation", text: "Decompose a new project goal into a complete task tree using natural language inputs. Verify subtasks and sequence logic." },
+        { "@type": "HowToStep", position: 2, name: "Add Predictive Scheduling", text: "Inject task timelines and enable AI-powered risk predictions to identify bottleneck tasks and overallocation risks." },
+        { "@type": "HowToStep", position: 3, name: "Automate Weekly Reporting", text: "Replace manual status reporting meetings with live, AI-generated project dashboards visible to all stakeholders." },
+        { "@type": "HowToStep", position: 4, name: "Connect Strategic Goals to Sprints", text: "Link company OKRs directly to execution tasks, creating a fully automated strategy-to-execution delivery pipeline." }
+      ]
+    }
   };
 
   const howToJsonLd = howToSchemas[slug] ?? null;

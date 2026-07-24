@@ -9,7 +9,13 @@ export const metadata: Metadata = {
       follow: true,
     },
     alternates: {
-        canonical: "/terms",
+        canonical: "https://spacelean.ai/terms",
+        languages: {
+            "en-US": "https://spacelean.ai/terms",
+            "en-GB": "https://spacelean.ai/terms",
+            "en-IN": "https://spacelean.ai/terms",
+            "x-default": "https://spacelean.ai/terms",
+        },
     },
     openGraph: {
         title: "Terms of Service | SpaceLean AI",

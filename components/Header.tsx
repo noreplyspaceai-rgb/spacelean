@@ -10,43 +10,36 @@ const CONTACTS = [
     country: "USA",
     flag: "🇺🇸",
     phone: "+1 646 421 5740",
-    email: "usa@aibizmod.com",
   },
   {
     country: "Canada",
     flag: "🇨🇦",
     phone: "+1 (979) 326-9493",
-    email: "canada@aibizmod.com",
   },
   {
     country: "UAE",
     flag: "🇦🇪",
     phone: "+971 56 256 7509",
-    email: "uae@aibizmod.com",
   },
   {
     country: "Saudi Arabia",
     flag: "🇸🇦",
     phone: "+966 56 208 1999",
-    email: "saudi@aibizmod.com",
   },
   {
     country: "Kuwait",
     flag: "🇰🇼",
     phone: "+965 9724 3755",
-    email: "kuwait@aibizmod.com",
   },
   {
     country: "Singapore",
     flag: "🇸🇬",
     phone: "+65 86 111 900",
-    email: "sg@aibizmod.com",
   },
   {
     country: "Malaysia",
     flag: "🇲🇾",
     phone: "+60 10 660 7357",
-    email: "malaysia@aibizmod.com",
   },
 ];
 

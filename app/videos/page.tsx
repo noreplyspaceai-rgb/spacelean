@@ -17,7 +17,13 @@ export const metadata: Metadata = {
     "interactive 3D BIM viewer",
   ],
   alternates: {
-    canonical: "/videos",
+    canonical: "https://spacelean.ai/videos",
+    languages: {
+      "en-US": "https://spacelean.ai/videos",
+      "en-GB": "https://spacelean.ai/videos",
+      "en-IN": "https://spacelean.ai/videos",
+      "x-default": "https://spacelean.ai/videos",
+    },
   },
   openGraph: {
     title: "SpaceLean Videos | Product Demos, BIM & AI Construction Management",

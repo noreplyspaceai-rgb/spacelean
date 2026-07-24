@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "SpaceLean | AI-Powered Lean Project Management & Construction Scheduling Software",
   description:
-    "SpaceLean is the AI-native Digital Construction Brain that auto-generates construction schedules from BIM models, predicts critical path risks, and optimizes crew scheduling. Free to start — try it today.",
+    "SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners. Auto-generate construction schedules from BIM models, predict critical path risks, and optimize crew scheduling.",
   keywords: [
     "SpaceLean",
     "AI project management software",
@@ -98,6 +98,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SpaceLean Inc.",
+    "url": "https://spacelean.ai",
+    "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+    "description": "SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.",
+    "sameAs": [
+      "https://www.linkedin.com/company/spacelean",
+      "https://www.youtube.com/@spacelean",
+      "https://www.g2.com/products/spacelean",
+      "https://www.capterra.com/p/10002345/SpaceLean",
+      "https://x.com/spacelean"
+    ]
+  };
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
@@ -107,6 +123,10 @@ export default function RootLayout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://unpkg.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
       </head>
       <body
         suppressHydrationWarning

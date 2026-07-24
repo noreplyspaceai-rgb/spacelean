@@ -32,19 +32,19 @@ export async function generateMetadata({
     title: `${feature.title} | SpaceLean Core`,
     description: feature.description,
     alternates: {
-      canonical: `/space-lean-core/${feature.slug}`,
+      canonical: `https://spacelean.ai/space-lean-core/${feature.slug}`,
       languages: {
-        "en-US": `/space-lean-core/${feature.slug}`,
-        "en-GB": `/space-lean-core/${feature.slug}`,
-        "en-IN": `/space-lean-core/${feature.slug}`,
-        "x-default": `/space-lean-core/${feature.slug}`,
+        "en-US": `https://spacelean.ai/space-lean-core/${feature.slug}`,
+        "en-GB": `https://spacelean.ai/space-lean-core/${feature.slug}`,
+        "en-IN": `https://spacelean.ai/space-lean-core/${feature.slug}`,
+        "x-default": `https://spacelean.ai/space-lean-core/${feature.slug}`,
       },
     },
     openGraph: {
       title: feature.title,
       description: feature.description,
       type: "article",
-      url: `/space-lean-core/${feature.slug}`,
+      url: `https://spacelean.ai/space-lean-core/${feature.slug}`,
     },
     twitter: {
       card: "summary_large_image",

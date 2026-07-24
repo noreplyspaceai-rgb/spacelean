@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     "automated construction planning",
   ],
   alternates: {
-    canonical: "/space-lean-core",
+    canonical: "https://spacelean.ai/space-lean-core",
     languages: {
-      "en-US": "/space-lean-core",
-      "en-GB": "/space-lean-core",
-      "en-IN": "/space-lean-core",
-      "x-default": "/space-lean-core",
+      "en-US": "https://spacelean.ai/space-lean-core",
+      "en-GB": "https://spacelean.ai/space-lean-core",
+      "en-IN": "https://spacelean.ai/space-lean-core",
+      "x-default": "https://spacelean.ai/space-lean-core",
     },
   },
   openGraph: {
@@ -61,11 +61,38 @@ export default function SpaceLeanCorePage() {
     },
   };
 
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SpaceLean Core",
+    "url": "https://spacelean.ai/space-lean-core",
+    "description": "AI-powered construction scheduling engine providing BIM-driven sequencing, Monte Carlo risk simulation, real-time replanning, and predictive project controls.",
+    "applicationCategory": "ConstructionManagementApplication",
+    "operatingSystem": "Web",
+    "featureList": [
+      "AI-Generated Construction Sequences",
+      "BIM-Driven Dependency Inference",
+      "Monte Carlo Schedule Simulations",
+      "Self-Healing Project Timelines",
+      "Zone Congestion and Crew Flow Optimization",
+      "Integrated Agile Sprint Planning"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai"
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
       <HeroSection />
       <FeaturesSection />

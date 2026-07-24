@@ -60,7 +60,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
               </h1>
 
               {/* Mono description */}
-              <p className="mt-4 max-w-lg mb-8">
+              <p className="mt-4 max-w-lg mb-8" id="solution-definition">
                 <span className="block border-l-4 border-cyan-400 pl-4">
                   <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">
                     {solution.description}
@@ -291,6 +291,75 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
         </div>
       </section>
 
+      {/* ── Implementation Steps (HowTo) ── */}
+      {solution.steps && solution.steps.length > 0 && (
+        <section className="py-16 sm:py-20 px-4 border-b border-black/[0.06]" id="solution-steps">
+          <div className="max-w-7xl px-4 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
+              className="mb-10"
+            >
+              <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+                <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
+                Step-by-step workflow
+              </span>
+              <h2 className="text-3xl sm:text-5xl font-normal lg:text-4xl tracking-tight leading-tight text-cyan-500 max-w-xl">
+                How it works in{" "}
+                <span className="font-bold text-5xl lg:text-5xl">5 simple steps.</span>
+              </h2>
+              <p className="mt-4 max-w-lg">
+                <span className="block border-l-4 border-cyan-400 pl-4">
+                  <span className="block text-base sm:text-lg font-mono text-neutral-500 leading-relaxed">Structured implementation</span>
+                  <span className="block text-base sm:text-lg font-mono font-semibold text-cyan-500 leading-relaxed">for guaranteed delivery.</span>
+                </span>
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
+              className="rounded-2xl border border-black/[0.07] bg-white p-6 sm:p-8 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
+            >
+              <ol className="space-y-6">
+                {solution.steps.map((step, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -12 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.45, delay: 0.05 + index * 0.055, ease: EASE }}
+                    className="flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-black/[0.06] hover:bg-black/[0.015] transition-all duration-200"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold font-mono text-sm shrink-0">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-neutral-900 mb-1 tracking-tight">{step.title}</h3>
+                      <p className="text-neutral-500 text-sm leading-relaxed font-mono">{step.description}</p>
+                    </div>
+                  </motion.li>
+                ))}
+              </ol>
+
+              <div className="mt-6 h-px bg-black/[0.05] relative overflow-hidden rounded-full">
+                <motion.div
+                  className="absolute inset-y-0 left-0 bg-cyan-400 rounded-full"
+                  initial={{ width: "0%" }}
+                  whileInView={{ width: "80%" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.4, ease: EASE }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* ── Testimonial ── */}
       {solution.testimonial && (
         <section className="py-16 sm:py-20 px-4 border-b border-black/[0.06]">
@@ -304,7 +373,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
             >
               <div className="max-w-3xl mx-auto text-center">
                 <div className="flex justify-center gap-1 mb-6">
-                  {[1,2,3,4,5].map((i) => <Star key={i} className="w-4 h-4 fill-cyan-500 text-cyan-500" />)}
+                  {[1, 2, 3, 4, 5].map((i) => <Star key={i} className="w-4 h-4 fill-cyan-500 text-cyan-500" />)}
                 </div>
                 <blockquote className="text-xl sm:text-2xl font-bold text-neutral-900 leading-tight mb-8 tracking-tight">
                   &quot;{solution.testimonial.quote}&quot;
