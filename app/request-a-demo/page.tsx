@@ -5,7 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Request a Demo | SpaceLean AI Task Management Platform',
-  description: 'Book a free personalized demo of SpaceLean. See how AI-powered task management, smart scheduling, and intelligent Kanban boards help teams deliver projects 40% faster.',
+  description: 'Book a free SpaceLean demo. See how AI task management, smart scheduling, and intelligent Kanban boards help construction teams deliver projects 40% faster.',
   keywords: [
     'SpaceLean demo',
     'AI task management demo',

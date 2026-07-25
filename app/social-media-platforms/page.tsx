@@ -6,7 +6,7 @@ import { socialPlatforms, getRegisteredPlatforms } from "@/data/socialPlatforms"
 export const metadata: Metadata = {
   title: "Social Media Platforms | SpaceLean",
   description:
-    "Discover every official SpaceLean profile across social media, AI platforms, developer communities, review websites, and business directories.",
+    "Follow SpaceLean on LinkedIn, Instagram, YouTube, and more. Discover every official profile across social media, AI communities, and business directories.",
   keywords: [
     "SpaceLean social media",
     "SpaceLean LinkedIn",

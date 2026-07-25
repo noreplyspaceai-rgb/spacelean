@@ -4,7 +4,7 @@ import AboutClient from "@/components/AboutClient";
 export const metadata: Metadata = {
   title: "About Us | SpaceLean - AI-Powered Task Management",
   description:
-    "Learn how SpaceLean is revolutionizing team productivity through AI-first innovation, user-centric design, and intelligent task orchestration.",
+    "SpaceLean is built by construction and AI experts to eliminate schedule overruns. Discover our mission to make every project deliver on time and on budget.",
   keywords: [
     "AI productivity mission",
     "SpaceLean story",

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Terms of Service | SpaceLean AI",
     description:
-        "Read the terms and conditions for using the SpaceLean AI platform, including account policies, service usage, intellectual property, and liability.",
+        "Read the terms and conditions for using SpaceLean AI, including account policies, service usage, intellectual property rights, and platform liability.",
     robots: {
       index: true,
       follow: true,

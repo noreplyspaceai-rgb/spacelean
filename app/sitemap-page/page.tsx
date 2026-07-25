@@ -6,7 +6,7 @@ import { solutions } from "@/lib/solutions-data";
 export const metadata: Metadata = {
   title: "Sitemap | SpaceLean — All Pages & Resources",
   description:
-    "Browse every page on SpaceLean — AI-powered task management platform. Find solutions for construction, engineering, and commercial teams, blog posts, comparison guides, free tools, and more.",
+    "Browse every SpaceLean page — AI construction scheduling, industry solutions, blog posts, comparison guides, free AI tools, pricing, videos, and more resources.",
   keywords: [
     "SpaceLean sitemap",
     "SpaceLean pages",

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title:
     "Space Lean Core | AI Construction Scheduling Engine — SpaceLean",
   description:
-    "Discover SpaceLean Core — the AI engine behind intelligent construction scheduling. BIM-driven sequencing, Monte Carlo simulation, real-time replanning, Kanban boards, and predictive risk analysis.",
+    "SpaceLean Core: AI-powered construction scheduling with BIM-driven sequencing, Monte Carlo simulation, real-time replanning, and predictive risk analysis.",
   keywords: [
     "SpaceLean Core features",
     "AI construction scheduling engine",

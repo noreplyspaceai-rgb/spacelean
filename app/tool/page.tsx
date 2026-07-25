@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Free AI Task Generator — Break Any Project into Steps | SpaceLean",
     description:
-        "SpaceLean's free AI Task Generator transforms any project description into a prioritized, dependency-mapped task list in seconds. No account required. Used by 1,000+ teams.",
+        "Free AI Task Generator by SpaceLean — transform any project description into a prioritized, dependency-mapped task list in seconds. No account required.",
     keywords: [
         "AI task generator",
         "free AI task generator",
