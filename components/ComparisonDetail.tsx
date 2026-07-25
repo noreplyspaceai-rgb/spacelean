@@ -15,6 +15,7 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.7, delay, ease: EASE },
 });
 
+
 interface ComparisonDetailProps {
   data: ComparisonData;
 }
