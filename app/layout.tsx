@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "SpaceLean | AI-Powered Lean Project Management & Construction Scheduling Software",
   description:
-    "SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners. Auto-generate construction schedules from BIM models, predict critical path risks, and optimize crew scheduling.",
+    "SpaceLean is an AI-powered construction scheduling platform. Auto-generate BIM-based schedules, predict critical path risks, and optimize crews in real time.",
   keywords: [
     "SpaceLean",
     "AI project management software",

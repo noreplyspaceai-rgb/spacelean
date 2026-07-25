@@ -12,7 +12,7 @@ import { SolutionsIndexClient } from "@/components/SolutionsClient";
 export const metadata: Metadata = {
   title: "Solutions | SpaceLean — AI Scheduling for Every Team & Project Type",
   description:
-    "SpaceLean delivers AI-powered construction scheduling solutions for General Contractors, Owners, and Consultants across Industrial, Infrastructure, and Commercial projects. Reduce planning time by 80%.",
+    "SpaceLean AI scheduling for General Contractors, Owners, and Consultants. Industrial, infrastructure, and commercial projects. Cut planning time by 80%.",
   keywords: [
     "AI construction scheduling software",
     "construction project management AI",

@@ -166,6 +166,49 @@ export default function Footer() {
                 </button>
               </div>
             </div>
+
+              {/* ── Global Contact Numbers ─────────────────────── */}
+              <div className="mt-8">
+                <p className="text-[11px] font-bold text-stone-900 uppercase tracking-[0.2em] mb-4">
+                  Global Contact Numbers
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    { country: "USA",          phone: "+1 646 421 5740" },
+                    { country: "Canada",       phone: "+1 (979) 326-9493" },
+                    { country: "UAE",          phone: "+971 56 256 7509" },
+                    { country: "Saudi Arabia", phone: "+966 56 208 1999" },
+                    { country: "Kuwait",       phone: "+965 9724 3755" },
+                    { country: "Singapore",    phone: "+65 86 111 900" },
+                    { country: "Malaysia",     phone: "+60 10 660 7357" },
+                  ].map(({ country, phone }) => (
+                    <li key={country}>
+                      <a
+                        href={`tel:${phone.replace(/[\s()+-]/g, "")}`}
+                        aria-label={`Call ${country}: ${phone}`}
+                        className="group flex items-center gap-2.5 py-1 rounded transition-colors duration-200"
+                      >
+                        <svg
+                          className="w-3.5 h-3.5 flex-shrink-0 text-stone-400 group-hover:text-purple-500 transition-colors duration-200"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1.75}
+                          aria-hidden="true"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.338c0-1.655 1.277-3.018 2.93-3.083L6 3.25l2.318 4.24-.927.927a.75.75 0 00-.17.802 10.528 10.528 0 005.56 5.56.75.75 0 00.802-.17l.927-.927L18.75 16l-.005.82c-.065 1.653-1.428 2.93-3.083 2.93C8.546 19.75 4.25 15.454 4.25 10.138V9.5a.75.75 0 00-1.5 0v.638A9.01 9.01 0 002.25 6.338z" />
+                        </svg>
+                        <span className="text-sm text-stone-600 group-hover:text-purple-700 transition-colors duration-200">
+                          <span className="font-semibold text-stone-900 group-hover:text-purple-800 transition-colors duration-200">
+                            {country}
+                          </span>
+                          {" "}{phone}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
           </div>
 
           {/* Nav Sections */}
@@ -189,6 +232,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
+
 
         {/* Bottom Strip */}
         <div className="pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-6">

@@ -6,7 +6,7 @@ import WhyUs from '@/components/WhyUs';
 export const metadata: Metadata = {
     title: "Pricing | SpaceLean - Scalable AI Task Management",
     description:
-        "Explore SpaceLean's transparent pricing plans. From individual builders to large enterprises, find the right AI-powered tools for your workflow.",
+        "Explore SpaceLean pricing plans for teams of every size. AI-powered scheduling, task management, and Kanban boards. Free plan available — no card required.",
     keywords: [
         "SpaceLean pricing",
         "AI project management cost",

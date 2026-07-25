@@ -8,6 +8,7 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
+Disallow: /admin/
 
 User-agent: OAI-SearchBot
 User-agent: GPTBot
@@ -20,5 +21,6 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
+Disallow: /admin/
 
 Sitemap: https://spacelean.ai/sitemap.xml

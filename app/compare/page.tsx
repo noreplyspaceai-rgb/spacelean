@@ -4,7 +4,7 @@ import CompareClient from "@/components/CompareClient";
 export const metadata: Metadata = {
   title: "SpaceLean vs Competitors: Comparison Hub | SpaceLean",
   description:
-    "Compare SpaceLean vs Asana, Monday.com, Notion, ClickUp, Linear, Alice Technologies, Autodesk, and more. Side-by-side feature tables, pricing, and honest verdicts.",
+    "Compare SpaceLean vs Asana, Monday.com, Notion, ClickUp, and more. Side-by-side feature tables, pricing, and honest verdicts for construction AI tools.",
   keywords: [
     "SpaceLean vs Asana",
     "SpaceLean vs Monday",

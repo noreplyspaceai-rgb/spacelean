@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: "Features | SpaceLean — AI Task Management, Kanban & Lean Scheduling Tools",
     description:
-        "SpaceLean features AI task decomposition, real-time Kanban boards, intelligent automation, and lean scheduling — everything your team needs to deliver projects 40% faster. Free to start.",
+        "SpaceLean features AI task decomposition, real-time Kanban boards, smart automation, and lean scheduling. Deliver projects 40% faster. Free to start today.",
     keywords: [
         "AI task management features",
         "lean project management tools",
