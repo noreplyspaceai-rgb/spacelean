@@ -24,6 +24,7 @@
 
 ## Top Keyword Opportunities
 
+
 | Keyword | Avg Monthly Searches | Competition | YoY Change |
 |---|---|---|---|
 | project management | 50,000 | Low | 0% |
