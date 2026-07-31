@@ -39,7 +39,7 @@ export const socialPlatforms: SocialPlatform[] = [
     category: "Social Networks",
     description:
       "Follow SpaceLean on Instagram for behind-the-scenes content, team culture, and visual stories from the field.",
-    url: "https://www.instagram.com/spacelean._/",
+    url: "https://www.instagram.com/spacelean1/",
     status: "Registered",
   },
   {
