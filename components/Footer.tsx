@@ -91,7 +91,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/spacelean._/",
+    href: "https://www.instagram.com/spacelean1/",
     external: true,
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
