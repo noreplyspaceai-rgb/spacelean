@@ -14,6 +14,7 @@
 | Missing pages in sitemap (`/about`, `/compare/*`, `/security`, `/tool`) | `app/sitemap.ts` |
 | No FAQ, AggregateRating, or BreadcrumbList schema | — |
 | No dedicated pages for "task management" or "project planning software" (50K/mo) | — |
+
 | No `hreflang` for Indian market despite all keywords being INR | — |
 
 ---
