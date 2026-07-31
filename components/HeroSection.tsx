@@ -32,14 +32,14 @@ function circleOrbit(R: number, startDeg: number, steps = 60) {
 const R = 250;
 
 const icons = [
-  { Icon: Brain,     shape: "rounded-2xl",  size: "w-12 h-12" },
-  { Icon: HardHat,   shape: "rounded-full", size: "w-12 h-12" },
-  { Icon: BarChart2, shape: "rounded-2xl",  size: "w-11 h-11" },
-  { Icon: Shield,    shape: "rounded-full", size: "w-11 h-11" },
-  { Icon: Zap,       shape: "rounded-2xl",  size: "w-10 h-10" },
-  { Icon: Cpu,       shape: "rounded-full", size: "w-10 h-10" },
-  { Icon: Layers,    shape: "rounded-2xl",  size: "w-10 h-10" },
-  { Icon: Ruler,     shape: "rounded-full", size: "w-10 h-10" },
+  { Icon: Brain, shape: "rounded-2xl", size: "w-12 h-12" },
+  { Icon: HardHat, shape: "rounded-full", size: "w-12 h-12" },
+  { Icon: BarChart2, shape: "rounded-2xl", size: "w-11 h-11" },
+  { Icon: Shield, shape: "rounded-full", size: "w-11 h-11" },
+  { Icon: Zap, shape: "rounded-2xl", size: "w-10 h-10" },
+  { Icon: Cpu, shape: "rounded-full", size: "w-10 h-10" },
+  { Icon: Layers, shape: "rounded-2xl", size: "w-10 h-10" },
+  { Icon: Ruler, shape: "rounded-full", size: "w-10 h-10" },
 ].map((icon, i) => ({ ...icon, keyframes: circleOrbit(R, i * 45) }));
 
 // ── Seeded random for deterministic positions ──
@@ -276,7 +276,7 @@ export default function HeroSection() {
         videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-15 pb-2 flex flex-col lg:flex-row items-center gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[104px] sm:pt-[120px] lg:pt-[144px] pb-2 flex flex-col lg:flex-row items-center gap-12">
 
         {/* ── Left: content ── */}
         <div className="flex-1 flex flex-col items-start text-left">
@@ -290,10 +290,10 @@ export default function HeroSection() {
 
           <motion.h1
             {...fadeUp(0.12)}
-            className="text-3xl sm:text-5xl font-normal lg:text-4xl tracking-tight leading-tight text-cyan-500 max-w-xl"
+            className="text-[clamp(1.75rem,4.5vw,2.5rem)] font-normal tracking-tight leading-tight text-cyan-500 max-w-xl"
           >
-            Leading <br />
-            <span className="font-bold text-6xl sm:text-5xl font-normal lg:text-5xl tracking-tight leading-tight text-cyan-500 max-w-2xl">AI Project Management</span>  <br /> Software   for 2026
+            AI-Powered <br />
+            <span className="font-bold text-[clamp(2.25rem,6vw,4rem)] tracking-tight leading-tight text-cyan-500 max-w-2xl">Construction Project Planning</span>  <br /> & Scheduling Software
           </motion.h1>
 
           <motion.p
@@ -328,6 +328,13 @@ export default function HeroSection() {
               How it works
             </button>
           </motion.div>
+
+          <motion.p
+            {...fadeUp(0.3)}
+            className="mt-4 text-xs text-neutral-400 leading-relaxed max-w-md"
+          >
+            Experience dynamic, AI-driven construction project management that optimizes crew schedules, dynamically maps critical paths, and reduces planning time by 80%.
+          </motion.p>
         </div>
 
         {/* ── Right: 3-D model + circular orbit ── */}

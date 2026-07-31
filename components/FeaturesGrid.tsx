@@ -82,7 +82,7 @@ export default function FeaturesGrid() {
         </div>
 
         {/* Two-column Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/8 border border-black/8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/8 border border-black/8">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             const isActive = activeIdx === idx;

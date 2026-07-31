@@ -34,7 +34,7 @@ export default function AudienceSection() {
   const [active, setActive] = useState("owners");
 
   return (
-    <section className="px-4 md:px-6 py-20 max-w-7xl mx-auto font-sans">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 max-w-7xl mx-auto font-sans">
 
       {/* Header */}
       <div className="mb-12">

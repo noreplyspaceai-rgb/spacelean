@@ -111,7 +111,7 @@ function LaptopMockup() {
             <div className="flex-1 overflow-hidden">
               <img
                 src="/dashboard.webp"
-                alt="Space Lean Dashboard"
+                alt="AI-powered construction scheduling dashboard showing Gantt view and critical path details"
                 width={1440}
                 height={900}
                 loading="lazy"
@@ -319,7 +319,7 @@ export default function DashboardShowcase() {
   return (
     <section ref={sectionRef} className="relative">
       <div className="sticky top-0 h-screen flex items-center overflow-hidden pt-16 mb-10">
-        <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
           {/* Top header */}
           <div className="mb-10 flex flex-col gap-3">

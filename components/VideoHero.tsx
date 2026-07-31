@@ -125,7 +125,7 @@ export default function VideoHero() {
 
       {/* ── Slide content ── */}
       <div className="relative z-20 h-full flex flex-col justify-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}
@@ -140,9 +140,9 @@ export default function VideoHero() {
               </p>
 
               {/* Heading */}
-              <h1 className="text-[clamp(2.4rem,5.5vw,4.2rem)] leading-[1.05] !text-[#f5f5f0] tracking-tight mb-6 whitespace-pre-line">
+              <h2 className="text-[clamp(2.4rem,5.5vw,4.2rem)] leading-[1.05] !text-[#f5f5f0] tracking-tight mb-6 whitespace-pre-line">
                 {slide.heading}
-              </h1>
+              </h2>
 
               {/* Body */}
               <p className="text-base sm:text-lg leading-relaxed max-w-xl mb-10 text-[#b8b8b0]">

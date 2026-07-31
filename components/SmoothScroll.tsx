@@ -41,5 +41,24 @@ export default function SmoothScroll() {
         }
     }, [pathname]);
 
+    // Handle mobile menu scroll freeze (Lenis stop/start)
+    useEffect(() => {
+        const handleMenuToggle = (e: Event) => {
+            const customEvent = e as CustomEvent;
+            if (lenisRef.current) {
+                if (customEvent.detail?.open) {
+                    lenisRef.current.stop();
+                } else {
+                    lenisRef.current.start();
+                }
+            }
+        };
+
+        window.addEventListener('menuToggle', handleMenuToggle);
+        return () => {
+            window.removeEventListener('menuToggle', handleMenuToggle);
+        };
+    }, []);
+
     return null;
 }

@@ -97,7 +97,7 @@ export default function WhyUs() {
 
   return (
     <section className="pb-4 pt-2 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Header ── */}
         <div ref={headingRef} className="mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
@@ -151,7 +151,7 @@ export default function WhyUs() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/4dmodel.gif"
-                alt="Construction site planning"
+                alt="4D construction scheduling software simulation showing site progress planning and BIM coordination"
                 width={600}
                 height={800}
                 loading="lazy"

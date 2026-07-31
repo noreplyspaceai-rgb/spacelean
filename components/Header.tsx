@@ -97,6 +97,23 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+      window.dispatchEvent(new CustomEvent("menuToggle", { detail: { open: true } }));
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      window.dispatchEvent(new CustomEvent("menuToggle", { detail: { open: false } }));
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      window.dispatchEvent(new CustomEvent("menuToggle", { detail: { open: false } }));
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
     if (!isOpen) return;
     const handleOutsideClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
@@ -138,7 +155,7 @@ export default function Header() {
   }, [scrolled]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-2 sm:px-4 lg:px-4 xl:px-8 pt-4 overflow-x-clip">
+    <header className={`fixed top-0 left-0 right-0 z-50 px-2 sm:px-4 lg:px-4 xl:px-8 overflow-x-clip transition-all duration-500 ${scrolled ? "pt-2" : "pt-4"}`}>
       <nav
         className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${scrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm border border-black/5"
@@ -146,7 +163,7 @@ export default function Header() {
           }`}
       >
         {/* ─── Main bar ─────────────────────────────────────────── */}
-        <div className="flex h-14 items-center justify-between gap-2 px-3 sm:px-4 lg:px-4 xl:px-6 min-w-0">
+        <div className={`flex items-center justify-between gap-2 px-3 sm:px-4 lg:px-4 xl:px-6 min-w-0 transition-all duration-500 ${scrolled ? "h-12" : "h-14 sm:h-16"}`}>
 
           {/* Logo — always visible, never shrinks */}
           <Link
@@ -223,7 +240,7 @@ export default function Header() {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 aria-haspopup="true"
-                className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 lg:px-3 py-1.5 bg-gray-100/60 hover:bg-gray-100/80 rounded-full border border-gray-200/60 transition-all duration-200 cursor-pointer select-none font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500/50 min-h-[36px] whitespace-nowrap"
+                className="flex items-center gap-1 sm:gap-1.5 px-3 sm:px-3.5 lg:px-4 py-2.5 bg-gray-100/60 hover:bg-gray-100/80 rounded-full border border-gray-200/60 transition-all duration-200 cursor-pointer select-none font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500/50 min-h-[44px] whitespace-nowrap"
               >
                 {/* SVG flag — always visible */}
                 <FlagIcon
@@ -252,7 +269,7 @@ export default function Header() {
               {/* ── Dropdown panel ────────────────────────────── */}
               <div
                 className={`absolute right-0 top-full mt-2 w-[min(480px,94vw)] bg-white border border-gray-200/80 rounded-2xl shadow-[0_10px_40px_-10px_rgba(147,51,234,0.15),0_2px_8px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out origin-top-right z-50
-                  max-sm:right-auto max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:origin-top
+                  max-sm:fixed max-sm:top-20 max-sm:left-4 max-sm:right-4 max-sm:w-auto max-sm:origin-top
                   before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 before:content-[''] ${
                   isOpen
                     ? "opacity-100 translate-y-0 scale-100 visible"
@@ -320,7 +337,7 @@ export default function Header() {
             {/* ── Hamburger — visible below lg (< 1024px) ──────── */}
             <button
               type="button"
-              className="lg:hidden inline-flex items-center justify-center p-2 rounded-full text-gray-600 hover:text-gray-900 hover:bg-gray-100/70 border border-transparent hover:border-gray-200 transition-all duration-200 w-10 h-10 flex-shrink-0"
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-full text-gray-600 hover:text-gray-900 hover:bg-gray-100/70 border border-transparent hover:border-gray-200 transition-all duration-200 w-11 h-11 flex-shrink-0"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -336,59 +353,66 @@ export default function Header() {
             </button>
           </div>
         </div>
+      </nav>
 
-        {/* ─── Mobile / Tablet drawer (< 1024px) ───────────────────── */}
-        <div
-          className={`lg:hidden absolute top-full left-0 right-0 mt-2 mx-3 sm:mx-4 bg-gradient-to-br from-white via-purple-50 to-blue-50 border border-gray-200 shadow-2xl shadow-purple-900/20 rounded-2xl overflow-hidden transition-all duration-300 ease-out origin-top z-50 ${
-            mobileMenuOpen
-              ? "opacity-100 translate-y-0 scale-100 visible"
-              : "opacity-0 -translate-y-4 scale-95 invisible pointer-events-none"
-          }`}
+      {/* ─── Mobile / Tablet drawer (< 1024px) ───────────────────── */}
+      <div
+        className={`lg:hidden absolute top-full left-0 right-0 mt-2 mx-3 sm:mx-4 bg-gradient-to-br from-white via-purple-50 to-blue-50 border border-gray-200 shadow-2xl shadow-purple-900/20 rounded-2xl overflow-hidden transition-all duration-300 ease-out origin-top z-50 ${
+          mobileMenuOpen
+            ? "opacity-100 translate-y-0 scale-100 visible"
+            : "opacity-0 -translate-y-4 scale-95 invisible pointer-events-none"
+        }`}
+        style={{
+          background: "#ffffff",
+          backgroundImage: "linear-gradient(to bottom right, #ffffff, #faf5ff, #eff6ff)"
+        }}
+      >
+        <div 
+          className="flex flex-col p-4 bg-white/90 gap-1.5"
+          style={{ background: "rgba(255, 255, 255, 0.9)" }}
         >
-          <div className="flex flex-col p-4 bg-white/90 gap-1.5">
-            <Link href="/about" onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
-              About
-            </Link>
-            <Link href="/space-lean-core" onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
-              Space Lean Core
-            </Link>
-            <Link href="/blogs" onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
-              Blog
-            </Link>
-            <Link href="/compare" onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
-              Compare
-            </Link>
-            <Link href="/solutions" onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
-              Solutions
-            </Link>
+          <Link href="/about" onClick={() => setMobileMenuOpen(false)}
+            className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
+            About
+          </Link>
+          <Link href="/space-lean-core" onClick={() => setMobileMenuOpen(false)}
+            className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
+            Space Lean Core
+          </Link>
+          <Link href="/blogs" onClick={() => setMobileMenuOpen(false)}
+            className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
+            Blog
+          </Link>
+          <Link href="/compare" onClick={() => setMobileMenuOpen(false)}
+            className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
+            Compare
+          </Link>
+          <Link href="/solutions" onClick={() => setMobileMenuOpen(false)}
+            className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
+            Solutions
+          </Link>
 
-            <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-200/60">
-              {/* Start Free — inside menu for phones only (the navbar already shows it at sm+) */}
-              <div className="sm:hidden w-full">
-                <StartFreeTrialButton
-                  label="Start free trial"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full justify-center px-5 py-3 text-base font-medium rounded-xl transition-all duration-200 min-h-[48px] flex items-center"
-                />
-              </div>
-
-              {/* Request a Demo — always inside the hamburger menu */}
-              <Link
-                href="/request-a-demo"
+          <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-200/60">
+            {/* Start Free — inside menu for phones only (the navbar already shows it at sm+) */}
+            <div className="sm:hidden w-full">
+              <StartFreeTrialButton
+                label="Start free trial"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-900 text-base font-medium rounded-xl border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200 min-h-[48px]"
-              >
-                Request a Demo
-              </Link>
+                className="w-full justify-center px-5 py-3 text-base font-medium rounded-xl transition-all duration-200 min-h-[48px] flex items-center"
+              />
             </div>
+
+            {/* Request a Demo — always inside the hamburger menu */}
+            <Link
+              href="/request-a-demo"
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-900 text-base font-medium rounded-xl border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200 min-h-[48px]"
+            >
+              Request a Demo
+            </Link>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

@@ -10,7 +10,7 @@ import { FEATURES } from "@/components/space-lean-core/data";
 
 export const metadata: Metadata = {
   title:
-    "Space Lean Core | AI Construction Scheduling Engine — SpaceLean",
+    "AI Project Management & Scheduling Software | SpaceLean Core",
   description:
     "SpaceLean Core: AI-powered construction scheduling with BIM-driven sequencing, Monte Carlo simulation, real-time replanning, and predictive risk analysis.",
   keywords: [
@@ -67,7 +67,7 @@ export default function SpaceLeanCorePage() {
     "name": "SpaceLean Core",
     "url": "https://spacelean.ai/space-lean-core",
     "description": "AI-powered construction scheduling engine providing BIM-driven sequencing, Monte Carlo risk simulation, real-time replanning, and predictive project controls.",
-    "applicationCategory": "ConstructionManagementApplication",
+    "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "featureList": [
       "AI-Generated Construction Sequences",
@@ -75,7 +75,9 @@ export default function SpaceLeanCorePage() {
       "Monte Carlo Schedule Simulations",
       "Self-Healing Project Timelines",
       "Zone Congestion and Crew Flow Optimization",
-      "Integrated Agile Sprint Planning"
+      "Integrated Agile Sprint Planning",
+      "Construction Scheduling Software",
+      "Lean Project Management Software"
     ],
     "publisher": {
       "@type": "Organization",

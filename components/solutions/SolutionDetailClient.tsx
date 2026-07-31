@@ -22,7 +22,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative z-10 py-0 pb-4 px-4 border-b border-black/[0.06]">
+      <section className="relative z-10 py-0 pb-16 px-4 border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto px-4">
 
           {/* Back */}
@@ -101,13 +101,13 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
       </section>
 
       {/* ── Use Cases ── */}
-      <section className="py-4 sm:py-20 px-4 border-b border-black/[0.06]">
+      <section className="py-16 sm:py-20 px-4 border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto px-4">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
             className="mb-10"
           >
@@ -134,7 +134,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
             className="rounded-2xl border border-black/[0.07] bg-white p-6 sm:p-8 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
           >
@@ -170,7 +170,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
             className="mb-10"
           >
@@ -193,7 +193,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
             className="rounded-2xl border border-black/[0.07] bg-white p-6 sm:p-8 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
           >
@@ -232,7 +232,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
             className="mb-10"
           >
@@ -255,7 +255,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
             className="rounded-2xl border border-black/[0.07] bg-white p-6 sm:p-8 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
           >
@@ -265,7 +265,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
                   key={index}
                   initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
+                  viewport={{ once: true, margin: "-10px" }}
                   transition={{ duration: 0.45, delay: 0.05 + index * 0.055, ease: EASE }}
                   className="group rounded-lg border border-transparent hover:border-black/[0.06] hover:bg-black/[0.015] transition-all duration-200 p-5"
                 >
@@ -298,7 +298,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "-15px" }}
               transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
               className="mb-10"
             >
@@ -321,7 +321,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "-15px" }}
               transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
               className="rounded-2xl border border-black/[0.07] bg-white p-6 sm:p-8 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
             >
@@ -331,7 +331,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
                     key={index}
                     initial={{ opacity: 0, x: -12 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-40px" }}
+                    viewport={{ once: true, margin: "-10px" }}
                     transition={{ duration: 0.45, delay: 0.05 + index * 0.055, ease: EASE }}
                     className="flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-black/[0.06] hover:bg-black/[0.015] transition-all duration-200"
                   >
@@ -367,7 +367,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "-15px" }}
               transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
               className="rounded-2xl border border-black/[0.07] bg-white p-8 sm:p-12 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
             >
@@ -398,7 +398,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
             className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8"
           >
@@ -422,7 +422,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
             className="rounded-2xl border border-black/[0.07] bg-white p-6 sm:p-8 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
           >
@@ -432,7 +432,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
                   key={other.slug}
                   initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
+                  viewport={{ once: true, margin: "-10px" }}
                   transition={{ duration: 0.45, delay: 0.05 + i * 0.055, ease: EASE }}
                 >
                   <Link href={`/solutions/${other.slug}`} className="flex items-center gap-4 rounded-lg border border-transparent hover:border-black/[0.06] hover:bg-black/[0.015] transition-all duration-200 px-4 py-4 group">
@@ -468,7 +468,7 @@ export function SolutionDetailClient({ solution, otherSolutions }: SolutionDetai
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 0.6, delay: 0.08, ease: EASE }}
             className="rounded-2xl border border-black/[0.07] bg-white p-8 sm:p-12 shadow-[0_2px_24px_rgba(0,0,0,0.04)]"
           >
