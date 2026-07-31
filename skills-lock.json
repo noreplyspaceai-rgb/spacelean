@@ -7,6 +7,12 @@
       "skillPath": "skills/ai-seo/SKILL.md",
       "computedHash": "a6265a6c9451a25987a94453f638e07bef84eb3f1cd73366d703fee79151cf09"
     },
+    "competitors": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/competitors/SKILL.md",
+      "computedHash": "6380b59f188f71552e4ea878f41518c387490d583c457f95c4d0f4161ccb7c71"
+    },
     "seo": {
       "source": "addyosmani/web-quality-skills",
       "sourceType": "github",
@@ -18,6 +24,12 @@
       "sourceType": "github",
       "skillPath": "skills/seo-audit/SKILL.md",
       "computedHash": "f2dc52130189068981f21e1c0bdc4471ac7cd9b08d8a1320604411aa0f950385"
+    },
+    "small-business-website": {
+      "source": "bassemhalawani/small-business-website-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "39f2dd8f810a3bcbccf7a735f18df9f31c54ac771cec0e400795363597bb92b3"
     }
   }
 }

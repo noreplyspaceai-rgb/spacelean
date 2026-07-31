@@ -51,7 +51,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProp
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                        className="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+                        className="relative w-full max-w-5xl bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10"
                     >
                         {/* Close Button */}
                         <button
@@ -62,7 +62,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProp
                         </button>
 
                         {/* Video Wrapper */}
-                        <div className="w-full h-full relative">
+                        <div className="relative aspect-video w-full">
                             <iframe
                                 src={`${videoUrl}?autoplay=1`}
                                 title="Product Demo"

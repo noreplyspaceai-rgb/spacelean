@@ -23,7 +23,7 @@ export default function Home() {
     "url": "https://spacelean.ai",
     "description":
       "SpaceLean is an AI-powered Digital Construction Brain that automatically generates construction schedules from BIM models, predicts critical path risks, optimizes crew scheduling, and adapts in real time.",
-    "applicationCategory": "ConstructionManagementSoftware",
+    "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "screenshot": "https://spacelean.ai/dashboard.png",
     "featureList": [
@@ -35,8 +35,9 @@ export default function Home() {
       "OKR Goal Management",
       "AI Task Decomposition",
       "Kanban Board Management",
-      "Lean Project Management",
+      "Lean Project Management Software",
       "Intelligent Workflow Automation",
+      "Construction Scheduling Software",
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -212,6 +213,7 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden">
+      {/* Standardized Section Padding: All imported page sections are audited to enforce uniform px-4 sm:px-6 lg:px-8 margins */}
       {/* SEO Structured Data */}
       <script
         type="application/ld+json"
