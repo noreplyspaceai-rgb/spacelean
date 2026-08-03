@@ -1,18 +1,33 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
-import SocialProof from "@/components/SocialProof";
 import WhyUs from "@/components/WhyUs";
-import AIFeature from "@/components/AIFeature";
-import ToolsSection from "@/components/ToolsSection";
-import FeaturesGrid from "@/components/FeaturesGrid";
-import WorkSmarter from "@/components/WorkSmarter";
-import Testimonials from "@/components/Testimonials";
-import HappyUsers from "@/components/HappyUsers";
-import FAQ from "@/components/FAQ";
-import AskSpaceLeanAI from "@/components/AskSpaceLeanAI";
-import TrySection from "@/components/TrySection";
-import VideoHero from "@/components/VideoHero";
 import DashboardShowcase from "@/components/Dashboardshowcase";
-import AudienceSection from "@/components/AudienceSection";
+
+// Dynamically import below-the-fold components
+const AudienceSection = dynamic(() => import("@/components/AudienceSection"), {
+  ssr: true,
+  loading: () => <div className="min-h-[600px]" />,
+});
+
+const FeaturesGrid = dynamic(() => import("@/components/FeaturesGrid"), {
+  ssr: true,
+  loading: () => <div className="min-h-[700px]" />,
+});
+
+const VideoHero = dynamic(() => import("@/components/VideoHero"), {
+  ssr: true,
+  loading: () => <div className="min-h-[560px] h-[80vh] max-h-[960px] bg-black" />,
+});
+
+const FAQ = dynamic(() => import("@/components/FAQ"), {
+  ssr: true,
+  loading: () => <div className="min-h-[900px]" />,
+});
+
+const AskSpaceLeanAI = dynamic(() => import("@/components/AskSpaceLeanAI"), {
+  ssr: true,
+  loading: () => <div className="min-h-[450px]" />,
+});
 
 export default function Home() {
   const softwareSchema = {

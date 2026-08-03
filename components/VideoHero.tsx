@@ -112,7 +112,8 @@ export default function VideoHero() {
           muted
           loop
           playsInline
-          preload={i === 0 ? "auto" : "none"}
+          // Avoid preloading all videos eagerly. Preload metadata only.
+          preload={i === current ? "auto" : "none"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             i === current ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}

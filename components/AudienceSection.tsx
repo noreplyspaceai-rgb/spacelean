@@ -1,5 +1,6 @@
 'use client';
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 
@@ -62,11 +63,11 @@ export default function AudienceSection() {
               className="relative rounded-2xl overflow-hidden cursor-pointer bg-[#1e2a4a] transition-all duration-500 ease-in-out flex-shrink-0 min-h-[120px] md:min-h-0"
               style={{ flex: isActive ? "2.2" : "0.7" }}
             >
-              <img
+              <Image
                 src={a.image}
                 alt={a.title}
-                width={800}
-                height={600}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500"
                 style={{ opacity: isActive ? 0.45 : 0.25 }}
