@@ -4,9 +4,23 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import StartFreeTrialButton from "@/components/StartFreeTrialButton";
-import * as Flags from "country-flag-icons/react/3x2";
+import US from "country-flag-icons/react/3x2/US";
+import CA from "country-flag-icons/react/3x2/CA";
+import AE from "country-flag-icons/react/3x2/AE";
+import SA from "country-flag-icons/react/3x2/SA";
+import KW from "country-flag-icons/react/3x2/KW";
+import SG from "country-flag-icons/react/3x2/SG";
+import MY from "country-flag-icons/react/3x2/MY";
 
-type FlagComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const FlagsMap: Record<string, React.ComponentType<any>> = {
+  US,
+  CA,
+  AE,
+  SA,
+  KW,
+  SG,
+  MY,
+};
 
 interface Contact {
   country: string;
@@ -61,7 +75,7 @@ const CONTACTS: Contact[] = [
 ];
 
 function FlagIcon({ iso, className }: { iso: string; className?: string }) {
-  const FlagComponent = (Flags as Record<string, FlagComponent>)[iso];
+  const FlagComponent = FlagsMap[iso];
   if (!FlagComponent) return null;
   return <FlagComponent className={className} />;
 }

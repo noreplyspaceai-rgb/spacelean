@@ -1,9 +1,7 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "motion/react";
-import DottedMap from "dotted-map";
-
 import { useTheme } from "next-themes";
 
 interface MapProps {
@@ -19,16 +17,13 @@ export default function WorldMap({
   lineColor = "#3d3333",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const map = new DottedMap({ height: 100, grid: "diagonal" });
-
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const svgMap = map.getSVG({
-    radius: 0.22,
-    color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-    shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "white",
-  });
+  // Avoid hydration mismatches when reading theme
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -45,10 +40,13 @@ export default function WorldMap({
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
 
+  // Default to light map before mount, then swap based on theme
+  const mapSrc = mounted && theme === "dark" ? "/world-map-dark.svg" : "/world-map-light.svg";
+
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black  rounded-lg  relative font-sans">
+    <div className="w-full aspect-[2/1] dark:bg-black rounded-lg relative font-sans">
       <img
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
+        src={mapSrc}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
         alt="world map"
         height="495"
