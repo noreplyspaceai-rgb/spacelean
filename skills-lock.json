@@ -13,6 +13,12 @@
       "skillPath": "skills/competitors/SKILL.md",
       "computedHash": "6380b59f188f71552e4ea878f41518c387490d583c457f95c4d0f4161ccb7c71"
     },
+    "free-tools": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/free-tools/SKILL.md",
+      "computedHash": "3fd8ab504b9b6d791b307baed7a87f49b455fc084ff367772c7418b8a57ce56d"
+    },
     "seo": {
       "source": "addyosmani/web-quality-skills",
       "sourceType": "github",
