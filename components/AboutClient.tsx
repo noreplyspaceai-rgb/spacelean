@@ -2,6 +2,7 @@
 
 import AboutHero from "./about/AboutHero";
 import AboutMission from "./about/AboutMission";
+import AboutTeam from "./about/AboutTeam";
 import AboutPillars from "./about/AboutPillars";
 import AboutValues from "./about/AboutValues";
 import AboutPresence from "./about/AboutPresence";
@@ -17,6 +18,7 @@ export default function AboutClient({ values }: AboutClientProps) {
       <AboutHero />
       <AboutMission />
       <AboutPillars />
+      <AboutTeam />
       <AboutValues values={values} />
       <AboutPresence />
     </div>
