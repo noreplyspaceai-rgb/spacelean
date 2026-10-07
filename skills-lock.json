@@ -7,6 +7,12 @@
       "skillPath": "skills/ai-seo/SKILL.md",
       "computedHash": "a6265a6c9451a25987a94453f638e07bef84eb3f1cd73366d703fee79151cf09"
     },
+    "audit-website-aeo": {
+      "source": "onvoyage-ai/gtm-engineer-skills",
+      "sourceType": "github",
+      "skillPath": "audit-website-aeo/SKILL.md",
+      "computedHash": "c9cc6e8b9e6de96afe6cd4a0b24f1f8cb8433e7507bb7ee0523e5bab6e644d7d"
+    },
     "competitors": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",

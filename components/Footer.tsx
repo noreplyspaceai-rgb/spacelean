@@ -17,6 +17,7 @@ const footerLinks = {
   resources: {
     title: "Resources",
     links: [
+      { label: "Technology & VeritasGraph", href: "/technology" },
       { label: "Blog", href: "/blogs" },
       { label: "Videos", href: "/videos" },
     ],
@@ -62,6 +63,7 @@ const footerLinks = {
 
 const footerBaseLinks = [
   { label: "Features", href: "/features" },
+  { label: "Technology & VeritasGraph", href: "/technology" },
   { label: "Pricing", href: "/pricing" },
   { label: "AI Task Generator", href: "/tool" },
   { label: "Engineering Sprint Scheduling", href: "/solutions/engineering-teams" },
@@ -76,6 +78,7 @@ const footerBaseLinks = [
   { label: "Blog", href: "/blogs" },
   { label: "Request a Demo", href: "/request-a-demo" },
   { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const socialLinks = [
@@ -232,6 +235,46 @@ export default function Footer() {
             </div>
           ))}
         </div>
+
+        {/* ── Powered by VeritasGraph Attribution Line ─────────────────────── */}
+        <div className="mb-12 rounded-xl bg-purple-50/80 border border-purple-200/70 px-5 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm sm:text-base text-stone-800 shadow-xs">
+          <p className="flex flex-wrap items-center gap-2 leading-relaxed">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-600 text-white font-bold text-xs uppercase tracking-wider">
+              Powered by
+            </span>
+            <a
+              href="https://github.com/bibinprathap/VeritasGraph"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-extrabold text-stone-900 hover:text-purple-700 underline decoration-purple-400 underline-offset-4 transition-colors text-base sm:text-lg"
+            >
+              VeritasGraph
+            </a>
+            <span className="text-purple-300 font-bold">•</span>
+            <span className="font-medium text-stone-700">
+              Verifiable AI search with source attribution & GraphRAG knowledge-graph reasoning.
+            </span>
+          </p>
+          <div className="flex items-center gap-4 flex-shrink-0 text-sm font-semibold">
+            <Link
+              href="/technology"
+              className="inline-flex items-center gap-1 text-purple-700 hover:text-purple-900 hover:underline transition-colors"
+            >
+              How it works →
+            </Link>
+            <a
+              href="https://bibinprathap.github.io/VeritasGraph/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-stone-600 hover:text-stone-900 transition-colors"
+            >
+              Docs ↗
+            </a>
+          </div>
+        </div>
+
+
+
 
 
         {/* Bottom Strip */}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Calendar, Brain, HardHat, BarChart3, ClipboardCheck, FolderOpen } from "lucide-react";
 import { useState } from "react";
 import type { Solution, SolutionsNav } from "@/lib/solutions-data";
 import { fadeUp } from "./motion";
@@ -161,6 +161,70 @@ interface SolutionsIndexClientProps {
   solutionsSolutions: Solution[];
 }
 
+const STAGE_CATEGORIES = [
+  {
+    title: "Planning & Scheduling",
+    icon: Calendar,
+    items: [
+      { name: "BIM-to-Schedule", status: "available", href: "/space-lean-core" },
+      { name: "CPM Scheduling", status: "available", href: "/tools/critical-path-calculator" },
+      { name: "Schedule Optimization", status: "available", href: "/space-lean-core" },
+      { name: "What-If Planning", status: "available", href: "/space-lean-core" },
+    ],
+  },
+  {
+    title: "Risk & Predictive Intelligence",
+    icon: Brain,
+    items: [
+      { name: "Risk Prediction", status: "available", href: "/space-lean-core" },
+      { name: "Delay Analysis", status: "available", href: "/space-lean-core" },
+      { name: "Schedule Risk", status: "available", href: "/space-lean-core" },
+      { name: "Resource Conflict Detection", status: "available", href: "/space-lean-core" },
+    ],
+  },
+  {
+    title: "Field Operations",
+    icon: HardHat,
+    items: [
+      { name: "Daily Site Reports", status: "available", href: "/tools/daily-site-report" },
+      { name: "Progress Monitoring", status: "coming_soon" },
+      { name: "Crew Management", status: "coming_soon" },
+      { name: "Site Productivity", status: "coming_soon" },
+    ],
+  },
+  {
+    title: "Project Controls",
+    icon: BarChart3,
+    items: [
+      { name: "Cost Management", status: "available", href: "/tools/construction-cost-calculator" },
+      { name: "Change Management", status: "coming_soon" },
+      { name: "Schedule Performance", status: "coming_soon" },
+      { name: "Project Tracking", status: "coming_soon" },
+    ],
+  },
+  {
+    title: "Quality & Safety",
+    icon: ClipboardCheck,
+    items: [
+      { name: "Quality Inspections", status: "coming_soon" },
+      { name: "Punch Lists", status: "coming_soon" },
+      { name: "Safety Observations", status: "coming_soon" },
+      { name: "Corrective Actions", status: "coming_soon" },
+    ],
+  },
+  {
+    title: "Documents & Workflows",
+    icon: FolderOpen,
+    items: [
+      { name: "RFI Management", status: "coming_soon" },
+      { name: "Submittals", status: "coming_soon" },
+      { name: "Drawings", status: "coming_soon" },
+      { name: "Document Tracking", status: "coming_soon" },
+      { name: "Approvals", status: "coming_soon" },
+    ],
+  },
+];
+
 export function SolutionsIndexClient({
   stakeholderSolutions,
   projectTypeSolutions,
@@ -223,6 +287,94 @@ export function SolutionsIndexClient({
             </a>
           ))}
         </motion.div>
+      </section>
+
+      {/* ── Construction Intelligence Across Every Stage ── */}
+      <section className="py-16 border-b border-black/8">
+        <div className="mb-12">
+          <motion.div {...fadeUp(0.08)}>
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-4 tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
+              Comprehensive Platform Capabilities
+            </span>
+          </motion.div>
+
+          <motion.div {...fadeUp(0.12)} className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-normal tracking-tight leading-tight">
+                Construction Intelligence <br />
+                <span className="font-bold text-cyan-500">Across Every Stage</span>
+              </h2>
+            </div>
+            <div className="max-w-md">
+              <p className="text-sm sm:text-base font-mono text-neutral-500 leading-relaxed border-l-4 border-cyan-400 pl-4">
+                Connect planning, scheduling, risk, field operations, and project controls in one construction intelligence platform.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* 6-Category Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {STAGE_CATEGORIES.map((category, idx) => {
+            const Icon = category.icon;
+            return (
+              <motion.div
+                key={category.title}
+                {...fadeUp(0.08 + idx * 0.05)}
+                className="group relative bg-white border border-black/8 rounded-2xl p-6 hover:border-cyan-400/60 hover:shadow-[0_4px_24px_rgba(6,182,212,0.08)] transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Category Header */}
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-black/5">
+                    <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-neutral-850">
+                      {category.title}
+                    </h3>
+                    <div className="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-colors duration-300">
+                      <Icon className="w-4 h-4 text-cyan-500 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                  </div>
+
+                  {/* Capabilities List */}
+                  <ul className="space-y-3.5">
+                    {category.items.map((item) => {
+                      const isAvailable = item.status === "available";
+                      if (isAvailable) {
+                        return (
+                          <li key={item.name} className="flex items-center justify-between group/item">
+                            <Link
+                              href={item.href || "#"}
+                              className="text-sm font-mono text-neutral-600 hover:text-cyan-600 transition-colors flex items-center gap-1.5"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0 animate-pulse" />
+                              {item.name}
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" />
+                            </Link>
+                            <span className="text-[9px] font-bold tracking-wider uppercase bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded-full border border-emerald-100">
+                              Available Now
+                            </span>
+                          </li>
+                        );
+                      } else {
+                        return (
+                          <li key={item.name} className="flex items-center justify-between">
+                            <span className="text-sm font-mono text-neutral-400 flex items-center gap-1.5 cursor-default select-none">
+                              <span className="w-1.5 h-1.5 rounded-full bg-neutral-300 flex-shrink-0" />
+                              {item.name}
+                            </span>
+                            <span className="text-[9px] font-bold tracking-wider uppercase bg-neutral-100 text-neutral-400 px-2 py-0.5 rounded-full border border-neutral-200">
+                              Coming Soon
+                            </span>
+                          </li>
+                        );
+                      }
+                    })}
+                  </ul>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </section>
 
       <section className="py-8 space-y-10">

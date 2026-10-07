@@ -4,7 +4,8 @@ export type PlatformCategory =
   | "Social Networks"
   | "Developer Communities"
   | "Design Communities"
-  | "Content Platforms";
+  | "Content Platforms"
+  | "Business Directories";
 
 export interface SocialPlatform {
   id: string;
@@ -20,6 +21,7 @@ export const PLATFORM_CATEGORIES: PlatformCategory[] = [
   "Developer Communities",
   "Design Communities",
   "Content Platforms",
+  "Business Directories",
 ];
 
 export const socialPlatforms: SocialPlatform[] = [
@@ -136,7 +138,26 @@ export const socialPlatforms: SocialPlatform[] = [
     category: "Content Platforms",
     description:
       "In-depth articles from the SpaceLean team on AI, construction technology, and the future of lean project management.",
-    status: "Coming Soon",
+    url: "https://medium.com/@spacelean1",
+    status: "Registered",
+  },
+  {
+    id: "hashnode",
+    name: "Hashnode",
+    category: "Content Platforms",
+    description:
+      "Official SpaceLean profile on Hashnode — check out our technical blogs, engineering write-ups, and developer guides.",
+    url: "https://hashnode.com/@spacelean",
+    status: "Registered",
+  },
+  {
+    id: "blogger",
+    name: "Blogger",
+    category: "Content Platforms",
+    description:
+      "Follow SpaceLean on Blogger — updates, articles, and discussions about our AI-native lean project management tools.",
+    url: "https://www.blogger.com/profile/07386576460648677552",
+    status: "Registered",
   },
   {
     id: "substack",
@@ -154,6 +175,17 @@ export const socialPlatforms: SocialPlatform[] = [
     description:
       "Follow SpaceLean on Micro.blog for bite-sized updates, micro-posts, and quick thoughts on construction technology.",
     url: "https://spacelean.micro.blog/",
+    status: "Registered",
+  },
+
+  // ── Business Directories ──────────────────────────────────────────────────────
+  {
+    id: "crunchbase",
+    name: "Crunchbase",
+    category: "Business Directories",
+    description:
+      "Official SpaceLean company profile on Crunchbase — view our corporate info, funding data, and industry classification.",
+    url: "https://www.crunchbase.com/organization/spacelean",
     status: "Registered",
   },
 ];

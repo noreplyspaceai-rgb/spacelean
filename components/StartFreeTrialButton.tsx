@@ -18,7 +18,7 @@ type StartFreeTrialButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "
 export default function StartFreeTrialButton({
   label = "Start free trial",
   showArrow = true,
-  trialUrl = "https://cad.spaceaiapp.com/lean",
+  trialUrl = "https://app.pmspace.ai/",
   modalTitle = "Start building smarter.",
   modalDescription = "Enter your details and we'll take you straight to your free account - no credit card needed.",
   submitLabel = "Get started free",
@@ -126,13 +126,7 @@ function TrialModal({
       return;
     }
     setSubmitted(true);
-    const destination = new URL(trialUrl, window.location.origin);
-    destination.searchParams.set("email", form.email);
-    destination.searchParams.set("firstName", form.firstName);
-    destination.searchParams.set("lastName", form.lastName);
-    destination.searchParams.set("company", form.company);
-    if (form.phone) destination.searchParams.set("phone", form.phone);
-    window.open(destination.toString(), "_blank", "noopener,noreferrer");
+    window.open(trialUrl, "_blank", "noopener,noreferrer");
   };
 
   return (

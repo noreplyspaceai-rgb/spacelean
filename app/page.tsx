@@ -9,6 +9,11 @@ const AudienceSection = dynamic(() => import("@/components/AudienceSection"), {
   loading: () => <div className="min-h-[600px]" />,
 });
 
+const ProductCapabilities = dynamic(() => import("@/components/ProductCapabilities"), {
+  ssr: true,
+  loading: () => <div className="min-h-[400px]" />,
+});
+
 const FeaturesGrid = dynamic(() => import("@/components/FeaturesGrid"), {
   ssr: true,
   loading: () => <div className="min-h-[700px]" />,
@@ -113,6 +118,10 @@ export default function Home() {
       "sameAs": [
         "https://x.com/spacelean_",
         "https://linkedin.com/company/spacelean",
+        "https://medium.com/@spacelean1",
+        "https://hashnode.com/@spacelean",
+        "https://www.crunchbase.com/organization/spacelean",
+        "https://www.blogger.com/profile/07386576460648677552",
       ],
     },
   } as const;
@@ -133,6 +142,10 @@ export default function Home() {
     "sameAs": [
       "https://x.com/spacelean_",
       "https://linkedin.com/company/spacelean",
+      "https://medium.com/@spacelean1",
+      "https://hashnode.com/@spacelean",
+      "https://www.crunchbase.com/organization/spacelean",
+      "https://www.blogger.com/profile/07386576460648677552",
     ],
   } as const;
 
@@ -254,7 +267,8 @@ export default function Home() {
       <HeroSection />
       <WhyUs />
       <DashboardShowcase />
-<AudienceSection/>
+      <ProductCapabilities />
+      <AudienceSection />
       {/* 2. Social Proof — Trust */}
       {/* <SocialProof /> */}
 

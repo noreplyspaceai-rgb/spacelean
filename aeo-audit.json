@@ -1,0 +1,2303 @@
+{
+  "url": "https://spacelean.ai/",
+  "generatedAt": "2026-09-17T02:53:52.766Z",
+  "crawledPages": 10,
+  "maxPages": 10,
+  "scoring": {
+    "foundationalScore": 89,
+    "heuristicIntelligenceScore": 76,
+    "provisionalScore": 83,
+    "provisionalGrade": "B+",
+    "note": "provisionalScore uses a deterministic heuristic for the intelligence half. The agent should replace heuristicIntelligenceScore with its own 6-dimension LLM evaluation, then compute finalScore = round(0.5*foundationalScore + 0.5*llmIntelligenceScore)."
+  },
+  "checks": [
+    {
+      "id": "title",
+      "label": "Clear page title",
+      "points": 10,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "meta-description",
+      "label": "Meta description",
+      "points": 10,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "canonical",
+      "label": "Canonical URL",
+      "points": 8,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "h1",
+      "label": "Single H1 heading",
+      "points": 8,
+      "passed": false,
+      "details": "6/10 pages passed this check."
+    },
+    {
+      "id": "schema",
+      "label": "Structured data present",
+      "points": 8,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "schema-types",
+      "label": "Schema types identified",
+      "points": 8,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "og",
+      "label": "Open Graph basics",
+      "points": 8,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "internal-links",
+      "label": "Internal linking",
+      "points": 10,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "image-alt",
+      "label": "Image alt coverage",
+      "points": 8,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "text-depth",
+      "label": "Readable content depth",
+      "points": 12,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "indexability",
+      "label": "Indexable for discovery",
+      "points": 10,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "ai-meta-tags",
+      "label": "AI-accessible meta tags",
+      "points": 6,
+      "passed": true,
+      "details": "10/10 pages passed this check."
+    },
+    {
+      "id": "heading-hierarchy",
+      "label": "Content structure",
+      "points": 6,
+      "passed": true,
+      "details": "8/10 pages passed this check."
+    },
+    {
+      "id": "llms-txt",
+      "label": "llms.txt valid",
+      "passed": true,
+      "points": 10,
+      "details": "Valid llms.txt (4429 chars)."
+    },
+    {
+      "id": "ai-bot-access",
+      "label": "AI bot access",
+      "passed": true,
+      "points": 12,
+      "details": "No AI bots blocked in robots.txt."
+    },
+    {
+      "id": "rss-feed",
+      "label": "RSS/Atom feed",
+      "passed": false,
+      "points": 8,
+      "details": "No RSS/Atom feed found."
+    }
+  ],
+  "coverage": [
+    {
+      "pageType": "other",
+      "pages": 6,
+      "avgScore": 97
+    },
+    {
+      "pageType": "home",
+      "pages": 1,
+      "avgScore": 100
+    },
+    {
+      "pageType": "pricing",
+      "pages": 1,
+      "avgScore": 93
+    },
+    {
+      "pageType": "product",
+      "pages": 1,
+      "avgScore": 93
+    },
+    {
+      "pageType": "about",
+      "pages": 1,
+      "avgScore": 93
+    }
+  ],
+  "prioritizedFixes": [
+    {
+      "title": "Add an RSS or Atom feed",
+      "impact": "Medium",
+      "effort": "Low",
+      "why": "RSS feeds help AI systems discover and track new content."
+    },
+    {
+      "title": "Create a docs/knowledge section for product facts",
+      "impact": "Medium",
+      "effort": "Medium",
+      "why": "A stable docs corpus helps agents extract precise answers."
+    }
+  ],
+  "worstPages": [
+    {
+      "url": "https://spacelean.ai/solutions",
+      "score": 98,
+      "maxScore": 112,
+      "pageType": "other"
+    },
+    {
+      "url": "https://spacelean.ai/pricing",
+      "score": 104,
+      "maxScore": 112,
+      "pageType": "pricing"
+    },
+    {
+      "url": "https://spacelean.ai/features",
+      "score": 104,
+      "maxScore": 112,
+      "pageType": "product"
+    },
+    {
+      "url": "https://spacelean.ai/about",
+      "score": 104,
+      "maxScore": 112,
+      "pageType": "about"
+    },
+    {
+      "url": "https://spacelean.ai/request-a-demo",
+      "score": 106,
+      "maxScore": 112,
+      "pageType": "other"
+    }
+  ],
+  "diagnostics": {
+    "crawlMs": 11882,
+    "robotsFound": true,
+    "robotsBlockedCount": 0,
+    "discoveredFromSitemap": 10,
+    "failedPages": 0
+  },
+  "robots": {
+    "found": true,
+    "aiBotBlocked": [],
+    "sitemapCount": 10
+  },
+  "llmsTxt": {
+    "found": true,
+    "hasH1": true,
+    "hasLink": true,
+    "contentLength": 4429,
+    "fullTxtFound": false
+  },
+  "rssFeed": false,
+  "heuristicIntelligenceSignals": [
+    {
+      "id": "freshness",
+      "signal": "Freshness",
+      "score": 45,
+      "rationale": "Date signals, update timestamps, and active maintenance indicators.",
+      "keyFinding": "0% pages have date signals; no RSS feed.",
+      "status": "Weak",
+      "fixPriority": "High ROI"
+    },
+    {
+      "id": "answer-readiness",
+      "signal": "Answer Readiness",
+      "score": 52,
+      "rationale": "Does the content lead with direct answers to questions agents get asked?",
+      "keyFinding": "40% pages have Q&A-style headings; 0% lead with definitions.",
+      "status": "Weak",
+      "fixPriority": "High ROI"
+    },
+    {
+      "id": "quotability",
+      "signal": "Quotability",
+      "score": 84,
+      "rationale": "Can an agent extract clean, self-contained passages to quote as citations?",
+      "keyFinding": "100% pages have rich headings; 100% meet depth threshold.",
+      "status": "Strong",
+      "fixPriority": "Monitor"
+    },
+    {
+      "id": "structural-clarity",
+      "signal": "Structural Clarity",
+      "score": 84,
+      "rationale": "Clean semantic HTML structure that survives extraction to markdown.",
+      "keyFinding": "80% clean heading hierarchy; 60% have single H1.",
+      "status": "Strong",
+      "fixPriority": "Monitor"
+    },
+    {
+      "id": "evidence-density",
+      "signal": "Evidence Density",
+      "score": 93,
+      "rationale": "Density of statistics, data points, named sources, and in-text citations.",
+      "keyFinding": "80% pages include numeric evidence; 100% have author attribution.",
+      "status": "Strong",
+      "fixPriority": "Monitor"
+    },
+    {
+      "id": "content-depth",
+      "signal": "Content Depth",
+      "score": 100,
+      "rationale": "Substantive long-form content that covers topics with depth and breadth.",
+      "keyFinding": "100% pages meet depth threshold across 5 template types.",
+      "status": "Strong",
+      "fixPriority": "Monitor"
+    }
+  ],
+  "pagesForReview": [
+    {
+      "url": "https://spacelean.ai/",
+      "pageType": "home",
+      "score": 112,
+      "maxScore": 112,
+      "aiView": {
+        "title": "SpaceLean | AI-Powered Lean Project Management &amp; Construction Scheduling Software",
+        "metaDescription": "SpaceLean is an AI-powered construction scheduling platform. Auto-generate BIM-based schedules, predict critical path risks, and optimize crews in real time.",
+        "h1": [
+          "AI-Powered Construction Project Planning &amp; Scheduling Software"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Optimize every construction phase with SPACE LEAN",
+          "Zero Manual Sequencing",
+          "Site-True Schedules",
+          "Three Strategies, One Click",
+          "Self-Healing Plans",
+          "Delays Caught Early",
+          "Crew Conflicts Resolved",
+          "Space Lean | How It Works",
+          "BIM becomes a reasoning engine.",
+          "Explore SpaceLean",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions",
+          "For Owners, Contractors and Consultants"
+        ],
+        "jsonLdCount": 6,
+        "schemaTypes": [
+          "Organization",
+          "SoftwareApplication",
+          "VideoObject",
+          "FAQPage"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=SoftwareApplication | name=SpaceLean | publisher=SpaceLean Inc. | description=SpaceLean is an AI-powered Digital Construction Brain that automatically generates construction sche\n@type=Organization | name=SpaceLean | description=SpaceLean is the AI-native construction project management platform that auto-generates schedules fr\n@type=VideoObject | name=SpaceLean Systems Infrastructure Engineering Software Demo | publisher=SpaceLean | description=See how SpaceLean automates construction sequencing, generates build plans from BIM models, and deli\n@type=VideoObject | name=How SpaceLean Works — Product Walkthrough | publisher=SpaceLean | description=A quick walkthrough showing how SpaceLean uses AI to break down projects into tasks, schedule crews,",
+        "internalLinkCount": 85,
+        "textExcerpt": "AI-Native Construction Intelligence. AI-Powered Construction Project Planning & Scheduling Software We don't animate schedules. We build them. Start free trial How it works Experience dynamic, AI-driven construction project management that optimizes crew schedules, dynamically maps critical paths, and reduces planning time by 80%. Why Space Lean Optimize every construction phase with SPACE LEAN Every delay has a root cause. Space Lean finds it before it finds you. From model to build-ready plan — in minutes, not days. 10× faster planning 01 Zero Manual Sequencing Upload your model. The build order is figured out for you. 02 Site-True Schedules Schedules built around real site conditions, not assumptions. 03 Three Strategies, One Click Fast, safe, or balanced — pick the plan that fits the job. 04 Self-Healing Plans One slip on site and the schedule adjusts itself downstream. 05 Delays Caught Early Risk zones surface before they become problems. 06 Crew Conflicts Resolved Crew clashes are caught and fixed before work begins. The Future of Construction Planning Space Lean | How It Works AI-powered generative scheduling that integrates with your existing workflow. Learn how Smart BIM BIM becomes a reasoning engine. Upload your IFC or Revit model and we auto-map every physical relationship — support, penetrations, zones, and trade dependencies 0 manual task links required Space Lean Core cad.spaceaiapp.com",
+        "bodyWordCount": 1016,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai",
+        "hasOg": true,
+        "imgCount": 7,
+        "imgsWithAlt": 7,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "url": "https://spacelean.ai/features",
+      "pageType": "product",
+      "score": 104,
+      "maxScore": 112,
+      "aiView": {
+        "title": "Features | SpaceLean — AI Task Management, Kanban &amp; Lean Scheduling Tools",
+        "metaDescription": "SpaceLean features AI task decomposition, real-time Kanban boards, smart automation, and lean scheduling. Deliver projects 40% faster. Free to start today.",
+        "h1": [
+          "SpaceLean Features — AI Task Management &amp; Lean Scheduling Tools",
+          "The future of intelligent work."
+        ],
+        "h1Count": 2,
+        "headings": [
+          "Core Features",
+          "AI Task Decomposition",
+          "Real-Time Collaboration",
+          "Intelligent Automation",
+          "Related Resources",
+          "AI Task Decomposition",
+          "Real-time Collaboration",
+          "Intelligent Automation",
+          "Transform your workflow today.",
+          "People Also Ask — Lean Project Management",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 3,
+        "schemaTypes": [
+          "Organization",
+          "FAQPage",
+          "SoftwareApplication"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=FAQPage\n@type=SoftwareApplication | name=SpaceLean | author=SpaceLean | description=AI-powered lean project management and construction scheduling platform with task decomposition, Kan",
+        "internalLinkCount": 71,
+        "textExcerpt": "SpaceLean Features — AI Task Management & Lean Scheduling Tools SpaceLean combines AI task decomposition, real-time Kanban boards, and intelligent automation to help teams deliver projects faster. Used by construction, engineering, and product teams worldwide. Core Features AI Task Decomposition Describe your project in plain language and SpaceLean instantly breaks it into prioritized, time-estimated tasks with dependencies mapped automatically. Real-Time Collaboration Work together with your team in real time — see live updates, assign tasks, track progress, and communicate directly within project boards. Intelligent Automation Automate repetitive workflows, trigger actions based on task status changes, and let AI handle scheduling adjustments when plans change. Related Resources Solutions for Every Team Space Lean Core Platform Free AI Task Generator Pricing Plans Free OKR Templates The Platform The future of intelligent work. Experience the most advanced AI productivity suite designed for high-performance teams. From automated task decomposition to real-time collaboration , SpaceLean is built to scale with your ambitions. AI Task Decomposition Our core AI engine takes a single project description and breaks it down into actionable, high-priority tasks in seconds. It uses advanced natural language processing to understand context and intent. Natural Language Processing Context-Aware Breakdown Auto-Priority Tagging Estimated Time Allocation Real-time Collaboration Built for teams that move fast. Update tasks, share feedback, and sync with your team members in real-time. Experience a seamless flow of information without the clutter of endless emails. Live Task Updates Inline Comments Activity Feed Team Mentions Intelligent Automation Automate the repetitive so you can focus on the creative. Set up custom triggers and actions with our no-code automation builder to streamline your repetitive workflows and save hours every week. No-Code Builder Custom Triggers Workflow",
+        "bodyWordCount": 725,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/features",
+        "hasOg": true,
+        "imgCount": 5,
+        "imgsWithAlt": 5,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "url": "https://spacelean.ai/space-lean-core",
+      "pageType": "other",
+      "score": 112,
+      "maxScore": 112,
+      "aiView": {
+        "title": "AI Project Management &amp; Scheduling Software | SpaceLean Core",
+        "metaDescription": "SpaceLean Core: AI-powered construction scheduling with BIM-driven sequencing, Monte Carlo simulation, real-time replanning, and predictive risk analysis.",
+        "h1": [
+          "AI-Powered Construction Scheduling for 2026"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Seven pillars of scheduling intelligence.",
+          "Kanban Board System",
+          "BIM Element Selection",
+          "Task Adding &amp; Management",
+          "Risk Analysis",
+          "AI Sequencing Engine",
+          "Monte Carlo Critical Path",
+          "Real-Time Resequencing",
+          "What changes when scheduling is AI-native.",
+          "Built for teams that demand more.",
+          "Complex Multi-Trade Projects",
+          "High-Risk Timelines",
+          "Optimization-Driven Teams",
+          "Digital-First Contractors",
+          "How It Works",
+          "Upload Your Model"
+        ],
+        "jsonLdCount": 3,
+        "schemaTypes": [
+          "Organization",
+          "CollectionPage",
+          "SoftwareApplication"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=CollectionPage | name=SpaceLean Core Capabilities | description=Complete overview of SpaceLean's core AI construction scheduling capabilities.\n@type=SoftwareApplication | name=SpaceLean Core | publisher=SpaceLean | description=AI-powered construction scheduling engine providing BIM-driven sequencing, Monte Carlo risk simulati",
+        "internalLinkCount": 73,
+        "textExcerpt": "Space Lean Core AI-Powered Construction Scheduling for 2026 BIM models don't become schedules on their own. We make them. Geometric intelligence, predictive risk analysis, and adaptive replanning — built into one platform that keeps your projects on track from day one. Start free trial Explore Features Core Capabilities Seven pillars of scheduling intelligence. Working in harmony. Built for how construction actually works. Construction Board Sprint 4 · Zone B Filter + Add Task Planned 3 Pour Slab L3 Structural 4d Core Wall Lift Civil 2d MEP Rough-in MEP 3d In Progress 2 Install Duct B2 HVAC 1d Frame Walls L2 Structural 2d Done 2 Slab L1 Structural — Columns L1 Civil — Task Management Kanban Board System Explore BIM Model Viewer Structural · Level 2 Clash Check Select Zone Export Properties Type IfcSlab Zone B Volume 48.2 m³ BIM Intelligence BIM Element Selection Explore AI Task Generator Auto-detects predecessors from geometry Import Push to Schedule Describe the work in natural language… Generate → Task Dur Predecessor Trade Conf Install Pipe P12 · L3 Zone-A 2d Slab L3 Plumbing 94 % HVAC Duct Rough-in · B2 3d Frame Walls HVAC 87 % Electrical Conduit · Core 1d Core Wall Electrical 91 % ✦ 12 predecessors auto-detected from geometry AI Planning Task Adding & Management Explore Risk Monitor Live · Updated 2 min ago ● Live Export Report Mitigate Slab Pour Z3 Critical 92 % Zone congestion + crew conflict MEP Shaft L4 High 71 % Material lead time risk Curtain Wall N Medium 48 % Weather window closing Fireproofing B2 Low 22 % Low — all clear Predictive Intelligence Risk Analysis Explore AI Sequence Optimizer Neo4j CKG · OR-Tools CP-SAT Regenerate Apply Sequence 3 sequences generated — select one to apply to master schedule Option A · Fast-track 84 d Risk: High Option B · Low-risk Recommended 93 d Risk: Low Option C · Takt flow 89 d Risk: Medium Construction Intelligence AI Sequencing Engine Explore Monte Carlo Simulation 1,000 runs · CP-SAT model Re-run View Report P50 89d",
+        "bodyWordCount": 1023,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/space-lean-core",
+        "hasOg": true,
+        "imgCount": 2,
+        "imgsWithAlt": 2,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "url": "https://spacelean.ai/pricing",
+      "pageType": "pricing",
+      "score": 104,
+      "maxScore": 112,
+      "aiView": {
+        "title": "Pricing | SpaceLean - Scalable AI Task Management",
+        "metaDescription": "Explore SpaceLean pricing plans for teams of every size. AI-powered scheduling, task management, and Kanban boards. Free plan available — no card required.",
+        "h1": [],
+        "h1Count": 0,
+        "headings": [
+          "Transparent Pricing.",
+          "Individual",
+          "Pro",
+          "Enterprise",
+          "Optimize every construction phase with SPACE LEAN",
+          "Zero Manual Sequencing",
+          "Site-True Schedules",
+          "Three Strategies, One Click",
+          "Self-Healing Plans",
+          "Delays Caught Early",
+          "Crew Conflicts Resolved",
+          "Frequently asked questions.",
+          "How does the AI task planning actually work?",
+          "Can I integrate SpaceLean with my existing stack?",
+          "Is my data secure with SpaceLean?",
+          "How does the pricing model work for larger teams?"
+        ],
+        "jsonLdCount": 3,
+        "schemaTypes": [
+          "Organization",
+          "SoftwareApplication",
+          "Product"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=SoftwareApplication | name=SpaceLean | publisher=SpaceLean Inc. | description=SpaceLean AI-powered construction scheduling and project management platform. Free to start — plans \n@type=Product | name=SpaceLean AI Construction Scheduling Platform | description=SpaceLean is an AI-powered construction scheduling and project management platform. Choose from Indi",
+        "internalLinkCount": 68,
+        "textExcerpt": "Transparent Pricing. Choose the plan that fits your team's ambition. No hidden fees, cancel anytime. Monthly Annually (Save 20%) Individual Perfect for freelancers and solo builders. $ 0 /user /month Up to 3 projects Basic AI task generation Manual time tracking Community support Start for Free Pro For teams that need more power and automation. $ 19 /user /month Unlimited projects Advanced AI project decomposition Predictive capacity planning Priority email support Two-way calendar sync Try Pro Free Enterprise Scale with confidence and dedicated control. Custom Everything in Pro SSO & SAML authentication Audit logs & compliance reports Dedicated account manager Custom AI model training Contact Sales Why Space Lean Optimize every construction phase with SPACE LEAN Every delay has a root cause. Space Lean finds it before it finds you. From model to build-ready plan — in minutes, not days. 10× faster planning 01 Zero Manual Sequencing Upload your model. The build order is figured out for you. 02 Site-True Schedules Schedules built around real site conditions, not assumptions. 03 Three Strategies, One Click Fast, safe, or balanced — pick the plan that fits the job. 04 Self-Healing Plans One slip on site and the schedule adjusts itself downstream. 05 Delays Caught Early Risk zones surface before they become problems. 06 Crew Conflicts Resolved Crew clashes are caught and fixed before work begins. Support Frequently asked questions. Everything you need to know about the product and billing. Can't find the answer? Talk to our team. # Question Category 01 How does the AI task planning actually work? Our AI engine analyzes your project description to identify key deliverables, dependencies, and necessary steps. It then structures these into an actionable Kanban board or timeline, estimating duration based on millions of similar successful projects. You can refine the output instantly. AI 02 Can I integrate SpaceLean with my existing stack? Integrations 03 Is my data secure w",
+        "bodyWordCount": 644,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/pricing",
+        "hasOg": true,
+        "imgCount": 3,
+        "imgsWithAlt": 3,
+        "headingLevels": [
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "url": "https://spacelean.ai/blogs",
+      "pageType": "other",
+      "score": 112,
+      "maxScore": 112,
+      "aiView": {
+        "title": "Blog | SpaceLean — AI Construction Scheduling &amp; Productivity Insights",
+        "metaDescription": "Insights on AI-powered construction scheduling, lean project management, team productivity, and the future of construction technology.",
+        "h1": [
+          "The Journal"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Intelligent Task Management: The Future of Productivity in 2026",
+          "SpaceLean vs Excel &amp; Trello: Intelligent Planning vs Manual Project Management",
+          "SpaceLean vs Notion: Intelligent Task Management vs All-in-One Workspace",
+          "How to Stop Missing Deadlines with Intelligent Scheduling",
+          "Kanban Board Best Practices for High-Performing Teams",
+          "Essential Remote Team Collaboration Tools for 2026",
+          "15 Proven Productivity Hacks for Busy Professionals That Actually Work (2026)",
+          "Agile Methodology: A Complete Beginner&#x27;s Guide for 2026",
+          "Smart Calendar Scheduling: 10 Tips to Reclaim Your Time",
+          "Mastering Team Communication: When to Go Async vs. Sync",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 1,
+        "schemaTypes": [
+          "Organization"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.",
+        "internalLinkCount": 77,
+        "textExcerpt": "Insights & Perspectives The Journal Thoughts on the future of construction, AI-native workflows, and designing complexity out of your projects. AI & Productivity 2026-01-28 Intelligent Task Management: The Future of Productivity in 2026 Discover how intelligent task management is revolutionizing the way teams work. Learn about smart prioritization, automated scheduling, and intelligent workflow optimization. Sarah Chen Read article. More articles Comparison 9 min read SpaceLean vs Excel & Trello: Intelligent Planning vs Manual Project Management Compare SpaceLean with Excel and Trello for project planning. Discover how intelligent task breakdown, automatic scheduling, and smart prioritization outperform manual tools. Read more Comparison 9 min read SpaceLean vs Notion: Intelligent Task Management vs All-in-One Workspace Compare SpaceLean and Notion for productivity and project management. Discover how intelligent task creation and automatic scheduling differ from manual workspace organization. Read more Guides 8 min read How to Stop Missing Deadlines with Intelligent Scheduling Struggling to meet project deadlines? Learn how intelligent scheduling tools automatically prioritize tasks, predict delays, and keep teams on track without manual planning. Read more Project Management 7 min read Kanban Board Best Practices for High-Performing Teams Master the art of Kanban with proven strategies that boost team efficiency. From WIP limits to swimlanes, learn how to optimize your visual workflow management. Read more Remote Work 9 min read Essential Remote Team Collaboration Tools for 2026 Navigate the remote work landscape with the best collaboration tools of 2026. From async communication to virtual workspaces, build a productive distributed team. Read more Productivity 10 min read 15 Proven Productivity Hacks for Busy Professionals That Actually Work (2026) Stop working harder — start working smarter. These 15 science-backed productivity hacks helped top professionals rec",
+        "bodyWordCount": 692,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/blogs",
+        "hasOg": true,
+        "imgCount": 13,
+        "imgsWithAlt": 13,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    }
+  ],
+  "pageAudits": [
+    {
+      "url": "https://spacelean.ai/",
+      "score": 112,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (85 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (157 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 6 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, SoftwareApplication, VideoObject, FAQPage"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 85 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "7/7 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 1016 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (3 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "SpaceLean | AI-Powered Lean Project Management &amp; Construction Scheduling Software",
+        "metaDescription": "SpaceLean is an AI-powered construction scheduling platform. Auto-generate BIM-based schedules, predict critical path risks, and optimize crews in real time.",
+        "h1": [
+          "AI-Powered Construction Project Planning &amp; Scheduling Software"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Optimize every construction phase with SPACE LEAN",
+          "Zero Manual Sequencing",
+          "Site-True Schedules",
+          "Three Strategies, One Click",
+          "Self-Healing Plans",
+          "Delays Caught Early",
+          "Crew Conflicts Resolved",
+          "Space Lean | How It Works",
+          "BIM becomes a reasoning engine.",
+          "Explore SpaceLean",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions",
+          "For Owners, Contractors and Consultants"
+        ],
+        "jsonLdCount": 6,
+        "schemaTypes": [
+          "Organization",
+          "SoftwareApplication",
+          "VideoObject",
+          "FAQPage"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=SoftwareApplication | name=SpaceLean | publisher=SpaceLean Inc. | description=SpaceLean is an AI-powered Digital Construction Brain that automatically generates construction sche\n@type=Organization | name=SpaceLean | description=SpaceLean is the AI-native construction project management platform that auto-generates schedules fr\n@type=VideoObject | name=SpaceLean Systems Infrastructure Engineering Software Demo | publisher=SpaceLean | description=See how SpaceLean automates construction sequencing, generates build plans from BIM models, and deli\n@type=VideoObject | name=How SpaceLean Works — Product Walkthrough | publisher=SpaceLean | description=A quick walkthrough showing how SpaceLean uses AI to break down projects into tasks, schedule crews,",
+        "internalLinkCount": 85,
+        "textExcerpt": "AI-Native Construction Intelligence. AI-Powered Construction Project Planning & Scheduling Software We don't animate schedules. We build them. Start free trial How it works Experience dynamic, AI-driven construction project management that optimizes crew schedules, dynamically maps critical paths, and reduces planning time by 80%. Why Space Lean Optimize every construction phase with SPACE LEAN Every delay has a root cause. Space Lean finds it before it finds you. From model to build-ready plan — in minutes, not days. 10× faster planning 01 Zero Manual Sequencing Upload your model. The build order is figured out for you. 02 Site-True Schedules Schedules built around real site conditions, not assumptions. 03 Three Strategies, One Click Fast, safe, or balanced — pick the plan that fits the job. 04 Self-Healing Plans One slip on site and the schedule adjusts itself downstream. 05 Delays Caught Early Risk zones surface before they become problems. 06 Crew Conflicts Resolved Crew clashes are caught and fixed before work begins. The Future of Construction Planning Space Lean | How It Works AI-powered generative scheduling that integrates with your existing workflow. Learn how Smart BIM BIM becomes a reasoning engine. Upload your IFC or Revit model and we auto-map every physical relationship — support, penetrations, zones, and trade dependencies 0 manual task links required Space Lean Core cad.spaceaiapp.com",
+        "bodyWordCount": 1016,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai",
+        "hasOg": true,
+        "imgCount": 7,
+        "imgsWithAlt": 7,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      "pageType": "home"
+    },
+    {
+      "url": "https://spacelean.ai/space-lean-core",
+      "score": 112,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (64 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (154 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/space-lean-core"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 3 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, SoftwareApplication"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 73 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "2/2 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 1023 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (3 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "AI Project Management &amp; Scheduling Software | SpaceLean Core",
+        "metaDescription": "SpaceLean Core: AI-powered construction scheduling with BIM-driven sequencing, Monte Carlo simulation, real-time replanning, and predictive risk analysis.",
+        "h1": [
+          "AI-Powered Construction Scheduling for 2026"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Seven pillars of scheduling intelligence.",
+          "Kanban Board System",
+          "BIM Element Selection",
+          "Task Adding &amp; Management",
+          "Risk Analysis",
+          "AI Sequencing Engine",
+          "Monte Carlo Critical Path",
+          "Real-Time Resequencing",
+          "What changes when scheduling is AI-native.",
+          "Built for teams that demand more.",
+          "Complex Multi-Trade Projects",
+          "High-Risk Timelines",
+          "Optimization-Driven Teams",
+          "Digital-First Contractors",
+          "How It Works",
+          "Upload Your Model"
+        ],
+        "jsonLdCount": 3,
+        "schemaTypes": [
+          "Organization",
+          "CollectionPage",
+          "SoftwareApplication"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=CollectionPage | name=SpaceLean Core Capabilities | description=Complete overview of SpaceLean's core AI construction scheduling capabilities.\n@type=SoftwareApplication | name=SpaceLean Core | publisher=SpaceLean | description=AI-powered construction scheduling engine providing BIM-driven sequencing, Monte Carlo risk simulati",
+        "internalLinkCount": 73,
+        "textExcerpt": "Space Lean Core AI-Powered Construction Scheduling for 2026 BIM models don't become schedules on their own. We make them. Geometric intelligence, predictive risk analysis, and adaptive replanning — built into one platform that keeps your projects on track from day one. Start free trial Explore Features Core Capabilities Seven pillars of scheduling intelligence. Working in harmony. Built for how construction actually works. Construction Board Sprint 4 · Zone B Filter + Add Task Planned 3 Pour Slab L3 Structural 4d Core Wall Lift Civil 2d MEP Rough-in MEP 3d In Progress 2 Install Duct B2 HVAC 1d Frame Walls L2 Structural 2d Done 2 Slab L1 Structural — Columns L1 Civil — Task Management Kanban Board System Explore BIM Model Viewer Structural · Level 2 Clash Check Select Zone Export Properties Type IfcSlab Zone B Volume 48.2 m³ BIM Intelligence BIM Element Selection Explore AI Task Generator Auto-detects predecessors from geometry Import Push to Schedule Describe the work in natural language… Generate → Task Dur Predecessor Trade Conf Install Pipe P12 · L3 Zone-A 2d Slab L3 Plumbing 94 % HVAC Duct Rough-in · B2 3d Frame Walls HVAC 87 % Electrical Conduit · Core 1d Core Wall Electrical 91 % ✦ 12 predecessors auto-detected from geometry AI Planning Task Adding & Management Explore Risk Monitor Live · Updated 2 min ago ● Live Export Report Mitigate Slab Pour Z3 Critical 92 % Zone congestion + crew conflict MEP Shaft L4 High 71 % Material lead time risk Curtain Wall N Medium 48 % Weather window closing Fireproofing B2 Low 22 % Low — all clear Predictive Intelligence Risk Analysis Explore AI Sequence Optimizer Neo4j CKG · OR-Tools CP-SAT Regenerate Apply Sequence 3 sequences generated — select one to apply to master schedule Option A · Fast-track 84 d Risk: High Option B · Low-risk Recommended 93 d Risk: Low Option C · Takt flow 89 d Risk: Medium Construction Intelligence AI Sequencing Engine Explore Monte Carlo Simulation 1,000 runs · CP-SAT model Re-run View Report P50 89d",
+        "bodyWordCount": 1023,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/space-lean-core",
+        "hasOg": true,
+        "imgCount": 2,
+        "imgsWithAlt": 2,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "other"
+    },
+    {
+      "url": "https://spacelean.ai/pricing",
+      "score": 104,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (49 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (155 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/pricing"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": false,
+          "points": 8,
+          "details": "Found 0 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 3 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, SoftwareApplication, Product"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 68 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "3/3 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 644 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (2 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "Pricing | SpaceLean - Scalable AI Task Management",
+        "metaDescription": "Explore SpaceLean pricing plans for teams of every size. AI-powered scheduling, task management, and Kanban boards. Free plan available — no card required.",
+        "h1": [],
+        "h1Count": 0,
+        "headings": [
+          "Transparent Pricing.",
+          "Individual",
+          "Pro",
+          "Enterprise",
+          "Optimize every construction phase with SPACE LEAN",
+          "Zero Manual Sequencing",
+          "Site-True Schedules",
+          "Three Strategies, One Click",
+          "Self-Healing Plans",
+          "Delays Caught Early",
+          "Crew Conflicts Resolved",
+          "Frequently asked questions.",
+          "How does the AI task planning actually work?",
+          "Can I integrate SpaceLean with my existing stack?",
+          "Is my data secure with SpaceLean?",
+          "How does the pricing model work for larger teams?"
+        ],
+        "jsonLdCount": 3,
+        "schemaTypes": [
+          "Organization",
+          "SoftwareApplication",
+          "Product"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=SoftwareApplication | name=SpaceLean | publisher=SpaceLean Inc. | description=SpaceLean AI-powered construction scheduling and project management platform. Free to start — plans \n@type=Product | name=SpaceLean AI Construction Scheduling Platform | description=SpaceLean is an AI-powered construction scheduling and project management platform. Choose from Indi",
+        "internalLinkCount": 68,
+        "textExcerpt": "Transparent Pricing. Choose the plan that fits your team's ambition. No hidden fees, cancel anytime. Monthly Annually (Save 20%) Individual Perfect for freelancers and solo builders. $ 0 /user /month Up to 3 projects Basic AI task generation Manual time tracking Community support Start for Free Pro For teams that need more power and automation. $ 19 /user /month Unlimited projects Advanced AI project decomposition Predictive capacity planning Priority email support Two-way calendar sync Try Pro Free Enterprise Scale with confidence and dedicated control. Custom Everything in Pro SSO & SAML authentication Audit logs & compliance reports Dedicated account manager Custom AI model training Contact Sales Why Space Lean Optimize every construction phase with SPACE LEAN Every delay has a root cause. Space Lean finds it before it finds you. From model to build-ready plan — in minutes, not days. 10× faster planning 01 Zero Manual Sequencing Upload your model. The build order is figured out for you. 02 Site-True Schedules Schedules built around real site conditions, not assumptions. 03 Three Strategies, One Click Fast, safe, or balanced — pick the plan that fits the job. 04 Self-Healing Plans One slip on site and the schedule adjusts itself downstream. 05 Delays Caught Early Risk zones surface before they become problems. 06 Crew Conflicts Resolved Crew clashes are caught and fixed before work begins. Support Frequently asked questions. Everything you need to know about the product and billing. Can't find the answer? Talk to our team. # Question Category 01 How does the AI task planning actually work? Our AI engine analyzes your project description to identify key deliverables, dependencies, and necessary steps. It then structures these into an actionable Kanban board or timeline, estimating duration based on millions of similar successful projects. You can refine the output instantly. AI 02 Can I integrate SpaceLean with my existing stack? Integrations 03 Is my data secure w",
+        "bodyWordCount": 644,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/pricing",
+        "hasOg": true,
+        "imgCount": 3,
+        "imgsWithAlt": 3,
+        "headingLevels": [
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "pricing"
+    },
+    {
+      "url": "https://spacelean.ai/solutions",
+      "score": 98,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (71 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (152 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/solutions"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": false,
+          "points": 8,
+          "details": "Found 2 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 5 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, SoftwareApplication, BreadcrumbList, WebSite"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 81 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "14/14 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 871 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": false,
+          "points": 6,
+          "details": "Heading levels skipped — weakens the content outline AI agents use for extraction."
+        }
+      ],
+      "aiView": {
+        "title": "Solutions | SpaceLean — AI Scheduling for Every Team &amp; Project Type",
+        "metaDescription": "SpaceLean AI scheduling for General Contractors, Owners, and Consultants. Industrial, infrastructure, and commercial projects. Cut planning time by 80%.",
+        "h1": [
+          "SpaceLean Solutions — AI Scheduling for Every Team",
+          "Solutions for Every Stakeholder &amp; Project."
+        ],
+        "h1Count": 2,
+        "headings": [
+          "Solutions by Stakeholder",
+          "Solutions by Project Type",
+          "Programs &amp; Partnerships",
+          "For General Contractors",
+          "For Industrial Projects",
+          "For SpaceLean for Engineering Teams — AI Sprint Scheduling &amp; Project Planning",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 5,
+        "schemaTypes": [
+          "Organization",
+          "CollectionPage",
+          "SoftwareApplication",
+          "BreadcrumbList",
+          "WebSite"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=CollectionPage | name=SpaceLean Solutions | publisher=SpaceLean | description=AI-powered construction scheduling solutions for General Contractors, Owners, Consultants, and every\n@type=SoftwareApplication | name=SpaceLean | publisher=SpaceLean | description=AI-powered construction scheduling platform delivering targeted planning solutions for General Contr\n@type=BreadcrumbList\n@type=WebSite | name=SpaceLean",
+        "internalLinkCount": 81,
+        "textExcerpt": "SpaceLean Solutions — AI Scheduling for Every Team AI-Native Construction Intelligence Solutions for Every Stakeholder & Project. From GCs to owners, industrial to commercial — Space Lean adapts to how your project is delivered. Stakeholder Project Type Partners By Stakeholder 🏗️ For General Contractors Build Smarter. Deliver Faster. Win More. Learn more Owners Consultants By Project Type ⚙️ For Industrial Projects Complex Systems. Precision Sequencing. Zero Surprises. Learn more Infrastructure Projects Commercial Projects Ideal Projects for Space Lean Solutions ⚙️ For SpaceLean for Engineering Teams — AI Sprint Scheduling & Project Planning Ship Faster. Plan Smarter. Stay Aligned. Learn more Space Lean Partners Program SpaceLean for Remote Teams — AI Project Management Across Time Zones SpaceLean for Startups — AI Project Management Built for Speed SpaceLean for Product Teams — AI-Powered Roadmap Execution",
+        "bodyWordCount": 871,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/solutions",
+        "hasOg": true,
+        "imgCount": 14,
+        "imgsWithAlt": 14,
+        "headingLevels": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "other"
+    },
+    {
+      "url": "https://spacelean.ai/features",
+      "score": 104,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (77 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (155 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/features"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": false,
+          "points": 8,
+          "details": "Found 2 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 3 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, FAQPage, SoftwareApplication"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 71 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "5/5 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 725 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (3 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "Features | SpaceLean — AI Task Management, Kanban &amp; Lean Scheduling Tools",
+        "metaDescription": "SpaceLean features AI task decomposition, real-time Kanban boards, smart automation, and lean scheduling. Deliver projects 40% faster. Free to start today.",
+        "h1": [
+          "SpaceLean Features — AI Task Management &amp; Lean Scheduling Tools",
+          "The future of intelligent work."
+        ],
+        "h1Count": 2,
+        "headings": [
+          "Core Features",
+          "AI Task Decomposition",
+          "Real-Time Collaboration",
+          "Intelligent Automation",
+          "Related Resources",
+          "AI Task Decomposition",
+          "Real-time Collaboration",
+          "Intelligent Automation",
+          "Transform your workflow today.",
+          "People Also Ask — Lean Project Management",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 3,
+        "schemaTypes": [
+          "Organization",
+          "FAQPage",
+          "SoftwareApplication"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=FAQPage\n@type=SoftwareApplication | name=SpaceLean | author=SpaceLean | description=AI-powered lean project management and construction scheduling platform with task decomposition, Kan",
+        "internalLinkCount": 71,
+        "textExcerpt": "SpaceLean Features — AI Task Management & Lean Scheduling Tools SpaceLean combines AI task decomposition, real-time Kanban boards, and intelligent automation to help teams deliver projects faster. Used by construction, engineering, and product teams worldwide. Core Features AI Task Decomposition Describe your project in plain language and SpaceLean instantly breaks it into prioritized, time-estimated tasks with dependencies mapped automatically. Real-Time Collaboration Work together with your team in real time — see live updates, assign tasks, track progress, and communicate directly within project boards. Intelligent Automation Automate repetitive workflows, trigger actions based on task status changes, and let AI handle scheduling adjustments when plans change. Related Resources Solutions for Every Team Space Lean Core Platform Free AI Task Generator Pricing Plans Free OKR Templates The Platform The future of intelligent work. Experience the most advanced AI productivity suite designed for high-performance teams. From automated task decomposition to real-time collaboration , SpaceLean is built to scale with your ambitions. AI Task Decomposition Our core AI engine takes a single project description and breaks it down into actionable, high-priority tasks in seconds. It uses advanced natural language processing to understand context and intent. Natural Language Processing Context-Aware Breakdown Auto-Priority Tagging Estimated Time Allocation Real-time Collaboration Built for teams that move fast. Update tasks, share feedback, and sync with your team members in real-time. Experience a seamless flow of information without the clutter of endless emails. Live Task Updates Inline Comments Activity Feed Team Mentions Intelligent Automation Automate the repetitive so you can focus on the creative. Set up custom triggers and actions with our no-code automation builder to streamline your repetitive workflows and save hours every week. No-Code Builder Custom Triggers Workflow",
+        "bodyWordCount": 725,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/features",
+        "hasOg": true,
+        "imgCount": 5,
+        "imgsWithAlt": 5,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "product"
+    },
+    {
+      "url": "https://spacelean.ai/blogs",
+      "score": 112,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (73 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (134 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/blogs"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 77 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "13/13 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 692 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (3 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "Blog | SpaceLean — AI Construction Scheduling &amp; Productivity Insights",
+        "metaDescription": "Insights on AI-powered construction scheduling, lean project management, team productivity, and the future of construction technology.",
+        "h1": [
+          "The Journal"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Intelligent Task Management: The Future of Productivity in 2026",
+          "SpaceLean vs Excel &amp; Trello: Intelligent Planning vs Manual Project Management",
+          "SpaceLean vs Notion: Intelligent Task Management vs All-in-One Workspace",
+          "How to Stop Missing Deadlines with Intelligent Scheduling",
+          "Kanban Board Best Practices for High-Performing Teams",
+          "Essential Remote Team Collaboration Tools for 2026",
+          "15 Proven Productivity Hacks for Busy Professionals That Actually Work (2026)",
+          "Agile Methodology: A Complete Beginner&#x27;s Guide for 2026",
+          "Smart Calendar Scheduling: 10 Tips to Reclaim Your Time",
+          "Mastering Team Communication: When to Go Async vs. Sync",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 1,
+        "schemaTypes": [
+          "Organization"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.",
+        "internalLinkCount": 77,
+        "textExcerpt": "Insights & Perspectives The Journal Thoughts on the future of construction, AI-native workflows, and designing complexity out of your projects. AI & Productivity 2026-01-28 Intelligent Task Management: The Future of Productivity in 2026 Discover how intelligent task management is revolutionizing the way teams work. Learn about smart prioritization, automated scheduling, and intelligent workflow optimization. Sarah Chen Read article. More articles Comparison 9 min read SpaceLean vs Excel & Trello: Intelligent Planning vs Manual Project Management Compare SpaceLean with Excel and Trello for project planning. Discover how intelligent task breakdown, automatic scheduling, and smart prioritization outperform manual tools. Read more Comparison 9 min read SpaceLean vs Notion: Intelligent Task Management vs All-in-One Workspace Compare SpaceLean and Notion for productivity and project management. Discover how intelligent task creation and automatic scheduling differ from manual workspace organization. Read more Guides 8 min read How to Stop Missing Deadlines with Intelligent Scheduling Struggling to meet project deadlines? Learn how intelligent scheduling tools automatically prioritize tasks, predict delays, and keep teams on track without manual planning. Read more Project Management 7 min read Kanban Board Best Practices for High-Performing Teams Master the art of Kanban with proven strategies that boost team efficiency. From WIP limits to swimlanes, learn how to optimize your visual workflow management. Read more Remote Work 9 min read Essential Remote Team Collaboration Tools for 2026 Navigate the remote work landscape with the best collaboration tools of 2026. From async communication to virtual workspaces, build a productive distributed team. Read more Productivity 10 min read 15 Proven Productivity Hacks for Busy Professionals That Actually Work (2026) Stop working harder — start working smarter. These 15 science-backed productivity hacks helped top professionals rec",
+        "bodyWordCount": 692,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/blogs",
+        "hasOg": true,
+        "imgCount": 13,
+        "imgsWithAlt": 13,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "other"
+    },
+    {
+      "url": "https://spacelean.ai/compare",
+      "score": 112,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (52 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (151 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/compare"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 88 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "3/3 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 1021 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (3 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "SpaceLean vs Competitors: Comparison Hub | SpaceLean",
+        "metaDescription": "Compare SpaceLean vs Asana, Monday.com, Notion, ClickUp, and more. Side-by-side feature tables, pricing, and honest verdicts for construction AI tools.",
+        "h1": [
+          "Why Teams Switch to SpaceLean."
+        ],
+        "h1Count": 1,
+        "headings": [
+          "SpaceLean vs Alice Technologies",
+          "SpaceLean vs Autodesk Construction Cloud",
+          "SpaceLean vs Aconex (Oracle Construction Management)",
+          "SpaceLean vs Visilean (VisiPlan)",
+          "SpaceLean vs Asana",
+          "SpaceLean vs Monday.com",
+          "SpaceLean vs Notion",
+          "SpaceLean vs ClickUp",
+          "SpaceLean vs Linear",
+          "Ready to upgrade your workflow?",
+          "SpaceLean Comparisons",
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 1,
+        "schemaTypes": [
+          "Organization"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.",
+        "internalLinkCount": 88,
+        "textExcerpt": "Comparison Guide Why Teams Switch to SpaceLean. Don't just manage tasks. Automate them. See how our AI-native approach compares to traditional tools. AI Planning Analytics Risk Guard Automation vs Alice Technologies SpaceLean vs Alice Technologies Alice Technologies specializes in AI-powered 4D construction sequencing from BIM models. However, Alice focuses on pre-construction planning and produces static sequences. SpaceLean goes further: it generates sequences AND continuously adapts them in real-time as the project executes, with embedded crew optimization and zone congestion logic. AI-First Planning Real-Time Adaptation Learn More vs Autodesk Construction Cloud SpaceLean vs Autodesk Construction Cloud Autodesk Construction Cloud is a comprehensive collaboration ecosystem connecting BIM, project data, and field teams. However, its scheduling engine (Forge, Dynamo) is limited and doesn't include predictive AI. SpaceLean specializes in intelligent, adaptive scheduling—turning your BIM into a real-time project brain. AI-First Planning Real-Time Adaptation Learn More vs Aconex (Oracle Construction Management) SpaceLean vs Aconex (Oracle Construction Management) Aconex (now Oracle Construction Management) is the industry standard for construction project collaboration and document management. However, it's not a scheduling or project planning tool. SpaceLean fills that gap with AI-driven scheduling that adapts in real-time. AI-First Planning Real-Time Adaptation Learn More vs Visilean (VisiPlan) SpaceLean vs Visilean (VisiPlan) Visilean is a solid 4D BIM visualization and lean construction planning tool with good Last Planner System support. However, its sequencing is still largely manual, and its AI capabilities are limited. SpaceLean adds true predictive, adaptive scheduling with deep crew and zone optimization—turning 4D from a visualization into an intelligence engine. AI-First Planning Real-Time Adaptation Learn More vs Asana SpaceLean vs Asana Asana is one of th",
+        "bodyWordCount": 1021,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/compare",
+        "hasOg": true,
+        "imgCount": 3,
+        "imgsWithAlt": 3,
+        "headingLevels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "other"
+    },
+    {
+      "url": "https://spacelean.ai/about",
+      "score": 104,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (49 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (155 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/about"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": false,
+          "points": 8,
+          "details": "Found 0 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 2 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 66 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "6/6 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 845 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (2 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "About Us | SpaceLean - AI-Powered Task Management",
+        "metaDescription": "SpaceLean is built by construction and AI experts to eliminate schedule overruns. Discover our mission to make every project deliver on time and on budget.",
+        "h1": [],
+        "h1Count": 0,
+        "headings": [
+          "The first truly AI-native construction platform.",
+          "Smarter planning, from day one.",
+          "Intelligent Automation",
+          "Risk-Aware Planning",
+          "Adaptive Scheduling",
+          "Multi-Trade Coordination",
+          "The team behind every breakthrough.",
+          "Together Beyond the Screen",
+          "Built in the Open",
+          "Celebrating Progress",
+          "Core Values",
+          "AI-First Innovation",
+          "User-Centric Design",
+          "Team Collaboration",
+          "Continuous Learning",
+          "Built close to every job site."
+        ],
+        "jsonLdCount": 2,
+        "schemaTypes": [
+          "Organization",
+          "AboutPage"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=AboutPage | name=About SpaceLean | publisher=SpaceLean | description=Learn about SpaceLean mission to revolutionize productivity using AI.",
+        "internalLinkCount": 66,
+        "textExcerpt": "Our Vision The first truly AI-native construction platform. Geometry becomes logic automatically. Teams focus on decisions. Eliminate manual dependency setup forever Surface risk before it becomes a delay Outperform legacy tools on intelligence, not just UI Every project makes the platform smarter 0+ Pilot Teams across 4 countries 0+ Live Projects in active use 0.9% Uptime SLA since launch 0s Avg Plan Time end-to-end Early access · actively onboarding teams Why it matters Construction projects lose an average of 20% of their budget to poor schedule management. We built the platform to close that gap — not with better dashboards, but with intelligence that works proactively . AI-Powered Real-Time Risk Auto Scheduling Built for Builders Our Mission Smarter planning, from day one. We don't link plans to schedules. We generate them. SpaceLean turns project data into an intelligent plan — inferring dependencies, optimising sequences, and adapting in real time so your team can focus on building, not firefighting. planning_engine.py from spacelean import PlanningEngine ... # Detect dependencies automatically engine . infer_dependencies (project) engine . assign_zones (project) # Generate optimised schedule plan = engine . optimise (project) Ready — plan generated in 4.2s Intelligent Automation From upload to optimised plan in minutes — no manual setup required. Risk-Aware Planning Probabilistic forecasting surfaces hidden risks before they become delays. Adaptive Scheduling Plans that self-correct in real time as site conditions change. Multi-Trade Coordination Every crew and trade knows exactly what to do and when. Our People The team behind every breakthrough. Engineers, planners, and builders — united. Building what the industry truly needs. Full Team Where great ideas find great people. Together Beyond the Screen Our team gathers, unwinds, and builds together — because the best breakthroughs happen when people truly connect. Collaboration Aligned on mission. Every sing",
+        "bodyWordCount": 845,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/about",
+        "hasOg": true,
+        "imgCount": 6,
+        "imgsWithAlt": 6,
+        "headingLevels": [
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "about"
+    },
+    {
+      "url": "https://spacelean.ai/request-a-demo",
+      "score": 106,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (54 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (156 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/request-a-demo"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 2 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, WebPage"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 66 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "2/2 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 345 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": false,
+          "points": 6,
+          "details": "Heading levels skipped — weakens the content outline AI agents use for extraction."
+        }
+      ],
+      "aiView": {
+        "title": "Request a Demo | SpaceLean AI Task Management Platform",
+        "metaDescription": "Book a free SpaceLean demo. See how AI task management, smart scheduling, and intelligent Kanban boards help construction teams deliver projects 40% faster.",
+        "h1": [
+          "See SpaceLean in Action"
+        ],
+        "h1Count": 1,
+        "headings": [
+          "Core",
+          "Resources",
+          "Compare",
+          "Space AI Ecosystem",
+          "Solutions"
+        ],
+        "jsonLdCount": 2,
+        "schemaTypes": [
+          "Organization",
+          "WebPage"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=WebPage | name=Request a Demo - SpaceLean | description=Book a free personalized demo of SpaceLean AI-powered task management platform.",
+        "internalLinkCount": 66,
+        "textExcerpt": "See SpaceLean in Action Get a personalized walkthrough of SpaceLean's AI-powered task management platform. Our team will show you how to streamline workflows, automate task breakdowns, and deliver projects faster. AI-powered task breakdown and prioritization Smart scheduling that adapts to your team Real-time collaboration across all projects Custom workflows for any industry Enterprise-grade security (SOC 2, AES-256) Dedicated onboarding and support Loading form...",
+        "bodyWordCount": 345,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/request-a-demo",
+        "hasOg": true,
+        "imgCount": 2,
+        "imgsWithAlt": 2,
+        "headingLevels": [
+          1,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "other"
+    },
+    {
+      "url": "https://spacelean.ai/tool",
+      "score": 112,
+      "maxScore": 112,
+      "summary": "Strong for AI agents. Improve a few weak signals to harden performance.",
+      "checks": [
+        {
+          "id": "title",
+          "label": "Clear page title",
+          "passed": true,
+          "points": 10,
+          "details": "Found title (65 chars)."
+        },
+        {
+          "id": "meta-description",
+          "label": "Meta description",
+          "passed": true,
+          "points": 10,
+          "details": "Found description (152 chars)."
+        },
+        {
+          "id": "canonical",
+          "label": "Canonical URL",
+          "passed": true,
+          "points": 8,
+          "details": "Canonical: https://spacelean.ai/tool"
+        },
+        {
+          "id": "h1",
+          "label": "Single H1 heading",
+          "passed": true,
+          "points": 8,
+          "details": "Found 1 h1 tag(s)."
+        },
+        {
+          "id": "schema",
+          "label": "Structured data present",
+          "passed": true,
+          "points": 8,
+          "details": "Found 4 JSON-LD block(s)."
+        },
+        {
+          "id": "schema-types",
+          "label": "Schema types identified",
+          "passed": true,
+          "points": 8,
+          "details": "Types: Organization, SoftwareApplication, HowTo, FAQPage"
+        },
+        {
+          "id": "og",
+          "label": "Open Graph basics",
+          "passed": true,
+          "points": 8,
+          "details": "og:title and og:description found."
+        },
+        {
+          "id": "internal-links",
+          "label": "Internal linking",
+          "passed": true,
+          "points": 10,
+          "details": "Found 73 internal links."
+        },
+        {
+          "id": "image-alt",
+          "label": "Image alt coverage",
+          "passed": true,
+          "points": 8,
+          "details": "2/2 images include alt text."
+        },
+        {
+          "id": "text-depth",
+          "label": "Readable content depth",
+          "passed": true,
+          "points": 12,
+          "details": "Estimated 729 words in body text."
+        },
+        {
+          "id": "indexability",
+          "label": "Indexable for discovery",
+          "passed": true,
+          "points": 10,
+          "details": "No noindex directive found."
+        },
+        {
+          "id": "ai-meta-tags",
+          "label": "AI-accessible meta tags",
+          "passed": true,
+          "points": 6,
+          "details": "No restrictive AI meta tags."
+        },
+        {
+          "id": "heading-hierarchy",
+          "label": "Content structure",
+          "passed": true,
+          "points": 6,
+          "details": "Clean heading structure (3 levels) — easy for AI agents to chunk and cite."
+        }
+      ],
+      "aiView": {
+        "title": "Free AI Task Generator — Break Any Project into Steps | SpaceLean",
+        "metaDescription": "Free AI Task Generator by SpaceLean — transform any project description into a prioritized, dependency-mapped task list in seconds. No account required.",
+        "h1": [
+          "Generate Execution Maps."
+        ],
+        "h1Count": 1,
+        "headings": [
+          "What Is an AI Task Generator?",
+          "Task Breakdown",
+          "Dependency Mapping",
+          "Priority Scoring",
+          "Duration Estimates",
+          "Construction Projects",
+          "OKR-to-Task Conversion",
+          "AI Task Generator vs Manual Planning",
+          "Frequently Asked Questions",
+          "What is an AI task generator?",
+          "Is SpaceLean&#x27;s AI task generator free?",
+          "Can the AI generate tasks from OKRs?",
+          "Does it work for construction projects?",
+          "How is this different from a to-do list app?",
+          "How accurate are the duration estimates?",
+          "Core"
+        ],
+        "jsonLdCount": 4,
+        "schemaTypes": [
+          "Organization",
+          "SoftwareApplication",
+          "HowTo",
+          "FAQPage"
+        ],
+        "jsonLdSummary": "@type=Organization | name=SpaceLean Inc. | description=SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.\n@type=SoftwareApplication | name=SpaceLean AI Task Generator | author=SpaceLean | description=Free AI task generator that transforms any project description into a prioritized, dependency-mapped\n@type=HowTo | name=How to Use SpaceLean's Free AI Task Generator | description=Generate a complete, prioritized task list for any project using SpaceLean's free AI Task Generator.\n@type=FAQPage",
+        "internalLinkCount": 73,
+        "textExcerpt": "Intelligence v4.2 Generate Execution Maps. The ultimate **AI task generator** for modern teams. Break down any project description into a surgical **work breakdown structure** in seconds. No friction. All power. AI Context Analysis... What Is an AI Task Generator? An AI task generator automatically breaks down any project description into a structured list of tasks — complete with dependencies, priorities, and time estimates — in under 10 seconds. ✅ Task Breakdown Every deliverable decomposed into specific, actionable steps. 🔗 Dependency Mapping The AI maps which tasks must finish before others can start. 🎯 Priority Scoring Tasks ranked Critical / High / Medium / Low automatically. ⏱️ Duration Estimates Time estimates per task calibrated from thousands of similar projects. 🏗️ Construction Projects Understands trade sequencing, BIM milestones, and permit dependencies. 🎯 OKR-to-Task Conversion Paste a Key Result and get the execution tasks needed to hit it. AI Task Generator vs Manual Planning Dimension AI Generator Manual Planning Time to first plan Under 10 seconds 60–90 minutes Dependency mapping Automatic Manual (often missed) Priority scoring AI-ranked automatically Subjective, often skipped Cost Free PM time = $50–$150/hour Iteration speed Regenerate in seconds Hours to revise Frequently Asked Questions What is an AI task generator? An AI task generator uses artificial intelligence to automatically break down a project description into a structured list of tasks with dependencies, priorities, and time estimates. Instead of spending hours mapping out a project manually, you describe your goal and the AI generates the plan in seconds. Is SpaceLean's AI task generator free? Yes — completely free with no account required. For teams that want to save plans and collaborate, SpaceLean offers a free plan for up to 3 members and a Pro plan starting at $19/month. Can the AI generate tasks from OKRs? Yes. Paste your Key Results and the AI generates the specific tasks y",
+        "bodyWordCount": 729,
+        "publishedDate": "",
+        "modifiedDate": "",
+        "author": "SpaceLean Inc.",
+        "aiMetaTags": [],
+        "hasNoindex": false,
+        "canonical": "https://spacelean.ai/tool",
+        "hasOg": true,
+        "imgCount": 2,
+        "imgsWithAlt": 2,
+        "headingLevels": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pageType": "other"
+    }
+  ]
+}

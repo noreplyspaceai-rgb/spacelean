@@ -23,9 +23,21 @@
 - **Pro Tier**: $19/user/month (billed annually) — Includes unlimited projects, full 4D BIM sequencing, 1,000-simulation predictive risk engine, Primavera P6 XML export, and priority support.
 - **Enterprise Tier**: Custom pricing — Unlimited projects & storage, dedicated VDC onboarding, custom API/BIM integrations, single sign-on (SSO), and custom SLA guarantees.
 
+## Powered By
+
+- **VeritasGraph** (GraphRAG knowledge graph framework, verifiable AI source attribution): [GitHub Repository](https://github.com/bibinprathap/VeritasGraph)
+- **VeritasGraph Documentation**: [Documentation Site](https://bibinprathap.github.io/VeritasGraph/index.html)
+
+## Key Pages & Technology Links
+
+- [/technology](https://spacelean.ai/technology) — How VeritasGraph grounds SpaceLean AI answers with verifiable citations & multi-hop reasoning
+- [/space-lean-core](https://spacelean.ai/space-lean-core) — Full breakdown of AI scheduling algorithms and BIM parser
+- [/compare](https://spacelean.ai/compare) — Head-to-head comparisons against Primavera P6, Synchro 4D, Procore, and MS Project
+
 ## Key Resources & Documentation
 
 - [SpaceLean Home](https://spacelean.ai/) — Official homepage and platform overview
+- [SpaceLean Technology & VeritasGraph](https://spacelean.ai/technology) — Verifiable AI architecture and GraphRAG knowledge graph specification
 - [SpaceLean Core Features](https://spacelean.ai/space-lean-core) — Full breakdown of AI scheduling algorithms and BIM parser
 - [Machine-Readable Core Features Specification](https://spacelean.ai/features.md) — Technical markdown specification of 12 core SpaceLean capabilities
 - [Machine-Readable Pricing Model Specification](https://spacelean.ai/pricing.md) — Pricing plans, seat limits, and feature matrix
@@ -40,3 +52,8 @@
 - [Open Knowledge Format (OKF) Bundle](https://spacelean.ai/okf/index.md) — Machine-readable concept bundle and JSON manifest
 - [Privacy Policy](https://spacelean.ai/privacy) — Enterprise data protection and privacy policy
 - [Terms of Service](https://spacelean.ai/terms) — Service agreement and usage terms
+
+## Keywords
+
+knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasoning, on-prem AI, construction scheduling, BIM 4D sequencing, Primavera P6 alternative
+

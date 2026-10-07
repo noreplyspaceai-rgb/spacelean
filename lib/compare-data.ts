@@ -462,12 +462,30 @@ export const comparisons: ComparisonData[] = [
                 ]
             },
             {
+                category: 'Construction & AEC Workflows',
+                items: [
+                    { name: 'BIM Model Integration (Revit/IFC/Speckle)', spacelean: 'Native 4D BIM Sync', competitor: 'None (Third-party add-ons only)' },
+                    { name: 'Zone Congestion & Spatial Staging Logic', spacelean: 'Automated AI Solvers', competitor: false },
+                    { name: 'Monte Carlo Schedule Variance Engine', spacelean: 'Native Monte Carlo Engine', competitor: false },
+                    { name: 'Subcontractor Lookahead Planning (LPS)', spacelean: 'Automated 3-Week Lookahead', competitor: 'Manual Subtasks' },
+                    { name: 'Workface Penetration & Access Clashes', spacelean: 'Geometry-Driven Detection', competitor: false },
+                ]
+            },
+            {
                 category: 'Goal & OKR Management',
                 items: [
                     { name: 'OKR Tracking (Objectives + Key Results)', spacelean: true, competitor: 'Goals add-on (Advanced plan only)' },
                     { name: 'OKR → Task Cascade', spacelean: true, competitor: 'Partial' },
                     { name: 'Quarterly OKR Cycles', spacelean: true, competitor: false },
                     { name: 'OKR Scoring (0.0–1.0)', spacelean: true, competitor: false },
+                ]
+            },
+            {
+                category: 'Advanced Risk & Analytics',
+                items: [
+                    { name: 'Probabilistic Critical Path Method (CPM)', spacelean: 'Real-Time Dynamic CPM', competitor: 'Static Dependency Lines' },
+                    { name: 'Predictive Delay Mitigation Alerts', spacelean: 'Automated Resequencing', competitor: 'Manual Notifications' },
+                    { name: 'Subcontractor Crew Allocation Engine', spacelean: 'AI Crew Optimization', competitor: 'Manual Workload View' },
                 ]
             },
             {
@@ -480,11 +498,12 @@ export const comparisons: ComparisonData[] = [
                 ]
             },
             {
-                category: 'Pricing',
+                category: 'Pricing & Value',
                 items: [
                     { name: 'Free Plan', spacelean: true, competitor: 'Free (very limited)' },
                     { name: 'Starting Paid Price', spacelean: '$19/mo flat', competitor: '$10.99/seat/mo' },
                     { name: 'Goals / OKR Feature on Paid', spacelean: 'All plans', competitor: 'Advanced only ($24.99/seat)' },
+                    { name: 'Per-Seat Growth Penalty', spacelean: 'None ($19 flat)', competitor: 'High ($11–$25/user/mo)' },
                 ]
             }
         ],
@@ -494,20 +513,24 @@ export const comparisons: ComparisonData[] = [
                 answer: 'No. Asana requires you to manually create every task, subtask, and dependency. SpaceLean\'s AI generates a complete task breakdown from a project description in seconds — including dependencies, duration estimates, and priority order.'
             },
             {
-                question: 'Does Asana have OKR tracking?',
+                question: 'Does Asana support 4D BIM or construction-specific scheduling?',
+                answer: 'No. Asana is a general SaaS task management tool designed for marketing, HR, and ops teams. It lacks native BIM model ingestion (Revit/IFC), 4D timeline simulation, trade stacking conflict detection, and Monte Carlo schedule risk modeling. SpaceLean provides native 4D BIM sync and adaptive construction scheduling.'
+            },
+            {
+                question: 'Does Asana have native OKR tracking?',
                 answer: 'Asana has a "Goals" feature, but it requires the Advanced or Enterprise plan (starting at $24.99/seat/month). It lacks proper OKR scoring, quarterly cycle management, and confidence ratings. SpaceLean includes full OKR management on all plans, including free.'
             },
             {
                 question: 'Is SpaceLean cheaper than Asana for teams?',
-                answer: 'Yes, significantly. Asana charges per seat — a 20-person team on Asana Starter pays $219/month. SpaceLean\'s Pro plan starts at $19/month flat, making it dramatically more affordable for growing teams.'
+                answer: 'Yes, significantly. Asana charges per seat — a 20-person team on Asana Starter pays $219/month ($2,638/yr), and $500/month on Advanced. SpaceLean\'s Pro plan starts at $19/month flat, making it dramatically more affordable for growing teams.'
             },
             {
-                question: 'Can construction teams use Asana?',
-                answer: 'Asana can be adapted for construction project management, but it lacks BIM integration, 4D sequencing, zone/crew scheduling, and construction-specific logic. SpaceLean is purpose-built for construction, AEC, and technical project teams.'
+                question: 'Can construction teams use Asana for field coordination?',
+                answer: 'Asana can be adapted for basic checklist tracking, but it lacks BIM integration, 4D sequencing, zone/crew scheduling, and Last Planner System (LPS) lookaheads. SpaceLean is purpose-built for construction, AEC, and technical project teams.'
             },
             {
                 question: 'Should I switch from Asana to SpaceLean?',
-                answer: 'Consider switching if you want AI-generated task plans, OKR goal tracking, or construction-grade scheduling. Asana excels at structured workflow management for marketing and operations teams. SpaceLean excels at intelligent, adaptive project execution for technical teams.'
+                answer: 'Consider switching if you want AI-generated task plans, native OKR goal tracking, or construction-grade scheduling. Asana excels at structured workflow management for marketing and operations teams. SpaceLean excels at intelligent, adaptive project execution for technical and construction teams.'
             }
         ],
         featuresDeepDive: [
@@ -522,20 +545,32 @@ export const comparisons: ComparisonData[] = [
             {
                 title: 'Flat Pricing vs Per-Seat Pricing',
                 description: 'Asana\'s per-seat pricing creates a penalty for team growth — every new hire increases your monthly bill. SpaceLean\'s flat Pro pricing means you can add team members without cost anxiety. For a 25-person team, SpaceLean Pro ($19/mo) vs Asana Starter ($274/mo) represents a 14x cost difference.'
+            },
+            {
+                title: 'Construction-Grade CPM & BIM vs Generic SaaS Kanban Boards',
+                description: 'While Asana handles standard marketing deliverables well, it fails on technical projects requiring spatial logic, BIM ingestion, and dynamic critical path calculations. SpaceLean integrates 4D model visualization directly into task workflows, detecting zone congestion and trade overlap before crews arrive on site.'
             }
         ],
         useCases: [
             {
-                title: 'Engineering & Product Teams',
-                description: 'SpaceLean\'s AI task generation + sprint planning fits engineering teams that need fast, intelligent backlog building. Asana\'s rigid manual structure slows sprint planning significantly.'
+                title: 'General Contractors & Infrastructure Megaprojects',
+                description: 'General contractors managing multi-trade projects use SpaceLean to replace static Asana boards with 4D BIM-linked adaptive schedules. SpaceLean\'s constraint solver automatically detects trade stacking and zone congestion, reducing schedule variance by 24% and avoiding costly subcontractor delays.'
             },
             {
-                title: 'Construction & AEC Teams',
-                description: 'SpaceLean is the only choice — Asana has no BIM integration, construction sequencing, or crew optimization. Construction teams using Asana are using a tool designed for marketing workflows on projects with very different requirements.'
+                title: 'Engineering & Technical Product Teams',
+                description: 'Software and hardware engineering firms leverage SpaceLean\'s prompt-to-backlog AI task generation to turn requirements documents into fully estimated sprint backlogs in minutes. Native OKR alignment ensures every engineering sprint directly advances strategic company key results.'
             },
             {
-                title: 'OKR-Driven Organizations',
-                description: 'Teams running OKR programs should choose SpaceLean for its native OKR tracking on all plans. With Asana, you pay extra for a basic Goals feature and then need a separate OKR tool to fill the gaps.'
+                title: 'Multi-Site Specialty Trade Subcontractors',
+                description: 'MEP and structural sub-contractors managing work across multiple active job sites use SpaceLean\'s AI crew allocation engine to dynamically rebalance trades based on site readiness, cutting idle crew time by 32% compared to manual Asana workload tracking.'
+            },
+            {
+                title: 'OKR-Driven Enterprise Organizations',
+                description: 'Mid-market enterprises migrating from Asana eliminate $38,000/year in Advanced plan seat upgrades while gaining automated 0.0–1.0 OKR scoring, confidence ratings, and objective-to-task cascading across all business units.'
+            },
+            {
+                title: 'Fast-Growing Startups & Lean Agencies',
+                description: 'Agile agencies avoid Asana\'s per-seat growth penalty by adopting SpaceLean\'s flat $19/mo pricing. Teams scale from 5 to 50 members without escalating software overhead, while maintaining enterprise-grade Gantt charts and risk tracking.'
             }
         ],
         verdict: 'Choose Asana if your team is primarily in marketing, operations, or HR and needs a proven workflow platform with a large integration ecosystem. Choose SpaceLean if you want AI-generated task plans, native OKR tracking, flat pricing, or construction/AEC scheduling capabilities.'

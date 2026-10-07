@@ -219,6 +219,12 @@ export default function Header() {
               Space Lean Core
             </Link>
             <Link
+              href="/technology"
+              className="px-2 xl:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
+            >
+              Technology
+            </Link>
+            <Link
               href="/tools"
               className="px-2 xl:px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-primary-text hover:bg-white rounded-full transition-all duration-200 hover:shadow-sm whitespace-nowrap"
             >
@@ -398,6 +404,10 @@ export default function Header() {
           <Link href="/space-lean-core" onClick={() => setMobileMenuOpen(false)}
             className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
             Space Lean Core
+          </Link>
+          <Link href="/technology" onClick={() => setMobileMenuOpen(false)}
+            className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">
+            Technology
           </Link>
           <Link href="/tools" onClick={() => setMobileMenuOpen(false)}
             className="px-4 py-3 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200 min-h-[44px] flex items-center">

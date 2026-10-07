@@ -114,6 +114,22 @@ export default function RootLayout({
     ]
   };
 
+  const softwareAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SpaceLean",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://spacelean.ai",
+    "featureList": ["AI search with source attribution", "Knowledge graph reasoning", "4D BIM sequencing", "Predictive critical path risk analysis"],
+    "isBasedOn": {
+      "@type": "SoftwareSourceCode",
+      "name": "VeritasGraph",
+      "codeRepository": "https://github.com/bibinprathap/VeritasGraph",
+      "url": "https://bibinprathap.github.io/VeritasGraph/index.html"
+    },
+    "author": { "@type": "Person", "name": "Bibin Prathap" }
+  };
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
@@ -126,6 +142,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
         />
       </head>
       <body

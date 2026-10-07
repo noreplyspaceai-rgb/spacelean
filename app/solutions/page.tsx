@@ -10,9 +10,9 @@ import {
 import { SolutionsIndexClient } from "@/components/SolutionsClient";
 
 export const metadata: Metadata = {
-  title: "Solutions | SpaceLean — AI Scheduling for Every Team & Project Type",
+  title: "Solutions | SpaceLean — Construction Intelligence Across Every Stage",
   description:
-    "SpaceLean AI scheduling for General Contractors, Owners, and Consultants. Industrial, infrastructure, and commercial projects. Cut planning time by 80%.",
+    "Connect planning, scheduling, risk, field operations, and project controls in one construction intelligence platform. Discover SpaceLean's available and upcoming solutions.",
   keywords: [
     "AI construction scheduling software",
     "construction project management AI",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Solutions | SpaceLean — AI Scheduling for Every Team & Project Type",
+    title: "Solutions | SpaceLean — Construction Intelligence Across Every Stage",
     description:
-      "AI-generated construction sequences, probabilistic scheduling, and real-time intelligence for GCs, Owners, and Consultants across every project type.",
+      "Connect planning, scheduling, risk, field operations, and project controls in one construction intelligence platform.",
     type: "website",
     images: ["/marketing.jpg"],
   },
