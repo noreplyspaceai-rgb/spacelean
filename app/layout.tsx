@@ -75,6 +75,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://spacelean.ai",
+    types: {
+      "application/rss+xml": "https://spacelean.ai/rss.xml",
+    },
     languages: {
       "en-US": "https://spacelean.ai",
       "en-GB": "https://spacelean.ai",
@@ -120,6 +123,8 @@ export default function RootLayout({
     "name": "SpaceLean",
     "applicationCategory": "BusinessApplication",
     "url": "https://spacelean.ai",
+    "datePublished": "2025-01-01T00:00:00Z",
+    "dateModified": "2026-03-01T00:00:00Z",
     "featureList": ["AI search with source attribution", "Knowledge graph reasoning", "4D BIM sequencing", "Predictive critical path risk analysis"],
     "isBasedOn": {
       "@type": "SoftwareSourceCode",
@@ -130,9 +135,25 @@ export default function RootLayout({
     "author": { "@type": "Person", "name": "Bibin Prathap" }
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SpaceLean",
+    "url": "https://spacelean.ai",
+    "description": "AI-native construction scheduling platform. Converts BIM models into 4D schedules automatically.",
+    "datePublished": "2025-01-01T00:00:00Z",
+    "dateModified": "2026-03-01T00:00:00Z",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://spacelean.ai/blogs?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
+        <link rel="alternate" type="application/rss+xml" title="SpaceLean Blog RSS Feed" href="https://spacelean.ai/rss.xml" />
         {/* Preload critical fonts to reduce FOIT */}
         <link rel="preload" href="/fonts/Verity-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/Verity-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -146,6 +167,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body

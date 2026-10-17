@@ -1,0 +1,10 @@
+# SpaceLean AI — AI Identity Card
+Name: SpaceLean
+Description: AI-native construction scheduling platform. Converts BIM models (IFC/Revit) into 4D schedules automatically.
+Homepage: https://spacelean.ai
+LLMs.txt: https://spacelean.ai/llms.txt
+Sitemap: https://spacelean.ai/sitemap.xml
+Contact: https://spacelean.ai/request-a-demo
+Category: Construction Technology / AI Scheduling Software
+Citation-Policy: allow
+Training-Policy: disallow

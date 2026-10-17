@@ -1,0 +1,419 @@
+# SpaceLean AI — Full Context Reference for AI Agents & Language Models
+
+> **Document Type**: `llms-full.txt` — Extended machine-readable context for AI crawlers, language models, and autonomous agents.
+> **Summary Reference**: [https://spacelean.ai/llms.txt](https://spacelean.ai/llms.txt)
+> **Updated**: 2026-10-13
+> **Format**: llmstxt.org specification v1.0 (full context variant)
+
+SpaceLean is an AI-native construction scheduling and project controls platform. It transforms 3D BIM models (IFC/Revit) into 4D buildable sequences, predicts critical path delays with 94% accuracy, and automates subcontractor trade coordination for General Contractors, Project Owners, and Construction Consultants.
+
+---
+
+## Part 1: Core Platform Capabilities & Feature Specifications
+
+> Source: [https://spacelean.ai/features.md](https://spacelean.ai/features.md)
+
+### 1. Kanban Board System
+- **Category**: Task & Phase Management
+- **Description**: Construction-native visual Kanban board mapping directly to project phases. Move tasks across configurable swim-lanes (Planned, In Progress, On Hold, Done) with sub-second synchronization to linked Gantt schedules.
+- **Key Capabilities**:
+  - Live drag-and-drop card auto-update to Gantt timeline (<1s lag)
+  - Configurable swim-lanes per project phase or trade package
+  - Role-based card access control (subcontractors restricted to their assigned scope)
+  - Work-in-Progress (WIP) caps to prevent phase overloading
+  - One-click RFI and risk escalation directly from task cards
+
+### 2. BIM Element Selection & Parsing
+- **Category**: BIM Intelligence
+- **Description**: Direct 3D model interaction where clicking any BIM element surfaces its linked tasks, dependencies, trade assignments, and risk flags.
+- **Key Capabilities**:
+  - Element-level IFC, Revit, and Navisworks model parsing
+  - Multi-select BIM geometry for batch task and trade assignment
+  - Automatic spatial zone detection grouping adjacent elements into work packages
+  - Geometric clash detection flagging structural conflicts prior to field execution
+  - Real-time element status coloring updating live as site tasks progress
+
+### 3. Task Adding & AI Work Breakdown Structure (WBS)
+- **Category**: AI Planning
+- **Description**: Generates structured task sequences from BIM geometry, templates, or natural language project descriptions in seconds.
+- **Key Capabilities**:
+  - Natural language task decomposition (converts plain text descriptions into structured tasks)
+  - AI-suggested task durations calibrated on historic project type and volume
+  - Automatic predecessor/successor inference based on spatial support logic
+  - Bulk import/export with Excel, CSV, and Primavera XML field mapping
+  - Floor-by-floor recurring task sequence templates
+
+### 4. Predictive Risk Analysis
+- **Category**: Predictive Intelligence
+- **Description**: Continuous schedule monitoring against live weather feeds, supply chain lead times, and historical delay patterns to surface ranked alerts before delays occur.
+- **Key Capabilities**:
+  - Automated Monte Carlo risk evaluation on schedule updates
+  - Daily updated Critical Path Volatility Score
+  - Live weather forecast overlay onto Gantt timelines
+  - Material lead-time tracking tied to supply chain delay alerts
+  - AI-ranked risk mitigation suggestions ordered by impact versus effort
+
+### 5. AI Sequencing Engine
+- **Category**: Construction Intelligence
+- **Description**: Converts BIM geometry into a Construction Knowledge Network (CKN) and executes constraint solvers to produce multiple valid 4D build strategies simultaneously.
+- **Key Capabilities**:
+  - Inferred physical support and penetration constraints from BIM geometry
+  - Generates 3–5 distinct build strategies (Fast-track, Low-risk, Takt flow)
+  - Encodes physical support rules as hard solver constraints
+  - Trade-stacking and crew continuity optimization per floor zone
+  - Side-by-side strategy comparison matrix evaluating risk vs. duration
+
+### 6. Monte Carlo Critical Path
+- **Category**: Probabilistic Scheduling
+- **Description**: Executes 1,000 schedule simulations per save to assign criticality probabilities, zone congestion penalties, and crew bottleneck scores to every task.
+- **Key Capabilities**:
+  - 1,000 Monte Carlo iterations on every schedule save
+  - Continuous probability scoring (0–100%) for critical path membership
+  - Built-in zone penetration and spatial congestion penalties
+  - Resource-driven slippage forecasting
+  - Graph Neural Network (GNN) centrality analysis identifying structural risk nodes
+
+### 7. Real-Time Resequencing (Self-Healing Schedule)
+- **Category**: Adaptive Execution
+- **Description**: Automatically isolates affected downstream task networks upon delay detection and re-solves dependencies in under 0.3 seconds.
+- **Key Capabilities**:
+  - Sub-second network traversal isolating only impacted task subsets
+  - CP-SAT solver + Monte Carlo re-optimizing schedules in <0.3s
+  - Automatic enforcement of crew non-overlap constraints
+  - Automatic reallocation of spatial zone access
+  - Immutable audit trail logging all automatic resequencing events
+
+### 8. Subcontractor Trade Coordination & Lookaheads
+- **Category**: Field Execution
+- **Description**: Automated 2-week lookahead generation, daily site activity logs, and trade-stacking alerts to align trade contractors.
+- **Key Capabilities**:
+  - Automated 2-week rolling lookahead schedule distribution
+  - Trade-specific mobile view filtering non-assigned project tasks
+  - Trade-stacking risk alerts preventing overlapping crews in identical zones
+  - Daily site progress reporting syncing directly to master Gantt
+
+### 9. Critical Path Volatility Scoring
+- **Category**: Project Controls
+- **Description**: Tracks structural stability of the critical path over time to identify floating bottlenecks before they delay milestone dates.
+- **Key Capabilities**:
+  - Real-time volatility index calculation (0-100 scale)
+  - Historical critical path variance tracking
+  - Early warning flags for near-critical paths (<3 days float)
+
+### 10. Primavera P6 & MS Project Interoperability
+- **Category**: Enterprise Data Exchange
+- **Description**: Full bi-directional import and export compatibility with industry-standard scheduling tools.
+- **Key Capabilities**:
+  - Native Primavera P6 XML and XER import/export
+  - Microsoft Project (.mpp / XML) data mapping
+  - Preservation of WBS codes, custom user fields, and calendar definitions
+
+### 11. Live Weather & Supply Chain Overlays
+- **Category**: External Risk Intelligence
+- **Description**: Integrates third-party weather APIs and supplier lead-time databases directly into Gantt schedules.
+- **Key Capabilities**:
+  - Location-based weather hazard predictions (rain, wind, extreme cold)
+  - Automated task duration padding for weather-sensitive operations (concrete pours, crane ops)
+  - Material lead-time risk indicators tied to procurement milestones
+
+### 12. Zone Congestion & Penetration Penalty Solver
+- **Category**: Spatial Optimization
+- **Description**: Spatial constraint engine preventing trade congestion and unsafe workface densities.
+- **Key Capabilities**:
+  - Maximum trade crew capacity caps per 1,000 sq ft / floor zone
+  - Mechanical penetration and clearance sequence checks
+  - Vertical logistics and hoist capacity scheduling
+
+---
+
+## Part 2: Pricing Model & Feature Matrix
+
+> Source: [https://spacelean.ai/pricing.md](https://spacelean.ai/pricing.md)
+
+### 2.1. Plan Overview
+
+| Plan | Monthly Price | Annual Price | Seat Limits | Target Audience |
+| :--- | :--- | :--- | :--- | :--- |
+| **Free** | $0.00 | $0.00 | Up to 3 users / workspace | Solo builders, freelancers, small team pilots |
+| **Pro** | $19.00 / user | $15.00 / user (Save 20%) | Unlimited | VDC managers, General Contractors, active construction projects |
+| **Enterprise** | Custom | Custom | Custom volume licensing | Large developers, infrastructure owners, multi-regional contractors |
+
+### 2.2. Tier Details
+
+**Free Tier**
+- Cost: $0.00 / month
+- User/Seat Limit: Maximum 3 members per workspace.
+- Storage Limit: Up to 100 MB total assets (including BIM models).
+- Project Limit: Up to 3 active projects.
+- Support: Community forum and basic help documentation.
+
+**Pro Tier**
+- Cost: $19.00 / user / month (monthly) or $15.00 / user / month (billed annually, $180.00 / user / year)
+- User/Seat Limit: No limit. Paid per active seat.
+- Storage Limit: 50 GB high-performance cloud storage for BIM files.
+- Project Limit: Unlimited active and archived projects.
+- Support: Priority email support (response under 12 hours).
+
+**Enterprise Tier**
+- Cost: Bespoke pricing based on volume and deployment model (SaaS vs. private tenant).
+- User/Seat Limit: Minimum 50 seats. Volume discounts apply.
+- Storage Limit: Unlimited workspace storage.
+- Project Limit: Unlimited active and archived projects.
+- Support: Dedicated VDC onboarding manager, 24/7 phone/email support, dedicated SLA contracts (99.9% uptime).
+
+### 2.3. Feature Comparison Matrix
+
+**Project & Task Management**
+| Capability | Free | Pro | Enterprise |
+| :--- | :---: | :---: | :---: |
+| Custom Kanban Boards | Yes | Yes | Yes |
+| Sub-second Gantt Chart Sync | Yes | Yes | Yes |
+| Role-based Card Access | No | Yes | Yes |
+| Custom Task WBS | Yes (Basic) | Yes (Advanced) | Yes (Advanced) |
+| Multi-Calendar Two-way Sync | No | Yes | Yes |
+| Work-in-Progress (WIP) limits | No | Yes | Yes |
+
+**BIM & Spatial Intelligence**
+| Capability | Free | Pro | Enterprise |
+| :--- | :---: | :---: | :---: |
+| 3D BIM Viewer | Yes (Up to 50MB) | Yes (Up to 5GB) | Yes (No limit) |
+| BIM-to-4D Timeline Auto-Sequencing | No | Yes | Yes |
+| Spatial Zone & Crew Congestion Detection | No | Yes | Yes |
+| Structural Clash Detection | No | Yes | Yes |
+| Element Status Color Sync | No | Yes | Yes |
+
+**Artificial Intelligence & Predictive Risk**
+| Capability | Free | Pro | Enterprise |
+| :--- | :---: | :---: | :---: |
+| Natural Language Task Decomposition | Yes | Yes | Yes |
+| Monte Carlo Critical Path Simulations | No | Yes (1,000 runs/save) | Yes (1,000 runs/save) |
+| Live Weather & Supply Chain Overlays | No | Yes | Yes |
+| Critical Path Volatility Index | No | Yes | Yes |
+| Custom AI Model Training | No | No | Yes |
+
+**Interoperability & Integrations**
+| Capability | Free | Pro | Enterprise |
+| :--- | :---: | :---: | :---: |
+| CSV / Excel Import & Export | Yes | Yes | Yes |
+| Primavera P6 (XML/XER) Import | Yes | Yes | Yes |
+| Primavera P6 (XML/XER) Export | No | Yes | Yes |
+| Microsoft Project (.mpp) Export | No | Yes | Yes |
+| Native Slack / MS Teams Integrations | Basic | Full | Full |
+| Custom API and Webhook Access | No | No | Yes |
+
+**Security & Governance**
+| Capability | Free | Pro | Enterprise |
+| :--- | :---: | :---: | :---: |
+| AES-256 Encryption at Rest | Yes | Yes | Yes |
+| TLS 1.3 Encryption in Transit | Yes | Yes | Yes |
+| Single Sign-On (SSO / SAML 2.0) | No | No | Yes |
+| Compliance Reports (SOC2 Type II / HIPAA) | No | No | Yes |
+| Full Audit Logs | No | No | Yes |
+| Private Tenant Hosting | No | No | Yes |
+
+### 2.4. Billing Terms
+
+- **Subscription Period**: Choice of monthly or annual contracts. Annual contracts represent a 20% discount.
+- **Pricing Updates**: 60-day minimum notice prior to any base price changes.
+- **Seat Adjustments**: Pro seats can be added or removed dynamically with prorated charges.
+- **Cancellation Policy**: Cancel at any time; subscription remains active until end of billing cycle. No partial refunds.
+- **Data Portability**: Users may export all project data (CSV, Primavera XML, BIM files) upon downgrade or cancellation.
+- **Tax**: Displayed prices exclude local consumption taxes (VAT, GST, Sales Tax).
+
+---
+
+## Part 3: Competitor Comparison Dataset
+
+> Source: [https://spacelean.ai/spacelean-vs-competitors.md](https://spacelean.ai/spacelean-vs-competitors.md)
+
+### Executive Comparison Matrix
+
+| Feature / Capability | SpaceLean AI | Primavera P6 | Synchro 4D | Procore | Alice Tech | MS Project | Trello / Asana |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **BIM 4D Parsing (IFC/Revit)** | Automatic (<60s) | Manual Link | Manual Link | 3D View Only | Pre-con Only | No | No |
+| **AI Sequence Planning** | Yes (Adaptive) | No | No | No | Static Only | No | No |
+| **Monte Carlo Critical Path** | 1,000 runs/save | Add-on ($) | No | No | Basic | Add-on ($) | No |
+| **Self-Healing Schedule (<0.3s)** | Yes | No | No | No | No | No | No |
+| **Trade Congestion Solver** | Built-in | No | Manual | No | Limited | No | No |
+| **Setup Time (Initial Schedule)** | < 10 mins | 2–4 weeks | 1–2 weeks | Days | Days | Days | Hours |
+| **Real-time Mobile Site Sync** | Yes | No | Limited | Yes | No | No | Yes |
+
+### Head-to-Head Analysis
+
+**SpaceLean AI vs Primavera P6 (Oracle)**
+- Target: Enterprise Construction CPM Scheduling
+- SpaceLean Advantage: Auto-generates CPM from BIM in <60s, 1,000-run Monte Carlo out-of-the-box, auto-heals downstream schedules.
+- P6 Limitation: Manual linking by scheduling specialists, zero native BIM parsing, static CPM, high learning curve.
+
+**SpaceLean AI vs Synchro 4D (Bentley)**
+- Target: 4D BIM Construction Visualization & Scheduling
+- SpaceLean Advantage: Real-time adaptive 4D scheduling, embedded crew trade congestion logic, zero manual element-to-task link setup.
+- Synchro Limitation: Manual 4D mapping, static timeline playback, no probabilistic critical path prediction.
+
+**SpaceLean AI vs Procore**
+- Target: Construction Field Management & Financials
+- SpaceLean Advantage: Advanced 4D BIM sequencing, AI-driven delay prediction, automated trade conflict resolution.
+- Procore Limitation: Relies on basic static Gantt or P6 imports, no predictive AI scheduling logic.
+
+**SpaceLean AI vs Alice Technologies**
+- Target: Pre-Construction AI Sequencing
+- SpaceLean Advantage: Real-time adaptive execution during construction, not just pre-construction.
+- Alice Limitation: Focuses exclusively on pre-construction optioneering with static output sequences.
+
+**SpaceLean AI vs Microsoft Project**
+- Target: Standard Desktop Project Scheduling
+- SpaceLean Advantage: Native BIM integration, automated trade dependency detection, cloud-native multi-user collaboration.
+- MS Project Limitation: No BIM awareness, manual dependency linking, desktop-first with no real-time mobile site sync.
+
+**SpaceLean AI vs Trello & Asana**
+- Target: General Team Task Management
+- SpaceLean Advantage: Construction logic, BIM geometry integration, probabilistic critical path, trade-stacking conflict prevention.
+- Trello/Asana Limitation: Built for office/general task management. No CPM logic, BIM viewers, or construction trade constraints.
+
+---
+
+## Part 4: API & Integration Technical Specifications
+
+> Source: [https://spacelean.ai/docs/ai-agents.md](https://spacelean.ai/docs/ai-agents.md)
+
+### 4.1. BIM Model Parsing Architecture
+
+**Supported File Standards**
+- IFC Formats: `IFC2x3`, `IFC4`, `IFC4x3` (.ifc, .ifczip)
+- Autodesk Formats: Revit (.rvt), Navisworks (.nwd via IFC export)
+- Geometry Processing Engine: Open-source IFC2X3/IFC4 geometry parser with automated spatial BRep bounds extraction.
+
+**Extracted BIM Data Schema**
+- `IfcBuildingElement`: Walls, slabs, columns, beams, ductwork, piping, windows, doors.
+- `IfcSpatialStructure`: Building, Storey, Space, Zone delineations.
+- `IfcRelContainedInSpatialStructure`: Spatial mapping linking elements to floor levels and work zones.
+- `IfcRelConnectsElements`: Adjacency and penetration topological relationships for automated dependency detection.
+
+### 4.2. Primavera P6 & Industry File Compatibility
+
+**Import / Export Formats**
+- Primavera P6 XML: Full schema support for P6 v8.0 to v24.x XML data exchange.
+- Primavera XER: Bi-directional parsing of native Primavera XER schedule files.
+- Microsoft Project: XML (.xml) and CSV import with automatic field mapping.
+- SpaceLean JSON Schema: Native open JSON schedule representation.
+
+**Field Mapping Standard**
+
+| SpaceLean Entity | Primavera P6 XML Equivalent | MS Project Field | Description |
+| :--- | :--- | :--- | :--- |
+| `taskId` | `ActivityObjectID` | `ID` / `GUID` | Unique activity identifier |
+| `taskName` | `ActivityName` | `Name` | Human-readable activity title |
+| `plannedDuration` | `PlannedDuration` | `Duration` | Estimated duration in hours/days |
+| `earlyStart` | `EarlyStartDate` | `EarlyStart` | Calculated early start timestamp |
+| `criticalPath` | `IsCritical` | `Critical` | Boolean indicator for critical path |
+| `freeFloat` | `FreeFloat` | `FreeFloat` | Available float before successor impact |
+| `totalFloat` | `TotalFloat` | `TotalFloat` | Total available schedule float |
+
+### 4.3. Webhook Events & Automated Notifications
+
+**Configurable Event Hooks**
+- `schedule.delay_detected`: Triggered when Monte Carlo simulations detect >70% delay risk on a critical path task.
+- `schedule.resequenced`: Emitted when the AI self-healing engine re-solves downstream dependencies.
+- `trade.conflict_flagged`: Emitted when trade-stacking congestion exceeds zone capacity thresholds.
+- `bim.model_parsed`: Triggered upon completion of 3D model parsing into a 4D schedule.
+
+**Webhook Event Payload Example (`schedule.delay_detected`)**
+
+```json
+{
+  "event": "schedule.delay_detected",
+  "timestamp": "2026-07-21T14:30:00Z",
+  "project_id": "proj_chi_tower_092",
+  "data": {
+    "task_id": "TSK-MEP-302",
+    "task_name": "HVAC Ductwork Installation Zone 4B",
+    "criticality_index": 0.89,
+    "delay_risk_days": 4.5,
+    "primary_cause": "Trade Stacking Conflict with Drywall Framing (Zone 4B)",
+    "suggested_mitigation": "Resequence Drywall Framing to Zone 4C start (+2 days float preserved)"
+  }
+}
+```
+
+### 4.4. REST API Endpoint Overview
+
+All API requests require Bearer token authentication (`Authorization: Bearer <API_KEY>`).
+
+- `POST /api/v1/bim/parse` — Upload IFC/Revit file to generate 4D schedule sequence.
+- `GET /api/v1/projects/{id}/critical-path` — Fetch real-time Monte Carlo critical path volatility scores.
+- `POST /api/v1/schedule/replan` — Execute sub-second self-healing schedule solver upon site progress updates.
+- `GET /api/v1/projects/{id}/export/p6` — Export current SpaceLean schedule as Primavera P6 XML.
+
+---
+
+## Part 5: Open Knowledge Format (OKF) Bundle
+
+> Source: [https://spacelean.ai/okf/index.md](https://spacelean.ai/okf/index.md)
+
+The SpaceLean OKF bundle provides structured, agent-readable concept documentation.
+
+### SpaceLean Platform Overview
+
+SpaceLean is an AI-native construction scheduling platform that parses 3D BIM models (IFC/Revit) into 4D critical path schedules. It eliminates manual Primavera P6 linking and predicts delay risks using a 1,000-simulation probabilistic Monte Carlo engine.
+
+- **IFC / Revit BIM Parsing**: Converts geometry into trade task dependencies in under 60 seconds.
+- **Critical Path Prediction**: Scores delay probability with 94% accuracy.
+- **Self-Healing CPM**: Dynamically recalculates downstream float when site delays occur.
+
+### OKF Concept Resources
+
+- [SpaceLean Platform Overview](https://spacelean.ai/okf/spacelean-overview.md)
+- [Solutions for General Contractors](https://spacelean.ai/okf/solutions-general-contractors.md)
+- [Solutions for Project Owners](https://spacelean.ai/okf/solutions-owners.md)
+- [Solutions for Construction Consultants](https://spacelean.ai/okf/solutions-consultants.md)
+- [Pricing Tiers & License Model](https://spacelean.ai/okf/pricing-tiers.md)
+
+---
+
+## Part 6: Target Audiences & Use Cases
+
+- **General Contractors (GCs)**: Eliminate trade-stacking conflicts, accelerate bid-level 4D schedule creation, keep field crews aligned on critical path priorities.
+- **Project Owners & Developers**: Gain real-time project intelligence, verify contractor milestone progress, protect project ROI against cost overruns.
+- **Construction Consultants & VDC Managers**: Deliver 4D BIM sequence options and probabilistic delay analysis without weeks of manual P6 setup.
+- **Industrial, Infrastructure & Commercial Projects**: Tailored scheduling logic for high-rise commercial structures, energy plants, highways, and civil infrastructure.
+
+---
+
+## Part 7: Technology Foundation
+
+- **VeritasGraph**: GraphRAG knowledge graph framework providing verifiable AI source attribution and multi-hop reasoning.
+  - GitHub: [https://github.com/bibinprathap/VeritasGraph](https://github.com/bibinprathap/VeritasGraph)
+  - Docs: [https://bibinprathap.github.io/VeritasGraph/index.html](https://bibinprathap.github.io/VeritasGraph/index.html)
+- **Construction Knowledge Network (CKN)**: Internal AI graph converting BIM geometry into spatial dependency networks for constraint-solving.
+- **CP-SAT Solver**: Constraint programming solver executing sub-second schedule reoptimization on detected delays.
+- **Graph Neural Network (GNN)**: Centrality analysis identifying structural risk nodes in task dependency networks.
+
+---
+
+## Part 8: Key Links & Navigation
+
+- **Homepage**: [https://spacelean.ai/](https://spacelean.ai/)
+- **Platform App**: [https://app.pmspace.ai/](https://app.pmspace.ai/)
+- **Technology / VeritasGraph**: [https://spacelean.ai/technology](https://spacelean.ai/technology)
+- **Core Features**: [https://spacelean.ai/space-lean-core](https://spacelean.ai/space-lean-core)
+- **Pricing**: [https://spacelean.ai/pricing](https://spacelean.ai/pricing)
+- **Compare Tools**: [https://spacelean.ai/compare](https://spacelean.ai/compare)
+- **Solutions for GCs**: [https://spacelean.ai/solutions/for-gcs](https://spacelean.ai/solutions/for-gcs)
+- **Solutions for Owners**: [https://spacelean.ai/solutions/for-owners](https://spacelean.ai/solutions/for-owners)
+- **Solutions for Consultants**: [https://spacelean.ai/solutions/for-consultants](https://spacelean.ai/solutions/for-consultants)
+- **Free AI Tool**: [https://spacelean.ai/tool](https://spacelean.ai/tool)
+- **Blog**: [https://spacelean.ai/blogs](https://spacelean.ai/blogs)
+- **RSS Feed**: [https://spacelean.ai/rss.xml](https://spacelean.ai/rss.xml)
+- **Request a Demo**: [https://spacelean.ai/request-a-demo](https://spacelean.ai/request-a-demo)
+- **Summary Context (llms.txt)**: [https://spacelean.ai/llms.txt](https://spacelean.ai/llms.txt)
+- **Features Spec**: [https://spacelean.ai/features.md](https://spacelean.ai/features.md)
+- **Pricing Spec**: [https://spacelean.ai/pricing.md](https://spacelean.ai/pricing.md)
+- **Competitor Dataset**: [https://spacelean.ai/spacelean-vs-competitors.md](https://spacelean.ai/spacelean-vs-competitors.md)
+- **API Spec**: [https://spacelean.ai/docs/ai-agents.md](https://spacelean.ai/docs/ai-agents.md)
+- **OKF Bundle**: [https://spacelean.ai/okf/index.md](https://spacelean.ai/okf/index.md)
+
+---
+
+## Keywords
+
+construction scheduling, 4D BIM, AI construction, BIM to schedule, critical path method, Monte Carlo simulation, self-healing schedule, CPM scheduling, Primavera P6 alternative, Synchro 4D alternative, IFC parsing, Revit scheduling, trade coordination, subcontractor management, predictive risk analysis, construction AI, project controls, schedule risk, VeritasGraph, GraphRAG, knowledge graph, construction knowledge network, zone congestion solver, lookahead planning, construction project management software

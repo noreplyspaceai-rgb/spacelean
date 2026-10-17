@@ -190,6 +190,21 @@ export default async function SolutionPage({ params }: Props) {
         ],
   };
 
+  const solutionSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "name": solution.title,
+    "description": solution.metaDescription,
+    "url": `https://spacelean.ai/solutions/${slug}`,
+    "datePublished": "2026-01-01T00:00:00Z",
+    "dateModified": "2026-03-01T00:00:00Z",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai",
+    },
+  };
+
   return (
     <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
       <script
@@ -200,6 +215,22 @@ export default async function SolutionPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionSchema) }}
+      />
+
+      {/* HTML Breadcrumbs for visual nav & search crawlability */}
+      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2 text-xs font-mono text-neutral-500">
+        <ol className="flex items-center space-x-2">
+          <li><a href="/" className="hover:text-cyan-600 transition-colors">Home</a></li>
+          <li><span>/</span></li>
+          <li><a href="/solutions" className="hover:text-cyan-600 transition-colors">Solutions</a></li>
+          <li><span>/</span></li>
+          <li className="text-neutral-900 font-semibold" aria-current="page">{solution.title}</li>
+        </ol>
+      </nav>
+
       <SolutionDetailClient solution={solution} otherSolutions={otherSolutions} />
 
       {/* Server-rendered internal links for SEO */}

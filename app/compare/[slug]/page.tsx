@@ -134,6 +134,8 @@ export default async function CompareDetailPage({ params }: CompareDetailPagePro
     "name": `SpaceLean (${comparison.title})`,
     "image": "https://spacelean.ai/mockuper.png",
     "description": comparison.description,
+    "datePublished": "2026-01-01T00:00:00Z",
+    "dateModified": "2026-03-01T00:00:00Z",
     "brand": {
       "@type": "Brand",
       "name": "SpaceLean",

@@ -1,0 +1,22 @@
+{
+  "name": "SpaceLean",
+  "tagline": "AI-Native Construction 4D Scheduling Platform",
+  "description": "SpaceLean is an AI-powered construction planning and 4D scheduling platform that automatically extracts BIM elements (IFC, Revit) and converts them into buildable, sequenced construction schedules in under 90 seconds.",
+  "homepage": "https://spacelean.ai",
+  "category": "Construction Technology / AI Scheduling Software",
+  "capabilities": [
+    "Automatic BIM to 4D Gantt Schedule Conversion (IFC / Revit)",
+    "AI-driven task planning and duration estimation",
+    "Spatial zone mapping to work packages",
+    "Lookahead planning and automated delay risk forecasting",
+    "Integrations with GitHub, GitLab, Slack, Google Calendar, and Zapier"
+  ],
+  "pricing": {
+    "model": "Freemium & Per-Seat",
+    "free_tier": "Free forever for individuals and small teams up to 3 members",
+    "paid_tier": "Scalable per-seat pricing with SSO, audit logs, and enterprise support",
+    "trial_url": "https://app.pmspace.ai/"
+  },
+  "contact": "https://spacelean.ai/request-a-demo",
+  "docs": "https://spacelean.ai/llms.txt"
+}

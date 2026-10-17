@@ -179,8 +179,27 @@ export default function ToolPage() {
         ],
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://spacelean.ai",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Free AI Task Generator",
+                "item": "https://spacelean.ai/tool",
+            },
+        ],
+    };
+
     return (
-        <main className="min-h-screen bg-[#FAFAFA] text-primary-text pt-32 pb-32 overflow-hidden relative">
+        <main className="min-h-screen bg-[#FAFAFA] text-primary-text pt-28 pb-32 overflow-hidden relative">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -193,6 +212,19 @@ export default function ToolPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+
+            {/* HTML Breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2 text-xs font-mono text-neutral-500">
+                <ol className="flex items-center space-x-2">
+                    <li><a href="/" className="hover:text-cyan-600 transition-colors">Home</a></li>
+                    <li><span>/</span></li>
+                    <li className="text-neutral-900 font-semibold" aria-current="page">Free AI Task Generator</li>
+                </ol>
+            </nav>
 
             {/* Background Minimalist Accents (Static) */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-black/[0.02] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />

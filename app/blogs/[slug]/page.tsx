@@ -279,7 +279,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
       },
     },
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedAt || (new Date(post.date) < new Date("2026-03-01") ? "2026-03-01" : post.date),
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://spacelean.ai/blogs/${slug}`,

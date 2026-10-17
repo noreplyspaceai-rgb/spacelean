@@ -64,8 +64,48 @@ export default async function CoreFeaturePage({
     notFound();
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SpaceLean Core",
+        "item": "https://spacelean.ai/space-lean-core",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": feature.title,
+        "item": `https://spacelean.ai/space-lean-core/${feature.slug}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white text-primary-text pt-28 pb-16 overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {/* HTML Breadcrumbs for visual nav & crawlability */}
+      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2 text-xs font-mono text-neutral-500">
+        <ol className="flex items-center space-x-2">
+          <li><a href="/" className="hover:text-cyan-600 transition-colors">Home</a></li>
+          <li><span>/</span></li>
+          <li><a href="/space-lean-core" className="hover:text-cyan-600 transition-colors">SpaceLean Core</a></li>
+          <li><span>/</span></li>
+          <li className="text-neutral-900 font-semibold" aria-current="page">{feature.title}</li>
+        </ol>
+      </nav>
+
       <CoreFeatureDetailClient slug={slug} />
     </main>
   );

@@ -112,21 +112,6 @@ export default function SolutionsPage() {
     ]
   };
 
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://spacelean.ai",
-    "name": "SpaceLean",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://spacelean.ai/solutions?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  };
-
   return (
     <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
       <script
@@ -140,10 +125,6 @@ export default function SolutionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       {/* Server-rendered content for SEO crawlers */}

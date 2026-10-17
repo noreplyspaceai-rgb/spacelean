@@ -45,6 +45,8 @@ export default function Home() {
       "SpaceLean is an AI-powered Digital Construction Brain that automatically generates construction schedules from BIM models, predicts critical path risks, optimizes crew scheduling, and adapts in real time.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
+    "datePublished": "2025-01-01T00:00:00Z",
+    "dateModified": "2026-03-01T00:00:00Z",
     "screenshot": "https://spacelean.ai/dashboard.png",
     "featureList": [
       "AI Construction Schedule Generation from BIM",

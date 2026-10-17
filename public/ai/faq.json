@@ -1,0 +1,27 @@
+[
+  {
+    "question": "How does the AI task planning actually work?",
+    "answer": "Our AI engine analyzes your project description to identify key deliverables, dependencies, and necessary steps. It then structures these into an actionable Kanban board or timeline, estimating duration based on millions of similar successful projects. You can refine the output instantly.",
+    "category": "AI"
+  },
+  {
+    "question": "Can I integrate SpaceLean with my existing stack?",
+    "answer": "Absolutely. SpaceLean features native two-way sync with GitHub, GitLab, Slack, and Google Calendar. We also offer a Zapier integration to connect with over 5,000+ other applications, ensuring your workflow remains uninterrupted.",
+    "category": "Integrations"
+  },
+  {
+    "question": "Is my data secure with SpaceLean?",
+    "answer": "Security is our top priority. We use AES-256 encryption for data at rest and TLS 1.3 for data in transit. We are SOC2 Type II compliant and offer HIPAA-compliant instances for healthcare organizations. Your proprietary data is never used to train our AI models.",
+    "category": "Security"
+  },
+  {
+    "question": "How does the pricing model work for larger teams?",
+    "answer": "SpaceLean is free forever for individuals and small teams up to 3 members. For larger organizations, we offer a per-seat pricing model that scales with your needs, including advanced features like SSO, audit logs, and dedicated support. Contact sales for enterprise volume discounts.",
+    "category": "Billing"
+  },
+  {
+    "question": "Does SpaceLean support agile methodologies?",
+    "answer": "Yes, SpaceLean is built with Agile in mind. We support Scrum sprints, Kanban continuous flow, and hybrid methodologies. Features include burndown charts, velocity tracking, and retrospective boards.",
+    "category": "Workflow"
+  }
+]

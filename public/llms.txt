@@ -2,6 +2,9 @@
 
 > SpaceLean is an AI-native construction scheduling and project controls platform designed for General Contractors, Project Owners, and Construction Consultants. It transforms 3D BIM models (IFC/Revit) into 4D buildable sequences, predicts critical path delays with 94% accuracy, and automates subcontractor trade coordination.
 
+**Last Updated**: 2026-10-13  
+**Full Context Reference**: [https://spacelean.ai/llms-full.txt](https://spacelean.ai/llms-full.txt) — Extended version with complete feature specs, pricing matrix, competitor dataset, and API documentation.
+
 ## Core Capabilities
 
 - **BIM-to-4D Sequencing**: Parses IFC and Revit models to automatically map spatial relationships, structural dependencies, and generate 4D construction timelines in under 60 seconds.
@@ -49,11 +52,17 @@
 - [Machine-Readable Competitor Comparison Dataset](https://spacelean.ai/spacelean-vs-competitors.md) — Master comparative dataset & feature matrix against P6, Synchro, Procore, Alice & MS Project
 - [Machine-Readable API & Integration Specs](https://spacelean.ai/docs/ai-agents.md) — API payloads, IFC/Revit parsing schemas & P6 XML data mapping
 - [Blog & Guides](https://spacelean.ai/blogs) — Construction scheduling best practices, OKR frameworks, and AI productivity guides
+- [RSS Content Feed](https://spacelean.ai/rss.xml) — Machine-readable RSS 2.0 feed of latest articles and guides
 - [Open Knowledge Format (OKF) Bundle](https://spacelean.ai/okf/index.md) — Machine-readable concept bundle and JSON manifest
 - [Privacy Policy](https://spacelean.ai/privacy) — Enterprise data protection and privacy policy
 - [Terms of Service](https://spacelean.ai/terms) — Service agreement and usage terms
 
 ## Keywords
 
-knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasoning, on-prem AI, construction scheduling, BIM 4D sequencing, Primavera P6 alternative
+construction scheduling, 4D BIM, AI construction, BIM to schedule, critical path method, Monte Carlo simulation, self-healing schedule, CPM scheduling, Primavera P6 alternative, Synchro 4D alternative, IFC parsing, Revit scheduling, trade coordination, subcontractor management, predictive risk analysis, construction AI, project controls, schedule risk, VeritasGraph, GraphRAG, knowledge graph, source attribution, verifiable AI, multi-hop reasoning, construction knowledge network, zone congestion solver, lookahead planning, construction project management software
 
+## Full Context
+
+For AI agents and crawlers requiring deep context, the extended version of this document contains complete feature specifications, the full pricing matrix, the competitor comparison dataset, API payload schemas, and the OKF bundle:
+
+- [Full Context (llms-full.txt)](https://spacelean.ai/llms-full.txt)

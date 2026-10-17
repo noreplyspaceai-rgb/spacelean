@@ -4,9 +4,9 @@ import FAQ from '@/components/FAQ';
 import WhyUs from '@/components/WhyUs';
 
 export const metadata: Metadata = {
-    title: "Pricing | SpaceLean - Scalable AI Task Management",
+    title: "Construction Scheduling Software Pricing | SpaceLean — Free, Pro & Enterprise",
     description:
-        "Explore SpaceLean pricing plans for teams of every size. AI-powered scheduling, task management, and Kanban boards. Free plan available — no card required.",
+        "Explore SpaceLean pricing for AI-powered construction scheduling. Free plan includes BIM viewer and AI task generator. Pro at $19/user/month includes 4D sequencing, Monte Carlo risk analysis, and P6 export.",
     keywords: [
         "SpaceLean pricing",
         "AI project management cost",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
         },
     },
     openGraph: {
-        title: "Pricing | SpaceLean — AI-Powered Task Management Plans",
+        title: "SpaceLean Pricing — AI Construction Scheduling Plans",
         description:
-            "Transparent pricing from free to enterprise. Find the right SpaceLean plan for your team.",
+            "Transparent pricing from free to enterprise. Find the right SpaceLean plan for your construction team. No hidden fees, cancel anytime.",
         type: "website",
     },
 };
@@ -145,11 +145,43 @@ export default function PricingPage() {
         }
     } as const;
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://spacelean.ai",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Pricing",
+                "item": "https://spacelean.ai/pricing",
+            },
+        ],
+    } as const;
+
     return (
         <main className="min-h-screen bg-[#fafafa]">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-            <section className="pt-32">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
+            {/* HTML Breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-2 text-xs font-mono text-neutral-500">
+                <ol className="flex items-center space-x-2">
+                    <li><a href="/" className="hover:text-cyan-600 transition-colors">Home</a></li>
+                    <li><span>/</span></li>
+                    <li className="text-neutral-900 font-semibold" aria-current="page">Pricing</li>
+                </ol>
+            </nav>
+
+            <h1 className="sr-only">Construction Scheduling Software Pricing | SpaceLean</h1>
+
+            <section className="pt-4">
                 <Pricing />
             </section>
 
