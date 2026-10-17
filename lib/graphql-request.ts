@@ -6,7 +6,7 @@
 
 const GQL_URL =
   process.env.NEXT_PUBLIC_GRAPHQL_URL ||
-  "https://spaceaiapp.com/backend/graphql";
+  "https://app.pmspace.ai/backend/graphql";
 
 export interface GraphQLResponse<T> {
   data?: T;

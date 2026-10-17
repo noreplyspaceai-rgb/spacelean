@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 const httpLink = new HttpLink({
-  uri: process.env.NEXT_PUBLIC_GRAPHQL_URL || 'https://spaceaiapp.com/backend/graphql',
+  uri: process.env.NEXT_PUBLIC_GRAPHQL_URL || 'https://app.pmspace.ai/backend/graphql',
 });
 
 export const client = new ApolloClient({
