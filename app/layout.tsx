@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     description:
       "Auto-generate construction schedules from BIM models in seconds. Predict risks, optimize crews, and adapt in real time.",
     images: ["/marketing.jpg"],
-    creator: "@spacelean",
+    creator: "@spacelean_",
   },
   alternates: {
     canonical: "https://spacelean.ai",
@@ -104,16 +104,30 @@ export default function RootLayout({
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://spacelean.ai/#organization",
     "name": "SpaceLean Inc.",
+    "alternateName": "SpaceLean",
     "url": "https://spacelean.ai",
     "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
     "description": "SpaceLean is the AI-native Digital Construction Brain for general contractors and project owners.",
+    "foundingDate": "2023",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "url": "https://spacelean.ai/request-a-demo"
+    },
     "sameAs": [
+      "https://x.com/spacelean_",
       "https://www.linkedin.com/company/spacelean",
-      "https://www.youtube.com/@spacelean",
+      "https://www.linkedin.com/in/space-lean-594724418/",
+      "https://www.youtube.com/@Spacelean-w2g",
+      "https://github.com/spacelean",
+      "https://www.crunchbase.com/organization/spacelean",
+      "https://medium.com/@spacelean1",
+      "https://hashnode.com/@spacelean",
+      "https://www.instagram.com/spacelean1/",
       "https://www.g2.com/products/spacelean",
-      "https://www.capterra.com/p/10002345/SpaceLean",
-      "https://x.com/spacelean"
+      "https://www.capterra.com/p/10002345/SpaceLean"
     ]
   };
 
