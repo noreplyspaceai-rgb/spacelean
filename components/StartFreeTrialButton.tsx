@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Sparkles, X, CheckCircle2, Zap, Shield, Users } from "lucide-react";
+import { ArrowRight, Sparkles, X, CheckCircle2, Zap, Shield, Users, Loader2 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ButtonHTMLAttributes, MouseEvent } from "react";
+
+const DEFAULT_TRIAL_URL =
+  "https://app.pmspace.ai/login?moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&redirect=/space-lean";
 
 type StartFreeTrialButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> & {
   label?: string;
@@ -18,7 +21,7 @@ type StartFreeTrialButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "
 export default function StartFreeTrialButton({
   label = "Start free trial",
   showArrow = true,
-  trialUrl = "https://app.pmspace.ai/",
+  trialUrl = DEFAULT_TRIAL_URL,
   modalTitle = "Start building smarter.",
   modalDescription = "Enter your details and we'll take you straight to your free account - no credit card needed.",
   submitLabel = "Get started free",
@@ -100,7 +103,7 @@ function TrialModal({
     phone: "",
   });
   const [errors, setErrors] = useState<Partial<typeof form>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
   const validate = () => {
     const newErrors: Partial<typeof form> = {};
@@ -125,8 +128,24 @@ function TrialModal({
       setErrors(newErrors);
       return;
     }
-    setSubmitted(true);
-    window.open(trialUrl, "_blank", "noopener,noreferrer");
+
+    setIsRedirecting(true);
+
+    let destination = trialUrl;
+    try {
+      const parsed = new URL(trialUrl);
+      if (form.email.trim()) {
+        parsed.searchParams.set("email", form.email.trim());
+      }
+      destination = parsed.toString();
+    } catch {
+      if (form.email.trim()) {
+        destination += (destination.includes("?") ? "&" : "?") + `email=${encodeURIComponent(form.email.trim())}`;
+      }
+    }
+
+    // Direct transition to the PM Space login page — no intermediate success screen
+    window.location.href = destination;
   };
 
   return (
@@ -146,7 +165,7 @@ function TrialModal({
 
       {/* Modal */}
       <motion.div
-        className="relative w-full max-w-4xl z-[998]  overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.35)] flex flex-col md:flex-row"
+        className="relative w-full max-w-4xl z-[998] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.35)] flex flex-col md:flex-row"
         initial={{ y: 40, opacity: 0, scale: 0.96 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         exit={{ y: 20, opacity: 0, scale: 0.97 }}
@@ -221,134 +240,111 @@ function TrialModal({
           <button
             type="button"
             onClick={onClose}
+            aria-label="Close modal"
             className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors z-20"
           >
             <X className="w-4 h-4 text-neutral-500" />
           </button>
 
-          {!submitted ? (
-            <div className="p-8 md:p-10 flex flex-col gap-5 flex-1">
-              <div>
-                <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-1">
-                  Create your account
-                </p>
-                <h3 className="text-xl font-bold text-[#0a0a0a]">
-                  Get started in seconds
-                </h3>
-              </div>
-
-              {/* Name row */}
-              <div className="grid grid-cols-2 gap-3">
-                <Field
-                  label="First name"
-                  placeholder="Jane"
-                  value={form.firstName}
-                  error={errors.firstName}
-                  onChange={(v) => handleChange("firstName", v)}
-                  onEnter={handleSubmit}
-                />
-                <Field
-                  label="Last name"
-                  placeholder="Smith"
-                  value={form.lastName}
-                  error={errors.lastName}
-                  onChange={(v) => handleChange("lastName", v)}
-                  onEnter={handleSubmit}
-                />
-              </div>
-
-              {/* Company */}
-              <Field
-                label="Company name"
-                placeholder="Acme Corp"
-                value={form.company}
-                error={errors.company}
-                onChange={(v) => handleChange("company", v)}
-                onEnter={handleSubmit}
-              />
-
-              {/* Email */}
-              <Field
-                label="Work email"
-                type="email"
-                placeholder="jane@acmecorp.com"
-                value={form.email}
-                error={errors.email}
-                onChange={(v) => handleChange("email", v)}
-                onEnter={handleSubmit}
-              />
-
-              {/* Phone */}
-              <Field
-                label={
-                  <span>
-                    Phone number{" "}
-                    <span className="font-normal text-neutral-400">(optional)</span>
-                  </span>
-                }
-                type="tel"
-                placeholder="+1 (555) 000-0000"
-                value={form.phone}
-                error={errors.phone}
-                onChange={(v) => handleChange("phone", v)}
-                onEnter={handleSubmit}
-              />
-
-              {/* CTA */}
-              <button
-                type="button"
-                onClick={handleSubmit}
-                className="w-full group inline-flex items-center justify-center gap-2 bg-[#0a0a0a] text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-neutral-800 active:scale-[0.99] transition-all mt-1"
-              >
-                {submitLabel}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-              </button>
-
-              <p className="text-[11px] text-neutral-400 text-center -mt-1">
-                By continuing, you agree to our{" "}
-                <a href="#" className="underline underline-offset-2 hover:text-neutral-600 transition-colors">
-                  Terms
-                </a>{" "}
-                and{" "}
-                <a href="#" className="underline underline-offset-2 hover:text-neutral-600 transition-colors">
-                  Privacy Policy
-                </a>
-                .
+          <div className="p-8 md:p-10 flex flex-col gap-5 flex-1">
+            <div>
+              <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-1">
+                Create your account
               </p>
+              <h3 className="text-xl font-bold text-[#0a0a0a]">
+                Get started in seconds
+              </h3>
             </div>
-          ) : (
-            <div className="flex flex-col items-center justify-center text-center p-10 flex-1 gap-4">
-              <motion.div
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="w-14 h-14 rounded-full bg-green-50 border border-green-100 flex items-center justify-center"
-              >
-                <svg className="w-6 h-6 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </motion.div>
-              <div>
-                <h3 className="text-xl font-bold text-[#0a0a0a] mb-1">
-                  Welcome aboard, {form.firstName}!
-                </h3>
-                <p className="text-sm text-neutral-500 leading-relaxed max-w-xs">
-                  Your free trial has opened in a new tab. Check your inbox for a confirmation email.
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={onClose}
-                className="mt-2 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-              >
-                Close this window
-              </button>
+
+            {/* Name row */}
+            <div className="grid grid-cols-2 gap-3">
+              <Field
+                label="First name"
+                placeholder="Jane"
+                value={form.firstName}
+                error={errors.firstName}
+                onChange={(v) => handleChange("firstName", v)}
+                onEnter={handleSubmit}
+              />
+              <Field
+                label="Last name"
+                placeholder="Smith"
+                value={form.lastName}
+                error={errors.lastName}
+                onChange={(v) => handleChange("lastName", v)}
+                onEnter={handleSubmit}
+              />
             </div>
-          )}
+
+            {/* Company */}
+            <Field
+              label="Company name"
+              placeholder="Acme Corp"
+              value={form.company}
+              error={errors.company}
+              onChange={(v) => handleChange("company", v)}
+              onEnter={handleSubmit}
+            />
+
+            {/* Email */}
+            <Field
+              label="Work email"
+              type="email"
+              placeholder="jane@acmecorp.com"
+              value={form.email}
+              error={errors.email}
+              onChange={(v) => handleChange("email", v)}
+              onEnter={handleSubmit}
+            />
+
+            {/* Phone */}
+            <Field
+              label={
+                <span>
+                  Phone number{" "}
+                  <span className="font-normal text-neutral-400">(optional)</span>
+                </span>
+              }
+              type="tel"
+              placeholder="+1 (555) 000-0000"
+              value={form.phone}
+              error={errors.phone}
+              onChange={(v) => handleChange("phone", v)}
+              onEnter={handleSubmit}
+            />
+
+            {/* CTA */}
+            <button
+              type="button"
+              onClick={handleSubmit}
+              disabled={isRedirecting}
+              className="w-full group inline-flex items-center justify-center gap-2 bg-[#0a0a0a] text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-neutral-800 active:scale-[0.99] transition-all mt-1 disabled:opacity-75 disabled:cursor-not-allowed"
+            >
+              {isRedirecting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Taking you to login...
+                </>
+              ) : (
+                <>
+                  {submitLabel}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </>
+              )}
+            </button>
+
+            <p className="text-[11px] text-neutral-400 text-center -mt-1">
+              By continuing, you agree to our{" "}
+              <a href="/terms" className="underline underline-offset-2 hover:text-neutral-600 transition-colors">
+                Terms
+              </a>{" "}
+              and{" "}
+              <a href="/privacy" className="underline underline-offset-2 hover:text-neutral-600 transition-colors">
+                Privacy Policy
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </motion.div>
     </motion.div>

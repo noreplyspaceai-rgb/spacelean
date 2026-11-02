@@ -110,45 +110,8 @@ export default function Home() {
       },
     ],
     "publisher": {
-      "@type": "Organization",
-      "name": "SpaceLean Inc.",
-      "url": "https://spacelean.ai",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://spacelean.ai/icononly_transparent_nobuffer.png",
-      },
-      "sameAs": [
-        "https://x.com/spacelean_",
-        "https://linkedin.com/company/spacelean",
-        "https://medium.com/@spacelean1",
-        "https://hashnode.com/@spacelean",
-        "https://www.crunchbase.com/organization/spacelean",
-        "https://www.blogger.com/profile/07386576460648677552",
-      ],
+      "@id": "https://spacelean.ai/#organization",
     },
-  } as const;
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SpaceLean",
-    "url": "https://spacelean.ai",
-    "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
-    "description": "SpaceLean is the AI-native construction project management platform that auto-generates schedules from BIM models and optimizes crew coordination.",
-    "foundingDate": "2023",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "url": "https://spacelean.ai/request-a-demo",
-    },
-    "sameAs": [
-      "https://x.com/spacelean_",
-      "https://linkedin.com/company/spacelean",
-      "https://medium.com/@spacelean1",
-      "https://hashnode.com/@spacelean",
-      "https://www.crunchbase.com/organization/spacelean",
-      "https://www.blogger.com/profile/07386576460648677552",
-    ],
   } as const;
 
   const videoSchema = [
@@ -164,12 +127,7 @@ export default function Home() {
       "embedUrl": "https://spacelean.ai",
       "duration": "PT1M30S",
       "publisher": {
-        "@type": "Organization",
-        "name": "SpaceLean",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://spacelean.ai/icononly_transparent_nobuffer.png",
-        },
+        "@id": "https://spacelean.ai/#organization",
       },
     },
     {
@@ -184,12 +142,7 @@ export default function Home() {
       "embedUrl": "https://spacelean.ai",
       "duration": "PT2M",
       "publisher": {
-        "@type": "Organization",
-        "name": "SpaceLean",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://spacelean.ai/icononly_transparent_nobuffer.png",
-        },
+        "@id": "https://spacelean.ai/#organization",
       },
     },
   ];
@@ -248,10 +201,6 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       {videoSchema.map((video, i) => (
         <script
