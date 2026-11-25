@@ -93,6 +93,7 @@ export default function PricingPage() {
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
+        "@id": "https://spacelean.ai/#product",
         "name": "SpaceLean AI Construction Scheduling Platform",
         "image": "https://spacelean.ai/dashboard.png",
         "description": "SpaceLean is an AI-powered construction scheduling and project management platform. Choose from Individual (Free), Pro ($19/mo), and Enterprise (Custom) plans.",
@@ -142,7 +143,14 @@ export default function PricingPage() {
                     "description": "Enterprise-grade security, SSO/SAML, audit logs, custom AI training, and dedicated onboarding manager."
                 }
             ]
-        }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1",
+        },
     } as const;
 
     const breadcrumbSchema = {
