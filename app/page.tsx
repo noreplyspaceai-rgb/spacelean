@@ -194,6 +194,105 @@ export default function Home() {
     ],
   };
 
+  const serviceSchemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://spacelean.ai/#service-bim-scheduling",
+      "name": "4D BIM Scheduling & Sequencing Engine",
+      "serviceType": "Construction Project Management Software Service",
+      "description":
+        "Automated conversion of 3D BIM models (IFC/Revit) into buildable 4D CPM construction schedules in under 60 seconds.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://spacelean.ai/#organization",
+        "name": "SpaceLean",
+        "url": "https://spacelean.ai",
+        "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+      },
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "4D BIM Scheduling Capabilities",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automated CPM Network Generation",
+              "description": "Transforms IFC geometry into logic-linked Gantt schedules with trade predecessors.",
+            },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Spatial Clash & Workface Constraint Detection",
+              "description": "Eliminates trade stacking and congestion in workface zones automatically.",
+            },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "3D IFC Element-Level Inspection",
+              "description": "Interactive web-based model exploration with quantity extraction.",
+            },
+          },
+        ],
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "General Contractors, Project Owners, VDC Managers",
+      },
+      "termsOfService": "https://spacelean.ai/terms",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://spacelean.ai/#service-delay-prediction",
+      "name": "AI Construction Delay Risk Prediction",
+      "serviceType": "Predictive Construction Analytics Service",
+      "description":
+        "Continuous schedule monitoring with 1,000-run Monte Carlo simulations to detect critical path risks with 94% accuracy.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://spacelean.ai/#organization",
+        "name": "SpaceLean",
+        "url": "https://spacelean.ai",
+        "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+      },
+      "areaServed": "Global",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Construction Planners, Project Controls Advisors, General Contractors",
+      },
+      "termsOfService": "https://spacelean.ai/terms",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://spacelean.ai/#service-trade-lookaheads",
+      "name": "Automated Subcontractor Lookaheads & Field Coordination",
+      "serviceType": "Construction Field Execution & Coordination Service",
+      "description":
+        "Automated rolling 2-week lookaheads, daily site activity logs, and real-time trade coordination preventing site congestion.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://spacelean.ai/#organization",
+        "name": "SpaceLean",
+        "url": "https://spacelean.ai",
+        "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+      },
+      "areaServed": "Global",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Field Superintendents, Subcontractors, Trade Foremen",
+      },
+      "termsOfService": "https://spacelean.ai/terms",
+    },
+  ];
+
   return (
     <main className="overflow-x-hidden">
       {/* Standardized Section Padding: All imported page sections are audited to enforce uniform px-4 sm:px-6 lg:px-8 margins */}
@@ -202,6 +301,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
+      {serviceSchemas.map((service, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+        />
+      ))}
       {videoSchema.map((video, i) => (
         <script
           key={i}

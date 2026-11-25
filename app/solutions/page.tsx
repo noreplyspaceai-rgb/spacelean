@@ -112,6 +112,62 @@ export default function SolutionsPage() {
     ]
   };
 
+  const solutionsServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://spacelean.ai/solutions#service",
+    "name": "SpaceLean Construction Project Management Solutions",
+    "serviceType": "Enterprise Construction Project Management Software Service",
+    "description":
+      "Tailored AI construction management and scheduling solutions for General Contractors, Project Owners, Engineering Teams, and VDC Consultants.",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai",
+      "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+    },
+    "areaServed": "Global",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SpaceLean Solutions Portfolio",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Solutions for General Contractors",
+            "url": "https://spacelean.ai/solutions/for-gcs",
+            "description": "Streamline trade coordination, eliminate site congestion, and automate lookaheads.",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Solutions for Project Owners",
+            "url": "https://spacelean.ai/solutions/for-owners",
+            "description": "Gain real-time portfolio visibility, verify milestone delivery, and protect capital ROI.",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Solutions for VDC Consultants",
+            "url": "https://spacelean.ai/solutions/for-consultants",
+            "description": "Deliver 4D BIM sequencing and probabilistic delay risk models to clients rapidly.",
+          },
+        },
+      ],
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "General Contractors, Real Estate Developers, Capital Project Directors, VDC Managers",
+    },
+    "termsOfService": "https://spacelean.ai/terms",
+  };
+
   return (
     <main className="min-h-screen bg-[#fafafa] text-primary-text pt-32 pb-20 overflow-hidden relative">
       <script
@@ -121,6 +177,10 @@ export default function SolutionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsServiceSchema) }}
       />
       <script
         type="application/ld+json"

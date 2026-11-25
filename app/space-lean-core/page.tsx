@@ -94,6 +94,61 @@ export default function SpaceLeanCorePage() {
     }
   };
 
+  const coreServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://spacelean.ai/space-lean-core#service",
+    "name": "SpaceLean Core AI Scheduling Services",
+    "serviceType": "AI-Powered Construction Project Controls Software Service",
+    "description":
+      "Comprehensive suite of AI construction scheduling services including 4D BIM sequencing, Monte Carlo probabilistic simulation, real-time replanning, and predictive risk analysis.",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai",
+      "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+    },
+    "areaServed": "Global",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SpaceLean Core Platform Capabilities",
+      "itemListElement": FEATURES.map((f) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": f.title,
+          "description": f.description,
+          "url": `https://spacelean.ai/space-lean-core/${f.slug}`,
+        },
+      })),
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "General Contractors, Project Owners, VDC Managers, Construction Schedulers",
+    },
+    "termsOfService": "https://spacelean.ai/terms",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SpaceLean Core",
+        "item": "https://spacelean.ai/space-lean-core",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
       <script
@@ -103,6 +158,14 @@ export default function SpaceLeanCorePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(coreServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <HeroSection />
       <FeaturesSection />

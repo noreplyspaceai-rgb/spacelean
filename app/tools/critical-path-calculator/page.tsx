@@ -55,11 +55,40 @@ export default function CriticalPathCalculatorPage() {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://spacelean.ai/tools",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Critical Path Calculator",
+        "item": "https://spacelean.ai/tools/critical-path-calculator",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white text-primary-text pt-32 pb-24 relative overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Decorative background grid and gradients to match SpaceLean style */}

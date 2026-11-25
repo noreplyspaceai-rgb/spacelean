@@ -258,13 +258,15 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": ["Article", "BlogPosting"],
+    "@id": `https://spacelean.ai/blogs/${slug}#article`,
     headline: post.title,
+    name: post.title,
     description: post.description,
-    image: {
-      "@type": "ImageObject",
-      url: post.image.startsWith("http") ? post.image : `https://spacelean.ai${post.image}`,
-    },
+    image: [
+      post.image.startsWith("http") ? post.image : `https://spacelean.ai${post.image}`,
+      "https://spacelean.ai/marketing.jpg",
+    ],
     author: {
       "@type": "Person",
       "@id": `https://spacelean.ai/authors/${authorProfile.slug}#person`,
@@ -283,11 +285,12 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     },
     publisher: {
       "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
       name: "SpaceLean",
       url: "https://spacelean.ai",
       logo: {
         "@type": "ImageObject",
-        url: "https://spacelean.ai/logo.png",
+        url: "https://spacelean.ai/icononly_transparent_nobuffer.png",
         width: 200,
         height: 60,
       },
@@ -302,6 +305,25 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     articleSection: post.category,
     keywords: post.tags.join(", "),
     inLanguage: "en-US",
+  };
+
+  const authorPersonSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `https://spacelean.ai/authors/${authorProfile.slug}#person`,
+    name: authorProfile.name,
+    jobTitle: authorProfile.role,
+    description: authorProfile.bio,
+    image: authorProfile.avatar || "https://spacelean.ai/icononly_transparent_nobuffer.png",
+    worksFor: {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+      name: authorProfile.worksFor,
+      url: "https://spacelean.ai",
+    },
+    knowsAbout: authorProfile.knowsAbout,
+    sameAs: authorProfile.sameAs,
+    url: `https://spacelean.ai/about#team`,
   };
 
   const faqJsonLd = faqs.length > 0 ? {
@@ -351,6 +373,10 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorPersonSchema) }}
       />
       <script
         type="application/ld+json"
