@@ -49,8 +49,18 @@ export default function TermsPage() {
         },
     ];
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacelean.ai" },
+            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://spacelean.ai/terms" },
+        ],
+    };
+
     return (
         <main className="min-h-screen bg-[#fafafa] text-primary-text pt-40 pb-32">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <div className="max-w-4xl mx-auto px-6">
                 <header className="mb-20">
                     <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter mb-8 leading-[1.1]">

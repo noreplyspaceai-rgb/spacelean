@@ -114,6 +114,70 @@ export default function Home() {
     },
   } as const;
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": "https://spacelean.ai/#product",
+    "name": "SpaceLean AI Construction Platform",
+    "image": "https://spacelean.ai/marketing.jpg",
+    "description": "AI-native construction scheduling software that converts 3D BIM models into 4D schedules, predicts critical path delays, and coordinates trade crews in real time.",
+    "brand": {
+      "@type": "Brand",
+      "name": "SpaceLean",
+    },
+    "category": "Construction Project Management Software",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "0.00",
+      "highPrice": "19.00",
+      "offerCount": 3,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "SpaceLean Individual Plan",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://spacelean.ai/pricing",
+          "description": "Free forever for individuals and small teams. Includes basic AI task generation, Kanban boards, and manual tracking.",
+        },
+        {
+          "@type": "Offer",
+          "name": "SpaceLean Pro Plan",
+          "price": "19.00",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "billingIncrement": 1,
+            "price": "19.00",
+            "priceCurrency": "USD",
+            "unitText": "month",
+          },
+          "availability": "https://schema.org/InStock",
+          "url": "https://spacelean.ai/pricing",
+          "description": "Full AI scheduling, BIM integration, critical path analysis, Monte Carlo risk simulation, and priority support.",
+        },
+        {
+          "@type": "Offer",
+          "name": "SpaceLean Enterprise Plan",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://spacelean.ai/pricing",
+          "description": "Enterprise-grade security, SSO/SAML, audit logs, custom AI training, and dedicated onboarding manager.",
+        },
+      ],
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1",
+    },
+  } as const;
+
   const videoSchema = [
     {
       "@context": "https://schema.org",
@@ -293,6 +357,45 @@ export default function Home() {
     },
   ];
 
+  const homepageBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+    ],
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://spacelean.ai/#webpage",
+    "url": "https://spacelean.ai",
+    "name": "SpaceLean — AI Construction Scheduling & BIM-to-Schedule Platform",
+    "description": "SpaceLean is an AI-native construction scheduling platform that converts 3D BIM models into 4D CPM schedules in under 60 seconds, predicts critical path delays, and coordinates trade crews in real time.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://spacelean.ai/#website",
+      "url": "https://spacelean.ai",
+      "name": "SpaceLean",
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacelean.ai" },
+      ],
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+    },
+    "inLanguage": "en-US",
+  };
+
   return (
     <main className="overflow-x-hidden">
       {/* Standardized Section Padding: All imported page sections are audited to enforce uniform px-4 sm:px-6 lg:px-8 margins */}
@@ -300,6 +403,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       {serviceSchemas.map((service, i) => (
         <script
@@ -318,6 +425,14 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageBreadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       {/* 1. HERO — Category Creation */}
