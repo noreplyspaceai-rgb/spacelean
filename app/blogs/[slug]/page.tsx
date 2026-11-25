@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogBySlug } from "@/lib/blog-data";
+import { getAuthorByName } from "@/lib/authors-data";
 import { Sparkles, ArrowRight, Clock, ChevronRight, ArrowLeft, BookOpen, Calendar, Share2 } from "lucide-react";
 import BlogToc from "@/components/blog/BlogToc";
 import MarkdownRenderer, { extractTocFromMarkdown } from "@/components/blog/MarkdownRenderer";
@@ -253,6 +254,8 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
 
   const howToJsonLd = howToSchemas[slug] ?? null;
 
+  const authorProfile = getAuthorByName(post.author);
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -264,8 +267,19 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     },
     author: {
       "@type": "Person",
-      name: post.author,
-      url: "https://spacelean.ai/about",
+      "@id": `https://spacelean.ai/authors/${authorProfile.slug}#person`,
+      name: authorProfile.name,
+      jobTitle: authorProfile.role,
+      description: authorProfile.bio,
+      worksFor: {
+        "@type": "Organization",
+        "@id": "https://spacelean.ai/#organization",
+        name: authorProfile.worksFor,
+        url: "https://spacelean.ai",
+      },
+      knowsAbout: authorProfile.knowsAbout,
+      sameAs: authorProfile.sameAs,
+      url: "https://spacelean.ai/about#team",
     },
     publisher: {
       "@type": "Organization",

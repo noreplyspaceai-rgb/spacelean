@@ -203,61 +203,36 @@ function BIMMockup() {
     <LaptopFrame>
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
         <TopBar
-          title="BIM Model Viewer"
-          sub="Structural · Level 2"
+          title="BIM Model Visualisation"
+          sub="3D Model · IFC Graph Viewer"
           actions={
             <>
               <Btn label="Clash Check" />
-              <Btn label="Select Zone" />
-              <Btn label="Export" primary />
+              <Btn label="Show in 4D" primary />
             </>
           }
         />
 
-        {/* Viewport */}
-        <div style={{ flex: 1, position: "relative", background: "#f1f5f9", overflow: "hidden", margin: 8, borderRadius: 6, border: `0.5px solid ${T.border}` }}>
-          <svg viewBox="0 0 320 175" style={{ width: "100%", height: "100%" }}>
-            {/* Grid */}
-            {[0,1,2,3,4].map(i => <line key={`v${i}`} x1={i*80} y1="0" x2={i*80} y2="175" stroke="#e2e8f0" strokeWidth="0.8"/>)}
-            {[0,1,2,3].map(i => <line key={`h${i}`} x1="0" y1={i*58} x2="320" y2={i*58} stroke="#e2e8f0" strokeWidth="0.8"/>)}
+        {/* Viewport with real 3D BIM model screenshot */}
+        <div style={{ flex: 1, position: "relative", background: "#e7e6e2", overflow: "hidden", margin: 6, borderRadius: 6, border: `0.5px solid ${T.border}` }}>
+          <img
+            src="/bim-model-visualisation.jpg"
+            alt="BIM Model Visualisation"
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
+          />
 
-            {/* Building wireframe */}
-            <g stroke="#94a3b8" strokeWidth="0.8" fill="none">
-              <rect x="40" y="25" width="240" height="125" rx="2"/>
-              <line x1="40" y1="66" x2="280" y2="66"/>
-              <line x1="40" y1="108" x2="280" y2="108"/>
-              <line x1="120" y1="25" x2="120" y2="150"/>
-              <line x1="200" y1="25" x2="200" y2="150"/>
-              <rect x="130" y="115" width="40" height="35" fill="#f1f5f9"/>
-            </g>
-
-            {/* Selected slab */}
-            <rect x="200" y="25" width="80" height="41" fill="rgba(37,99,235,0.08)" stroke="#2563eb" strokeWidth="1.2"/>
-
-            {/* Tooltip */}
-            <rect x="200" y="5" width="112" height="18" rx="3" fill="#2563eb"/>
-            <text x="205" y="13" fill="white" fontSize="5" fontFamily="monospace" fontWeight="bold">IfcSlab · L2 · Zone-B</text>
-            <text x="205" y="20" fill="white" fontSize="4.5" fontFamily="monospace">48.2 m³ · 2 penetrations</text>
-
-            {/* Clash badge */}
-            <circle cx="230" cy="47" r="4" fill="#f59e0b" opacity="0.9"/>
-            <text x="237" y="50" fill="#d97706" fontSize="5" fontFamily="monospace" fontWeight="bold">CLASH</text>
-
-            {/* Status dots */}
-            {([[65,60,"#059669"],[80,108,"#059669"],[135,60,"#d97706"],[135,108,"#2563eb"]] as const).map(([x,y,c],i) => (
-              <circle key={i} cx={x} cy={y} r="3.5" fill={c} opacity="0.75"/>
-            ))}
-          </svg>
-
-          {/* Properties panel */}
+          {/* Properties badge overlay */}
           <div style={{
             position: "absolute", bottom: 6, right: 6,
-            background: T.surface, border: `0.5px solid ${T.border}`,
-            borderRadius: 5, padding: "5px 7px", minWidth: 80,
+            background: "rgba(255, 255, 255, 0.92)",
+            backdropFilter: "blur(4px)",
+            border: `0.5px solid ${T.border}`,
+            borderRadius: 5, padding: "4px 7px", minWidth: 76,
+            boxShadow: "0 2px 6px rgba(0,0,0,0.06)",
           }}>
-            <p style={{ fontSize: 6, fontWeight: 700, color: T.text, margin: "0 0 3px" }}>Properties</p>
-            {[["Type","IfcSlab"],["Zone","B"],["Volume","48.2 m³"]].map(([k,v]) => (
-              <div key={k} style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+            <p style={{ fontSize: 6, fontWeight: 700, color: T.text, margin: "0 0 2px" }}>Properties</p>
+            {[["Type","IfcWall"],["Zone","B"],["Model","3D IFC"]].map(([k,v]) => (
+              <div key={k} style={{ display: "flex", justifyContent: "space-between", gap: 6 }}>
                 <span style={{ fontSize: 5.5, color: T.muted }}>{k}</span>
                 <span style={{ fontSize: 5.5, color: T.text, fontWeight: 600 }}>{v}</span>
               </div>

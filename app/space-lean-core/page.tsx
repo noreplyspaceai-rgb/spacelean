@@ -79,6 +79,14 @@ export default function SpaceLeanCorePage() {
       "Construction Scheduling Software",
       "Lean Project Management Software"
     ],
+    "about": [
+      { "@type": "Thing", "name": "Building Information Modeling", "sameAs": "https://www.wikidata.org/wiki/Q852174" },
+      { "@type": "Thing", "name": "Critical Path Method", "sameAs": "https://www.wikidata.org/wiki/Q217997" },
+      { "@type": "Thing", "name": "Industry Foundation Classes", "sameAs": "https://www.wikidata.org/wiki/Q1661642" },
+      { "@type": "Thing", "name": "Lean Construction", "sameAs": "https://www.wikidata.org/wiki/Q6509514" },
+      { "@type": "Thing", "name": "Monte Carlo method", "sameAs": "https://www.wikidata.org/wiki/Q231574" },
+      { "@type": "Thing", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" }
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "SpaceLean",

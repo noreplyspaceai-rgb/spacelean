@@ -36,17 +36,26 @@ function ComparisonRow({
   index: number;
 }) {
   return (
-    <motion.div
+    <motion.tr
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: 0.08 + index * 0.04, ease: EASE }}
-      className="grid grid-cols-[minmax(0,1fr)_96px_96px] sm:grid-cols-[minmax(0,1fr)_140px_140px] items-center gap-2 sm:gap-4 px-4 sm:px-6 py-4 border-b border-black/[0.06]"
+      className="border-b border-black/[0.06] hover:bg-black/[0.015] transition-colors"
     >
-      <p className="text-sm sm:text-base text-neutral-800 leading-snug">{item.feature}</p>
-      <StatusCell value={item.spaceLean} />
-      <StatusCell value={item.traditional} />
-    </motion.div>
+      <th
+        scope="row"
+        className="text-left font-normal px-4 sm:px-6 py-4 text-sm sm:text-base text-neutral-800 leading-snug"
+      >
+        {item.feature}
+      </th>
+      <td className="px-2 sm:px-4 py-4 text-center">
+        <StatusCell value={item.spaceLean} />
+      </td>
+      <td className="px-2 sm:px-4 py-4 text-center">
+        <StatusCell value={item.traditional} />
+      </td>
+    </motion.tr>
   );
 }
 
@@ -84,19 +93,40 @@ export default function ComparisonSection() {
         </motion.div>
 
         <div className="rounded-3xl border border-black/[0.08] bg-white overflow-hidden shadow-sm">
-          <div className="grid grid-cols-[minmax(0,1fr)_96px_96px] sm:grid-cols-[minmax(0,1fr)_140px_140px] gap-2 sm:gap-4 px-4 sm:px-6 py-4 bg-black/[0.02] border-b border-black/[0.06]">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-neutral-500">Capability</p>
-            <p className="text-center text-xs font-bold uppercase tracking-[0.16em] text-cyan-600">
-              Space Lean
-            </p>
-            <p className="text-center text-xs font-bold uppercase tracking-[0.16em] text-neutral-500">
-              Traditional
-            </p>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <caption className="sr-only">
+                Detailed capability comparison between SpaceLean and Traditional Construction Planning Tools
+              </caption>
+              <thead>
+                <tr className="bg-black/[0.02] border-b border-black/[0.06]">
+                  <th
+                    scope="col"
+                    className="text-left px-4 sm:px-6 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500"
+                  >
+                    Capability
+                  </th>
+                  <th
+                    scope="col"
+                    className="w-24 sm:w-36 text-center px-2 sm:px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-cyan-600"
+                  >
+                    Space Lean
+                  </th>
+                  <th
+                    scope="col"
+                    className="w-24 sm:w-36 text-center px-2 sm:px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500"
+                  >
+                    Traditional
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON_FEATURES.map((item, index) => (
+                  <ComparisonRow key={item.feature} item={item} index={index} />
+                ))}
+              </tbody>
+            </table>
           </div>
-
-          {COMPARISON_FEATURES.map((item, index) => (
-            <ComparisonRow key={item.feature} item={item} index={index} />
-          ))}
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Network, ArrowRight, FileText, ClipboardCheck, Calculator } from "lucide-react";
+import { Network, ArrowRight, FileText, ClipboardCheck, Calculator, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Construction Planning Tools | SpaceLean",
@@ -72,6 +72,14 @@ const TOOLS_LIST: ToolCard[] = [
     badge: "FREE",
     icon: Calculator,
     href: "/tools/construction-cost-calculator",
+    comingSoon: false,
+  },
+  {
+    title: "Construction Safety Inspection Checklist",
+    description: "Create and manage construction site safety inspections with structured checklists covering PPE, scaffolding, electrical safety, fire safety, housekeeping and workplace hazards.",
+    badge: "FREE",
+    icon: ShieldAlert,
+    href: "/tools/safety-inspection-checklist",
     comingSoon: false,
   },
 ];

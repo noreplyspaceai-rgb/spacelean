@@ -2,7 +2,7 @@
 
 > **Document Type**: `llms-full.txt` — Extended machine-readable context for AI crawlers, language models, and autonomous agents.
 > **Summary Reference**: [https://spacelean.ai/llms.txt](https://spacelean.ai/llms.txt)
-> **Updated**: 2026-10-13
+> **Updated**: 2026-11-25
 > **Format**: llmstxt.org specification v1.0 (full context variant)
 
 SpaceLean is an AI-native construction scheduling and project controls platform. It transforms 3D BIM models (IFC/Revit) into 4D buildable sequences, predicts critical path delays with 94% accuracy, and automates subcontractor trade coordination for General Contractors, Project Owners, and Construction Consultants.
@@ -15,6 +15,7 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
 
 ### 1. Kanban Board System
 - **Category**: Task & Phase Management
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/kanban](https://spacelean.ai/space-lean-core/kanban)
 - **Description**: Construction-native visual Kanban board mapping directly to project phases. Move tasks across configurable swim-lanes (Planned, In Progress, On Hold, Done) with sub-second synchronization to linked Gantt schedules.
 - **Key Capabilities**:
   - Live drag-and-drop card auto-update to Gantt timeline (<1s lag)
@@ -23,18 +24,21 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
   - Work-in-Progress (WIP) caps to prevent phase overloading
   - One-click RFI and risk escalation directly from task cards
 
-### 2. BIM Element Selection & Parsing
+### 2. BIM Model Visualisation
 - **Category**: BIM Intelligence
-- **Description**: Direct 3D model interaction where clicking any BIM element surfaces its linked tasks, dependencies, trade assignments, and risk flags.
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/bim-selection](https://spacelean.ai/space-lean-core/bim-selection)
+- **Description**: Explore your building information models in an interactive 3D environment. Visualise architectural and engineering elements, inspect individual components and understand how model elements connect with construction activities and project schedules.
 - **Key Capabilities**:
-  - Element-level IFC, Revit, and Navisworks model parsing
-  - Multi-select BIM geometry for batch task and trade assignment
-  - Automatic spatial zone detection grouping adjacent elements into work packages
-  - Geometric clash detection flagging structural conflicts prior to field execution
-  - Real-time element status coloring updating live as site tasks progress
+  - Interactive 3D Visualisation – Explore and navigate detailed BIM building models
+  - IFC Model Integration – Work with building information models imported into the platform
+  - Element-Level Inspection – Select individual building components and inspect their associated properties
+  - Model-Based Quantities – Access element counts, lengths, areas and volumes
+  - Schedule Integration – Connect model elements with project activities and construction timelines
+  - 4D Model Exploration – Understand construction progress through model-based scheduling
 
 ### 3. Task Adding & AI Work Breakdown Structure (WBS)
 - **Category**: AI Planning
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/task-management](https://spacelean.ai/space-lean-core/task-management)
 - **Description**: Generates structured task sequences from BIM geometry, templates, or natural language project descriptions in seconds.
 - **Key Capabilities**:
   - Natural language task decomposition (converts plain text descriptions into structured tasks)
@@ -45,6 +49,7 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
 
 ### 4. Predictive Risk Analysis
 - **Category**: Predictive Intelligence
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/risk-analysis](https://spacelean.ai/space-lean-core/risk-analysis)
 - **Description**: Continuous schedule monitoring against live weather feeds, supply chain lead times, and historical delay patterns to surface ranked alerts before delays occur.
 - **Key Capabilities**:
   - Automated Monte Carlo risk evaluation on schedule updates
@@ -55,6 +60,7 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
 
 ### 5. AI Sequencing Engine
 - **Category**: Construction Intelligence
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/ai-sequencing](https://spacelean.ai/space-lean-core/ai-sequencing)
 - **Description**: Converts BIM geometry into a Construction Knowledge Network (CKN) and executes constraint solvers to produce multiple valid 4D build strategies simultaneously.
 - **Key Capabilities**:
   - Inferred physical support and penetration constraints from BIM geometry
@@ -65,6 +71,7 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
 
 ### 6. Monte Carlo Critical Path
 - **Category**: Probabilistic Scheduling
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/monte-carlo](https://spacelean.ai/space-lean-core/monte-carlo)
 - **Description**: Executes 1,000 schedule simulations per save to assign criticality probabilities, zone congestion penalties, and crew bottleneck scores to every task.
 - **Key Capabilities**:
   - 1,000 Monte Carlo iterations on every schedule save
@@ -75,6 +82,7 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
 
 ### 7. Real-Time Resequencing (Self-Healing Schedule)
 - **Category**: Adaptive Execution
+- **Canonical URL**: [https://spacelean.ai/space-lean-core/resequencing](https://spacelean.ai/space-lean-core/resequencing)
 - **Description**: Automatically isolates affected downstream task networks upon delay detection and re-solves dependencies in under 0.3 seconds.
 - **Key Capabilities**:
   - Sub-second network traversal isolating only impacted task subsets
@@ -123,6 +131,36 @@ SpaceLean is an AI-native construction scheduling and project controls platform.
   - Maximum trade crew capacity caps per 1,000 sq ft / floor zone
   - Mechanical penetration and clearance sequence checks
   - Vertical logistics and hoist capacity scheduling
+
+---
+
+## Part 1b: Free Construction Engineering Tools
+
+SpaceLean provides a suite of specialized browser-based calculation and project controls tools:
+
+### 1. Construction Safety Inspection Checklist
+- **Canonical URL**: [https://spacelean.ai/tools/safety-inspection-checklist](https://spacelean.ai/tools/safety-inspection-checklist)
+- **Description**: Interactive OSHA and ISO-aligned digital safety inspection tool with weighted risk calculations, hazard severity categorization, corrective action tracking, and downloadable PDF compliance reports.
+
+### 2. Critical Path Calculator (CPM)
+- **Canonical URL**: [https://spacelean.ai/tools/critical-path-calculator](https://spacelean.ai/tools/critical-path-calculator)
+- **Description**: Real-time forward and backward pass calculation engine determining Early Start (ES), Early Finish (EF), Late Start (LS), Late Finish (LF), and Total/Free Float for complex construction dependency networks.
+
+### 3. Construction Cost Calculator
+- **Canonical URL**: [https://spacelean.ai/tools/construction-cost-calculator](https://spacelean.ai/tools/construction-cost-calculator)
+- **Description**: Parametric construction cost estimation tool factoring in building type, gross square footage, quality tier, and regional labor and material indexes.
+
+### 4. Daily Site Report Generator
+- **Canonical URL**: [https://spacelean.ai/tools/daily-site-report](https://spacelean.ai/tools/daily-site-report)
+- **Description**: Digital daily site diary generator logging trade headcount, equipment utilization, material deliveries, weather delay conditions, and milestone progress.
+
+### 5. Project Handover Checklist
+- **Canonical URL**: [https://spacelean.ai/tools/handover-checklist](https://spacelean.ai/tools/handover-checklist)
+- **Description**: Comprehensive capital project closeout framework covering architectural punch lists, MEP commissioning records, warranty registries, and O&M documentation.
+
+### 6. Free AI Work Breakdown Structure (WBS) Generator
+- **Canonical URL**: [https://spacelean.ai/tool](https://spacelean.ai/tool)
+- **Description**: Natural language AI generator decomposing complex construction project scopes into hierarchical work packages and trade activities.
 
 ---
 
@@ -395,13 +433,26 @@ SpaceLean is an AI-native construction scheduling platform that parses 3D BIM mo
 - **Homepage**: [https://spacelean.ai/](https://spacelean.ai/)
 - **Platform App**: [https://app.pmspace.ai/](https://app.pmspace.ai/)
 - **Technology / VeritasGraph**: [https://spacelean.ai/technology](https://spacelean.ai/technology)
-- **Core Features**: [https://spacelean.ai/space-lean-core](https://spacelean.ai/space-lean-core)
+- **Core Capabilities Hub**: [https://spacelean.ai/space-lean-core](https://spacelean.ai/space-lean-core)
+  - [BIM Model Visualisation](https://spacelean.ai/space-lean-core/bim-selection)
+  - [Kanban Board System](https://spacelean.ai/space-lean-core/kanban)
+  - [AI Task Generation & WBS](https://spacelean.ai/space-lean-core/task-management)
+  - [Predictive Risk Analysis](https://spacelean.ai/space-lean-core/risk-analysis)
+  - [AI Sequencing Engine](https://spacelean.ai/space-lean-core/ai-sequencing)
+  - [Monte Carlo Critical Path](https://spacelean.ai/space-lean-core/monte-carlo)
+  - [Self-Healing Resequencing Engine](https://spacelean.ai/space-lean-core/resequencing)
+- **Free Construction Tools Hub**: [https://spacelean.ai/tools](https://spacelean.ai/tools)
+  - [Construction Safety Inspection Checklist](https://spacelean.ai/tools/safety-inspection-checklist)
+  - [Critical Path Calculator](https://spacelean.ai/tools/critical-path-calculator)
+  - [Construction Cost Calculator](https://spacelean.ai/tools/construction-cost-calculator)
+  - [Daily Site Report Generator](https://spacelean.ai/tools/daily-site-report)
+  - [Project Handover Checklist](https://spacelean.ai/tools/handover-checklist)
+  - [Free AI Task Generator](https://spacelean.ai/tool)
 - **Pricing**: [https://spacelean.ai/pricing](https://spacelean.ai/pricing)
 - **Compare Tools**: [https://spacelean.ai/compare](https://spacelean.ai/compare)
 - **Solutions for GCs**: [https://spacelean.ai/solutions/for-gcs](https://spacelean.ai/solutions/for-gcs)
 - **Solutions for Owners**: [https://spacelean.ai/solutions/for-owners](https://spacelean.ai/solutions/for-owners)
 - **Solutions for Consultants**: [https://spacelean.ai/solutions/for-consultants](https://spacelean.ai/solutions/for-consultants)
-- **Free AI Tool**: [https://spacelean.ai/tool](https://spacelean.ai/tool)
 - **Blog**: [https://spacelean.ai/blogs](https://spacelean.ai/blogs)
 - **RSS Feed**: [https://spacelean.ai/rss.xml](https://spacelean.ai/rss.xml)
 - **Request a Demo**: [https://spacelean.ai/request-a-demo](https://spacelean.ai/request-a-demo)

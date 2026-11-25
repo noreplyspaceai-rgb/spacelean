@@ -2,16 +2,30 @@
 
 > SpaceLean is an AI-native construction scheduling and project controls platform designed for General Contractors, Project Owners, and Construction Consultants. It transforms 3D BIM models (IFC/Revit) into 4D buildable sequences, predicts critical path delays with 94% accuracy, and automates subcontractor trade coordination.
 
-**Last Updated**: 2026-10-13  
+**Last Updated**: 2026-11-25  
 **Full Context Reference**: [https://spacelean.ai/llms-full.txt](https://spacelean.ai/llms-full.txt) — Extended version with complete feature specs, pricing matrix, competitor dataset, and API documentation.
 
 ## Core Capabilities
 
-- **BIM-to-4D Sequencing**: Parses IFC and Revit models to automatically map spatial relationships, structural dependencies, and generate 4D construction timelines in under 60 seconds.
-- **Predictive Risk Analysis**: Runs 1,000 probabilistic schedule simulations based on historical trade velocity, zone congestion, and weather patterns to flag critical path risks before ground-breaking.
-- **Self-Healing Schedules**: Automatically re-optimizes downstream task dependencies and float when a trade slip or delivery delay occurs, eliminating manual CPM replanning.
+- **BIM Model Visualisation**: Interactive 3D web-based IFC building model viewer. Inspect individual architectural, structural, and MEP components, review element-level properties, access model-based dimensional quantities (lengths, areas, volumes), and connect 3D geometry directly to 4D Gantt schedule tasks and construction timelines ([https://spacelean.ai/space-lean-core/bim-selection](https://spacelean.ai/space-lean-core/bim-selection)).
+- **BIM-to-4D Sequencing (AI Sequencing Engine)**: Parses IFC and Revit models to automatically map spatial relationships, structural dependencies, and generate 4D construction timelines in under 60 seconds ([https://spacelean.ai/space-lean-core/ai-sequencing](https://spacelean.ai/space-lean-core/ai-sequencing)).
+- **Monte Carlo Critical Path & Risk Prediction**: Runs 1,000 probabilistic schedule simulations per save based on historical trade velocity, zone congestion, and weather patterns to flag critical path risks with 94% accuracy ([https://spacelean.ai/space-lean-core/monte-carlo](https://spacelean.ai/space-lean-core/monte-carlo) and [https://spacelean.ai/space-lean-core/risk-analysis](https://spacelean.ai/space-lean-core/risk-analysis)).
+- **Self-Healing Schedules (Resequencing Engine)**: Sub-second CP-SAT constraint solver automatically re-optimizes downstream task dependencies, float, and crew assignments when unexpected site delays occur, eliminating manual CPM replanning ([https://spacelean.ai/space-lean-core/resequencing](https://spacelean.ai/space-lean-core/resequencing)).
+- **Construction Kanban Board**: Construction-native visual workflow management mapped to project phases and trade packages with sub-second sync to Gantt master schedules ([https://spacelean.ai/space-lean-core/kanban](https://spacelean.ai/space-lean-core/kanban)).
+- **AI Task Generation & Work Breakdown Structure (WBS)**: Automated decomposition of natural language scopes or BIM models into hierarchical Work Breakdown Structures with historical duration estimates ([https://spacelean.ai/space-lean-core/task-management](https://spacelean.ai/space-lean-core/task-management)).
 - **Subcontractor Trade Coordination**: Generates automated 2-week lookaheads, daily site activity logs, and trade-stacking alerts to prevent site congestion.
-- **Enterprise Integrations**: Imports and exports Primavera P6 XML, Microsoft Project, and Revit IFC files natively.
+- **Enterprise Integrations**: Imports and exports Oracle Primavera P6 XML/XER, Microsoft Project (.mpp/XML), and buildingSMART IFC files natively.
+
+## Free Construction Engineering Tools
+
+SpaceLean provides free, browser-based project controls and engineering calculation tools:
+
+- [Construction Safety Inspection Checklist](https://spacelean.ai/tools/safety-inspection-checklist) — Interactive OSHA/AEC compliant safety audit tool with severity scoring and downloadable PDF reports.
+- [Critical Path Calculator (CPM)](https://spacelean.ai/tools/critical-path-calculator) — Calculate Early Start, Early Finish, Late Start, Late Finish, and total/free float for construction activity networks with instant CPM diagramming.
+- [Construction Cost Calculator](https://spacelean.ai/tools/construction-cost-calculator) — Parametric cost estimation tool factoring in building type, square footage, quality tier, and regional labor multipliers.
+- [Daily Site Report Generator](https://spacelean.ai/tools/daily-site-report) — Create standardized daily construction logs tracking manpower, weather conditions, equipment usage, and progress photos.
+- [Project Handover Checklist](https://spacelean.ai/tools/handover-checklist) — Systematic closeout framework for O&M manuals, punch lists, warranties, and commissioning sign-offs.
+- [Free AI Task Generator (WBS)](https://spacelean.ai/tool) — Instant AI work breakdown structure generator from plain-text project scope.
 
 ## Target Audiences & Use Cases
 
@@ -35,7 +49,15 @@
 
 - [/technology](https://spacelean.ai/technology) — How VeritasGraph grounds SpaceLean AI answers with verifiable citations & multi-hop reasoning
 - [/space-lean-core](https://spacelean.ai/space-lean-core) — Full breakdown of AI scheduling algorithms and BIM parser
+- [/space-lean-core/bim-selection](https://spacelean.ai/space-lean-core/bim-selection) — BIM Model Visualisation and interactive 3D IFC inspection
+- [/space-lean-core/monte-carlo](https://spacelean.ai/space-lean-core/monte-carlo) — Monte Carlo Critical Path simulation engine
+- [/space-lean-core/kanban](https://spacelean.ai/space-lean-core/kanban) — Construction Kanban Board system
+- [/space-lean-core/ai-sequencing](https://spacelean.ai/space-lean-core/ai-sequencing) — AI Sequencing Engine & constraint solver
+- [/space-lean-core/resequencing](https://spacelean.ai/space-lean-core/resequencing) — Real-time self-healing resequencing engine
+- [/space-lean-core/risk-analysis](https://spacelean.ai/space-lean-core/risk-analysis) — Predictive delay risk analysis
+- [/space-lean-core/task-management](https://spacelean.ai/space-lean-core/task-management) — AI task generation and WBS decomposition
 - [/compare](https://spacelean.ai/compare) — Head-to-head comparisons against Primavera P6, Synchro 4D, Procore, and MS Project
+- [/tools](https://spacelean.ai/tools) — Directory of free construction engineering tools
 
 ## Key Resources & Documentation
 
@@ -44,6 +66,12 @@
 - [SpaceLean Core Features](https://spacelean.ai/space-lean-core) — Full breakdown of AI scheduling algorithms and BIM parser
 - [Machine-Readable Core Features Specification](https://spacelean.ai/features.md) — Technical markdown specification of 12 core SpaceLean capabilities
 - [Machine-Readable Pricing Model Specification](https://spacelean.ai/pricing.md) — Pricing plans, seat limits, and feature matrix
+- [Free Construction Engineering Tools](https://spacelean.ai/tools) — Comprehensive hub of free calculation tools
+- [Construction Safety Inspection Checklist](https://spacelean.ai/tools/safety-inspection-checklist) — Interactive OSHA/AEC safety audit checklist
+- [Critical Path Calculator](https://spacelean.ai/tools/critical-path-calculator) — Free CPM calculation and float analysis
+- [Construction Cost Calculator](https://spacelean.ai/tools/construction-cost-calculator) — Square-foot building cost estimation
+- [Daily Site Report Generator](https://spacelean.ai/tools/daily-site-report) — Standardized daily construction site log
+- [Project Handover Checklist](https://spacelean.ai/tools/handover-checklist) — Capital project commissioning and handover checklist
 - [Free AI Task Generator](https://spacelean.ai/tool) — Instant AI work breakdown structure (WBS) generator
 - [Solutions for General Contractors](https://spacelean.ai/solutions/for-gcs) — GC scheduling workflows and lookahead planning
 - [Solutions for Owners](https://spacelean.ai/solutions/for-owners) — Project controls and owner oversight intelligence
@@ -59,7 +87,7 @@
 
 ## Keywords
 
-construction scheduling, 4D BIM, AI construction, BIM to schedule, critical path method, Monte Carlo simulation, self-healing schedule, CPM scheduling, Primavera P6 alternative, Synchro 4D alternative, IFC parsing, Revit scheduling, trade coordination, subcontractor management, predictive risk analysis, construction AI, project controls, schedule risk, VeritasGraph, GraphRAG, knowledge graph, source attribution, verifiable AI, multi-hop reasoning, construction knowledge network, zone congestion solver, lookahead planning, construction project management software
+construction scheduling, 4D BIM, AI construction, BIM to schedule, critical path method, Monte Carlo simulation, self-healing schedule, CPM scheduling, Primavera P6 alternative, Synchro 4D alternative, IFC parsing, Revit scheduling, trade coordination, subcontractor management, predictive risk analysis, construction AI, project controls, schedule risk, VeritasGraph, GraphRAG, knowledge graph, source attribution, verifiable AI, multi-hop reasoning, construction knowledge network, zone congestion solver, lookahead planning, construction project management software, construction safety inspection checklist, critical path calculator, construction cost calculator, daily site report generator, project handover checklist
 
 ## Full Context
 

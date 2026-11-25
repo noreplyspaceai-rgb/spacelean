@@ -113,9 +113,51 @@ export default function RootLayout({
     "foundingDate": "2023",
     "contactPoint": {
       "@type": "ContactPoint",
-      "contactType": "sales",
+      "telephone": "+1-646-421-5740",
+      "contactType": "customer support",
+      "availableLanguage": ["English"],
       "url": "https://spacelean.ai/request-a-demo"
     },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SpaceLean AI Platform Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "4D BIM Scheduling Engine",
+            "description": "Automated conversion of 3D BIM geometry into buildable 4D construction timelines."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Construction Delay Risk Prediction",
+            "description": "Probabilistic Monte Carlo schedule simulation to predict critical path volatility."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automated Subcontractor Lookaheads",
+            "description": "Real-time trade coordination and 2-week lookahead generation to prevent site congestion."
+          }
+        }
+      ]
+    },
+    "knowsAbout": [
+      { "@type": "Thing", "name": "Building Information Modeling", "sameAs": "https://www.wikidata.org/wiki/Q852174" },
+      { "@type": "Thing", "name": "Critical Path Method", "sameAs": "https://www.wikidata.org/wiki/Q217997" },
+      { "@type": "Thing", "name": "Industry Foundation Classes", "sameAs": "https://www.wikidata.org/wiki/Q1661642" },
+      { "@type": "Thing", "name": "Lean Construction", "sameAs": "https://www.wikidata.org/wiki/Q6509514" },
+      { "@type": "Thing", "name": "Monte Carlo method", "sameAs": "https://www.wikidata.org/wiki/Q231574" },
+      { "@type": "Thing", "name": "Kanban", "sameAs": "https://www.wikidata.org/wiki/Q486483" },
+      { "@type": "Thing", "name": "Project Management Software", "sameAs": "https://www.wikidata.org/wiki/Q21074704" },
+      { "@type": "Thing", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" }
+    ],
     "sameAs": [
       "https://x.com/spacelean_",
       "https://www.linkedin.com/company/spacelean",
@@ -140,6 +182,14 @@ export default function RootLayout({
     "datePublished": "2025-01-01T00:00:00Z",
     "dateModified": "2026-03-01T00:00:00Z",
     "featureList": ["AI search with source attribution", "Knowledge graph reasoning", "4D BIM sequencing", "Predictive critical path risk analysis"],
+    "about": [
+      { "@type": "Thing", "name": "Building Information Modeling", "sameAs": "https://www.wikidata.org/wiki/Q852174" },
+      { "@type": "Thing", "name": "Critical Path Method", "sameAs": "https://www.wikidata.org/wiki/Q217997" },
+      { "@type": "Thing", "name": "Industry Foundation Classes", "sameAs": "https://www.wikidata.org/wiki/Q1661642" },
+      { "@type": "Thing", "name": "Lean Construction", "sameAs": "https://www.wikidata.org/wiki/Q6509514" },
+      { "@type": "Thing", "name": "Monte Carlo method", "sameAs": "https://www.wikidata.org/wiki/Q231574" },
+      { "@type": "Thing", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" }
+    ],
     "isBasedOn": {
       "@type": "SoftwareSourceCode",
       "name": "VeritasGraph",

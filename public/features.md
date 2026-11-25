@@ -12,15 +12,16 @@
   - Work-in-Progress (WIP) caps to prevent phase overloading
   - One-click RFI and risk escalation directly from task cards
 
-## 2. BIM Element Selection & Parsing
+## 2. BIM Model Visualisation
 - **Category**: BIM Intelligence
-- **Description**: Direct 3D model interaction where clicking any BIM element surfaces its linked tasks, dependencies, trade assignments, and risk flags.
+- **Description**: Explore your building information models in an interactive 3D environment. Visualise architectural and engineering elements, inspect individual components and understand how model elements connect with construction activities and project schedules.
 - **Key Capabilities**:
-  - Element-level IFC, Revit, and Navisworks model parsing
-  - Multi-select BIM geometry for batch task and trade assignment
-  - Automatic spatial zone detection grouping adjacent elements into work packages
-  - Geometric clash detection flagging structural conflicts prior to field execution
-  - Real-time element status coloring updating live as site tasks progress
+  - Interactive 3D Visualisation – Explore and navigate detailed BIM building models
+  - IFC Model Integration – Work with building information models imported into the platform
+  - Element-Level Inspection – Select individual building components and inspect their associated properties
+  - Model-Based Quantities – Access element counts, lengths, areas and volumes
+  - Schedule Integration – Connect model elements with project activities and construction timelines
+  - 4D Model Exploration – Understand construction progress through model-based scheduling
 
 ## 3. Task Adding & AI Work Breakdown Structure (WBS)
 - **Category**: AI Planning

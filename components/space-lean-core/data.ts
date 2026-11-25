@@ -92,21 +92,22 @@ export const FEATURES: Feature[] = [
     color: "from-cyan-50 to-white",
   },
 
-  // 2 ─ BIM Element Selection
+  // 2 ─ BIM Model Visualisation
   {
     id: "bim-selection",
     slug: "bim-selection",
     icon: Box,
     subtitle: "BIM Intelligence",
-    title: "BIM Element Selection",
+    title: "BIM Model Visualisation",
     description:
-      "Click any element in your 3D model and SpaceLean instantly surfaces its linked tasks, dependencies, trade assignments, and risk flags. Geometry drives the schedule — not the other way around.",
+      "Explore your building information models in an interactive 3D environment. Visualise architectural and engineering elements, inspect individual components and understand how model elements connect with construction activities and project schedules.",
     keyPoints: [
-      "IFC / Revit / Navisworks model import with element-level parsing",
-      "Multi-select elements to batch-assign tasks or trades",
-      "Automatic zone detection groups adjacent elements into work packages",
-      "Clash detection surfaces conflicts before they reach the field",
-      "Element status colours update live as tasks progress",
+      "Interactive 3D Visualisation – Explore and navigate detailed BIM building models.",
+      "IFC Model Integration – Work with building information models imported into the platform.",
+      "Element-Level Inspection – Select individual building components and inspect their associated properties.",
+      "Model-Based Quantities – Access element counts, lengths, areas and volumes.",
+      "Schedule Integration – Connect model elements with project activities and construction timelines.",
+      "4D Model Exploration – Understand construction progress through model-based scheduling.",
     ],
     benefits: [
       { icon: Box, metric: "60%",    label: "Reduction in model re-imports" },
@@ -114,7 +115,7 @@ export const FEATURES: Feature[] = [
       { icon: Box, metric: "Zero",   label: "Manual co-ordination layers" },
       { icon: Box, metric: "IFC2+3", label: "Standards supported" },
     ],
-    image: "/screenshots/bim-element-selection.png",
+    image: "/bim-model-visualisation.jpg",
     accentColor: "text-cyan-500",
     color: "from-sky-50 to-white",
   },

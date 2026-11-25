@@ -4,7 +4,7 @@ import { ComparisonData } from '@/lib/compare-data';
 import { Check, X, ArrowRight, Star, HelpCircle, Lightbulb, ShieldCheck, Sparkles } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { span } from 'framer-motion/client';
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -104,68 +104,96 @@ export default function ComparisonDetail({ data }: ComparisonDetailProps) {
             className="rounded-2xl border border-black/[0.07] overflow-hidden shadow-sm"
           >
             <div className="overflow-x-auto">
-              {/* Table header */}
-              <div className="grid grid-cols-3 bg-black/[0.02] px-4 sm:px-8 py-5 border-b border-black/[0.06] min-w-[480px]">
-                <div className="col-span-1 text-[10px] font-bold text-neutral-400 uppercase tracking-widest self-center">
-                  Feature Capability
-                </div>
-                <div className="col-span-1 text-center">
-                  <span className="text-sm font-semibold text-cyan-500">SpaceLean</span>
-                </div>
-                <div className="col-span-1 text-center">
-                  <span className="text-sm font-semibold text-neutral-400">{data.competitorName}</span>
-                </div>
-              </div>
+              <table className="w-full border-collapse min-w-[480px]">
+                <caption className="sr-only">
+                  Detailed capability and feature comparison between SpaceLean and {data.competitorName}
+                </caption>
+                <thead>
+                  <tr className="bg-black/[0.02] border-b border-black/[0.06]">
+                    <th
+                      scope="col"
+                      className="text-left px-4 sm:px-8 py-5 text-[10px] font-bold text-neutral-400 uppercase tracking-widest"
+                    >
+                      Feature Capability
+                    </th>
+                    <th
+                      scope="col"
+                      className="w-1/3 text-center px-4 sm:px-8 py-5 text-sm font-semibold text-cyan-500"
+                    >
+                      SpaceLean
+                    </th>
+                    <th
+                      scope="col"
+                      className="w-1/3 text-center px-4 sm:px-8 py-5 text-sm font-semibold text-neutral-400"
+                    >
+                      {data.competitorName}
+                    </th>
+                  </tr>
+                </thead>
 
-              <div className="divide-y divide-black/[0.04] min-w-[480px]">
-                {data.features.map((category) => (
-                  <div key={category.category}>
-                    {/* Category row */}
-                    <div className="px-4 sm:px-8 py-3 bg-black/[0.015] text-[10px] font-bold text-neutral-400 uppercase tracking-[0.2em] border-y border-black/[0.04]">
-                      {category.category}
-                    </div>
+                <tbody className="divide-y divide-black/[0.04]">
+                  {data.features.map((category) => (
+                    <React.Fragment key={category.category}>
+                      {/* Category header row */}
+                      <tr className="bg-black/[0.015] border-y border-black/[0.04]">
+                        <th
+                          colSpan={3}
+                          scope="colgroup"
+                          className="text-left px-4 sm:px-8 py-3 text-[10px] font-bold text-neutral-400 uppercase tracking-[0.2em]"
+                        >
+                          {category.category}
+                        </th>
+                      </tr>
 
-                    {category.items.map((item) => (
-                      <div
-                        key={item.name}
-                        className="grid grid-cols-3 px-4 sm:px-8 py-5 hover:bg-black/[0.015] transition-colors"
-                      >
-                        <div className="col-span-1 text-sm font-medium text-neutral-800 flex items-center">
-                          {item.name}
-                        </div>
+                      {category.items.map((item) => (
+                        <tr
+                          key={item.name}
+                          className="hover:bg-black/[0.015] transition-colors"
+                        >
+                          <th
+                            scope="row"
+                            className="text-left font-medium text-sm text-neutral-800 px-4 sm:px-8 py-5"
+                          >
+                            {item.name}
+                          </th>
 
-                        {/* SpaceLean cell */}
-                        <div className="col-span-1 flex justify-center items-center">
-                          {item.spacelean === true ? (
-                            <span className="w-7 h-7 rounded-full bg-cyan-500 flex items-center justify-center">
-                              <Check className="w-3.5 h-3.5 text-white" />
-                            </span>
-                          ) : (
-                            <span className="text-cyan-500 font-semibold text-xs tracking-wide">
-                              {item.spacelean}
-                            </span>
-                          )}
-                        </div>
+                          {/* SpaceLean cell */}
+                          <td className="px-4 sm:px-8 py-5 text-center">
+                            <div className="flex justify-center items-center">
+                              {item.spacelean === true ? (
+                                <span className="w-7 h-7 rounded-full bg-cyan-500 flex items-center justify-center">
+                                  <Check className="w-3.5 h-3.5 text-white" />
+                                </span>
+                              ) : (
+                                <span className="text-cyan-500 font-semibold text-xs tracking-wide">
+                                  {item.spacelean}
+                                </span>
+                              )}
+                            </div>
+                          </td>
 
-                        {/* Competitor cell */}
-                        <div className="col-span-1 flex justify-center items-center">
-                          {item.competitor === true ? (
-                            <span className="w-7 h-7 rounded-full bg-black/[0.04] border border-black/[0.08] flex items-center justify-center">
-                              <Check className="w-3.5 h-3.5 text-neutral-400" />
-                            </span>
-                          ) : item.competitor === false ? (
-                            <span className="w-7 h-7 rounded-full bg-black/[0.04] border border-black/[0.08] flex items-center justify-center">
-                              <X className="w-3.5 h-3.5 text-neutral-300" />
-                            </span>
-                          ) : (
-                            <span className="text-neutral-400 text-xs tracking-wide">{item.competitor}</span>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
+                          {/* Competitor cell */}
+                          <td className="px-4 sm:px-8 py-5 text-center">
+                            <div className="flex justify-center items-center">
+                              {item.competitor === true ? (
+                                <span className="w-7 h-7 rounded-full bg-black/[0.04] border border-black/[0.08] flex items-center justify-center">
+                                  <Check className="w-3.5 h-3.5 text-neutral-400" />
+                                </span>
+                              ) : item.competitor === false ? (
+                                <span className="w-7 h-7 rounded-full bg-black/[0.04] border border-black/[0.08] flex items-center justify-center">
+                                  <X className="w-3.5 h-3.5 text-neutral-300" />
+                                </span>
+                              ) : (
+                                <span className="text-neutral-400 text-xs tracking-wide">{item.competitor}</span>
+                              )}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </React.Fragment>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </motion.div>
         </div>

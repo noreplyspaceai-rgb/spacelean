@@ -68,6 +68,51 @@ const FLOAT_ICONS = [
   },
 ];
 
+const MASTER_COMPARISON_ROWS = [
+  {
+    capability: "Initial Schedule Setup Time",
+    spacelean: "60 seconds (Auto-BIM)",
+    p6: "3–4 weeks (Manual)",
+    generic: "Days (Manual tasks)",
+    alice: "1–2 weeks",
+  },
+  {
+    capability: "BIM-to-4D Sequencing",
+    spacelean: "Native IFC & Revit parsing",
+    p6: "Requires Synchro 4D plugin",
+    generic: "No BIM support",
+    alice: "Parametric ruleset setup",
+  },
+  {
+    capability: "Risk Simulation & Critical Path",
+    spacelean: "1,000 Monte Carlo runs / save",
+    p6: "Deterministic single CPM",
+    generic: "No probabilistic modeling",
+    alice: "Prescriptive generative runs",
+  },
+  {
+    capability: "Dynamic Real-Time Resequencing",
+    spacelean: "Autonomous (< 1 second)",
+    p6: "Manual CPM recalculation",
+    generic: "Manual card reordering",
+    alice: "Cloud batch re-solver",
+  },
+  {
+    capability: "Subcontractor Lookaheads",
+    spacelean: "Automated 2-week lookaheads",
+    p6: "Exported static PDFs",
+    generic: "Basic task assignments",
+    alice: "Milestone reports",
+  },
+  {
+    capability: "Construction Knowledge Graph (CKN)",
+    spacelean: "Native VeritasGraph engine",
+    p6: "Relational database tables",
+    generic: "Document/Row database",
+    alice: "Constraint optimization graph",
+  },
+];
+
 export default function CompareClient() {
   return (
     <main className="relative min-h-screen bg-white text-primary-text overflow-hidden">
@@ -215,6 +260,72 @@ export default function CompareClient() {
               </Link>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* MASTER FEATURE COMPARISON TABLE */}
+        <motion.div {...fadeUp(0.2)} className="max-w-6xl mx-auto mb-24">
+          <div className="mb-8">
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-neutral-700 bg-black/5 border border-black/10 rounded-full px-3 py-1 mb-3 tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
+              Comprehensive Technical Matrix
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-normal tracking-tight text-neutral-900">
+              SpaceLean vs <span className="font-bold text-cyan-500">Industry Alternatives</span>
+            </h2>
+            <p className="text-sm sm:text-base text-neutral-600 mt-2 max-w-2xl">
+              Compare architectural benchmarks and scheduling capabilities across legacy CPM software, generic task tools, and SpaceLean.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-black/[0.08] bg-white overflow-hidden shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse min-w-[640px]">
+                <caption className="sr-only">
+                  Comprehensive technical comparison of SpaceLean vs Primavera P6, Generic PM tools, and Alice Technologies
+                </caption>
+                <thead>
+                  <tr className="bg-black/[0.02] border-b border-black/[0.06]">
+                    <th scope="col" className="text-left px-4 sm:px-6 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500">
+                      Capability / Metric
+                    </th>
+                    <th scope="col" className="text-center px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-cyan-600 bg-cyan-50/50">
+                      SpaceLean
+                    </th>
+                    <th scope="col" className="text-center px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500">
+                      Primavera P6
+                    </th>
+                    <th scope="col" className="text-center px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500">
+                      Asana / Monday
+                    </th>
+                    <th scope="col" className="text-center px-4 py-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500">
+                      Alice Technologies
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-black/[0.04]">
+                  {MASTER_COMPARISON_ROWS.map((row) => (
+                    <tr key={row.capability} className="hover:bg-black/[0.015] transition-colors">
+                      <th scope="row" className="text-left font-medium text-sm text-neutral-800 px-4 sm:px-6 py-4">
+                        {row.capability}
+                      </th>
+                      <td className="px-4 py-4 text-center text-xs sm:text-sm font-semibold text-cyan-700 bg-cyan-50/30">
+                        {row.spacelean}
+                      </td>
+                      <td className="px-4 py-4 text-center text-xs sm:text-sm text-neutral-600">
+                        {row.p6}
+                      </td>
+                      <td className="px-4 py-4 text-center text-xs sm:text-sm text-neutral-500">
+                        {row.generic}
+                      </td>
+                      <td className="px-4 py-4 text-center text-xs sm:text-sm text-neutral-600">
+                        {row.alice}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </motion.div>
 
         {/* STATS SECTION */}

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import AboutClient from "@/components/AboutClient";
+import { authors } from "@/lib/authors-data";
 
 export const metadata: Metadata = {
   title: "About Us | SpaceLean - AI-Powered Task Management",
@@ -64,25 +65,74 @@ export default function AboutPage() {
     { number: "99.9%", label: "Uptime" },
   ];
 
+  const founder = authors.find((a) => a.slug === "bibin-prathap");
+  const teamMembers = authors.filter(
+    (a) => a.slug !== "spacelean-team" && a.slug !== "bibin-prathap"
+  );
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: "About SpaceLean",
     description:
-      "Learn about SpaceLean mission to revolutionize productivity using AI.",
+      "SpaceLean is an AI-powered construction scheduling and project controls platform built to eliminate schedule delays and project overruns.",
+    url: "https://spacelean.ai/about",
     publisher: {
       "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
       name: "SpaceLean",
+      url: "https://spacelean.ai",
       logo: {
         "@type": "ImageObject",
-        url: "https://spaceaiapp.com/icononly_transparent_nobuffer.png",
+        url: "https://spacelean.ai/icononly_transparent_nobuffer.png",
       },
+      sameAs: [
+        "https://twitter.com/spacelean_",
+        "https://linkedin.com/company/spacelean",
+        "https://github.com/bibinprathap/VeritasGraph",
+      ],
     },
     mainEntity: {
       "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
       name: "SpaceLean",
-      foundingDate: "2024",
-      knowsAbout: ["AI productivity", "Task Management", "Agile Workflows"],
+      url: "https://spacelean.ai",
+      foundingDate: "2023",
+      sameAs: [
+        "https://twitter.com/spacelean_",
+        "https://linkedin.com/company/spacelean",
+        "https://github.com/bibinprathap/VeritasGraph",
+      ],
+      founder: founder ? {
+        "@type": "Person",
+        "@id": `https://spacelean.ai/authors/${founder.slug}#person`,
+        name: founder.name,
+        jobTitle: founder.role,
+        description: founder.bio,
+        knowsAbout: founder.knowsAbout,
+        sameAs: founder.sameAs,
+      } : undefined,
+      employee: teamMembers.map((member) => ({
+        "@type": "Person",
+        "@id": `https://spacelean.ai/authors/${member.slug}#person`,
+        name: member.name,
+        jobTitle: member.role,
+        description: member.bio,
+        knowsAbout: member.knowsAbout,
+        sameAs: member.sameAs,
+        worksFor: {
+          "@type": "Organization",
+          name: "SpaceLean",
+          url: "https://spacelean.ai",
+        },
+      })),
+      knowsAbout: [
+        "Building Information Modeling",
+        "4D Construction Scheduling",
+        "Critical Path Method",
+        "Lean Construction",
+        "AI Task Management",
+      ],
     },
   };
 
