@@ -214,6 +214,36 @@ export default function RootLayout({
     }
   };
 
+  const founderPersonSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://spacelean.ai/authors/bibin-prathap#person",
+    "name": "Bibin Prathap",
+    "jobTitle": "Founder & Lead Architect",
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai",
+      "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png"
+    },
+    "description":
+      "Founder and lead researcher of SpaceLean and VeritasGraph, pioneering AI knowledge graphs for 4D BIM construction scheduling.",
+    "image": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+    "sameAs": [
+      "https://github.com/bibinprathap",
+      "https://github.com/bibinprathap/VeritasGraph",
+      "https://linkedin.com/company/spacelean"
+    ],
+    "knowsAbout": [
+      "Building Information Modeling",
+      "Knowledge Graphs",
+      "Critical Path Method",
+      "Lean Construction",
+      "Construction AI"
+    ]
+  };
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
@@ -235,6 +265,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderPersonSchema) }}
         />
       </head>
       <body

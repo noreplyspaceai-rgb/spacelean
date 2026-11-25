@@ -136,11 +136,61 @@ export default function AboutPage() {
     },
   };
 
+  const teamPersonSchemas = {
+    "@context": "https://schema.org",
+    "@graph": authors
+      .filter((a) => a.slug !== "spacelean-team")
+      .map((author) => ({
+        "@type": "Person",
+        "@id": `https://spacelean.ai/authors/${author.slug}#person`,
+        "name": author.name,
+        "jobTitle": author.role,
+        "description": author.bio,
+        "image": author.avatar || "https://spacelean.ai/icononly_transparent_nobuffer.png",
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://spacelean.ai/#organization",
+          "name": "SpaceLean",
+          "url": "https://spacelean.ai"
+        },
+        "knowsAbout": author.knowsAbout,
+        "sameAs": author.sameAs,
+        "url": `https://spacelean.ai/authors/${author.slug}`
+      }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://spacelean.ai/about",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen ">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamPersonSchemas) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}

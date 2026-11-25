@@ -124,6 +124,25 @@ const softwareSchema = {
     },
 };
 
+const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://spacelean.ai',
+        },
+        {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Features',
+            item: 'https://spacelean.ai/features',
+        },
+    ],
+};
+
 const featuresSummary = [
     {
         title: "AI Task Decomposition",
@@ -179,6 +198,10 @@ export default function FeaturesPage() {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
                 />
             </main>
         </div>

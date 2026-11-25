@@ -32,8 +32,84 @@ export default async function BlogPage({ searchParams }: PageProps) {
   const endIndex = startIndex + POSTS_PER_PAGE;
   const paginatedPosts = remainingPosts.slice(startIndex, endIndex);
 
+  const blogHubSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://spacelean.ai/blogs#collection",
+    "name": "SpaceLean Blog — AI Construction Scheduling & Productivity Insights",
+    "description":
+      "Insights on AI-powered construction scheduling, lean project management, team productivity, and the future of construction technology.",
+    "url": "https://spacelean.ai/blogs",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+      },
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": blogPosts.length,
+      "itemListElement": blogPosts.map((post, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": ["Article", "BlogPosting"],
+          "@id": `https://spacelean.ai/blogs/${post.slug}#article`,
+          "headline": post.title,
+          "name": post.title,
+          "description": post.description,
+          "url": `https://spacelean.ai/blogs/${post.slug}`,
+          "datePublished": post.date,
+          "dateModified": post.updatedAt || post.date,
+          "image": post.image.startsWith("http") ? post.image : `https://spacelean.ai${post.image}`,
+          "author": {
+            "@type": "Person",
+            "name": post.author,
+          },
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://spacelean.ai/#organization",
+            "name": "SpaceLean",
+            "url": "https://spacelean.ai",
+          },
+        },
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spacelean.ai",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://spacelean.ai/blogs",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen text-[#0a0a0a] pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogHubSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Header ── */}

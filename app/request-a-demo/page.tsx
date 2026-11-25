@@ -58,11 +58,34 @@ export default function RequestDemoPage() {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://spacelean.ai',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Request a Demo',
+        item: 'https://spacelean.ai/request-a-demo',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Server-rendered content for SEO */}
