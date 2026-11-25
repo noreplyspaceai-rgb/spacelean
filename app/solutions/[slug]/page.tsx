@@ -190,6 +190,59 @@ export default async function SolutionPage({ params }: Props) {
         ],
   };
 
+  // Dynamic audience mapping tailored to each solution target segment
+  const audienceMap: Record<string, string> = {
+    "for-gcs": "General Contractors, Construction Project Directors, Field Operations",
+    "for-owners": "Project Owners, Real Estate Developers, Capital Project Directors",
+    "for-consultants": "VDC Consultants, Construction Planners, Project Controls Advisors",
+    "industrial": "Industrial EPC Contractors, Plant Engineers, Energy Project Managers",
+    "infrastructure": "Civil Infrastructure Contractors, Transportation Authorities, Public Works Engineers",
+    "commercial": "Commercial General Contractors, High-Rise Builders, Commercial Developers",
+    "ideal-projects": "Enterprise Construction Teams, Lean Construction Champions",
+    "engineering-teams": "Engineering Managers, VDC Teams, BIM Technical Directors",
+    "partners-program": "AEC Technology Partners, System Integrators, BIM Consultants",
+    "remote-teams": "Distributed Construction Teams, Remote Project Controls Specialists",
+    "startups": "ConTech Startups, Fast-Growth Construction Teams",
+    "product-teams": "Construction Product Managers, Digital Delivery Teams",
+  };
+
+  const audienceType = audienceMap[slug] || "General Contractors, Project Owners, VDC Managers";
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `https://spacelean.ai/solutions/${slug}#service`,
+    "name": solution.title,
+    "serviceType": "Construction Project Management Software Service",
+    "description": solution.metaDescription || solution.description,
+    "url": `https://spacelean.ai/solutions/${slug}`,
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://spacelean.ai/#organization",
+      "name": "SpaceLean",
+      "url": "https://spacelean.ai",
+      "logo": "https://spacelean.ai/icononly_transparent_nobuffer.png",
+    },
+    "areaServed": "Global",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": `${solution.title} Capabilities`,
+      "itemListElement": solution.features.map((feature) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": feature.title,
+          "description": feature.description,
+        },
+      })),
+    },
+    "termsOfService": "https://spacelean.ai/terms",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": audienceType,
+    },
+  };
+
   const solutionSchema = {
     "@context": "https://schema.org",
     "@type": "ItemPage",
@@ -202,6 +255,9 @@ export default async function SolutionPage({ params }: Props) {
       "@type": "Organization",
       "name": "SpaceLean",
       "url": "https://spacelean.ai",
+    },
+    "mainEntity": {
+      "@id": `https://spacelean.ai/solutions/${slug}#service`,
     },
   };
 
@@ -218,6 +274,10 @@ export default async function SolutionPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
       {/* HTML Breadcrumbs for visual nav & search crawlability */}
